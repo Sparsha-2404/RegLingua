@@ -1,0 +1,32 @@
+# Core ML/NLP
+torch
+transformers
+peft
+accelerate
+datasets
+sentencepiece
+scikit-learn
+pandas
+numpy
+
+# Retrieval / RAG
+sentence-transformers
+faiss-cpu
+rank-bm25
+
+# Multi-agent orchestration
+langgraph
+langchain-core
+
+# Language detection
+langdetect
+
+# API / App
+fastapi
+uvicorn
+streamlit
+
+# Utilities
+python-dotenv
+pydantic
+pytest

@@ -1,0 +1,39 @@
+# Environments
+.venv-reglingua/
+venv/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Model artifacts (too large for git — share via Drive/HF Hub instead)
+models/*.bin
+models/*.safetensors
+models/checkpoints/
+*.pt
+*.pth
+
+# Data (raw scraped/large files — keep small processed samples only if needed)
+data/raw/
+data/regulatory/*.pdf
+*.jsonl.bak
+
+# Logs
+*.log
+training_logs.csv
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints/
