@@ -5,8 +5,9 @@ Owned by: M4
 
 Day 1: CaseState, event schema, and this module's skeleton (state graph
 shape + conditional routing signatures) landed first.
-Day 2: nodes are wired to the mocked agents in agents/mock_agents.py, giving
-a fully runnable graph —
+Day 2: nodes are wired to real M2/M3 components (RiskAgent, EvidenceAgent)
+plus the still-mocked Explainer/Rewriter/Verifier trio, via
+`agents/agent_factory.py` — giving a fully runnable graph:
 
     detect_language -> classify_risk --(compliant, high confidence)--> mark_compliant -> END
                                       \\--(needs review)--> gather_evidence -> explain -> rewrite <-> verify
@@ -17,10 +18,14 @@ a fully runnable graph —
                                                                                      (escalate, attempts >= max)
                                                                                         -> END
 
-Nothing here calls a real model or an LLM — that's Day 9 per the plan
-("Convert Evidence/Explainer/Rewriter into real agent calls"). Swapping a
-mock for a real implementation only touches agents/mock_agents.py (or a new
-agents/real_agents.py); this file's routing logic does not change.
+Integration note (Day 1-2 merge of M2/M3/M4): this file previously lived at
+the root of a standalone `reglingua_supervisor` package and called
+`agents.mock_agents.build_mock_agents()`. It now lives at `agents/
+supervisor.py` alongside the other agents, and calls
+`agents.agent_factory.build_agents()`, which wires in M2's real classifier
+and M3's real retriever behind the same Protocol contracts. The routing
+logic below is otherwise untouched — that's the entire point of the Day 1
+contracts.
 """
 
 from __future__ import annotations
@@ -29,8 +34,8 @@ from typing import Literal
 
 from langgraph.graph import END, StateGraph
 
-from .agents.mock_agents import build_mock_agents
-from .schemas import (
+from agents.agent_factory import build_agents
+from core.schemas import (
     CaseState,
     EventType,
     EvidenceRequest,
@@ -41,7 +46,7 @@ from .schemas import (
     RiskLabel,
 )
 
-_AGENTS = build_mock_agents()
+_AGENTS = build_agents()
 
 # Confidence floor below which a Compliant verdict still gets routed through
 # Evidence/Explainer for a second opinion, instead of auto-exiting. Mirrors
@@ -57,7 +62,7 @@ _COMPLIANT_CONFIDENCE_FLOOR = 0.7
 def detect_language(state: CaseState) -> CaseState:
     lang_code = _AGENTS["language_detector"].detect(state.input_text)
     state.language = Language.HI if lang_code == "hi" else Language.EN
-    state.log(EventType.LANGUAGE_DETECTED, agent_name="LanguageDetector", language=state.language)
+    state.log(EventType.LANGUAGE_DETECTED, agent_name="LanguageAgentAdapter", language=state.language)
     return state
 
 
@@ -74,7 +79,7 @@ def gather_evidence(state: CaseState) -> CaseState:
     )
     response = _AGENTS["evidence_agent"].gather(request)
     state.evidence = response.evidence
-    state.log(EventType.EVIDENCE_RETRIEVED, agent_name="MockEvidenceAgent", n_items=len(response.evidence))
+    state.log(EventType.EVIDENCE_RETRIEVED, agent_name="EvidenceAgentAdapter", n_items=len(response.evidence))
     return state
 
 

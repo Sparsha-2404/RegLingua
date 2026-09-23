@@ -21,7 +21,7 @@ import re
 from pathlib import Path
 from typing import List, Optional
 
-from core.contracts import RetrievedChunk, Regulator
+from agents.research_contracts import RetrievedChunk, Regulator
 
 # Matches latin letters and Devanagari letters, so English and Hindi/
 # code-mixed queries both tokenize sensibly.

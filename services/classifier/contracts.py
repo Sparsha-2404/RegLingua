@@ -7,6 +7,16 @@ in the multi-agent architecture blueprint (Section 3 "Agent Responsibilities
 in one place means every module speaks the same schema regardless of whether
 a stage is currently a deterministic function (Phase A) or an LLM-backed
 agent (Phase B/C) — the Day 1 architecture-review recommendation.
+
+Integration note (Day 1-2 merge of M2/M3/M4): this file was originally
+`core/contracts.py` inside M2's own standalone `nlp-regulatory-agents/`
+package. M4's `core/schemas.py` (CaseState etc.) is the system-wide state
+contract that the Supervisor and every agent-to-agent call actually speaks,
+so on merge this module was relocated to `services/classifier/contracts.py`
+to make clear it is the classifier service's own internal input/output
+type (RiskPrediction), not a second competing "core" schema.
+`agents/risk_agent_adapter.py` is the only place that translates between
+this file's `RiskLevel` and `core.schemas.RiskLabel`.
 """
 from __future__ import annotations
 

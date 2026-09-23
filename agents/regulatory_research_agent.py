@@ -24,7 +24,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from core.contracts import (
+from agents.research_contracts import (
     RegulatoryResearchInput,
     RegulatoryResearchOutput,
     RegulatoryResearchResult,

@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # repo root on path
 
-from core.contracts import RegulatoryResearchInput, RiskPrediction
+from agents.research_contracts import RegulatoryResearchInput, RiskPrediction
 from agents.regulatory_research_agent import RegulatoryResearchAgent
 
 

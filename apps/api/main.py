@@ -3,10 +3,10 @@ RegLingua — FastAPI Endpoint
 ===============================
 Owned by: M4
 Day 1 deliverable: the endpoint skeleton, wired to run_case() once Day 2's
-mocked Supervisor pipeline existed.
+pipeline existed.
 
-Run locally with:
-    uvicorn reglingua_supervisor.main:app --reload
+Run locally with (from the repo root):
+    uvicorn apps.api.main:app --reload
 """
 
 from __future__ import annotations
@@ -16,8 +16,8 @@ from typing import Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from .schemas import CaseState
-from .supervisor import run_case
+from agents.supervisor import run_case
+from core.schemas import CaseState
 
 app = FastAPI(
     title="RegLingua API",
@@ -72,8 +72,7 @@ def scan(request: ScanRequest) -> ScanResponse:
 
 @app.get("/scan/{case_id}/trace")
 def get_trace(case_id: str) -> dict:
-    # Stub only: a per-case store lands alongside the Streamlit chat
-    # interface (Phase 8 / session state work), so /scan is currently
-    # stateless. Documenting the contract now so app/app.py has a stable
-    # endpoint to build the agent-trace panel against.
+    # Stub only: a per-case store lands alongside the demo UI, so /scan is
+    # currently stateless. Documenting the contract now so the UI has a
+    # stable endpoint to build the agent-trace panel against.
     raise HTTPException(status_code=501, detail="Case trace store not implemented yet.")

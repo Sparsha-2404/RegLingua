@@ -10,6 +10,13 @@ Regulatory Research Agent should depend only on the types in this file, never
 on internal retrieval implementation details (deterministic keyword search
 today, hybrid BM25 + vector search from Day 5 onward). That's what lets M3
 swap the retriever underneath without breaking anyone downstream.
+
+Integration note (Day 1-2 merge of M2/M3/M4): this file was originally
+`core/contracts.py` inside M3's own standalone `reglingua/` package. M4's
+`core/schemas.py` (CaseState etc.) is the system-wide state contract, so on
+merge this module was relocated to `agents/research_contracts.py` to make
+clear it is the Regulatory Research Agent's own input/output contract, not
+a second competing "core" schema. Nothing inside the file changed.
 """
 
 from __future__ import annotations

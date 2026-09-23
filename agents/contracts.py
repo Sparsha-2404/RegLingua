@@ -17,13 +17,21 @@ Ownership per the revised table:
   - RewriterAgent            M4 — moved from M3, constrained rewrite
   - VerifierAgent            M4 — independent risk re-check + evidence/constraint checks
   - Supervisor               M4 — owns all wiring/state/routing
+
+Integration note (Day 1-2 merge of M2/M3/M4): this file used to import
+`from ..schemas import ...` as a package-relative import inside the
+`reglingua_supervisor` package. Now that M2's classifier service, M3's
+research agent, and M4's supervisor all live in one repo (`core/`,
+`agents/`, `services/`), every module imports `core.schemas` as an absolute
+import instead, so nothing here depends on which package it happens to be
+nested under.
 """
 
 from __future__ import annotations
 
 from typing import Protocol, runtime_checkable
 
-from ..schemas import (
+from core.schemas import (
     CaseState,
     EvidenceRequest,
     EvidenceResponse,

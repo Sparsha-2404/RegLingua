@@ -1,10 +1,30 @@
 """
 Day 2 verification: exercises the state-machine pipeline end-to-end using
-only the mocked agents — no real model, no network, no LLM call.
+M2's real classifier mock and M3's real retriever (via agents/agent_factory.py),
+with Explainer/Rewriter/Verifier still mocked — no trained model, no
+network, no LLM call.
+
+Integration note: these assertions were originally written against M4's
+own standalone `MockRiskAgent`, which mapped specific trigger phrases to
+SEBI/RBI/DPDP by a lookup table. Once wired to M2's real
+`MockRiskClassifier` (services/classifier/interface.py), the regulator
+assertions below were updated: M2's keyword mock is intentionally
+SEBI-only at Day 1-2 (see its `_HIGH_RISK_KEYWORDS` list) — per-regulator
+classification is a Day 3+ task once M2 trains on M1's real, per-regulator
+labelled dataset (`data/raw/labeled_examples_m1.csv`). This is a real
+behavioural difference the merge surfaced, not a bug in either module.
+
+A second, actual bug WAS found and fixed here: `MockRewriterAgent`'s
+attempt-2+ fallback text used to read "...not guaranteed...", which passed
+against M4's old mock (whose trigger list required "guaranteed return(s)"
+together) but fails against M2's real mock (bare substring match on
+"guaranteed") — so the Rewriter<->Verifier loop never actually resolved
+once real components replaced the fully-mocked pipeline. See
+`agents/mock_agents.py` for the fix.
 """
 
-from reglingua_supervisor.schemas import ResolutionStatus, RiskLabel
-from reglingua_supervisor.supervisor import run_case
+from core.schemas import ResolutionStatus, RiskLabel
+from agents.supervisor import run_case
 
 
 def test_compliant_text_short_circuits():
@@ -27,12 +47,15 @@ def test_risky_text_with_easy_trigger_resolves_in_one_pass():
 
 
 def test_risky_text_with_untouched_trigger_needs_a_retry():
-    # None of these trigger words are edited by MockRewriterAgent's attempt-1
-    # logic, so the candidate is unchanged, the Verifier rejects it, and the
-    # loop must retry into attempt 2 (which returns fixed compliant text).
+    # "zero risk" trips M2's real MockRiskClassifier (regulator is always
+    # "SEBI" for that mock, regardless of which keyword — see integration
+    # note above). None of the words in this sentence are edited by
+    # MockRewriterAgent's attempt-1 logic, so the candidate is unchanged,
+    # the Verifier rejects it, and the loop must retry into attempt 2
+    # (which returns the fixed, now genuinely-compliant fallback text).
     result = run_case("This loan offers instant approval with zero risk and no paperwork.")
     assert result.risk_label == RiskLabel.RISKY
-    assert result.regulator == "RBI"
+    assert result.regulator == "SEBI"
     assert result.resolution_status == ResolutionStatus.RESOLVED
     assert result.rewrite_attempts == 2
     assert result.verified_compliant is True
