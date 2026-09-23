@@ -1,0 +1,83 @@
+[
+  {
+    "SOURCE_ID": "SEBI_IA_REG_2013",
+    "REGULATOR": "SEBI",
+    "DOCUMENT_TITLE": "Investment Advisers Regulations, 2013",
+    "EFFECTIVE_DATE": "21-01-2013 (original notification; amended subsequently)",
+    "TEXT": "Regulatory requirements governing investment advisers, including registration, risk profiling, suitability, client agreements and responsibilities.",
+    "SOURCE_URL": "https://www.sebi.gov.in/legal/regulations/nov-2025/securities-and-exchange-board-of-india-investment-advisers-regulations-2013-and-securities-last-amended-on-november-25-2025-_98246.html",
+    "TOPIC": "Investment Advisers"
+  },
+  {
+    "SOURCE_ID": "SEBI_MC_IA_2026",
+    "REGULATOR": "SEBI",
+    "DOCUMENT_TITLE": "Master Circular for Investment Advisers, 2026",
+    "EFFECTIVE_DATE": "06-02-2026",
+    "TEXT": "Consolidated regulatory guidance and requirements applicable to investment advisers.",
+    "SOURCE_URL": "https://www.sebi.gov.in/legal/master-circulars/feb-2026/master-circular-for-investment-advisers_99569.html",
+    "TOPIC": "Investment Advisers"
+  },
+  {
+    "SOURCE_ID": "SEBI_SPOT_SCAM",
+    "REGULATOR": "SEBI",
+    "DOCUMENT_TITLE": "Spot a Scam",
+    "EFFECTIVE_DATE": "—",
+    "TEXT": "SEBI investor guidance concerning identification and avoidance of potential scams.",
+    "SOURCE_URL": "https://investor.sebi.gov.in/spot-any-scam.html",
+    "TOPIC": "Investor Protection"
+  },
+  {
+    "SOURCE_ID": "SEBI_INVESTOR_GUIDANCE",
+    "REGULATOR": "SEBI",
+    "DOCUMENT_TITLE": "Investor Guidance",
+    "EFFECTIVE_DATE": "—",
+    "TEXT": "General investor education and guidance published through the SEBI Investor portal.",
+    "SOURCE_URL": "https://investor.sebi.gov.in/",
+    "TOPIC": "Investor Education"
+  },
+  {
+    "SOURCE_ID": "RBI_DL_GUIDELINES_2022",
+    "REGULATOR": "RBI",
+    "DOCUMENT_TITLE": "Guidelines on Digital Lending, 2022",
+    "EFFECTIVE_DATE": "02-09-2022 (subsequently repealed)",
+    "TEXT": "Requirements relating to digital lending, including borrower disclosures, data collection, consent, fees and grievance-related requirements.",
+    "SOURCE_URL": "https://rbidocs.rbi.org.in/rdocs/notification/PDFs/GUIDELINESDIGITALLENDINGD5C35A71D8124A0E92AEB940A7D25BB3.PDF",
+    "TOPIC": "Digital Lending"
+  },
+  {
+    "SOURCE_ID": "RBI_DL_DIRECTIONS_2025",
+    "REGULATOR": "RBI",
+    "DOCUMENT_TITLE": "Digital Lending Directions, 2025",
+    "EFFECTIVE_DATE": "08-05-2025; Para 6 effective 01-11-2025; Para 17 effective 15-06-2025",
+    "TEXT": "Official RBI Directions; effective immediately except Para 6 from 01-11-2025 and Para 17 from 15-06-2025.",
+    "SOURCE_URL": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=12848&Mode=0",
+    "TOPIC": "Digital Lending"
+  },
+  {
+    "SOURCE_ID": "DPDP_ACT_2023",
+    "REGULATOR": "DPDP",
+    "DOCUMENT_TITLE": "Digital Personal Data Protection Act, 2023",
+    "EFFECTIVE_DATE": "13-11-2025 (staggered commencement)",
+    "TEXT": "Legal requirements governing processing of digital personal data and rights and duties of Data Principals and Data Fiduciaries.",
+    "SOURCE_URL": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+    "TOPIC": "Data Protection"
+  },
+  {
+    "SOURCE_ID": "DPDP_RULES_2025",
+    "REGULATOR": "DPDP",
+    "DOCUMENT_TITLE": "Digital Personal Data Protection Rules, 2025",
+    "EFFECTIVE_DATE": "14-11-2025 (staggered commencement)",
+    "TEXT": "Rules providing detailed requirements for implementation of the Digital Personal Data Protection Act, 2023.",
+    "SOURCE_URL": "https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf",
+    "TOPIC": "Data Protection"
+  },
+  {
+    "SOURCE_ID": "SEBI_SMP_DISCLOSURE_2026",
+    "REGULATOR": "SEBI",
+    "DOCUMENT_TITLE": "Ease of Doing Investment (EoDI)- Disclosure of registered name and registration number by SEBI regulated entities and their agents on Social Media Platforms (SMPs)",
+    "EFFECTIVE_DATE": "26-02-2026",
+    "TEXT": "SEBI requires SEBI-regulated entities and their agents to disclose their registered name and registration number on applicable social media platforms.",
+    "SOURCE_URL": "https://www.sebi.gov.in/legal/circulars/feb-2026/ease-of-doing-investment-eodi-disclosure-of-registered-name-and-registration-number-by-sebi-regulated-entities-and-their-agents-on-social-media-platforms-smps-_100005.html",
+    "TOPIC": "Social Media Disclosure"
+  }
+]

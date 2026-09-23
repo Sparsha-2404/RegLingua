@@ -1,0 +1,277 @@
+id,source_id,source_reference,evidence_status,evidence_note
+SEBI001,SEBI_IA_REG_2013,Regulation 17,VERIFIED,Regulation 17 covers suitability of investment advice; the example describes advice based on client financial goals.
+SEBI002,SEBI_IA_REG_2013,Regulation 17(a),VERIFIED,Regulation 16 requires client risk profiling and Regulation 17 requires suitability; the example aligns with recommending investments based on the risk profile.
+SEBI003,SEBI_IA_REG_2013,Regulation 16/17,VERIFIED,SEBI requires relevant client information/risk profiling and suitability before investment advice. The Master Circular also states advice should follow completion of risk profiling and suitability.
+SEBI004,SEBI_IA_REG_2013,Regulations 16 and 17,VERIFIED,The cited provisions cover risk profiling and suitability of investment advice.
+SEBI005,SEBI_IA_REG_2013,Regulation 17(e),VERIFIED,The cited regulatory framework requires suitability assessment and consideration of relevant client/product factors before advice; the example describes bypassing assessment of investment experience.
+SEBI006,SEBI_SPOT_SCAM,Guidelines for Spotting a Scam,VERIFIED,SEBI Investor guidance warns investors about assured/guaranteed returns and unrealistic profit claims.
+SEBI007,SEBI_SPOT_SCAM,Guidelines for Spotting a Scam,VERIFIED,"The example describes assured returns regardless of market conditions, matching SEBI Investor scam-warning guidance."
+SEBI008,SEBI_INVESTOR_GUIDANCE,Factors to Consider Before Investing,VERIFIED,The investor guidance explains that investments carry market risk and returns are not guaranteed.
+SEBI009,SEBI_INVESTOR_GUIDANCE,Factors to Consider Before Investing,VERIFIED,The cited investor guidance supports providing investors with information to understand investment options and associated considerations.
+SEBI0010,SEBI_IA_REG_2013,Regulation 16,VERIFIED,"Regulation 16 requires the investment adviser to obtain information necessary for investment advice, including risk appetite/tolerance; the example directly reflects risk profiling."
+SEBI0011,SEBI_MC_IA_2026,Risk Profiling & Suitability,VERIFIED,The February 2026 Master Circular states that investment advice should be provided only after completing the client's risk profile and ensuring suitability.
+SEBI0012,SEBI_MC_IA_2026,Risk Profiling & Suitability,VERIFIED,The Master Circular requires completion of risk profiling before providing investment advice.
+SEBI0013,SEBI_MC_IA_2026,Client Agreement / Disclosure,VERIFIED,The Master Circular requires an investment advisory agreement with specified terms and requires disclosure of agreement terms including fees before advisory services/fees.
+SEBI0014,SEBI_MC_IA_2026,Client Agreement / Disclosure,VERIFIED,The Master Circular requires the client agreement to cover applicable terms and fees; failure to disclose fees conflicts with that requirement.
+SEBI0015,SEBI_MC_IA_2026,Conflict of Interest Disclosure,VERIFIED,The Master Circular requires appropriate disclosure of potential conflicts of interest to clients.
+SEBI0016,SEBI_MC_IA_2026,Conflict of Interest Disclosure,VERIFIED,The cited conflict-of-interest guidance requires disclosure to clients of possible sources or potential areas of conflict.
+SEBI0017,SEBI_MC_IA_2026,Investor Charter,VERIFIED,"The Master Circular requires registered name, registration type, registration number and related details to be prominently displayed on specified client-facing channels."
+SEBI0018,SEBI_IA_REG_2013,Regulation 3(1),VERIFIED,Regulation 3(1) states that a person cannot act as or hold itself out as an investment adviser without obtaining the required SEBI registration.
+SEBI0019,SEBI_IA_REG_2013,"Regulation 19(1), read with applicable SEBI circular on maintenance of records",VERIFIED,"Regulation 19(1) requires investment advisers to maintain records relating to their activities, including client interactions/advice-related records under applicable SEBI requirements."
+SEBI0020,SEBI_MC_IA_2026,Advertisement Code,VERIFIED,The February 2026 Master Circular contains an Advertisement Code for Investment Advisers and requires compliance with it for advertisements and communications.
+SEBI0021,SEBI_IA_REG_2013,Regulation 15(6),VERIFIED,Regulation 15(6) addresses maintenance of confidentiality of client information and restrictions on disclosure.
+SEBI0022,SEBI_IA_REG_2013,Regulation 15(6),VERIFIED,The example describes disclosure of confidential client information contrary to the confidentiality requirement.
+SEBI0023,SEBI_IA_REG_2013,Regulation 15(8),VERIFIED,Regulation 15(8) addresses KYC requirements applicable before providing investment advisory services.
+SEBI0024,SEBI_IA_REG_2013,Regulation 15(8),VERIFIED,Regulation 15(8) requires an Investment Adviser to comply with applicable KYC requirements before providing investment advisory services. The example describes providing investment advice without completing the required KYC process.
+SEBI0025,SEBI_IA_REG_2013,"Regulation 15(1), 15(5)",VERIFIED,The cited provisions address conflict-of-interest management and disclosure requirements for investment advisers.
+SEBI0026,SEBI_IA_REG_2013,"Regulation 15(2), 19(2)",VERIFIED,The cited provisions are relevant to compensation/conflict disclosures where an adviser or associated entity receives compensation connected with recommended products/services.
+SEBI0027,SEBI_IA_REG_2013,"Regulations 15(14), 18(9)",VERIFIED,The cited provisions address use of artificial intelligence/machine learning tools in investment advisory activities and associated responsibility/disclosure requirements.
+SEBI0028,SEBI_IA_REG_2013,Regulation 15(14),VERIFIED,The cited provision places responsibility on the investment adviser for activities/services involving AI or ML tools; the example describes attempting to disclaim that responsibility.
+SEBI0029,SEBI_IA_REG_2013,Regulation 19,VERIFIED,"Regulation 19 addresses maintenance of records by investment advisers, including records relevant to client advice and compliance."
+SEBI0030,SEBI_IA_REG_2013,Regulation 19,VERIFIED,"The example describes providing advice without maintaining required advisory records, which conflicts with the record-maintenance requirement."
+SEBI0031,SEBI_MC_IA_2026,Client Disclosure,VERIFIED,The February 2026 Master Circular contains client-facing disclosure requirements covering relevant information that must be provided to prospective/clients.
+SEBI0032,SEBI_MC_IA_2026,Client Disclosure,VERIFIED,The example describes withholding business affiliations/material information that the cited disclosure framework requires to be communicated.
+SEBI0033,SEBI_MC_IA_2026,Compensation Disclosure,VERIFIED,The Master Circular contains disclosure requirements for remuneration/compensation received by an investment adviser or associate in connection with distribution/execution services.
+SEBI0034,SEBI_MC_IA_2026,Compensation Disclosure,VERIFIED,The example describes recommending a product without making the corresponding compensation disclosure.
+SEBI0035,SEBI_MC_IA_2026,Intermediary Disclosure,VERIFIED,The Master Circular requires disclosure of remuneration/compensation that may be received when recommending another intermediary.
+SEBI0036,SEBI_MC_IA_2026,Intermediary Disclosure,VERIFIED,"The example describes recommending an intermediary without disclosing potential compensation, which conflicts with the cited disclosure requirement."
+SEBI0037,SEBI_MC_IA_2026,Holdings Disclosure,VERIFIED,The Master Circular contains disclosure requirements concerning holdings/positions relevant to investment advice and conflicts.
+SEBI0038,SEBI_MC_IA_2026,Holdings Disclosure,VERIFIED,The example describes recommending a security without disclosing a relevant adviser holding/position.
+SEBI0039,SEBI_MC_IA_2026,Product Disclosure,VERIFIED,The Master Circular contains requirements concerning disclosure of material information and relevant characteristics/performance information when providing investment advice.
+SEBI0040,SEBI_MC_IA_2026,Product Disclosure,VERIFIED,The example describes withholding material product/security information relevant to an investment recommendation.
+SEBI0041,SEBI_MC_IA_2026,Warnings / Disclaimers,VERIFIED,"The Master Circular contains requirements concerning appropriate risk warnings, disclaimers and disclosures in investment-adviser communications."
+SEBI0042,SEBI_MC_IA_2026,Warnings / Disclaimers,VERIFIED,"The example describes suppressing required risk warnings/disclaimers, which conflicts with the applicable communication requirements."
+SEBI0043,SEBI_MC_IA_2026,Website Disclosure,VERIFIED,The Master Circular contains requirements for Investment Advisers to maintain and provide specified information through their website/client-facing channels.
+SEBI0044,SEBI_MC_IA_2026,Website Disclosure,VERIFIED,The example describes failing to provide required information on the adviser's website.
+SEBI0045,SEBI_MC_IA_2026,Regulatory Status Disclosure,VERIFIED,The Master Circular requires specified registration/status information to be disclosed to clients and prospective clients.
+SEBI0046,SEBI_MC_IA_2026,Regulatory Status Disclosure,VERIFIED,The example describes withholding required information concerning the adviser's regulatory status.
+SEBI0047,SEBI_MC_IA_2026,Grievance Disclosure,VERIFIED,The Master Circular requires Investment Advisers to provide specified information concerning investor/client grievance redressal.
+SEBI0048,SEBI_MC_IA_2026,Grievance Disclosure,VERIFIED,The example describes failing to provide information about the grievance-redressal process.
+SEBI0049,SEBI_MC_IA_2026,Compliance Audit,VERIFIED,The Master Circular contains requirements concerning compliance audits of Investment Advisers.
+SEBI0050,SEBI_MC_IA_2026,Compliance Audit,VERIFIED,The example describes not conducting the required compliance audit.
+SEBI0051,SEBI_MC_IA_2026,Periodic Reporting,VERIFIED,SEBI requires Investment Advisers to submit periodic regulatory reports in the prescribed manner.
+SEBI0052,SEBI_MC_IA_2026,Periodic Reporting,VERIFIED,The example describes failure to submit required periodic regulatory reports.
+SEBI0053,SEBI_MC_IA_2026,Client Agreement,VERIFIED,The Master Circular requires specified terms and conditions to be incorporated into the agreement between an Investment Adviser and client.
+SEBI0054,SEBI_MC_IA_2026,Client Agreement,VERIFIED,The example describes providing investment-advisory services without completing the required client agreement.
+SEBI0055,SEBI_MC_IA_2026,Fees,VERIFIED,The Master Circular contains requirements concerning disclosure and charging of fees for investment-advisory services.
+SEBI0056,SEBI_MC_IA_2026,Fees,VERIFIED,The example describes providing advisory services without clearly disclosing applicable fees.
+SEBI0057,SEBI_MC_IA_2026,Fees,VERIFIED,The cited framework requires applicable fees/charges and relevant terms to be disclosed to clients.
+SEBI0058,SEBI_MC_IA_2026,Fees,VERIFIED,The example describes charging a fee that was not disclosed to the client in advance.
+SEBI0059,SEBI_MC_IA_2026,Guaranteed Returns,VERIFIED,"The Master Circular/advertisement framework restricts misleading claims and communications concerning investment returns, including guarantees or assured returns."
+SEBI0060,SEBI_MC_IA_2026,Guaranteed Returns,VERIFIED,"The example describes promising guaranteed investment returns, which conflicts with the applicable SEBI communication requirements."
+SEBI0061,SEBI_MC_IA_2026,Direct Plans,VERIFIED,The Master Circular contains requirements concerning direct plans and disclosure of relevant options to clients.
+SEBI0062,SEBI_MC_IA_2026,Fees,REVIEW,The example concerns changing the fee mode without checking the resulting fee against the applicable maximum; the exact fee-cap provision should be checked against the current Master Circular before treating this as fully verified.
+SEBI0063,SEBI_MC_IA_2026,Client Funds,VERIFIED,The Master Circular contains requirements concerning handling and segregation of client money and prohibits inappropriate mixing of client funds with the adviser's own funds.
+SEBI0064,SEBI_MC_IA_2026,Client Funds,VERIFIED,"The example describes mixing client funds with the adviser's own operational funds, which conflicts with applicable client-money handling requirements."
+SEBI0065,SEBI_MC_IA_2026,Direct Plans,VERIFIED,The Master Circular contains disclosure requirements concerning direct plans and the distinction between direct and regular plans.
+SEBI0066,SEBI_MC_IA_2026,Direct Plans,VERIFIED,The cited SEBI framework contains requirements restricting Investment Advisers from handling or receiving clients' securities on their own behalf. The example describes asking clients to transfer securities to the adviser's account for management.
+SEBI0067,SEBI_MC_IA_2026,Fees / Compensation Disclosure,VERIFIED,The Master Circular contains requirements concerning disclosure of fees and compensation received in connection with investment-advisory services.
+SEBI0068,SEBI_MC_IA_2026,Regular Plans / Commission,REVIEW,The example involves commission-based regular plans and suitability/direct-plan considerations; the exact regulatory applicability depends on the adviser's registration/business arrangement and should be manually reviewed.
+SEBI0069,SEBI_MC_IA_2026,Regulatory Compliance / Disclosure,VERIFIED,The Master Circular consolidates applicable regulatory requirements and disclosure obligations for Investment Advisers.
+SEBI0070,SEBI_MC_IA_2026,Regulatory Compliance / Disclosure,VERIFIED,The example describes disregarding applicable regulatory requirements and disclosures covered by the Master Circular.
+RBI001,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,"The cited provision requires disclosure of the all-inclusive cost of the digital loan, including APR, before the loan is accepted."
+RBI002,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,The cited provision requires the Key Facts Statement to be provided to the borrower before execution of the loan contract.
+RBI003,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,The KFS requirement supports disclosure of material loan terms and costs before the borrower enters the loan.
+RBI004,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,The cited framework requires disclosure of the all-inclusive cost/APR and applicable charges.
+RBI005,RBI_DL_GUIDELINES_2022,Para 5.1.1,VERIFIED,The cited provision requires explicit borrower consent for collection of data through digital lending applications.
+RBI006,RBI_DL_GUIDELINES_2022,Para 5.1.1,VERIFIED,The cited framework requires need-based data collection with explicit consent and an audit trail.
+RBI007,RBI_DL_GUIDELINES_2022,Para 5.1.1,VERIFIED,The example conflicts with the requirement for explicit consent before collection of personal data.
+RBI008,RBI_DL_GUIDELINES_2022,Para 5.1.1,VERIFIED,The framework supports granular consent and appropriate controls over collection/use of data.
+RBI009,RBI_DL_GUIDELINES_2022,Para 5.1.2,VERIFIED,The cited provision requires the lender/LSP to provide a comprehensive privacy policy covering data collection and use.
+RBI010,RBI_DL_GUIDELINES_2022,Para 5.1.2,VERIFIED,The example conflicts with the requirement to provide an appropriate privacy policy.
+RBI011,RBI_DL_GUIDELINES_2022,Para 5.2.2,VERIFIED,"The framework requires loan disbursal directly into the borrower's bank account, subject to specified exceptions."
+RBI012,RBI_DL_GUIDELINES_2022,Para 5.2.2,VERIFIED,"The example describes routine disbursal to an LSP account, contrary to the prescribed disbursal mechanism."
+RBI013,RBI_DL_GUIDELINES_2022,Para 5.2.3,VERIFIED,"The framework requires repayment directly into the regulated entity's bank account, subject to permitted exceptions."
+RBI014,RBI_DL_GUIDELINES_2022,Para 5.2.3,VERIFIED,"The example describes directing repayment to a third-party account, contrary to the cited requirement."
+RBI015,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,The cited provision supports disclosure of the total cost/APR and applicable charges before loan acceptance.
+RBI016,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,"The example describes charging an undisclosed fee, which conflicts with the disclosure requirement."
+RBI017,RBI_DL_GUIDELINES_2022,Para 5.2.4,VERIFIED,"The cited provision provides for a cooling-off period during which the borrower may exit the digital loan without penalty, subject to the prescribed conditions."
+RBI018,RBI_DL_GUIDELINES_2022,Para 5.2.4,VERIFIED,The example describes denying the prescribed cooling-off option.
+RBI019,RBI_DL_GUIDELINES_2022,Para 5.3.1,VERIFIED,The framework requires the borrower to be informed of the recovery agent's details at the time of assigning the recovery function.
+RBI020,RBI_DL_GUIDELINES_2022,Para 5.3.1,VERIFIED,The example describes beginning recovery without providing the required recovery-agent information.
+RBI021,RBI_DL_GUIDELINES_2022,Para 5.1.3,VERIFIED,The framework requires the regulated entity to ensure appropriate creditworthiness assessment before extending digital credit.
+RBI022,RBI_DL_GUIDELINES_2022,Para 5.1.3,VERIFIED,The example describes granting digital credit without the required creditworthiness assessment.
+RBI023,RBI_DL_GUIDELINES_2022,Para 5.2,VERIFIED,The cited section contains requirements concerning disclosure of material information about digital lending products.
+RBI024,RBI_DL_GUIDELINES_2022,Para 5.2,VERIFIED,The example describes providing a digital loan without adequately disclosing material loan terms.
+RBI025,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,The cited provision supports disclosure of applicable charges and the all-inclusive cost/APR.
+RBI026,RBI_DL_GUIDELINES_2022,Para 5.2.1,VERIFIED,The example describes imposing charges that were not disclosed to the borrower.
+RBI027,RBI_DL_GUIDELINES_2022,Para 5.4,VERIFIED,The cited framework requires an effective grievance-redressal mechanism for digital lending activities.
+RBI028,RBI_DL_GUIDELINES_2022,Para 5.4,VERIFIED,The example describes the absence of an effective grievance-redressal mechanism.
+RBI029,RBI_DL_GUIDELINES_2022,Para 5.4,VERIFIED,The cited framework requires appropriate grievance-redressal arrangements and communication of relevant contact details.
+RBI030,RBI_DL_GUIDELINES_2022,Para 5.4,VERIFIED,The example describes failing to provide the borrower with the required grievance information.
+RBI031,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,Para 5 requires regulated entities to conduct appropriate due diligence on Lending Service Providers before entering into arrangements.
+RBI032,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,The example describes onboarding an LSP without the required due diligence.
+RBI033,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,Para 6 requires an appropriate and consistent mechanism for matching similarly placed borrowers with lender offers and specifies information to be displayed for loan-offer comparison.
+RBI034,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,Para 6 requires transparency and an unbiased presentation of matching loan offers. The example describes commercially or otherwise biased promotion of one lender over other matching offers.
+RBI035,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,"Para 12 requires collection of personal data through digital lending applications to be need-based and based on explicit consent, with appropriate controls for consent and withdrawal."
+RBI036,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,The example describes collecting or using borrower personal data without the applicable consent controls required under Para 12.
+RBI037,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,"The example describes providing borrowers with an option to withdraw previously provided consent, consistent with the consent controls described in Para 12."
+RBI038,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,"Para 12 places conditions on sharing borrower personal data with third parties, including appropriate consent and purpose-related controls. The example describes third-party sharing without the required consent."
+RBI039,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,"Para 13 requires data collected through digital lending applications to be stored only in systems located in India, subject to the specified requirements."
+RBI040,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,Para 13 requires regulated entities to ensure that data stored outside India is deleted from the foreign storage system and brought back to India within the specified period.
+RBI041,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,Para 13 requires regulated entities to ensure that biometric data is not collected or stored unless specifically permitted under applicable law.
+RBI042,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,Para 13 requires regulated entities to ensure that data is stored in India and that applicable data-storage requirements are followed.
+RBI043,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,Para 14 requires regulated entities to ensure that digital lending arrangements have a comprehensive privacy policy covering specified data practices.
+RBI044,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,"Para 14 requires the privacy policy to specify the type of data collected, purposes of collection, storage/use practices and related privacy requirements."
+RBI045,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,Para 14 requires the privacy policy to be comprehensive and to address the applicable privacy practices for digital lending arrangements.
+RBI046,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,Para 15 requires regulated entities to ensure that their digital lending technology systems comply with applicable technology and cybersecurity standards.
+RBI047,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 16 requires lending-related credit information to be reported to Credit Information Companies in accordance with the applicable requirements.
+RBI048,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 17 requires regulated entities to report information relating to their Digital Lending Apps to RBI through the specified CIMS reporting mechanism
+RBI049,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 17 requires regulated entities to keep information relating to their Digital Lending Apps updated through the prescribed RBI reporting mechanism.
+RBI050,RBI_DL_DIRECTIONS_2025,Para 6,REVIEW,Para 6 requires an appropriate and consistent mechanism for matching similarly placed borrowers with lender offers. The specific claim concerning undocumented changes to the matching mechanism is not sufficiently established by the cited provision alone and should remain under review.
+RBI051,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,"Para 17 requires reporting of Digital Lending Apps to RBI through the prescribed CIMS mechanism, with the regulated entity responsible for the reported information."
+RBI052,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 17 requires regulated entities to report their Digital Lending Apps through the prescribed RBI reporting mechanism.
+RBI053,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 18 specifies the eligibility requirements applicable to an entity acting as a Digital Lending Guidelines provider (DLG provider).
+RBI054,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 19 requires regulated entities to have a board-approved policy governing Digital Lending Guidelines arrangements.
+RBI055,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 19 clarifies that DLG arrangements cannot be treated as a substitute for proper credit appraisal and underwriting by the regulated entity.
+RBI056,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,Para 19 requires regulated entities to carry out due diligence of the DLG provider and satisfy the specified requirements before entering into a DLG arrangement.
+RBI057,RBI_DL_DIRECTIONS_2025,Para 7,VERIFIED,Para 20 restricts regulated entities from entering into DLG arrangements for the facilities specified in the Directions.
+RBI058,RBI_DL_DIRECTIONS_2025,Para 7,VERIFIED,"Para 20 specifies restrictions on credit-guarantee arrangements, including the facilities for which DLG arrangements cannot be entered into."
+RBI059,RBI_DL_DIRECTIONS_2025,Para 10,VERIFIED,Para 20 also restricts DLG arrangements in the specified peer-to-peer lending context.
+RBI060,RBI_DL_DIRECTIONS_2025,Para 10,VERIFIED,Para 21 requires DLG arrangements to be structured through an explicit contractual arrangement containing the applicable terms and conditions.
+RBI061,RBI_DL_DIRECTIONS_2025,Para 11,VERIFIED,Para 22 specifies the permitted forms in which DLG may be provided.
+RBI062,RBI_DL_DIRECTIONS_2025,Para 11,VERIFIED,Para 23 caps the amount of DLG that may be provided at 5% of the amount of the underlying loan portfolio.
+RBI063,RBI_DL_DIRECTIONS_2025,Para 11,VERIFIED,Para 24 specifies the treatment of the underlying loan portfolio for recognition of Non-Performing Assets (NPA) in the context of DLG arrangements.
+RBI064,RBI_DL_DIRECTIONS_2025,Para 11,VERIFIED,Para 24 provides requirements concerning recovery after invocation of DLG and its treatment in relation to the underlying loan.
+RBI065,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,Para 25 specifies the regulatory-capital treatment applicable to DLG arrangements.
+RBI066,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,Para 26 specifies requirements relating to invocation of DLG and the applicable tenor/period of the DLG arrangement.
+RBI067,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,Para 27 requires disclosure of relevant information relating to DLG arrangements at the prescribed level.
+RBI068,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,Para 27 specifies requirements for periodic/monthly disclosure relating to DLG arrangements
+RBI069,RBI_DL_DIRECTIONS_2025,Para 16,VERIFIED,Para 28 provides the specified exceptions to the DLG requirements for guarantee schemes covered by the applicable government/other arrangements.
+RBI070,RBI_DL_DIRECTIONS_2025,Para 16,VERIFIED,"Para 29 contains general provisions applicable to digital lending arrangements, including the specified treatment of DLG and related regulatory requirements."
+DPDP001,DPDP_ACT_2023,Section 5,VERIFIED,Section 5 requires a notice to be given to the Data Principal describing the personal data and purpose of processing.
+DPDP002,DPDP_ACT_2023,Section 5,VERIFIED,The cited section requires the Data Principal to be informed about the personal data being processed and the purpose of processing.
+DPDP003,DPDP_ACT_2023,Section 6,VERIFIED,"Section 6 addresses valid consent and requires consent to be free, specific, informed and unambiguous."
+DPDP004,DPDP_ACT_2023,Section 5,VERIFIED,The example describes collecting personal data without providing the required notice about its processing purpose.
+DPDP005,DPDP_ACT_2023,Section 4,VERIFIED,"Section 4 establishes that personal data may be processed for a lawful purpose, including a purpose for which consent has been given or certain legitimate uses apply."
+DPDP006,DPDP_ACT_2023,Section 4,VERIFIED,"The example describes processing personal data for an undisclosed purpose, which conflicts with the Act's lawful-purpose framework."
+DPDP007,DPDP_ACT_2023,Section 6,VERIFIED,Section 6 establishes requirements for valid consent before processing personal data on the basis of consent.
+DPDP008,DPDP_ACT_2023,Section 6,VERIFIED,The example describes processing personal data without obtaining the required consent.
+DPDP009,DPDP_ACT_2023,Section 7,VERIFIED,Section 7 provides requirements concerning withdrawal of consent and requires withdrawal to be as easy as giving consent.
+DPDP010,DPDP_ACT_2023,Section 7,VERIFIED,The example directly conflicts with the requirement that withdrawal of consent be as easy as giving consent.
+DPDP011,DPDP_ACT_2023,Section 8(4),VERIFIED,Section 8(4) requires a Data Fiduciary to protect personal data in its possession or control by taking reasonable security safeguards.
+DPDP012,DPDP_ACT_2023,Section 8(4),VERIFIED,The example describes storing personal data without the reasonable security safeguards required by Section 8(4).
+DPDP013,DPDP_ACT_2023,Section 8(4),VERIFIED,The cited provision establishes the obligation to maintain reasonable security safeguards for personal data.
+DPDP014,DPDP_ACT_2023,Section 8(4),VERIFIED,"The example describes maintaining controls intended to prevent unauthorised access, consistent with the security-safeguard obligation."
+DPDP015,DPDP_ACT_2023,Section 8(4),VERIFIED,The example describes failing to implement reasonable security safeguards.
+DPDP016,DPDP_ACT_2023,Section 8(6),VERIFIED,Section 8(6) addresses intimation of personal data breaches to the Board and affected Data Principals in the prescribed manner.
+DPDP017,DPDP_ACT_2023,Section 8(6),VERIFIED,The example describes delaying breach notification contrary to the breach-intimation obligation.
+DPDP018,DPDP_ACT_2023,Section 8(6),VERIFIED,The cited provision includes intimation to affected Data Principals in the event of a personal data breach.
+DPDP019,DPDP_ACT_2023,Section 8(6),VERIFIED,The example describes failing to provide the required breach information to affected Data Principals.
+DPDP020,DPDP_ACT_2023,Section 8(7),VERIFIED,"Section 8(7) requires erasure of personal data when the specified purpose is no longer being served, subject to applicable legal requirements."
+DPDP021,DPDP_ACT_2023,Section 8(7),VERIFIED,"The example describes indefinite retention after the purpose has been fulfilled, contrary to the cited erasure requirement."
+DPDP022,DPDP_ACT_2023,Section 8(7),VERIFIED,The example aligns with erasure/retention requirements where the specified purpose is no longer being served and no legal retention requirement applies.
+DPDP023,DPDP_ACT_2023,Section 8(7),VERIFIED,The example describes retaining personal data without an applicable purpose or requirement.
+DPDP024,DPDP_ACT_2023,Sections 11–14,VERIFIED,"Sections 11–14 establish rights of Data Principals including access, correction/erasure, grievance redressal and nomination."
+DPDP025,DPDP_ACT_2023,Sections 11–14,VERIFIED,The example describes failing to provide a practical mechanism for exercising Data Principal rights.
+DPDP026,DPDP_ACT_2023,Section 9,VERIFIED,Section 9 establishes additional obligations concerning processing of children's personal data.
+DPDP027,DPDP_ACT_2023,Section 9,VERIFIED,Section 9 requires verifiable parental consent before processing children's personal data.
+DPDP028,DPDP_ACT_2023,Section 9,VERIFIED,The example describes assuming consent without completing the applicable verification requirements.
+DPDP029,DPDP_ACT_2023,Section 9,VERIFIED,Section 9 restricts processing of children's personal data where it is likely to cause detrimental effects on the well-being of the child.
+DPDP030,DPDP_ACT_2023,Section 9,VERIFIED,Section 9 contains restrictions concerning tracking/behavioural monitoring of children and targeted advertising directed at children.
+DPDP031,DPDP_ACT_2023,Section 10,VERIFIED,"Section 10 establishes additional obligations for Significant Data Fiduciaries, including appointment of a Data Protection Officer."
+DPDP032,DPDP_ACT_2023,Section 10,VERIFIED,The example describes failing to appoint the required Data Protection Officer as a Significant Data Fiduciary.
+DPDP033,DPDP_ACT_2023,Section 10,VERIFIED,Section 10 requires Significant Data Fiduciaries to appoint an independent data auditor.
+DPDP034,DPDP_ACT_2023,Section 10,VERIFIED,The example describes failing to conduct the required data audit as a Significant Data Fiduciary.
+DPDP035,DPDP_ACT_2023,Section 11,VERIFIED,"Section 11 establishes the Data Principal's right to obtain information about personal data and its processing, subject to the Act."
+DPDP036,DPDP_ACT_2023,Section 11(1)(b),VERIFIED,"Section 11 gives the Data Principal the right to obtain the identities of other Data Fiduciaries and Data Processors with whom personal data has been shared, subject to the Act."
+DPDP037,DPDP_ACT_2023,Section 11(1)(b),VERIFIED,"The example describes refusing information that Section 11 makes available to the Data Principal, subject to applicable exceptions."
+DPDP038,DPDP_ACT_2023,Section 12,VERIFIED,Section 12 provides the Data Principal with rights concerning correction and erasure of personal data.
+DPDP039,DPDP_ACT_2023,Section 12,VERIFIED,The example describes refusing a valid correction or erasure request without an applicable basis.
+DPDP040,DPDP_ACT_2023,Section 13,VERIFIED,Section 13 provides the Data Principal with a right to grievance redressal and requires the Data Fiduciary to establish an effective mechanism for redressal.
+DPDP041,DPDP_ACT_2023,Section 13,VERIFIED,The example describes failing to provide a practical mechanism for grievance redressal.
+DPDP042,DPDP_ACT_2023,Section 14,VERIFIED,Section 14 provides the Data Principal with the right to nominate another individual to exercise rights in the event of death or incapacity.
+DPDP043,DPDP_ACT_2023,Section 14,VERIFIED,The example describes improperly preventing use of the nomination mechanism provided by the Act.
+DPDP044,DPDP_ACT_2023,Section 15,VERIFIED,"Section 15 specifies duties of the Data Principal, including compliance with applicable provisions of law."
+DPDP045,DPDP_ACT_2023,Section 15,VERIFIED,Section 15 includes duties relating to furnishing authentic information and other responsibilities imposed on the Data Principal.
+DPDP046,DPDP_ACT_2023,Section 8(3),VERIFIED,Section 8 requires the Data Fiduciary to take reasonable measures to ensure accuracy and completeness of personal data where applicable.
+DPDP047,DPDP_ACT_2023,Section 8,VERIFIED,"Section 8 establishes obligations concerning protection, retention and handling of personal data by the Data Fiduciary."
+DPDP048,DPDP_ACT_2023,Section 8(4),VERIFIED,Section 8(4) requires reasonable security safeguards to protect personal data in the possession or control of the Data Fiduciary.
+DPDP049,DPDP_ACT_2023,Section 10(2)(c),VERIFIED,Section 10 requires Significant Data Fiduciaries to undertake periodic Data Protection Impact Assessments and periodic audits.
+DPDP050,DPDP_ACT_2023,Section 10(2)(c),VERIFIED,The example describes failing to undertake a required Data Protection Impact Assessment as a Significant Data Fiduciary.
+DPDP051,DPDP_ACT_2023,Section 10(2)(b),VERIFIED,Section 10 requires a Significant Data Fiduciary to appoint an independent data auditor to carry out a data audit.
+DPDP052,DPDP_ACT_2023,Section 10(2)(b),VERIFIED,The example describes failing to conduct the required data audit as a Significant Data Fiduciary.
+DPDP053,DPDP_ACT_2023,Section 10(2)(a)(ii),VERIFIED,Section 10 requires the Data Protection Officer of a Significant Data Fiduciary to be based in India.
+DPDP054,DPDP_ACT_2023,Section 10(2)(a),VERIFIED,The example describes failing to appoint or appropriately locate the required Data Protection Officer.
+DPDP055,DPDP_ACT_2023,Section 10(2)(a)(iv),VERIFIED,Section 10 requires the Data Protection Officer to be the point of contact for the grievance redressal mechanism.
+DPDP056,DPDP_ACT_2023,Section 10(2)(a)(iv),VERIFIED,The example describes failing to make the Data Protection Officer available as the required grievance contact point.
+DPDP057,DPDP_ACT_2023,Section 10(2)(c)(i),VERIFIED,The Data Protection Impact Assessment required for Significant Data Fiduciaries includes assessment and management of risks to the rights of Data Principals.
+DPDP058,DPDP_ACT_2023,Section 10(2)(c)(i),VERIFIED,The example describes conducting significant data-processing activities without assessing relevant risks to Data Principal rights.
+DPDP059,DPDP_ACT_2023,Section 8(4),VERIFIED,Section 8(4) requires reasonable security safeguards for personal data held by or under the control of the Data Fiduciary.
+DPDP060,DPDP_ACT_2023,Section 8(4),VERIFIED,The example describes continuing data processing without reviewing or maintaining appropriate security safeguards.
+DPDP061,DPDP_ACT_2023,Section 11,VERIFIED,Section 11 establishes the Data Principal's right to obtain information concerning personal data being processed and related processing activities.
+DPDP062,DPDP_ACT_2023,Section 11,VERIFIED,The example describes creating unnecessary barriers to exercising the Data Principal's access right.
+DPDP063,DPDP_ACT_2023,Section 7,VERIFIED,Section 7 requires withdrawal of consent to be as easy as giving consent.
+DPDP064,DPDP_ACT_2023,Section 7,VERIFIED,The example directly conflicts with the requirement that withdrawal of consent be as easy as giving consent.
+DPDP065,DPDP_ACT_2023,Section 4,VERIFIED,"Section 4 permits processing of personal data for a lawful purpose, including purposes for which valid consent has been given or specified legitimate uses apply."
+DPDP066,DPDP_ACT_2023,Section 4,VERIFIED,"The example describes using personal data for an undisclosed/unrelated purpose, which is inconsistent with the lawful-purpose framework."
+DPDP067,DPDP_RULES_2025,Rule 3,VERIFIED,"Rule 3 requires the notice to be presented independently and in clear and plain language, including an itemised description of personal data and the specified purpose or purposes of processing."
+DPDP068,DPDP_RULES_2025,Rule 3,VERIFIED,"The example describes a notice that fails to clearly identify the personal data collected and processing purposes, contrary to Rule 3."
+DPDP069,DPDP_RULES_2025,Rule 3,VERIFIED,Rule 3 requires clear and plain-language notice containing the relevant personal-data and purpose information.
+DPDP070,DPDP_RULES_2025,Rule 3,VERIFIED,"The example describes providing information that is not independently understandable or accessible, contrary to the notice requirements in Rule 3."
+SEBI071,SEBI_SPOT_SCAM,,VERIFIED,"The cited nan requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+SEBI072,SEBI_MC_IA_2026,Risk Profiling & Suitability,VERIFIED,"The cited Risk Profiling & Suitability requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+SEBI073,SEBI_MC_IA_2026,Client Agreement / Disclosure,VERIFIED,"The cited Client Agreement / Disclosure requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+SEBI074,SEBI_MC_IA_2026,Conflict of Interest Disclosure,VERIFIED,"The cited Conflict of Interest Disclosure requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+SEBI075,SEBI_IA_REG_2013,Regulation 15(8),VERIFIED,"The cited Regulation 15(8) requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+SEBI076,SEBI_MC_IA_2026,Display of Details on Website,VERIFIED,"The cited Display of Details on Website requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+SEBI077,SEBI_MC_IA_2026,Investor Grievance Redressal,VERIFIED,"The cited Investor Grievance Redressal requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+SEBI078,SEBI_MC_IA_2026,Compliance Audit,VERIFIED,"The cited Compliance Audit requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+SEBI079,SEBI_MC_IA_2026,Agreement between IA and Client,VERIFIED,"The cited Agreement between IA and Client requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+SEBI080,SEBI_MC_IA_2026,Guidelines for Investment Advisers,VERIFIED,"The cited Guidelines for Investment Advisers requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+SEBI081,SEBI_MC_IA_2026,Most Important Terms and Conditions,VERIFIED,"The cited Most Important Terms and Conditions requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+SEBI082,SEBI_IA_REG_2013,Regulation 16/17,VERIFIED,"The cited Regulation 16/17 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+SEBI083,SEBI_IA_REG_2013,Regulation 17(a),VERIFIED,"The cited Regulation 17(a) requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI084,SEBI_IA_REG_2013,Regulation 16,VERIFIED,"The cited Regulation 16 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI085,SEBI_MC_IA_2026,Client Agreement / Disclosure,VERIFIED,"The cited Client Agreement / Disclosure requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI086,SEBI_MC_IA_2026,Conflict of Interest Disclosure,VERIFIED,"The cited Conflict of Interest Disclosure requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI087,SEBI_IA_REG_2013,Regulation 15(8),VERIFIED,"The cited Regulation 15(8) requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI088,SEBI_MC_IA_2026,Client Disclosure,VERIFIED,"The cited Client Disclosure requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI089,SEBI_MC_IA_2026,Display of Details on Website,VERIFIED,"The cited Display of Details on Website requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI090,SEBI_MC_IA_2026,Investor Grievance Redressal,VERIFIED,"The cited Investor Grievance Redressal requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI091,SEBI_MC_IA_2026,Compliance Audit,VERIFIED,"The cited Compliance Audit requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+SEBI092,SEBI_MC_IA_2026,Agreement between IA and Client,VERIFIED,"The cited Agreement between IA and Client requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI071,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,"The cited Para 6 requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+RBI072,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,"The cited Para 12 requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+RBI073,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,"The cited Para 12 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+RBI074,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,"The cited Para 6 requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+RBI075,RBI_DL_DIRECTIONS_2025,Para 7,VERIFIED,"The cited Para 7 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+RBI076,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,"The cited Para 5 requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+RBI077,RBI_DL_DIRECTIONS_2025,Para 11,VERIFIED,"The cited Para 11 requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+RBI078,RBI_DL_DIRECTIONS_2025,Para 11,VERIFIED,"The cited Para 11 requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+RBI079,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,"The cited Para 13 requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+RBI080,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,"The cited Para 6 requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+RBI081,RBI_DL_DIRECTIONS_2025,Para 16,VERIFIED,"The cited Para 16 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+RBI082,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,"The cited Para 12 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+RBI083,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,"The cited Para 6 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI084,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,"The cited Para 12 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI085,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,"The cited Para 12 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI086,RBI_DL_DIRECTIONS_2025,Para 12,VERIFIED,"The cited Para 12 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI087,RBI_DL_DIRECTIONS_2025,Para 13,VERIFIED,"The cited Para 13 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI088,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,"The cited Para 5 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI089,RBI_DL_DIRECTIONS_2025,Para 5,VERIFIED,"The cited Para 5 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI090,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,"The cited Para 6 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI091,RBI_DL_DIRECTIONS_2025,Para 6,VERIFIED,"The cited Para 6 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+RBI092,RBI_DL_DIRECTIONS_2025,Para 11,VERIFIED,"The cited Para 11 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP071,DPDP_RULES_2025,Rule 3,VERIFIED,"The cited Rule 3 requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+DPDP072,DPDP_ACT_2023,Section 6,VERIFIED,"The cited Section 6 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+DPDP073,DPDP_ACT_2023,"Section 6; DPDP Rules, 2025 — Rule 3",VERIFIED,"The cited Section 6; DPDP Rules, 2025 — Rule 3 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+DPDP074,DPDP_ACT_2023,"Sections 4, 5 and 7",VERIFIED,"The cited Sections 4, 5 and 7 requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+DPDP075,DPDP_ACT_2023,Section 8(5),VERIFIED,"The cited Section 8(5) requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+DPDP076,DPDP_ACT_2023,Section 8(6),VERIFIED,"The cited Section 8(6) requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+DPDP077,DPDP_ACT_2023,Section 8(7),VERIFIED,"The cited Section 8(7) requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+DPDP078,DPDP_ACT_2023,Section 11,VERIFIED,"The cited Section 11 requirement is directly relevant, and the example describes the required or permitted compliance behavior."
+DPDP079,DPDP_ACT_2023,Section 12,VERIFIED,"The cited Section 12 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+DPDP080,DPDP_ACT_2023,Section 13,VERIFIED,"The cited Section 13 requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+DPDP081,DPDP_ACT_2023,Section 9(1),VERIFIED,"The cited Section 9(1) requirement is relevant, but the example is intentionally context-dependent/partial, so the risk label is Medium for verifier-abstention testing."
+DPDP082,DPDP_ACT_2023,"Sections 4, 5 and 7",VERIFIED,"The cited Sections 4, 5 and 7 requirement is directly relevant, and the example describes conduct that conflicts with that requirement."
+DPDP083,DPDP_RULES_2025,Rule 3,VERIFIED,"The cited Rule 3 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP084,DPDP_ACT_2023,Section 6,VERIFIED,"The cited Section 6 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP085,DPDP_ACT_2023,"Section 6; DPDP Rules, 2025 — Rule 3",VERIFIED,"The cited Section 6; DPDP Rules, 2025 — Rule 3 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP086,DPDP_ACT_2023,"Sections 4, 5 and 7",VERIFIED,"The cited Sections 4, 5 and 7 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP087,DPDP_ACT_2023,Section 8(5),VERIFIED,"The cited Section 8(5) requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP088,DPDP_ACT_2023,Section 8(6),VERIFIED,"The cited Section 8(6) requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP089,DPDP_ACT_2023,Section 8(7),VERIFIED,"The cited Section 8(7) requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP090,DPDP_ACT_2023,Section 11,VERIFIED,"The cited Section 11 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP091,DPDP_ACT_2023,Section 12,VERIFIED,"The cited Section 12 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
+DPDP092,DPDP_ACT_2023,Section 13,VERIFIED,"The cited Section 13 requirement is relevant to the example pair. The examples intentionally include partial/conditional compliance, so the outcome depends on additional context; the pair is labeled Medium for verifier-abstention testing."
