@@ -13,7 +13,7 @@ import pytest
 # Make the repo root importable when running `pytest` from anywhere.
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from core.contracts import RiskLevel, RiskPrediction  # noqa: E402
+from services.classifier.contracts import RiskLevel, RiskPrediction  # noqa: E402
 from services.classifier.interface import MockRiskClassifier  # noqa: E402
 from services.classifier.baseline import TfidfLogisticClassifier  # noqa: E402
 from services.classifier.preprocessing import (  # noqa: E402
