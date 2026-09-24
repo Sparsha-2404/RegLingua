@@ -1,0 +1,102 @@
+[
+  {
+    "source_id": "SEBI_IA_001",
+    "regulator": "SEBI",
+    "document_title": "SEBI (Investment Advisers) Regulations — Registration Trigger",
+    "section": "Reg. 2(1)(m) — definition of investment advice",
+    "effective_date": "2013-01-21",
+    "text": "Any person who, for consideration, advises another person on the merits of buying, selling or otherwise dealing in securities, or offers personalized recommendations on investment products, is treated as providing investment advice and must be registered as an Investment Adviser.",
+    "source_url": "https://www.sebi.gov.in/legal/regulations/ia-regulations",
+    "topic": "personalized investment advice registration"
+  },
+  {
+    "source_id": "SEBI_IA_002",
+    "regulator": "SEBI",
+    "document_title": "SEBI Advertisement Code for Investment Advisers",
+    "section": "Clause 3 — prohibition on assured or guaranteed returns",
+    "effective_date": "2020-07-23",
+    "text": "No advertisement, marketing material or product description shall state or imply an assured, guaranteed or risk-free return on any securities-linked investment product, as returns on securities are inherently subject to market risk.",
+    "source_url": "https://www.sebi.gov.in/legal/circulars/advertisement-code",
+    "topic": "guaranteed returns marketing language"
+  },
+  {
+    "source_id": "SEBI_MF_003",
+    "regulator": "SEBI",
+    "document_title": "SEBI Mutual Fund Regulations — Risk Disclosure",
+    "section": "Reg. 29 — mandatory risk-factor disclosure",
+    "effective_date": "1996-12-09",
+    "text": "All mutual fund scheme communication must carry a standard risk disclosure statement and must not use past performance to imply future guaranteed outcomes to prospective investors.",
+    "source_url": "https://www.sebi.gov.in/legal/regulations/mf-regulations",
+    "topic": "risk disclosure past performance"
+  },
+  {
+    "source_id": "RBI_LEND_001",
+    "regulator": "RBI",
+    "document_title": "RBI Fair Practices Code for Lenders",
+    "section": "Para 5 — disclosure of interest rate and charges",
+    "effective_date": "2015-03-01",
+    "text": "Lenders and digital lending platforms must clearly disclose the annualised percentage rate, all applicable fees, and the total cost of credit to the borrower before loan sanction, in a manner the borrower can understand.",
+    "source_url": "https://www.rbi.org.in/fair-practices-code",
+    "topic": "interest rate disclosure lending"
+  },
+  {
+    "source_id": "RBI_LEND_002",
+    "regulator": "RBI",
+    "document_title": "RBI Digital Lending Guidelines",
+    "section": "Para 8 — restriction on unregulated lending claims",
+    "effective_date": "2022-09-02",
+    "text": "Digital lending apps must not claim, suggest or imply instant unconditional loan approval, and must not describe unregulated third-party lenders as RBI-approved or RBI-regulated entities.",
+    "source_url": "https://www.rbi.org.in/digital-lending-guidelines",
+    "topic": "instant loan approval claims digital lending"
+  },
+  {
+    "source_id": "RBI_PAY_003",
+    "regulator": "RBI",
+    "document_title": "RBI Payment and Settlement Systems Guidelines",
+    "section": "Para 12 — wallet and prepaid instrument communication",
+    "effective_date": "2017-10-11",
+    "text": "Prepaid payment instrument issuers must not represent wallet balances as bank deposits or as instruments carrying deposit insurance, since PPI balances are not covered by deposit insurance schemes.",
+    "source_url": "https://www.rbi.org.in/payment-systems-guidelines",
+    "topic": "wallet balance deposit insurance claims"
+  },
+  {
+    "source_id": "DPDP_001",
+    "regulator": "DPDP",
+    "document_title": "Digital Personal Data Protection Act, 2023",
+    "section": "Sec. 6 — consent requirements",
+    "effective_date": "2023-08-11",
+    "text": "Consent for processing personal data must be free, specific, informed, unconditional and unambiguous, given through a clear affirmative action, and a data fiduciary must not bundle consent for unrelated processing purposes into a single blanket checkbox.",
+    "source_url": "https://www.meity.gov.in/dpdp-act-2023",
+    "topic": "consent bundling blanket checkbox"
+  },
+  {
+    "source_id": "DPDP_002",
+    "regulator": "DPDP",
+    "document_title": "Digital Personal Data Protection Act, 2023",
+    "section": "Sec. 8 — notice requirements",
+    "effective_date": "2023-08-11",
+    "text": "A data fiduciary must give the data principal a notice, in clear and plain language, describing the personal data being collected and the specific purpose for which it will be processed, before or at the time of seeking consent.",
+    "source_url": "https://www.meity.gov.in/dpdp-act-2023",
+    "topic": "notice plain language purpose"
+  },
+  {
+    "source_id": "DPDP_003",
+    "regulator": "DPDP",
+    "document_title": "Digital Personal Data Protection Act, 2023",
+    "section": "Sec. 9 — children's data",
+    "effective_date": "2023-08-11",
+    "text": "Before processing any personal data of a child, a data fiduciary must obtain verifiable parental consent, and must not undertake tracking, behavioural monitoring or targeted advertising directed at children.",
+    "source_url": "https://www.meity.gov.in/dpdp-act-2023",
+    "topic": "children data parental consent targeted advertising"
+  },
+  {
+    "source_id": "DPDP_HI_004",
+    "regulator": "DPDP",
+    "document_title": "डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023",
+    "section": "धारा 6 — सहमति संबंधी आवश्यकताएँ",
+    "effective_date": "2023-08-11",
+    "text": "व्यक्तिगत डेटा को संसाधित करने के लिए सहमति स्वतंत्र, विशिष्ट, सूचित और स्पष्ट होनी चाहिए, और डेटा फिड्यूशियरी असंबंधित उद्देश्यों के लिए सहमति को एक ही चेकबॉक्स में नहीं जोड़ सकता।",
+    "source_url": "https://www.meity.gov.in/dpdp-act-2023-hi",
+    "topic": "consent bundling blanket checkbox hindi"
+  }
+]

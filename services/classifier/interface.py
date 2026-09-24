@@ -19,7 +19,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import List, Sequence
 
-from core.contracts import RiskPrediction
+from services.classifier.contracts import RiskPrediction
 
 
 class RiskClassifier(ABC):
@@ -83,7 +83,7 @@ class MockRiskClassifier(RiskClassifier):
                 risk_factors=hits,
                 regulator_candidates=["SEBI"],
             )
-        return RiskPrediction(risk_level="LOW", confidence=0.5, risk_factors=[])
+        return RiskPrediction(risk_level="LOW", confidence=0.85, risk_factors=[])
 
     def save(self, path: str) -> None:
         pass  # nothing to persist for a rule-based mock
