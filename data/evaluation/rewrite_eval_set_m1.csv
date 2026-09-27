@@ -1,0 +1,11 @@
+id,original_text,regulator,expected_banned_phrase_removed
+RW001,We guarantee 20% assured returns on your investment.,SEBI,guarantee
+RW002,This is a risk-free investment with zero risk of loss.,SEBI,risk-free
+RW003,Our fund offers the highest returns in the market guaranteed.,SEBI,guarantee
+RW004,Double your money in just 6 months with our sure-shot profit plan.,SEBI,double your money
+RW005,This loan offers instant approval with zero risk and no paperwork.,RBI,zero risk
+RW006,No questions asked loan with hidden charges waived forever.,RBI,no questions asked loan
+RW007,We can share your data with anyone we choose.,DPDP,share your data with anyone
+RW008,We will sell your data to third parties without asking.,DPDP,sell your data
+RW009,Sign up today - no consent required to use your information.,DPDP,no consent required
+RW010,Invest now and get 100% safe guaranteed returns with zero risk.,SEBI,guarantee
