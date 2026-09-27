@@ -68,3 +68,33 @@ def test_vector_search_rejects_empty_query():
         assert "query must not be empty" in str(exc)
     else:
         raise AssertionError("Expected ValueError for empty query")
+
+
+def test_vector_search_supports_topic_filter():
+    index = RegulatoryVectorIndex(encoder=FakeEncoder())
+    index.build()
+
+    results = index.search(
+        "guaranteed returns",
+        top_k=5,
+        topic="guaranteed returns marketing language",
+    )
+
+    assert results
+    assert all(
+        result["topic"] == "guaranteed returns marketing language"
+        for result in results
+    )
+
+
+def test_vector_search_supports_source_id_filter():
+    index = RegulatoryVectorIndex(encoder=FakeEncoder())
+    index.build()
+
+    results = index.search(
+        "guaranteed returns",
+        source_id="SEBI_IA_002",
+    )
+
+    assert len(results) == 1
+    assert results[0]["source_id"] == "SEBI_IA_002"
