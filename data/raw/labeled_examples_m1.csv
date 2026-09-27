@@ -1,0 +1,517 @@
+text,risk_level,language
+Our experts provide investment advice based on your financial goals,MEDIUM,en
+We recommend investments that match your risk profile,LOW,en
+Our platform recommends investments without asking about your financial situation,HIGH,en
+Our advisors recommend investments according to your financial objectives and risk tolerance,LOW,en
+We recommend complex financial products without assessing your investment experience,HIGH,en
+Our investment recommendations are guaranteed to generate profits,HIGH,en
+Earn assured returns from our investment strategy regardless of market conditions,HIGH,en
+Investments involve market risk and returns are not guaranteed,LOW,en
+We provide information to help you understand different investment options,LOW,en
+Our advisors assess your risk profile before recommending investments,LOW,en
+We provide investment advice without requiring clients to complete a risk profile.,HIGH,en
+We conduct risk profiling before providing investment advice,LOW,en
+Our clients receive information about our fees before entering into an advisory agreement,LOW,en
+We do not disclose our fees or compensation to clients before they use our advisory service,HIGH,en
+We disclose our business affiliations and potential conflicts of interest to clients,LOW,en
+We recommend investments without informing clients about our conflicts of interest,HIGH,en
+Our website displays our SEBI registration details and registration number,LOW,en
+We provide investment advisory services without being registered with SEBI,HIGH,en
+We maintain records of interactions with clients relating to investment advice,LOW,en
+Our advertisements promote our investment advisory services without following the applicable advertising requirements,HIGH,en
+We keep client information confidential and do not share it without the required permission,LOW,en
+We share confidential client information with third parties without obtaining the client's required permission,HIGH,en
+We follow Know Your Client procedures before providing investment advisory services,LOW,en
+We provide investment advice without completing the required KYC process,HIGH,en
+We disclose conflicts of interest that may affect our investment advisory services,LOW,en
+We receive compensation from another party for recommending a financial product to our advisory clients without disclosing it.,HIGH,en
+We use artificial intelligence tools to assist with investment advice and disclose their use to clients,LOW,en
+"Our AI system generates investment advice, but we do not take responsibility for the security or integrity of client data used by the system",HIGH,en
+"We maintain records of client KYC, risk profiling and suitability assessments",LOW,en
+We provide investment advice without maintaining records of the client's risk profile or suitability assessment,HIGH,en
+We disclose our business affiliations and relevant material information to prospective clients before they decide to use our advisory services.,LOW,en
+We do not disclose our business affiliations or other material information to prospective clients before they use our advisory services.,HIGH,en
+We disclose any remuneration or compensation received from an associate for distribution or execution services relating to products for which investment advice is provided.,LOW,en
+We recommend a product to a client without disclosing compensation received by our associate for distribution or execution services relating to that product.,HIGH,en
+"Before recommending another intermediary, we disclose any remuneration or compensation we may receive if the client uses that intermediary.",LOW,en
+We recommend a stock broker to clients without disclosing compensation we may receive from that intermediary.,HIGH,en
+We disclose any holdings or positions we have in financial products or securities that are the subject of our investment advice.,LOW,en
+We recommend a security to a client without disclosing that our adviser entity holds a position in that security.,HIGH,en
+"We disclose material facts about the key features of a product or security, including relevant performance information, when providing investment advice.",LOW,en
+We provide investment advice without disclosing material facts about the key features and relevant performance information of the recommended security.,HIGH,en
+We draw the client's attention to relevant warnings and disclaimers in documents or advertising materials relating to a recommended investment product.,LOW,en
+We recommend an investment product without drawing the client's attention to the relevant warnings and disclaimers in its documents or advertising materials.,HIGH,en
+We clearly disclose when an advisory service relates to a product or service outside SEBI's regulatory purview.,LOW,en
+We provide advisory services for products outside SEBI's regulatory purview without informing the client that SEBI regulatory recourse is unavailable for those services.,HIGH,en
+We maintain a functional website containing the information required for our investment advisory business.,LOW,en
+We provide investment advisory services without maintaining the required functional website.,HIGH,en
+"Our website prominently displays our registered name, registration type, registration number and validity.",LOW,en
+We do not display our SEBI registration number and registration validity prominently on our website or client communications.,HIGH,en
+We disclose our principal officer's contact details and the relevant SEBI office details through the required communication channels.,LOW,en
+We omit our principal officer's contact details and relevant SEBI office information from required client-facing disclosures.,HIGH,en
+We display information about complaints received and their redressal on our website within the prescribed reporting framework.,LOW,en
+We do not disclose the required complaint and redressal information on our website.,HIGH,en
+We conduct an annual audit of our compliance with the SEBI Investment Advisers Regulations.,LOW,en
+We do not conduct the required annual compliance audit of our investment advisory activities.,HIGH,en
+We submit the information and reports required by SEBI through the applicable periodic reporting process.,LOW,en
+We do not submit the periodic reports required by SEBI for our investment advisory activities.,HIGH,en
+We provide investment advice only after the client has signed the investment advisory agreement and received a copy of the signed agreement.,LOW,en
+We begin providing investment advice before the client signs the required investment advisory agreement.,HIGH,en
+We charge advisory fees only in accordance with the applicable fee modes and limits prescribed by SEBI.,LOW,en
+We charge advisory fees above the applicable maximum prescribed by SEBI for the relevant client and fee mode.,HIGH,en
+We ensure that the total fee charged remains within the applicable limit when changing the client's fee mode.,LOW,en
+We change a client’s fee mode without checking whether the resulting fee remains within the applicable maximum.,MEDIUM,en
+"We do not guarantee returns, profits or risk-free investments through our investment advisory services.",LOW,en
+We offer clients an investment advisory scheme promising assured or guaranteed returns.,HIGH,en
+We accept payments only towards our investment advisory fees and do not accept funds or securities in our account on behalf of clients.,LOW,en
+We ask clients to transfer securities to our account so that we can manage their investments on their behalf.,HIGH,en
+"We advise clients on direct plans where such plans are available, in accordance with the applicable SEBI requirements.",LOW,en
+"We advise a commission-based regular plan even though a direct plan is available, without considering the applicable direct-plan requirement.",MEDIUM,en
+We maintain the required separation between our investment advisory activities and other activities where segregation requirements apply.,LOW,en
+We combine our investment advisory and distribution activities for the same client without maintaining the required client-level segregation.,HIGH,en
+हमारे विशेषज्ञ आपके वित्तीय लक्ष्यों के आधार पर निवेश संबंधी सलाह देते हैं।,MEDIUM,hi
+हम आपकी जोखिम प्रोफ़ाइल के अनुरूप निवेश की सिफारिश करते हैं।,LOW,hi
+हमारा प्लेटफ़ॉर्म आपकी वित्तीय स्थिति के बारे में पूछे बिना निवेश की सिफारिश करता है।,HIGH,hi
+हमारे सलाहकार आपके वित्तीय उद्देश्यों और जोखिम सहनशीलता के अनुसार निवेश की सिफारिश करते हैं।,LOW,hi
+हम आपके निवेश अनुभव का आकलन किए बिना जटिल वित्तीय उत्पादों की सिफारिश करते हैं।,HIGH,hi
+हमारी निवेश सिफारिशों से लाभ की गारंटी दी जाती है।,HIGH,hi
+हमारी निवेश रणनीति से बाजार की परिस्थितियों की परवाह किए बिना सुनिश्चित रिटर्न अर्जित करने का वादा किया जाता है।,HIGH,hi
+निवेश में बाजार जोखिम शामिल होता है और रिटर्न की गारंटी नहीं होती।,LOW,hi
+हम विभिन्न निवेश विकल्पों को समझने में आपकी सहायता के लिए जानकारी प्रदान करते हैं।,LOW,hi
+हमारे सलाहकार निवेश की सिफारिश करने से पहले आपकी जोखिम प्रोफ़ाइल का आकलन करते हैं।,LOW,hi
+हम ग्राहकों से जोखिम प्रोफ़ाइल पूरा करवाए बिना निवेश संबंधी सलाह प्रदान करते हैं।,HIGH,hi
+हम निवेश संबंधी सलाह देने से पहले जोखिम प्रोफ़ाइल तैयार करते हैं।,LOW,hi
+हमारे ग्राहकों को सलाहकार समझौता करने से पहले हमारी फीस की जानकारी मिलती है।,LOW,hi
+हम ग्राहकों द्वारा हमारी सलाहकार सेवा लेने से पहले अपनी फीस या मुआवज़े का खुलासा नहीं करते।,HIGH,hi
+हम ग्राहकों को अपने व्यावसायिक संबंधों और संभावित हितों के टकराव का खुलासा करते हैं।,LOW,hi
+हम ग्राहकों को अपने हितों के टकराव के बारे में बताए बिना निवेश की सिफारिश करते हैं।,HIGH,hi
+हमारी वेबसाइट पर हमारा SEBI पंजीकरण विवरण और पंजीकरण संख्या प्रदर्शित होती है।,LOW,hi
+हम SEBI के साथ पंजीकृत हुए बिना निवेश सलाहकार सेवाएँ प्रदान करते हैं।,HIGH,hi
+हम निवेश सलाह से संबंधित ग्राहकों के साथ हुई बातचीत का रिकॉर्ड रखते हैं।,LOW,hi
+हमारे विज्ञापन लागू विज्ञापन आवश्यकताओं का पालन किए बिना हमारी निवेश सलाहकार सेवाओं का प्रचार करते हैं।,HIGH,hi
+हम ग्राहक की जानकारी को गोपनीय रखते हैं और आवश्यक अनुमति के बिना उसे साझा नहीं करते।,LOW,hi
+हम ग्राहक की आवश्यक अनुमति प्राप्त किए बिना उसकी गोपनीय जानकारी तीसरे पक्ष के साथ साझा करते हैं।,HIGH,hi
+हम निवेश सलाहकार सेवाएँ देने से पहले Know Your Client (KYC) प्रक्रियाओं का पालन करते हैं।,LOW,hi
+हम आवश्यक KYC प्रक्रिया पूरी किए बिना निवेश संबंधी सलाह प्रदान करते हैं।,HIGH,hi
+हम उन हितों के टकराव का खुलासा करते हैं जो हमारी निवेश सलाहकार सेवाओं को प्रभावित कर सकते हैं।,LOW,hi
+हम अपने सलाहकार ग्राहकों को वित्तीय उत्पाद की सिफारिश करने के लिए किसी अन्य पक्ष से प्राप्त मुआवज़े का खुलासा नहीं करते।,HIGH,hi
+हम निवेश सलाह में सहायता के लिए कृत्रिम बुद्धिमत्ता उपकरणों का उपयोग करते हैं और ग्राहकों को इसके उपयोग की जानकारी देते हैं।,LOW,hi
+"हमारी AI प्रणाली निवेश संबंधी सलाह तैयार करती है, लेकिन हम प्रणाली द्वारा उपयोग किए गए ग्राहक डेटा की सुरक्षा या अखंडता की जिम्मेदारी नहीं लेते।",HIGH,hi
+"हम ग्राहक के KYC, जोखिम प्रोफ़ाइल और उपयुक्तता आकलन के रिकॉर्ड रखते हैं।",LOW,hi
+हम ग्राहक की जोखिम प्रोफ़ाइल या उपयुक्तता आकलन का रिकॉर्ड रखे बिना निवेश संबंधी सलाह प्रदान करते हैं।,HIGH,hi
+हम संभावित ग्राहकों को हमारी सलाहकार सेवाएँ लेने का निर्णय करने से पहले अपने व्यावसायिक संबंधों और संबंधित महत्वपूर्ण जानकारी का खुलासा करते हैं।,LOW,hi
+हम संभावित ग्राहकों द्वारा हमारी सलाहकार सेवाएँ लेने से पहले अपने व्यावसायिक संबंधों या अन्य महत्वपूर्ण जानकारी का खुलासा नहीं करते।,HIGH,hi
+हम उन उत्पादों से संबंधित वितरण या निष्पादन सेवाओं के लिए किसी सहयोगी से प्राप्त पारिश्रमिक या मुआवज़े का खुलासा करते हैं जिनके लिए निवेश सलाह दी जाती है।,LOW,hi
+हम किसी उत्पाद की सिफारिश करते समय उस उत्पाद से संबंधित वितरण या निष्पादन सेवाओं के लिए अपने सहयोगी द्वारा प्राप्त मुआवज़े का खुलासा नहीं करते।,HIGH,hi
+किसी अन्य मध्यस्थ की सिफारिश करने से पहले हम ग्राहक को बताते हैं कि ग्राहक द्वारा उस मध्यस्थ का उपयोग करने पर हमें कोई पारिश्रमिक या मुआवज़ा मिल सकता है।,LOW,hi
+हम ग्राहकों को किसी स्टॉक ब्रोकर की सिफारिश करते हैं लेकिन उस मध्यस्थ से मिलने वाले संभावित मुआवज़े का खुलासा नहीं करते।,HIGH,hi
+हम उन वित्तीय उत्पादों या प्रतिभूतियों में अपनी होल्डिंग या स्थिति का खुलासा करते हैं जिनके बारे में हम निवेश सलाह देते हैं।,LOW,hi
+हम किसी ग्राहक को किसी प्रतिभूति की सिफारिश करते हैं लेकिन यह नहीं बताते कि हमारी सलाहकार संस्था के पास उस प्रतिभूति में स्थिति है।,HIGH,hi
+निवेश सलाह देते समय हम किसी उत्पाद या प्रतिभूति की प्रमुख विशेषताओं और संबंधित प्रदर्शन जानकारी सहित महत्वपूर्ण तथ्यों का खुलासा करते हैं।,LOW,hi
+हम अनुशंसित प्रतिभूति की प्रमुख विशेषताओं और संबंधित प्रदर्शन जानकारी के महत्वपूर्ण तथ्यों का खुलासा किए बिना निवेश सलाह प्रदान करते हैं।,HIGH,hi
+हम अनुशंसित निवेश उत्पाद से संबंधित दस्तावेज़ों या विज्ञापन सामग्री में दिए गए प्रासंगिक चेतावनियों और अस्वीकरणों पर ग्राहक का ध्यान दिलाते हैं।,LOW,hi
+हम किसी निवेश उत्पाद की सिफारिश करते समय उसके दस्तावेज़ों या विज्ञापन सामग्री में दिए गए प्रासंगिक चेतावनियों और अस्वीकरणों पर ग्राहक का ध्यान नहीं दिलाते।,HIGH,hi
+"जब कोई सलाहकार सेवा ऐसे उत्पाद या सेवा से संबंधित होती है जो SEBI के नियामकीय दायरे से बाहर है, तो हम इसे स्पष्ट रूप से बताते हैं।",LOW,hi
+हम SEBI के नियामकीय दायरे से बाहर के उत्पादों के लिए सलाहकार सेवाएँ प्रदान करते हैं लेकिन ग्राहक को यह नहीं बताते कि उन सेवाओं के लिए SEBI के तहत नियामकीय शिकायत का उपाय उपलब्ध नहीं है।,HIGH,hi
+हम अपनी निवेश सलाहकार गतिविधियों के लिए आवश्यक जानकारी वाली कार्यशील वेबसाइट बनाए रखते हैं।,LOW,hi
+हम आवश्यक कार्यशील वेबसाइट बनाए बिना निवेश सलाहकार सेवाएँ प्रदान करते हैं।,HIGH,hi
+"हमारी वेबसाइट पर हमारा पंजीकृत नाम, पंजीकरण का प्रकार, पंजीकरण संख्या और वैधता प्रमुखता से प्रदर्शित होती है।",LOW,hi
+हम अपनी वेबसाइट या ग्राहक संचार में अपनी SEBI पंजीकरण संख्या और पंजीकरण की वैधता प्रमुखता से प्रदर्शित नहीं करते।,HIGH,hi
+हम आवश्यक संचार माध्यमों के माध्यम से अपने प्रधान अधिकारी के संपर्क विवरण और संबंधित SEBI कार्यालय के विवरण का खुलासा करते हैं।,LOW,hi
+हम आवश्यक ग्राहक-सामना वाले प्रकटीकरण में अपने प्रधान अधिकारी के संपर्क विवरण और संबंधित SEBI कार्यालय की जानकारी शामिल नहीं करते।,HIGH,hi
+हम निर्धारित रिपोर्टिंग ढाँचे के अनुसार अपनी वेबसाइट पर प्राप्त शिकायतों और उनके निवारण की जानकारी प्रदर्शित करते हैं।,LOW,hi
+हम अपनी वेबसाइट पर आवश्यक शिकायत और निवारण संबंधी जानकारी का खुलासा नहीं करते।,HIGH,hi
+हम SEBI Investment Advisers Regulations के अनुपालन का वार्षिक ऑडिट करवाते हैं।,LOW,hi
+हम अपनी निवेश सलाहकार गतिविधियों का आवश्यक वार्षिक अनुपालन ऑडिट नहीं करवाते।,HIGH,hi
+हम लागू आवधिक रिपोर्टिंग प्रक्रिया के माध्यम से SEBI द्वारा आवश्यक जानकारी और रिपोर्ट प्रस्तुत करते हैं।,LOW,hi
+हम अपनी निवेश सलाहकार गतिविधियों के लिए SEBI द्वारा आवश्यक आवधिक रिपोर्ट प्रस्तुत नहीं करते।,HIGH,hi
+हम ग्राहक द्वारा निवेश सलाहकार समझौते पर हस्ताक्षर करने और हस्ताक्षरित समझौते की प्रति प्राप्त करने के बाद ही निवेश सलाह प्रदान करते हैं।,LOW,hi
+हम ग्राहक द्वारा आवश्यक निवेश सलाहकार समझौते पर हस्ताक्षर करने से पहले निवेश सलाह देना शुरू कर देते हैं।,HIGH,hi
+हम SEBI द्वारा निर्धारित लागू शुल्क विधियों और सीमाओं के अनुसार ही सलाहकार फीस लेते हैं।,LOW,hi
+हम संबंधित ग्राहक और शुल्क विधि के लिए SEBI द्वारा निर्धारित लागू अधिकतम सीमा से अधिक सलाहकार फीस लेते हैं।,HIGH,hi
+हम ग्राहक की शुल्क विधि बदलते समय यह सुनिश्चित करते हैं कि कुल लिया गया शुल्क लागू सीमा के भीतर रहे।,LOW,hi
+हम ग्राहक की शुल्क विधि बदल देते हैं और यह जाँच नहीं करते कि परिणामी शुल्क लागू अधिकतम सीमा के भीतर है या नहीं।,MEDIUM,hi
+"हम अपनी निवेश सलाहकार सेवाओं के माध्यम से रिटर्न, लाभ या जोखिम-मुक्त निवेश की गारंटी नहीं देते।",LOW,hi
+हम ग्राहकों को सुनिश्चित या गारंटीकृत रिटर्न का वादा करने वाली निवेश सलाहकार योजना प्रदान करते हैं।,HIGH,hi
+हम केवल अपनी निवेश सलाहकार फीस के लिए भुगतान स्वीकार करते हैं और ग्राहकों की ओर से अपनी खाते में धन या प्रतिभूतियाँ स्वीकार नहीं करते।,LOW,hi
+हम ग्राहकों से अपनी ओर से उनके निवेश का प्रबंधन करने के लिए प्रतिभूतियाँ हमारे खाते में स्थानांतरित करने को कहते हैं।,HIGH,hi
+"जहाँ प्रत्यक्ष योजनाएँ उपलब्ध हैं, वहाँ हम लागू SEBI आवश्यकताओं के अनुसार ग्राहकों को उन योजनाओं पर सलाह देते हैं।",LOW,hi
+हम प्रत्यक्ष योजना उपलब्ध होने के बावजूद कमीशन-आधारित नियमित योजना पर सलाह देते हैं और लागू प्रत्यक्ष-योजना आवश्यकता पर विचार नहीं करते।,MEDIUM,hi
+"जहाँ पृथक्करण की आवश्यकताएँ लागू होती हैं, वहाँ हम अपनी निवेश सलाहकार गतिविधियों और अन्य गतिविधियों के बीच आवश्यक पृथक्करण बनाए रखते हैं।",LOW,hi
+हम आवश्यक ग्राहक-स्तरीय पृथक्करण बनाए बिना उसी ग्राहक के लिए अपनी निवेश सलाहकार और वितरण गतिविधियों को मिला देते हैं।,HIGH,hi
+"Bas hamare saath invest karo, guaranteed 30% return milega.",HIGH,hi-en
+"Aapka risk profile update karna optional hai, hum bina uske bhi recommendation de denge.",HIGH,hi-en
+"Fee agreement mein hai, but exact amount baad mein bata denge.",HIGH,hi-en
+"Agar product mein hamara interest hai, disclosure kaun padhta hai? Bas recommendation follow karo.",HIGH,hi-en
+"KYC complete nahi hua toh bhi advice start kar sakte hain, documents baad mein de dena.",HIGH,hi-en
+"Website pe registration details available hain, bas thoda search karna padega.",LOW,hi-en
+"Grievance ke liye support team ko message kar dena, formal complaint ki zarurat nahi.",LOW,hi-en
+"Audit toh karte hain, but compliance issues ko next review tak hold kar dete hain.",HIGH,hi-en
+"Client agreement sign karne se pehle terms dekh sakte ho, but kuch fee details later share hoti hain.",MEDIUM,hi-en
+"Direct plan choose karo, advisory ke saath distribution service bhi automatically add ho jayegi.",MEDIUM,hi-en
+"Guaranteed return nahi hai, but market conditions ke hisaab se strong returns expect kar sakte ho.",MEDIUM,hi-en
+"Hamari advisory advice aapke profile ke according hoti hai, but har product ka detailed suitability check nahi hota.",MEDIUM,hi-en
+"We recommend products after reviewing the client's risk profile, but some recommendations are based on the profile recorded at the previous review.",MEDIUM,en
+"हम ग्राहक की जोखिम प्रोफ़ाइल की समीक्षा करने के बाद उत्पाद सुझाते हैं, लेकिन कुछ सिफारिशें पिछली समीक्षा में दर्ज प्रोफ़ाइल पर आधारित होती हैं।",MEDIUM,hi
+"We update a client's risk profile when we receive material information, although some changes are captured only at the next scheduled review.",MEDIUM,en
+"जब हमें ग्राहक की वित्तीय स्थिति में महत्वपूर्ण बदलाव की जानकारी मिलती है तो हम जोखिम प्रोफ़ाइल अपडेट करते हैं, हालांकि कुछ बदलाव अगली निर्धारित समीक्षा में दर्ज होते हैं।",MEDIUM,hi
+"We disclose the advisory fee in the client agreement, while some optional service charges are explained separately during onboarding.",MEDIUM,en
+"हम क्लाइंट एग्रीमेंट में सलाहकारी शुल्क बताते हैं, जबकि कुछ वैकल्पिक सेवा शुल्क onboarding के दौरान अलग से बताए जाते हैं।",MEDIUM,hi
+"We disclose potential conflicts in our documentation, but the disclosure appears in a detailed section rather than the main recommendation screen.",MEDIUM,en
+"हम अपने दस्तावेज़ों में संभावित हितों के टकराव का खुलासा करते हैं, लेकिन यह जानकारी मुख्य recommendation screen के बजाय एक विस्तृत सेक्शन में दिखाई जाती है।",MEDIUM,hi
+"We normally complete KYC before providing advice, but a small number of cases proceed while document verification is still being completed.",MEDIUM,en
+"हम सामान्यतः सलाह देने से पहले KYC पूरा करते हैं, लेकिन कुछ मामलों में दस्तावेज़ सत्यापन पूरा होने से पहले प्रक्रिया आगे बढ़ जाती है।",MEDIUM,hi
+"We provide the required client disclosures before onboarding, but some updated information is communicated only when the agreement is renewed.",MEDIUM,en
+"हम onboarding से पहले आवश्यक client disclosures देते हैं, लेकिन कुछ updated information केवल agreement renew होने पर साझा की जाती है।",MEDIUM,hi
+"Our website displays the registration details, while some additional investor information is available through a separate disclosure page.",MEDIUM,en
+"हमारी वेबसाइट पर registration details दिखाई जाती हैं, जबकि कुछ अतिरिक्त investor information एक अलग disclosure page पर उपलब्ध है।",MEDIUM,hi
+"We provide a grievance contact, but clients are directed to a separate support section to find the complaint process and contact details.",MEDIUM,en
+"हम grievance contact उपलब्ध कराते हैं, लेकिन clients को complaint process और contact details के लिए एक अलग support section पर जाना पड़ता है।",MEDIUM,hi
+"We complete the compliance review each year, but one supporting audit document is finalized shortly after the internal review date.",MEDIUM,en
+"हम हर वर्ष compliance review पूरा करते हैं, लेकिन एक supporting audit document internal review date के थोड़े समय बाद finalize होता है।",MEDIUM,hi
+"We provide the advisory agreement before services begin, but certain operational details are updated later through a separate client communication.",MEDIUM,en
+"हम services शुरू होने से पहले advisory agreement देते हैं, लेकिन कुछ operational details बाद में अलग client communication के माध्यम से update की जाती हैं।",MEDIUM,hi
+We clearly disclose the all-inclusive annual percentage rate (APR) of the digital loan before you take the loan,LOW,en
+We do not disclose the total annual cost of your digital loan before you accept it,HIGH,en
+We provide a Key Fact Statement before you enter into the digital loan contract,LOW,en
+We charge additional fees that are not mentioned in the Key Fact Statement,HIGH,en
+Our digital lending app collects only the data necessary for providing the loan service,LOW,en
+Our loan app collects your contacts and other phone data without asking for your explicit consent,HIGH,en
+You can choose whether to allow us to use specific personal data.,LOW,en
+We share your personal information with third parties without obtaining your explicit consent,HIGH,en
+Our digital lending app provides a clear privacy policy explaining how borrower data is handled.,LOW,en
+Our lending app does not provide borrowers with a clear privacy policy,HIGH,en
+We disburse the approved loan directly into the borrower's bank account,LOW,en
+We disburse digital loans into the lending app's or third-party account instead of the borrower's bank account.,HIGH,en
+Borrowers make loan repayments directly into the regulated entity's bank account,LOW,en
+Borrowers repay their loans through a third-party pool account operated by our lending service provider,HIGH,en
+We obtain explicit consent before increasing a borrower's credit limit.,LOW,en
+We automatically increase your credit limit without asking for your explicit consent.,HIGH,en
+Borrowers can exit the digital loan during the cooling-off period by paying the principal and proportionate APR without penalty,LOW,en
+We do not provide borrowers with an option to exit the digital loan during the cooling-off period,HIGH,en
+We tell borrowers which recovery agent is authorized to contact them when recovery responsibility is transferred,LOW,en
+We transfer recovery responsibilities to an agent without informing the borrower which agent is authorized to contact them,HIGH,en
+We clearly disclose all applicable fees and charges to borrowers before they accept the digital loan,LOW,en
+We charge borrowers fees directly for services provided by our Lending Service Provider (LSP),HIGH,en
+We disclose the applicable penal charges upfront in the Key Fact Statement,LOW,en
+We do not disclose the applicable penal charges in the Key Fact Statement before the borrower accepts the loan,HIGH,en
+Borrowers can easily find the contact details of our grievance redressal officer on our digital lending app and website,LOW,en
+Our digital lending app does not provide borrowers with a clear way to submit complaints or contact a grievance redressal officer,HIGH,en
+"We assess a borrower's economic profile, including relevant information such as age, occupation and income, before extending a digital loan",LOW,en
+We provide digital loans without assessing the borrower's economic profile or creditworthiness,HIGH,en
+"We clearly display information about our digital loan products, including product features, loan limits, and costs",LOW,en
+We collect personal data only after explaining the purpose of collecting it and obtaining the borrower's explicit consent,LOW,en
+Our lending service provider completes enhanced due diligence before entering into a digital lending agreement with us,LOW,en
+We engage a lending service provider without conducting enhanced due diligence on its data privacy and borrower protection practices,HIGH,en
+We display matching loan offers from different lenders with enough information for borrowers to make a fair comparison.,LOW,en
+Our lending platform promotes one lender's loan offer over others without providing borrowers with an unbiased comparison,HIGH,en
+Our digital lending app allows borrowers to give or deny consent for the use of specific personal data,LOW,en
+Our digital lending app accesses a borrower's contact list and call logs without the borrower's explicit consent.,HIGH,en
+We provide borrowers with an option to revoke consent previously given for collecting their personal data.,LOW,en
+We share borrowers' personal information with third parties without obtaining explicit consent.,HIGH,en
+"We ensure that borrower data is stored only on servers located within India, subject to applicable regulatory requirements",LOW,en
+We store borrowers' personal data on servers outside India without following applicable RBI requirements for data processing and storage,HIGH,en
+We conduct due diligence on every Lending Service Provider before entering into a digital lending arrangement.,LOW,en
+We onboard a Lending Service Provider for digital lending without conducting the required due diligence.,HIGH,en
+We periodically review the conduct of our Lending Service Providers against the terms of their agreements.,LOW,en
+We continue using a Lending Service Provider even after identifying material deviations from its contractual obligations without taking appropriate action.,HIGH,en
+Our agreements with Lending Service Providers clearly define the respective roles and responsibilities of the regulated entity and the LSP.,LOW,en
+We use a Lending Service Provider under an arrangement that does not clearly define the responsibilities of the parties.,HIGH,en
+"When an LSP works with multiple lenders, we ensure that the digital lending platform displays loan offers that match the borrower's request.",LOW,en
+Our platform displays only the loan offer from the lender that pays us the highest commercial fee even when other matching offers are available.,HIGH,en
+We use a consistent mechanism for matching similarly placed borrowers with suitable lender offers.,LOW,en
+We change our lender-matching mechanism for similar borrowers without documenting the change.,MEDIUM,en
+"We display the lender name, loan amount, tenor, APR, monthly repayment obligation and applicable penal charges for matching loan offers.",LOW,en
+"We show borrowers a loan offer without providing enough information about the lender, APR, repayment obligation and applicable charges to compare it fairly with other offers.",HIGH,en
+We provide a link to the Key Facts Statement for each digital loan offer displayed to the borrower.,LOW,en
+We display multiple loan offers but do not provide borrowers access to the relevant Key Facts Statements.,HIGH,en
+Our digital loan-offer display uses an objective and unbiased presentation of matching lender offers.,LOW,en
+We use deceptive interface elements to push borrowers toward a particular lender's loan offer.,HIGH,en
+We assess a borrower's creditworthiness using relevant information before extending digital credit.,LOW,en
+We approve digital loans without assessing the borrower's creditworthiness.,HIGH,en
+We disburse the digital loan directly into the borrower's bank account unless a permitted regulatory or specific end-use exception applies.,LOW,en
+We routinely disburse digital loans into the Lending Service Provider's bank account instead of the borrower's account.,HIGH,en
+We give borrowers an explicit option to exit a digital loan during the applicable cooling-off period by paying the principal and proportionate APR without penalty.,LOW,en
+We deny borrowers the applicable cooling-off option for exiting a digital loan without penalty.,HIGH,en
+We disclose any permissible one-time processing fee applicable when a borrower exits during the cooling-off period in the Key Facts Statement.,LOW,en
+We impose an undisclosed exit fee on borrowers who exercise the cooling-off option.,HIGH,en
+We designate a nodal grievance redressal officer to handle complaints relating to our digital lending activities.,LOW,en
+We do not provide borrowers with a designated channel or officer for resolving complaints about our digital lending services.,HIGH,en
+We ensure that personal data collected through our digital lending application is handled in accordance with applicable data-protection and regulatory requirements.,LOW,en
+"We collect personal information through our digital lending application without following the applicable consent, privacy and data-handling requirements.",HIGH,en
+We ensure that digital lending activities and associated service providers comply with applicable cybersecurity requirements.,LOW,en
+We allow our digital lending application and service providers to operate without addressing applicable cybersecurity requirements.,HIGH,en
+हम डिजिटल ऋण लेने से पहले उसकी सभी लागतों को शामिल करने वाली वार्षिक प्रतिशत दर (APR) स्पष्ट रूप से बताते हैं।,LOW,hi
+हम डिजिटल ऋण स्वीकार करने से पहले उसकी कुल वार्षिक लागत का खुलासा नहीं करते।,HIGH,hi
+हम डिजिटल ऋण अनुबंध में प्रवेश करने से पहले मुख्य तथ्य विवरण (KFS) प्रदान करते हैं।,LOW,hi
+हम ऐसे अतिरिक्त शुल्क लेते हैं जिनका मुख्य तथ्य विवरण (KFS) में उल्लेख नहीं है।,HIGH,hi
+हमारा डिजिटल ऋण ऐप ऋण सेवा प्रदान करने के लिए केवल आवश्यक डेटा एकत्र करता है।,LOW,hi
+हमारा ऋण ऐप आपकी स्पष्ट सहमति लिए बिना आपके संपर्क और फोन का अन्य डेटा एकत्र करता है।,HIGH,hi
+आप यह चुन सकते हैं कि हमें विशिष्ट व्यक्तिगत डेटा का उपयोग करने की अनुमति देनी है या नहीं।,LOW,hi
+हम आपकी स्पष्ट सहमति प्राप्त किए बिना आपकी व्यक्तिगत जानकारी तीसरे पक्ष के साथ साझा करते हैं।,HIGH,hi
+"हमारा डिजिटल ऋण ऐप उधारकर्ता के डेटा को कैसे संभाला जाता है, यह समझाने वाली स्पष्ट गोपनीयता नीति उपलब्ध कराता है।",LOW,hi
+हमारा ऋण ऐप उधारकर्ताओं को स्पष्ट गोपनीयता नीति उपलब्ध नहीं कराता।,HIGH,hi
+हम स्वीकृत ऋण को सीधे उधारकर्ता के बैंक खाते में वितरित करते हैं।,LOW,hi
+हम उधारकर्ता के बैंक खाते के बजाय ऋण ऐप या तीसरे पक्ष के खाते में डिजिटल ऋण वितरित करते हैं।,HIGH,hi
+उधारकर्ता ऋण की चुकौती सीधे विनियमित संस्था के बैंक खाते में करते हैं।,LOW,hi
+उधारकर्ता हमारे Lending Service Provider द्वारा संचालित तीसरे पक्ष के पूल खाते के माध्यम से ऋण की चुकौती करते हैं।,HIGH,hi
+हम उधारकर्ता की क्रेडिट सीमा बढ़ाने से पहले स्पष्ट सहमति प्राप्त करते हैं।,LOW,hi
+हम आपकी स्पष्ट सहमति लिए बिना आपकी क्रेडिट सीमा अपने आप बढ़ा देते हैं।,HIGH,hi
+उधारकर्ता कूलिंग-ऑफ अवधि के दौरान मूलधन और आनुपातिक APR का भुगतान करके बिना दंड के डिजिटल ऋण से बाहर निकल सकते हैं।,LOW,hi
+हम उधारकर्ताओं को कूलिंग-ऑफ अवधि के दौरान डिजिटल ऋण से बाहर निकलने का विकल्प नहीं देते।,HIGH,hi
+"जब वसूली की जिम्मेदारी स्थानांतरित की जाती है, तो हम उधारकर्ता को बताते हैं कि उससे संपर्क करने के लिए कौन-सा रिकवरी एजेंट अधिकृत है।",LOW,hi
+हम उधारकर्ता को यह बताए बिना वसूली की जिम्मेदारी किसी एजेंट को सौंप देते हैं कि उससे संपर्क करने के लिए कौन-सा एजेंट अधिकृत है।,HIGH,hi
+हम उधारकर्ता द्वारा डिजिटल ऋण स्वीकार करने से पहले सभी लागू फीस और शुल्कों का स्पष्ट खुलासा करते हैं।,LOW,hi
+हम अपने Lending Service Provider (LSP) द्वारा प्रदान की गई सेवाओं के लिए उधारकर्ताओं से सीधे शुल्क लेते हैं।,HIGH,hi
+हम मुख्य तथ्य विवरण (KFS) में लागू दंडात्मक शुल्कों का पहले से खुलासा करते हैं।,LOW,hi
+उधारकर्ता द्वारा ऋण स्वीकार करने से पहले हम लागू दंडात्मक शुल्कों का मुख्य तथ्य विवरण (KFS) में खुलासा नहीं करते।,HIGH,hi
+उधारकर्ता हमारे डिजिटल ऋण ऐप और वेबसाइट पर शिकायत निवारण अधिकारी के संपर्क विवरण आसानी से पा सकते हैं।,LOW,hi
+हमारा डिजिटल ऋण ऐप उधारकर्ताओं को शिकायत दर्ज करने या शिकायत निवारण अधिकारी से संपर्क करने का स्पष्ट तरीका उपलब्ध नहीं कराता।,HIGH,hi
+"डिजिटल ऋण देने से पहले हम उधारकर्ता की आर्थिक प्रोफ़ाइल का आकलन करते हैं, जिसमें आयु, व्यवसाय और आय जैसी प्रासंगिक जानकारी शामिल है।",LOW,hi
+हम उधारकर्ता की आर्थिक प्रोफ़ाइल या ऋण-योग्यता का आकलन किए बिना डिजिटल ऋण प्रदान करते हैं।,HIGH,hi
+"हम अपने डिजिटल ऋण उत्पादों की जानकारी, जिसमें उत्पाद की विशेषताएँ, ऋण सीमाएँ और लागत शामिल हैं, स्पष्ट रूप से प्रदर्शित करते हैं।",LOW,hi
+हम व्यक्तिगत डेटा एकत्र करने का उद्देश्य समझाने और उधारकर्ता की स्पष्ट सहमति प्राप्त करने के बाद ही डेटा एकत्र करते हैं।,LOW,hi
+हमारा Lending Service Provider हमारे साथ डिजिटल ऋण समझौता करने से पहले उन्नत जाँच-पड़ताल पूरी करता है।,LOW,hi
+हम डेटा गोपनीयता और उधारकर्ता संरक्षण संबंधी उसकी प्रक्रियाओं पर उन्नत जाँच-पड़ताल किए बिना किसी Lending Service Provider को नियुक्त करते हैं।,HIGH,hi
+हम विभिन्न ऋणदाताओं के मिलान किए गए ऋण प्रस्ताव पर्याप्त जानकारी के साथ दिखाते हैं ताकि उधारकर्ता उचित तुलना कर सकें।,LOW,hi
+हमारा डिजिटल ऋण प्लेटफ़ॉर्म उधारकर्ताओं को निष्पक्ष तुलना दिए बिना एक ऋणदाता के प्रस्ताव को दूसरों की तुलना में बढ़ावा देता है।,HIGH,hi
+हमारा डिजिटल ऋण ऐप उधारकर्ताओं को विशिष्ट व्यक्तिगत डेटा के उपयोग के लिए सहमति देने या मना करने का विकल्प देता है।,LOW,hi
+हमारा डिजिटल ऋण ऐप उधारकर्ता की स्पष्ट सहमति के बिना उसकी संपर्क सूची और कॉल लॉग तक पहुँचता है।,HIGH,hi
+हम उधारकर्ताओं को उनके व्यक्तिगत डेटा के संग्रह के लिए पहले दी गई सहमति वापस लेने का विकल्प देते हैं।,LOW,hi
+हम स्पष्ट सहमति प्राप्त किए बिना उधारकर्ताओं की व्यक्तिगत जानकारी तीसरे पक्ष के साथ साझा करते हैं।,HIGH,hi
+हम यह सुनिश्चित करते हैं कि उधारकर्ता का डेटा लागू नियामकीय आवश्यकताओं के अधीन केवल भारत में स्थित सर्वरों पर संग्रहीत हो।,LOW,hi
+हम डेटा प्रसंस्करण और भंडारण के लिए लागू RBI आवश्यकताओं का पालन किए बिना उधारकर्ताओं का व्यक्तिगत डेटा भारत के बाहर स्थित सर्वरों पर संग्रहीत करते हैं।,HIGH,hi
+हम डिजिटल ऋण व्यवस्था में प्रवेश करने से पहले प्रत्येक Lending Service Provider की उचित जाँच-पड़ताल करते हैं।,LOW,hi
+हम आवश्यक जाँच-पड़ताल किए बिना किसी Lending Service Provider को डिजिटल ऋण के लिए नियुक्त करते हैं।,HIGH,hi
+हम अपने Lending Service Providers के आचरण की उनके समझौतों की शर्तों के अनुसार समय-समय पर समीक्षा करते हैं।,LOW,hi
+हम महत्वपूर्ण संविदात्मक विचलन पाए जाने के बाद भी उचित कार्रवाई किए बिना किसी Lending Service Provider का उपयोग जारी रखते हैं।,HIGH,hi
+हमारे Lending Service Providers के साथ समझौतों में विनियमित संस्था और LSP की संबंधित भूमिकाएँ और जिम्मेदारियाँ स्पष्ट रूप से परिभाषित होती हैं।,LOW,hi
+हम ऐसी व्यवस्था के तहत Lending Service Provider का उपयोग करते हैं जिसमें पक्षों की जिम्मेदारियाँ स्पष्ट रूप से परिभाषित नहीं हैं।,HIGH,hi
+"जब कोई LSP कई ऋणदाताओं के साथ काम करता है, तो हम सुनिश्चित करते हैं कि डिजिटल ऋण प्लेटफ़ॉर्म उधारकर्ता के अनुरोध से मेल खाने वाले ऋण प्रस्ताव दिखाए।",LOW,hi
+अन्य उपयुक्त प्रस्ताव उपलब्ध होने पर भी हमारा प्लेटफ़ॉर्म केवल उस ऋणदाता का प्रस्ताव दिखाता है जो हमें सबसे अधिक व्यावसायिक शुल्क देता है।,HIGH,hi
+हम समान परिस्थितियों वाले उधारकर्ताओं के लिए उपयुक्त ऋणदाता प्रस्तावों का मिलान करने की एक सुसंगत व्यवस्था का उपयोग करते हैं।,LOW,hi
+हम समान उधारकर्ताओं के लिए अपनी ऋणदाता-मिलान व्यवस्था में बदलाव को दस्तावेज़ित किए बिना बदल देते हैं।,MEDIUM,hi
+"हम मिलान किए गए ऋण प्रस्तावों के लिए ऋणदाता का नाम, ऋण राशि, अवधि, APR, मासिक पुनर्भुगतान दायित्व और लागू दंडात्मक शुल्क प्रदर्शित करते हैं।",LOW,hi
+"हम उधारकर्ताओं को ऋणदाता, APR, पुनर्भुगतान दायित्व और लागू शुल्कों के बारे में पर्याप्त जानकारी दिए बिना ऋण प्रस्ताव दिखाते हैं ताकि वे उचित तुलना कर सकें।",HIGH,hi
+हम उधारकर्ता को प्रदर्शित प्रत्येक डिजिटल ऋण प्रस्ताव के लिए मुख्य तथ्य विवरण (KFS) का लिंक प्रदान करते हैं।,LOW,hi
+हम कई ऋण प्रस्ताव प्रदर्शित करते हैं लेकिन उधारकर्ताओं को संबंधित मुख्य तथ्य विवरण उपलब्ध नहीं कराते।,HIGH,hi
+हमारा डिजिटल ऋण-प्रस्ताव प्रदर्शन मिलान किए गए ऋणदाता प्रस्तावों को वस्तुनिष्ठ और निष्पक्ष तरीके से प्रस्तुत करता है।,LOW,hi
+हम भ्रामक इंटरफ़ेस तत्वों का उपयोग करके उधारकर्ताओं को किसी विशेष ऋणदाता के प्रस्ताव की ओर आकर्षित करते हैं।,HIGH,hi
+हम डिजिटल ऋण देने से पहले प्रासंगिक जानकारी का उपयोग करके उधारकर्ता की ऋण-योग्यता का आकलन करते हैं।,LOW,hi
+हम उधारकर्ता की ऋण-योग्यता का आकलन किए बिना डिजिटल ऋण स्वीकृत करते हैं।,HIGH,hi
+"हम डिजिटल ऋण को सीधे उधारकर्ता के बैंक खाते में वितरित करते हैं, जब तक कि कोई अनुमत नियामकीय या विशिष्ट अंतिम-उपयोग अपवाद लागू न हो।",LOW,hi
+हम उधारकर्ता के खाते के बजाय नियमित रूप से डिजिटल ऋण को Lending Service Provider के बैंक खाते में वितरित करते हैं।,HIGH,hi
+हम उधारकर्ता को लागू कूलिंग-ऑफ अवधि के दौरान मूलधन और आनुपातिक APR का भुगतान करके बिना दंड के डिजिटल ऋण से बाहर निकलने का स्पष्ट विकल्प देते हैं।,LOW,hi
+हम उधारकर्ताओं को बिना दंड के डिजिटल ऋण से बाहर निकलने के लागू कूलिंग-ऑफ विकल्प से वंचित करते हैं।,HIGH,hi
+हम कूलिंग-ऑफ अवधि के दौरान ऋण से बाहर निकलने पर लागू किसी अनुमत एकमुश्त प्रोसेसिंग शुल्क का मुख्य तथ्य विवरण (KFS) में खुलासा करते हैं।,LOW,hi
+हम कूलिंग-ऑफ विकल्प का उपयोग करने वाले उधारकर्ताओं पर ऐसा निकासी शुल्क लगाते हैं जिसका खुलासा नहीं किया गया था।,HIGH,hi
+हम डिजिटल ऋण गतिविधियों से संबंधित शिकायतों को संभालने के लिए एक नोडल शिकायत निवारण अधिकारी नियुक्त करते हैं।,LOW,hi
+हम उधारकर्ताओं को अपनी डिजिटल ऋण सेवाओं से संबंधित शिकायतों के समाधान के लिए कोई निर्धारित चैनल या अधिकारी उपलब्ध नहीं कराते।,HIGH,hi
+हम सुनिश्चित करते हैं कि हमारे डिजिटल ऋण आवेदन के माध्यम से एकत्र व्यक्तिगत डेटा को लागू डेटा-सुरक्षा और नियामकीय आवश्यकताओं के अनुसार संभाला जाए।,LOW,hi
+"हम लागू सहमति, गोपनीयता और डेटा-प्रबंधन आवश्यकताओं का पालन किए बिना अपने डिजिटल ऋण आवेदन के माध्यम से व्यक्तिगत जानकारी एकत्र करते हैं।",HIGH,hi
+हम सुनिश्चित करते हैं कि डिजिटल ऋण गतिविधियाँ और उनसे जुड़े सेवा प्रदाता लागू साइबर सुरक्षा आवश्यकताओं का पालन करें।,LOW,hi
+हम अपने डिजिटल ऋण आवेदन और सेवा प्रदाताओं को लागू साइबर सुरक्षा आवश्यकताओं को संबोधित किए बिना संचालित होने देते हैं।,HIGH,hi
+"Loan offers compare karte time lender ka naam, APR aur repayment details clearly dikhate hain.",LOW,hi-en
+"Hamari app borrower ke contacts access karti hai bina explicit consent ke, because verification ke liye needed hai.",HIGH,hi-en
+"Agar borrower consent withdraw kare, toh hum future data collection rok dete hain, but pehle collected data automatically delete nahi hota.",MEDIUM,hi-en
+Multiple lenders ke offers mein hum wahi offer top pe dikhate hain jahan hume highest commercial fee milti hai.,HIGH,hi-en
+"Borrower ka creditworthiness check karke hi loan approve karte hain, but kuch repeat customers ko simplified review milta hai.",MEDIUM,hi-en
+LSP onboard karne se pehle proper due diligence karte hain aur agreement mein roles clearly mention hote hain.,LOW,hi-en
+"Cooling-off period mein loan exit kar sakte ho, bas applicable principal aur proportionate APR pay karna hoga.",LOW,hi-en
+Cooling-off period mein exit karoge toh ek extra exit fee lagegi jo pehle clearly disclose nahi ki gayi thi.,HIGH,hi-en
+"Borrower data India mein store karte hain, except where applicable RBI requirements allow another arrangement.",LOW,hi-en
+App mein deceptive pop-ups use karke borrower ko ek particular lender select karne ke liye push karte hain.,HIGH,hi-en
+"Cybersecurity controls implemented hain, but third-party LSP ke systems ka review quarterly hota hai.",MEDIUM,hi-en
+"Grievance officer ka contact app mein hai, but complaint process ke detailed steps support page par diye hain.",MEDIUM,hi-en
+"We display matching offers from multiple lenders, but the way the offers are ordered can depend on commercial arrangements.",MEDIUM,en
+"हम कई lenders के matching offers दिखाते हैं, लेकिन offers का order commercial arrangements पर depend कर सकता है।",MEDIUM,hi
+"Borrowers can give or deny consent for specific data uses, although some permissions are bundled together in the same consent flow.",MEDIUM,en
+"Borrowers specific data uses के लिए consent दे या deny कर सकते हैं, हालांकि कुछ permissions एक ही consent flow में bundled होती हैं।",MEDIUM,hi
+"We allow borrowers to withdraw consent, but the effect of withdrawal can differ depending on the data-processing activity involved.",MEDIUM,en
+"Borrowers consent withdraw कर सकते हैं, लेकिन withdrawal का effect अलग-अलग data-processing activities के अनुसार अलग हो सकता है।",MEDIUM,hi
+"We share borrower data with service providers only for stated purposes, although the exact third-party access may vary by service.",MEDIUM,en
+"हम borrower data service providers के साथ stated purposes के लिए share करते हैं, हालांकि exact third-party access service के अनुसार बदल सकता है।",MEDIUM,hi
+"Borrower data is stored in India, but a limited part of the processing may involve systems located outside India subject to applicable requirements.",MEDIUM,en
+"Borrower data India में store किया जाता है, लेकिन applicable requirements के अधीन processing का एक सीमित हिस्सा India के बाहर स्थित systems से जुड़ सकता है।",MEDIUM,hi
+"We review LSP conduct periodically, but the timing of the review depends on the risk and nature of the arrangement.",MEDIUM,en
+"हम LSP conduct की periodic review करते हैं, लेकिन review का timing arrangement के risk और nature पर depend करता है।",MEDIUM,hi
+"Our LSP agreement defines the parties' responsibilities, while some operational responsibilities are described in linked procedures.",MEDIUM,en
+"हमारे LSP agreement में parties की responsibilities define हैं, जबकि कुछ operational responsibilities linked procedures में बताई गई हैं।",MEDIUM,hi
+"We use a consistent lender-matching process, but the matching criteria can be updated when the platform's lending products change.",MEDIUM,en
+"हम consistent lender-matching process use करते हैं, लेकिन lending products बदलने पर matching criteria update हो सकते हैं।",MEDIUM,hi
+"We provide a Key Fact Statement link for loan offers, but the link may appear only after the borrower selects an offer.",MEDIUM,en
+"हम loan offers के लिए Key Fact Statement का link देते हैं, लेकिन link borrower के offer select करने के बाद दिखाई दे सकता है।",MEDIUM,hi
+"We provide borrowers a cooling-off option, but the applicable exit terms depend on the specific digital loan arrangement.",MEDIUM,en
+"हम borrowers को cooling-off option देते हैं, लेकिन applicable exit terms specific digital loan arrangement पर depend करते हैं।",MEDIUM,hi
+We clearly inform users about the personal data we collect and the purpose for which we process it,LOW,en
+We collect personal data without informing users about what data is being collected or why it is being processed,HIGH,en
+Our notice uses clear and plain language so users can understand how their personal data will be processed.,LOW,en
+Our privacy notice is difficult to understand and does not clearly explain the purposes for which personal data is processed,HIGH,en
+We obtain consent from users before processing their personal data where consent is the applicable basis for processing,LOW,en
+We process users' personal data without obtaining the required consent,HIGH,en
+Users can withdraw their consent for processing personal data as easily as they gave it,LOW,en
+We make it significantly harder for users to withdraw consent than it was to provide consent,HIGH,en
+We process personal data only for a lawful purpose for which the user has provided consent or another permitted basis applies,LOW,en
+We use personal data for purposes unrelated to the purpose communicated to the user and without another permitted basis for processing,HIGH,en
+We implement reasonable security safeguards to protect users' personal data from unauthorized access or disclosure.,LOW,en
+We do not implement reasonable security safeguards to protect users' personal data.,HIGH,en
+We notify affected users when we become aware of a personal data breach involving their information,LOW,en
+We do not notify affected users after becoming aware of a personal data breach involving their information.,HIGH,en
+"We erase personal data when the specified purpose is no longer being served, unless retention is required by law.",LOW,en
+We continue retaining users' personal data even after the specified purpose is no longer being served and no legal requirement to retain it applies,HIGH,en
+We publish contact information for a person who can answer users' questions about the processing of their personal data.,LOW,en
+We do not provide users with contact information for questions about how their personal data is processed,HIGH,en
+We establish an effective mechanism for users to submit and resolve grievances relating to the processing of their personal data,LOW,en
+We do not provide users with an effective mechanism to raise grievances about the processing of their personal data,HIGH,en
+We obtain verifiable consent from a parent before processing the personal data of a child,LOW,en
+We process a child's personal data without obtaining verifiable consent from the parent,HIGH,en
+We do not undertake processing of children's personal data that is likely to cause a detrimental effect on their well-being,LOW,en
+We process children's personal data in ways that are likely to cause a detrimental effect on their well-being,HIGH,en
+We do not track or behaviourally monitor children or direct targeted advertising at children,LOW,en
+We track children's behaviour and use their personal data for targeted advertising directed at children,HIGH,en
+We appoint a Data Protection Officer based in India when we are notified as a Significant Data Fiduciary.,LOW,en
+"As a Significant Data Fiduciary, we do not appoint a Data Protection Officer based in India",HIGH,en
+"As a Significant Data Fiduciary, we appoint an independent data auditor to evaluate our compliance with the Act.",LOW,en
+"As a Significant Data Fiduciary, we do not appoint an independent data auditor to evaluate our compliance with the Act.",HIGH,en
+We provide users with information about the personal data being processed by us when they exercise their right to access information,LOW,en
+We do not provide users with information about the personal data being processed when they exercise their right to access information,HIGH,en
+"We allow users to request correction, completion, updating, or erasure of their personal data where applicable",LOW,en
+We do not provide users with a mechanism to request correction or erasure of their personal data where applicable,HIGH,en
+We provide users with a mechanism to raise grievances regarding the processing of their personal data,LOW,en
+We do not provide users with a mechanism to raise grievances regarding the processing of their personal data,HIGH,en
+Users can nominate another individual to exercise their rights in accordance with the DPDP Act if they die or become incapable of exercising their rights.,LOW,en
+We do not provide users with a mechanism to make a nomination for exercising their rights under the DPDP Act.,HIGH,en
+We require users to provide authentic information when exercising their rights under the DPDP Act.,LOW,en
+Users may provide false or misleading information when exercising their rights under the DPDP Act without any requirement to provide authentic information,HIGH,en
+We maintain appropriate technical and organisational measures to protect personal data in our custody or control.,LOW,en
+We store personal data without implementing reasonable security safeguards against unauthorised access or processing.,HIGH,en
+We take reasonable security safeguards to prevent personal data breaches.,LOW,en
+We do not maintain safeguards to prevent unauthorised access to the personal data we process.,HIGH,en
+We inform the Data Protection Board and affected Data Principals about a personal data breach as required by applicable rules.,LOW,en
+We delay notifying the relevant authority and affected individuals after discovering a personal data breach.,HIGH,en
+"We erase personal data when the specified purpose for which it was collected is no longer being served, subject to applicable legal requirements.",LOW,en
+We retain personal data indefinitely even after the purpose for processing it has been fulfilled.,HIGH,en
+We ensure that personal data is erased when retention is no longer necessary and there is no overriding legal requirement to retain it.,LOW,en
+"We continue storing customer personal data solely because it may be useful someday, without a defined retention purpose.",HIGH,en
+We provide a clear mechanism for Data Principals to exercise their rights under the applicable provisions of the Act.,LOW,en
+"We make it difficult for Data Principals to exercise their rights relating to access, correction, erasure and grievance redressal.",HIGH,en
+We allow Data Principals to obtain information about the personal data being processed by us through the prescribed process.,LOW,en
+We refuse a valid request from a Data Principal to obtain information about their personal data without an applicable exception.,HIGH,en
+We provide a mechanism for Data Principals to request correction of inaccurate or misleading personal data.,LOW,en
+We ignore valid requests from Data Principals to correct inaccurate personal data.,HIGH,en
+We provide a mechanism for Data Principals to request erasure of personal data that is no longer necessary for the specified purpose.,LOW,en
+We continue processing personal data after receiving a valid erasure request even when there is no legal requirement to retain it.,HIGH,en
+We provide a channel through which Data Principals can register grievances regarding the processing of their personal data.,LOW,en
+We do not provide any practical channel for Data Principals to raise grievances about our processing of personal data.,HIGH,en
+"We enable Data Principals to nominate another individual to exercise their rights in the event of their death or incapacity, as provided by the Act.",LOW,en
+We prevent Data Principals from using the nomination mechanism provided under the Act without a valid legal basis.,HIGH,en
+We provide a clear and accessible process for Data Principals to withdraw consent where consent is the legal basis for processing.,LOW,en
+We make withdrawing consent substantially more difficult than giving consent.,HIGH,en
+"We ensure that processing based on consent stops when a Data Principal validly withdraws that consent, subject to applicable legal requirements.",LOW,en
+We continue processing personal data on the basis of withdrawn consent without identifying another lawful basis for the processing.,HIGH,en
+We use clear and plain language when providing privacy notices to Data Principals.,LOW,en
+We provide privacy information in a way that is difficult for Data Principals to understand or access independently.,HIGH,en
+Our privacy notice clearly describes the personal data being collected and the specific purposes for which it will be processed.,LOW,en
+Our privacy notice does not clearly identify the personal data collected or the specific purposes for which it will be processed.,HIGH,en
+हम एकत्र किए जाने वाले व्यक्तिगत डेटा और उसे संसाधित करने के उद्देश्य के बारे में उपयोगकर्ताओं को स्पष्ट रूप से सूचित करते हैं।,LOW,hi
+हम उपयोगकर्ताओं को यह बताए बिना व्यक्तिगत डेटा एकत्र करते हैं कि कौन-सा डेटा एकत्र किया जा रहा है या उसका प्रसंस्करण क्यों किया जा रहा है।,HIGH,hi
+हमारी सूचना स्पष्ट और सरल भाषा का उपयोग करती है ताकि उपयोगकर्ता समझ सकें कि उनके व्यक्तिगत डेटा को कैसे संसाधित किया जाएगा।,LOW,hi
+हमारी गोपनीयता सूचना समझना कठिन है और यह स्पष्ट रूप से नहीं बताती कि व्यक्तिगत डेटा किन उद्देश्यों के लिए संसाधित किया जाता है।,HIGH,hi
+"जहाँ सहमति प्रसंस्करण का लागू आधार है, वहाँ हम व्यक्तिगत डेटा संसाधित करने से पहले उपयोगकर्ताओं की सहमति प्राप्त करते हैं।",LOW,hi
+हम आवश्यक सहमति प्राप्त किए बिना उपयोगकर्ताओं के व्यक्तिगत डेटा को संसाधित करते हैं।,HIGH,hi
+उपयोगकर्ता व्यक्तिगत डेटा के प्रसंस्करण के लिए अपनी सहमति उतनी ही आसानी से वापस ले सकते हैं जितनी आसानी से उन्होंने सहमति दी थी।,LOW,hi
+हम उपयोगकर्ताओं के लिए सहमति वापस लेना सहमति देने की तुलना में काफी अधिक कठिन बना देते हैं।,HIGH,hi
+हम व्यक्तिगत डेटा को केवल उस वैध उद्देश्य के लिए संसाधित करते हैं जिसके लिए उपयोगकर्ता ने सहमति दी है या जहाँ कोई अन्य अनुमत आधार लागू होता है।,LOW,hi
+हम व्यक्तिगत डेटा का उपयोग उपयोगकर्ता को बताए गए उद्देश्य से असंबंधित उद्देश्यों के लिए और किसी अन्य अनुमत प्रसंस्करण आधार के बिना करते हैं।,HIGH,hi
+हम उपयोगकर्ताओं के व्यक्तिगत डेटा को अनधिकृत पहुँच या प्रकटीकरण से बचाने के लिए उचित सुरक्षा उपाय लागू करते हैं।,LOW,hi
+हम उपयोगकर्ताओं के व्यक्तिगत डेटा की सुरक्षा के लिए उचित सुरक्षा उपाय लागू नहीं करते।,HIGH,hi
+"जब हमें उपयोगकर्ता की जानकारी से संबंधित व्यक्तिगत डेटा उल्लंघन का पता चलता है, तो हम प्रभावित उपयोगकर्ताओं को सूचित करते हैं।",LOW,hi
+उपयोगकर्ता की जानकारी से संबंधित व्यक्तिगत डेटा उल्लंघन का पता चलने के बाद हम प्रभावित उपयोगकर्ताओं को सूचित नहीं करते।,HIGH,hi
+"जब व्यक्तिगत डेटा एकत्र करने का निर्दिष्ट उद्देश्य पूरा नहीं रह जाता, तो हम डेटा मिटा देते हैं, जब तक कि कानून के तहत उसे बनाए रखना आवश्यक न हो।",LOW,hi
+निर्दिष्ट उद्देश्य पूरा हो जाने और डेटा बनाए रखने की कोई कानूनी आवश्यकता न होने के बाद भी हम उपयोगकर्ताओं का व्यक्तिगत डेटा रखते रहते हैं।,HIGH,hi
+हम उस व्यक्ति की संपर्क जानकारी प्रकाशित करते हैं जो उपयोगकर्ताओं के व्यक्तिगत डेटा के प्रसंस्करण से जुड़े प्रश्नों का उत्तर दे सकता है।,LOW,hi
+हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण के बारे में प्रश्न पूछने के लिए संपर्क जानकारी उपलब्ध नहीं कराते।,HIGH,hi
+हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण से संबंधित शिकायतें दर्ज करने और उनका समाधान कराने के लिए प्रभावी व्यवस्था स्थापित करते हैं।,LOW,hi
+हम उपयोगकर्ताओं को व्यक्तिगत डेटा के प्रसंस्करण के बारे में शिकायत दर्ज करने के लिए प्रभावी व्यवस्था उपलब्ध नहीं कराते।,HIGH,hi
+हम बच्चे के व्यक्तिगत डेटा को संसाधित करने से पहले माता-पिता की सत्यापन योग्य सहमति प्राप्त करते हैं।,LOW,hi
+हम माता-पिता की सत्यापन योग्य सहमति प्राप्त किए बिना बच्चे के व्यक्तिगत डेटा को संसाधित करते हैं।,HIGH,hi
+हम बच्चों के व्यक्तिगत डेटा का ऐसा प्रसंस्करण नहीं करते जिससे उनके कल्याण पर हानिकारक प्रभाव पड़ने की संभावना हो।,LOW,hi
+हम बच्चों के व्यक्तिगत डेटा को ऐसे तरीकों से संसाधित करते हैं जिनसे उनके कल्याण पर हानिकारक प्रभाव पड़ने की संभावना है।,HIGH,hi
+हम बच्चों को ट्रैक या व्यवहारिक रूप से मॉनिटर नहीं करते और न ही बच्चों को लक्षित विज्ञापन दिखाते हैं।,LOW,hi
+हम बच्चों के व्यवहार को ट्रैक करते हैं और उनके व्यक्तिगत डेटा का उपयोग बच्चों को लक्षित विज्ञापन देने के लिए करते हैं।,HIGH,hi
+"जब हमें Significant Data Fiduciary के रूप में अधिसूचित किया जाता है, तो हम भारत में स्थित Data Protection Officer नियुक्त करते हैं।",LOW,hi
+Significant Data Fiduciary होने के बावजूद हम भारत में स्थित Data Protection Officer नियुक्त नहीं करते।,HIGH,hi
+Significant Data Fiduciary के रूप में हम अधिनियम के अनुपालन का मूल्यांकन करने के लिए एक स्वतंत्र data auditor नियुक्त करते हैं।,LOW,hi
+Significant Data Fiduciary के रूप में हम अधिनियम के अनुपालन का मूल्यांकन करने के लिए स्वतंत्र data auditor नियुक्त नहीं करते।,HIGH,hi
+"जब उपयोगकर्ता अपने सूचना तक पहुँच के अधिकार का प्रयोग करते हैं, तो हम उनके द्वारा संसाधित किए जा रहे व्यक्तिगत डेटा की जानकारी प्रदान करते हैं।",LOW,hi
+"जब उपयोगकर्ता सूचना तक पहुँच के अपने अधिकार का प्रयोग करते हैं, तो हम संसाधित किए जा रहे उनके व्यक्तिगत डेटा की जानकारी प्रदान नहीं करते।",HIGH,hi
+"जहाँ लागू हो, हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा में सुधार, उसे पूरा करने, अद्यतन करने या मिटाने का अनुरोध करने की सुविधा देते हैं।",LOW,hi
+"जहाँ लागू हो, हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा में सुधार या उसे मिटाने का अनुरोध करने की व्यवस्था उपलब्ध नहीं कराते।",HIGH,hi
+हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण से संबंधित शिकायतें दर्ज करने की व्यवस्था उपलब्ध कराते हैं।,LOW,hi
+हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण से संबंधित शिकायतें दर्ज करने की व्यवस्था उपलब्ध नहीं कराते।,HIGH,hi
+"यदि उपयोगकर्ता की मृत्यु हो जाती है या वह अपने अधिकारों का प्रयोग करने में असमर्थ हो जाता है, तो वह DPDP Act के अनुसार अपने अधिकारों का प्रयोग करने के लिए किसी अन्य व्यक्ति को नामित कर सकता है।",LOW,hi
+हम उपयोगकर्ताओं को DPDP Act के तहत अपने अधिकारों के प्रयोग के लिए किसी अन्य व्यक्ति को नामित करने की व्यवस्था उपलब्ध नहीं कराते।,HIGH,hi
+हम उपयोगकर्ताओं से DPDP Act के तहत अपने अधिकारों का प्रयोग करते समय प्रामाणिक जानकारी देने की अपेक्षा करते हैं।,LOW,hi
+उपयोगकर्ता अपने अधिकारों का प्रयोग करते समय बिना प्रामाणिक जानकारी देने की आवश्यकता के गलत या भ्रामक जानकारी दे सकते हैं।,HIGH,hi
+हम अपने कब्जे या नियंत्रण में व्यक्तिगत डेटा की सुरक्षा के लिए उचित तकनीकी और संगठनात्मक उपाय बनाए रखते हैं।,LOW,hi
+हम अनधिकृत पहुँच या प्रसंस्करण से बचाने के लिए उचित सुरक्षा उपाय लागू किए बिना व्यक्तिगत डेटा संग्रहीत करते हैं।,HIGH,hi
+हम व्यक्तिगत डेटा उल्लंघनों को रोकने के लिए उचित सुरक्षा उपाय अपनाते हैं।,LOW,hi
+हम अपने द्वारा संसाधित व्यक्तिगत डेटा तक अनधिकृत पहुँच रोकने के लिए सुरक्षा उपाय बनाए नहीं रखते।,HIGH,hi
+हम लागू नियमों के अनुसार Data Protection Board और प्रभावित Data Principals को व्यक्तिगत डेटा उल्लंघन के बारे में सूचित करते हैं।,LOW,hi
+व्यक्तिगत डेटा उल्लंघन का पता चलने के बाद हम संबंधित प्राधिकरण और प्रभावित व्यक्तियों को सूचित करने में देरी करते हैं।,HIGH,hi
+"जब व्यक्तिगत डेटा एकत्र करने का निर्दिष्ट उद्देश्य पूरा नहीं रह जाता, तो हम लागू कानूनी आवश्यकताओं के अधीन उस डेटा को मिटा देते हैं।",LOW,hi
+प्रसंस्करण का उद्देश्य पूरा हो जाने के बाद भी हम व्यक्तिगत डेटा को अनिश्चित काल तक बनाए रखते हैं।,HIGH,hi
+"जब डेटा रखना आवश्यक नहीं रह जाता और उसे बनाए रखने की कोई अन्य कानूनी आवश्यकता नहीं होती, तो हम व्यक्तिगत डेटा मिटा देते हैं।",LOW,hi
+"हम केवल इसलिए ग्राहक का व्यक्तिगत डेटा संग्रहीत करते रहते हैं क्योंकि भविष्य में वह उपयोगी हो सकता है, बिना किसी निर्धारित प्रतिधारण उद्देश्य के।",HIGH,hi
+हम Data Principals को अधिनियम के लागू प्रावधानों के तहत अपने अधिकारों का प्रयोग करने के लिए स्पष्ट व्यवस्था उपलब्ध कराते हैं।,LOW,hi
+"हम Data Principals के लिए पहुँच, सुधार, मिटाने और शिकायत निवारण से संबंधित अपने अधिकारों का प्रयोग करना कठिन बना देते हैं।",HIGH,hi
+हम Data Principals को निर्धारित प्रक्रिया के माध्यम से अपने द्वारा संसाधित किए जा रहे व्यक्तिगत डेटा की जानकारी प्राप्त करने की सुविधा देते हैं।,LOW,hi
+हम किसी लागू अपवाद के बिना Data Principal के अपने व्यक्तिगत डेटा की जानकारी प्राप्त करने के वैध अनुरोध को अस्वीकार करते हैं।,HIGH,hi
+हम Data Principals को गलत या भ्रामक व्यक्तिगत डेटा में सुधार का अनुरोध करने की व्यवस्था उपलब्ध कराते हैं।,LOW,hi
+हम गलत व्यक्तिगत डेटा को सुधारने के Data Principal के वैध अनुरोधों को अनदेखा करते हैं।,HIGH,hi
+हम Data Principals को ऐसे व्यक्तिगत डेटा को मिटाने का अनुरोध करने की व्यवस्था उपलब्ध कराते हैं जिसकी निर्दिष्ट उद्देश्य के लिए अब आवश्यकता नहीं है।,LOW,hi
+कानूनी रूप से डेटा बनाए रखने की आवश्यकता न होने पर भी वैध मिटाने के अनुरोध के बाद हम व्यक्तिगत डेटा का प्रसंस्करण जारी रखते हैं।,HIGH,hi
+हम Data Principals को अपने व्यक्तिगत डेटा के प्रसंस्करण के बारे में शिकायत दर्ज करने के लिए एक माध्यम उपलब्ध कराते हैं।,LOW,hi
+हम Data Principals को अपने व्यक्तिगत डेटा के प्रसंस्करण के बारे में शिकायत दर्ज करने के लिए कोई व्यावहारिक माध्यम उपलब्ध नहीं कराते।,HIGH,hi
+हम अधिनियम के अनुसार Data Principals को उनकी मृत्यु या अक्षमता की स्थिति में अपने अधिकारों का प्रयोग करने के लिए किसी अन्य व्यक्ति को नामित करने की सुविधा देते हैं।,LOW,hi
+हम Data Principals को वैध कानूनी आधार के बिना अधिनियम द्वारा प्रदान की गई नामांकन व्यवस्था का उपयोग करने से रोकते हैं।,HIGH,hi
+"जहाँ सहमति प्रसंस्करण का कानूनी आधार है, वहाँ हम Data Principals को सहमति वापस लेने की स्पष्ट और सुलभ प्रक्रिया उपलब्ध कराते हैं।",LOW,hi
+हम सहमति वापस लेने की प्रक्रिया को सहमति देने की प्रक्रिया की तुलना में काफी अधिक कठिन बना देते हैं।,HIGH,hi
+"जब Data Principal वैध रूप से सहमति वापस लेता है, तो हम उस सहमति के आधार पर प्रसंस्करण रोक देते हैं, लागू कानूनी आवश्यकताओं के अधीन।",LOW,hi
+हम सहमति वापस लिए जाने के बाद भी प्रसंस्करण के लिए किसी अन्य वैध आधार की पहचान किए बिना व्यक्तिगत डेटा संसाधित करते रहते हैं।,HIGH,hi
+हम Data Principals को गोपनीयता सूचनाएँ देते समय स्पष्ट और सरल भाषा का उपयोग करते हैं।,LOW,hi
+हम गोपनीयता संबंधी जानकारी ऐसे तरीके से प्रदान करते हैं जिसे Data Principals के लिए समझना या स्वतंत्र रूप से प्राप्त करना कठिन है।,HIGH,hi
+हमारी गोपनीयता सूचना एकत्र किए जाने वाले व्यक्तिगत डेटा और उसके प्रसंस्करण के विशिष्ट उद्देश्यों का स्पष्ट वर्णन करती है।,LOW,hi
+हमारी गोपनीयता सूचना एकत्र किए जाने वाले व्यक्तिगत डेटा या उसके प्रसंस्करण के विशिष्ट उद्देश्यों को स्पष्ट रूप से नहीं बताती।,HIGH,hi
+"User ko data collect karne se pehle clear notice dete hain, but notice app ke terms page mein available hai.",LOW,hi-en
+"Consent lete waqt user ko specific purpose explain karte hain, but saare permissions ek hi screen par bundled hain.",MEDIUM,hi-en
+"User consent withdraw kar sakta hai, but withdrawal process thoda hidden hai aur multiple steps lagte hain.",MEDIUM,hi-en
+"Data sirf stated purpose ke liye use karte hain, bina extra purpose ke reuse nahi karte.",LOW,hi-en
+"Security controls hain, but encryption sabhi stored personal data ke liye consistently enabled nahi hai.",HIGH,hi-en
+"Data breach hone par users ko inform karte hain, but notification kuch cases mein delay ho sakta hai.",MEDIUM,hi-en
+Personal data ko business need khatam hone ke baad bhi indefinitely retain karte hain.,HIGH,hi-en
+"Users ko access request raise karne ka option dete hain, but response process manual hai.",LOW,hi-en
+"Correction request accept karte hain, but supporting documents mangne ke baad update process complete hota hai.",MEDIUM,hi-en
+"Grievance officer ka contact available hai, but complaint resolution timeline case ke according vary kar sakta hai.",MEDIUM,hi-en
+"Children ke data ke liye required safeguards follow karte hain, but age verification kuch cases mein self-declaration par based hai.",MEDIUM,hi-en
+"User ke data ko bina proper purpose bataye marketing ke liye reuse karna allowed nahi hai, phir bhi team kabhi-kabhi old leads ko contact karti hai.",HIGH,hi-en
+"We provide users with a clear notice about the data collected, but some details about processing are available through a linked policy.",MEDIUM,en
+"हम users को collected data के बारे में clear notice देते हैं, लेकिन processing की कुछ details linked policy में उपलब्ध हैं।",MEDIUM,hi
+"We obtain consent before processing personal data, although some related purposes are presented together in the same consent flow.",MEDIUM,en
+"हम personal data process करने से पहले consent लेते हैं, हालांकि कुछ related purposes एक ही consent flow में साथ दिखाए जाते हैं।",MEDIUM,hi
+"Users can withdraw consent through the account settings, but the withdrawal process requires several steps before it takes effect.",MEDIUM,en
+"Users account settings से consent withdraw कर सकते हैं, लेकिन withdrawal effective होने से पहले कई steps पूरे करने पड़ते हैं।",MEDIUM,hi
+"We use personal data for the stated service purpose, while a limited additional use may occur where another applicable purpose is documented.",MEDIUM,en
+"हम personal data को stated service purpose के लिए use करते हैं, जबकि एक सीमित additional use किसी अन्य documented applicable purpose के तहत हो सकता है।",MEDIUM,hi
+"We maintain reasonable security safeguards, but the exact controls applied can vary depending on the type of personal data and system involved.",MEDIUM,en
+"हम reasonable security safeguards maintain करते हैं, लेकिन applied controls personal data और system के type के अनुसार अलग हो सकते हैं।",MEDIUM,hi
+"We notify users about personal data breaches, although the timing of notification may depend on when the incident is confirmed and the applicable requirement.",MEDIUM,en
+"हम personal data breaches के बारे में users को notify करते हैं, हालांकि notification का timing incident की confirmation और applicable requirement पर depend कर सकता है।",MEDIUM,hi
+"We retain personal data only while it is needed for the stated purpose, but some records are kept longer where another legal or operational requirement applies.",MEDIUM,en
+"हम personal data को stated purpose के लिए आवश्यक रहने तक retain करते हैं, लेकिन किसी अन्य legal या operational requirement के कारण कुछ records अधिक समय तक रखे जा सकते हैं।",MEDIUM,hi
+"We provide a channel for data-access requests, but requests may require identity verification before the information is disclosed.",MEDIUM,en
+"हम data-access requests के लिए channel देते हैं, लेकिन information disclose करने से पहले identity verification आवश्यक हो सकती है।",MEDIUM,hi
+"We process correction requests, but some changes require supporting information before the record can be updated.",MEDIUM,en
+"हम correction requests process करते हैं, लेकिन record update करने से पहले कुछ changes के लिए supporting information आवश्यक होती है।",MEDIUM,hi
+"We provide a grievance mechanism, but the time needed to resolve a complaint depends on the nature of the request.",MEDIUM,en
+"हम grievance mechanism उपलब्ध कराते हैं, लेकिन complaint resolve होने में लगने वाला समय request की nature पर depend करता है।",MEDIUM,hi
