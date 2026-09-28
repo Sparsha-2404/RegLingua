@@ -26,6 +26,12 @@ from core.schemas import CaseState, EventType, Regulator, RiskLabel
 from services.classifier.contracts import RiskLevel, RiskPrediction
 from services.classifier.interface import MockRiskClassifier, RiskClassifier
 from services.classifier.preprocessing import normalize_for_classifier
+from services.classifier.regulator_classifier import RegulatorClassifier
+
+# Below this confidence, a real-model regulator guess isn't trusted enough
+# to drive downstream evidence retrieval, so the case falls back to GENERAL
+# instead of over-committing to a specific regulator.
+_REGULATOR_CONFIDENCE_FLOOR = 0.4
 
 # M2's four-way risk vocabulary collapses onto M4's three-way one. NEEDS_REVIEW
 # (M2's low-confidence abstention) maps to AMBIGUOUS rather than COMPLIANT so
@@ -56,10 +62,24 @@ class RiskAgentAdapter:
     `TfidfLogisticClassifier`, pass a loaded instance in via
     `RiskAgentAdapter(classifier=trained_clf)` — nothing else in the
     Supervisor or graph wiring needs to change.
+
+    Day 3-5 integration note: the real `TfidfLogisticClassifier` (unlike
+    `MockRiskClassifier`) never populates `RiskPrediction.regulator_candidates`
+    — it's single-task, risk-level only (see `INTEGRATION_NOTES.md`,
+    "Regulator attribution narrowed"). An optional `regulator_classifier`
+    (`services.classifier.regulator_classifier.RegulatorClassifier`) can be
+    passed in to fill that gap; it's only consulted when the risk classifier
+    itself didn't supply a regulator, so `MockRiskClassifier`'s existing
+    SEBI-keyword behaviour is unaffected.
     """
 
-    def __init__(self, classifier: Optional[RiskClassifier] = None) -> None:
+    def __init__(
+        self,
+        classifier: Optional[RiskClassifier] = None,
+        regulator_classifier: Optional[RegulatorClassifier] = None,
+    ) -> None:
         self.classifier = classifier or MockRiskClassifier()
+        self.regulator_classifier = regulator_classifier
 
     def classify(self, state: CaseState) -> CaseState:
         normed = normalize_for_classifier(state.input_text)
@@ -70,11 +90,12 @@ class RiskAgentAdapter:
         state.risk_phrase = prediction.risk_factors[0] if prediction.risk_factors else None
 
         regulator_candidates = prediction.regulator_candidates or []
-        state.regulator = (
-            _STR_TO_REGULATOR.get(regulator_candidates[0], Regulator.GENERAL)
-            if regulator_candidates
-            else Regulator.GENERAL
-        )
+        if regulator_candidates:
+            state.regulator = _STR_TO_REGULATOR.get(regulator_candidates[0], Regulator.GENERAL)
+        elif self.regulator_classifier is not None:
+            state.regulator = self._predict_regulator(normed["normalized_text"])
+        else:
+            state.regulator = Regulator.GENERAL
 
         state.log(
             EventType.RISK_CLASSIFIED,
@@ -84,3 +105,9 @@ class RiskAgentAdapter:
             risk_factors=list(prediction.risk_factors),
         )
         return state
+
+    def _predict_regulator(self, normalized_text: str) -> Regulator:
+        (label, confidence), = self.regulator_classifier.predict(normalized_text, top_n=1)
+        if confidence < _REGULATOR_CONFIDENCE_FLOOR:
+            return Regulator.GENERAL
+        return _STR_TO_REGULATOR.get(label, Regulator.GENERAL)

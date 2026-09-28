@@ -49,6 +49,12 @@ class ResolutionStatus(str, Enum):
     PENDING = "pending"
     RESOLVED = "resolved"
     ESCALATED = "escalated"
+    NEEDS_REVIEW = "needs_review"  # Day 9: abstention -- low confidence or no
+    # evidence found. Distinct from ESCALATED (which means "the
+    # rewrite/verify loop ran and failed"): NEEDS_REVIEW means the system
+    # deliberately declined to guess rather than force a call it isn't
+    # confident in (architecture doc Section 15: "abstain instead of
+    # inventing a regulation").
 
 
 class EventType(str, Enum):
@@ -61,6 +67,8 @@ class EventType(str, Enum):
     VERIFICATION_RUN = "verification_run"
     ITERATION_RETRY = "iteration_retry"
     ESCALATED = "escalated"
+    ABSTAINED = "abstained"  # Day 9: routed to NEEDS_REVIEW instead of
+    # forcing a low-confidence call or fabricating a citation.
     CASE_RESOLVED = "case_resolved"
     AGENT_ERROR = "agent_error"
 
