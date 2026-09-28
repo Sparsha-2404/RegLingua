@@ -1,15 +1,15 @@
 """
-Simple vector index for RegLingua regulatory documents.
+Vector index for RegLingua regulatory documents.
 
-Day 3:
+Day 4:
 - Loads the regulatory corpus.
 - Generates multilingual embeddings.
 - Stores embeddings together with regulatory metadata.
+- Supports metadata filtering before vector ranking.
 - Provides cosine-similarity search.
 
-This is intentionally simple for the initial embedding-index milestone.
-The Day 5 hybrid retriever can later use this component alongside
-keyword retrieval and reranking.
+The index is intentionally kept simple so the Day 5 hybrid retriever
+can combine it with keyword retrieval and reranking.
 """
 
 from __future__ import annotations
@@ -59,26 +59,13 @@ class RegulatoryVectorIndex:
         vectors = self.encoder.encode(texts)
         self.embeddings = np.asarray(vectors, dtype=np.float32)
 
-    def search(
+    def _filter_indices(
         self,
-        query: str,
-        top_k: int = 5,
         regulator: Optional[str] = None,
-    ) -> List[dict]:
-        """Return the most semantically similar regulatory documents."""
-
-        if not query.strip():
-            raise ValueError("query must not be empty")
-
-        if self.embeddings is None:
-            raise RuntimeError("Index has not been built. Call build() first.")
-
-        query_vector = np.asarray(
-            self.encoder.encode_one(query),
-            dtype=np.float32,
-        )
-
-        scores = self.embeddings @ query_vector
+        topic: Optional[str] = None,
+        source_id: Optional[str] = None,
+    ) -> List[int]:
+        """Return document indices matching the supplied metadata filters."""
 
         candidate_indices = list(range(len(self.documents)))
 
@@ -88,6 +75,62 @@ class RegulatoryVectorIndex:
                 for index in candidate_indices
                 if self.documents[index]["regulator"] == regulator
             ]
+
+        if topic:
+            topic_lower = topic.lower()
+            candidate_indices = [
+                index
+                for index in candidate_indices
+                if topic_lower in self.documents[index].get("topic", "").lower()
+            ]
+
+        if source_id:
+            candidate_indices = [
+                index
+                for index in candidate_indices
+                if self.documents[index]["source_id"] == source_id
+            ]
+
+        return candidate_indices
+
+    def search(
+        self,
+        query: str,
+        top_k: int = 5,
+        regulator: Optional[str] = None,
+        topic: Optional[str] = None,
+        source_id: Optional[str] = None,
+    ) -> List[dict]:
+        """
+        Return the most semantically similar regulatory documents.
+
+        Metadata filtering is performed before vector ranking.
+        """
+
+        if not query.strip():
+            raise ValueError("query must not be empty")
+
+        if top_k < 1:
+            raise ValueError("top_k must be >= 1")
+
+        if self.embeddings is None:
+            raise RuntimeError("Index has not been built. Call build() first.")
+
+        candidate_indices = self._filter_indices(
+            regulator=regulator,
+            topic=topic,
+            source_id=source_id,
+        )
+
+        if not candidate_indices:
+            return []
+
+        query_vector = np.asarray(
+            self.encoder.encode_one(query),
+            dtype=np.float32,
+        )
+
+        scores = self.embeddings @ query_vector
 
         ranked_indices = sorted(
             candidate_indices,

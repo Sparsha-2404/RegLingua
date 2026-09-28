@@ -29,17 +29,16 @@ from agents.research_contracts import (
     RegulatoryResearchOutput,
     RegulatoryResearchResult,
 )
-from services.retrieval.deterministic_retriever import DeterministicRetriever
+from services.retrieval.hybrid_retriever import HybridRetriever
 
 
 class RegulatoryResearchAgent:
     AGENT_NAME = "regulatory_researcher"
 
-    def __init__(self, retriever: Optional[DeterministicRetriever] = None):
-        # Dependency-injected so the Day 5+ hybrid (BM25 + vector) retriever
-        # can be swapped in later without touching this agent's contract
-        # or anything that calls it.
-        self.retriever = retriever or DeterministicRetriever()
+    def __init__(self, retriever: Optional[HybridRetriever] = None):
+        # Dependency-injected so the retriever implementation can be replaced
+        # without changing the agent contract or downstream callers.
+        self.retriever = retriever or HybridRetriever()
 
     def run(self, request: RegulatoryResearchInput) -> RegulatoryResearchOutput:
         request.validate()
