@@ -24,12 +24,12 @@ from __future__ import annotations
 
 from typing import Optional
 
-from core.contracts import (
+from reglingua.core.contracts import (
     RegulatoryResearchInput,
     RegulatoryResearchOutput,
     RegulatoryResearchResult,
 )
-from services.retrieval.deterministic_retriever import DeterministicRetriever
+from reglingua.services.retrieval.deterministic_retriever import DeterministicRetriever
 
 
 class RegulatoryResearchAgent:

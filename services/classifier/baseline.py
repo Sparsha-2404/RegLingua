@@ -20,6 +20,7 @@ from typing import List, Sequence
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
+
 from services.classifier.contracts import RiskLevel, RiskPrediction
 from services.classifier.interface import RiskClassifier
 

@@ -10,13 +10,8 @@ Run as tests (if pytest is available):
 
 from __future__ import annotations
 
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # repo root on path
-
-from core.contracts import RegulatoryResearchInput, RiskPrediction
-from agents.regulatory_research_agent import RegulatoryResearchAgent
+from reglingua.core.contracts import RegulatoryResearchInput, RiskPrediction
+from reglingua.agents.regulatory_research_agent import RegulatoryResearchAgent
 
 
 def _run_case(agent, case_id, text, language, regulator_candidates, topic_hint=None):
