@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Union
 
 import numpy as np
 
@@ -61,7 +61,7 @@ class RegulatoryVectorIndex:
 
     def _filter_indices(
         self,
-        regulator: Optional[str] = None,
+        regulator: Optional[Union[str, List[str]]] = None,
         topic: Optional[str] = None,
         source_id: Optional[str] = None,
     ) -> List[int]:
@@ -70,10 +70,13 @@ class RegulatoryVectorIndex:
         candidate_indices = list(range(len(self.documents)))
 
         if regulator:
+            allowed_regulators = (
+                {regulator} if isinstance(regulator, str) else set(regulator)
+            )
             candidate_indices = [
                 index
                 for index in candidate_indices
-                if self.documents[index]["regulator"] == regulator
+                if self.documents[index]["regulator"] in allowed_regulators
             ]
 
         if topic:
@@ -97,7 +100,7 @@ class RegulatoryVectorIndex:
         self,
         query: str,
         top_k: int = 5,
-        regulator: Optional[str] = None,
+        regulator: Optional[Union[str, List[str]]] = None,
         topic: Optional[str] = None,
         source_id: Optional[str] = None,
     ) -> List[dict]:

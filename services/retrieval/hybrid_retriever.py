@@ -64,11 +64,7 @@ class HybridRetriever:
         vector_results = self.vector_index.search(
             query=query_text,
             top_k=max(top_k, 10),
-            regulator=(
-                regulator_candidates[0]
-                if regulator_candidates and len(regulator_candidates) == 1
-                else None
-            ),
+            regulator=regulator_candidates or None,
             topic=topic_hint,
         )
 

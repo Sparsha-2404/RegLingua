@@ -147,3 +147,41 @@ def test_hybrid_retriever_handles_empty_query():
     results = retriever.retrieve("")
 
     assert results == []
+
+
+def test_hybrid_retriever_passes_multiple_regulator_filters():
+    class RecordingVectorIndex(FakeVectorIndex):
+        def __init__(self):
+            super().__init__()
+            self.received_regulator = None
+
+        def search(
+            self,
+            query,
+            top_k=5,
+            regulator=None,
+            topic=None,
+            source_id=None,
+        ):
+            self.received_regulator = regulator
+            return super().search(
+                query=query,
+                top_k=top_k,
+                regulator=regulator,
+                topic=topic,
+                source_id=source_id,
+            )
+
+    vector_index = RecordingVectorIndex()
+    retriever = HybridRetriever(
+        keyword_retriever=FakeKeywordRetriever(),
+        vector_index=vector_index,
+    )
+
+    retriever.retrieve(
+        "guaranteed returns",
+        regulator_candidates=["SEBI", "RBI"],
+        top_k=2,
+    )
+
+    assert vector_index.received_regulator == ["SEBI", "RBI"]

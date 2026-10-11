@@ -98,3 +98,22 @@ def test_vector_search_supports_source_id_filter():
 
     assert len(results) == 1
     assert results[0]["source_id"] == "SEBI_IA_002"
+
+
+def test_vector_search_supports_multiple_regulator_filters():
+    index = RegulatoryVectorIndex(encoder=FakeEncoder())
+    index.build()
+
+    results = index.search(
+        "guaranteed returns",
+        top_k=10,
+        regulator=["SEBI", "RBI"],
+    )
+
+    assert results
+    assert all(
+        result["regulator"] in ["SEBI", "RBI"]
+        for result in results
+    )
+    assert any(result["regulator"] == "SEBI" for result in results)
+    assert any(result["regulator"] == "RBI" for result in results)
