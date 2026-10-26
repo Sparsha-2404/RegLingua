@@ -10,9 +10,17 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from services.retrieval.hybrid_retriever import HybridRetriever
+from agents.research_contracts import RegulatoryResearchInput, RiskPrediction
+from agents.regulatory_research_agent import RegulatoryResearchAgent
 
 K = 3
 OUTPUT_FILE = ROOT / "tests" / "evaluation" / "retrieval_results.json"
+
+NEGATIVE_QUERIES = [
+    "What are the best restaurants for a weekend picnic?",
+    "How do I grow tomatoes in a home garden?",
+    "Recommend a science-fiction movie for tonight.",
+]
 
 EVALUATION_CASES = [
     {
@@ -44,6 +52,31 @@ EVALUATION_CASES = [
         "language": "Hindi",
         "query": "व्यक्तिगत डेटा की सहमति और चेकबॉक्स",
         "expected": "DPDP_HI_004",
+    },
+    {
+        "language": "English",
+        "query": "investment adviser registration requirements for personalized advice",
+        "expected": "SEBI_IA_001",
+    },
+    {
+        "language": "English",
+        "query": "mutual fund risk disclosures and past performance",
+        "expected": "SEBI_MF_003",
+    },
+    {
+        "language": "English",
+        "query": "wallet balance and deposit insurance claims",
+        "expected": "RBI_PAY_003",
+    },
+    {
+        "language": "English",
+        "query": "parental consent for children's data and targeted advertising",
+        "expected": "DPDP_003",
+    },
+    {
+        "language": "English",
+        "query": "privacy notice in plain language explaining its purpose",
+        "expected": "DPDP_002",
     },
 ]
 
@@ -107,12 +140,62 @@ def main():
         "mean_reciprocal_rank": round(reciprocal_rank_total / count, 4),
     }
 
+
+    agent = RegulatoryResearchAgent(retriever=retriever)
+    negative_results = []
+
+    for index, query in enumerate(NEGATIVE_QUERIES, start=1):
+        request = RegulatoryResearchInput(
+            case_id=f"NEGATIVE-{index:03d}",
+            normalized_text=query,
+            language="en",
+            risk_prediction=RiskPrediction(
+                label="LOW",
+                confidence=0.9,
+                factors=[],
+            ),
+            regulator_candidates=[],
+            top_k=K,
+        )
+        output = agent.run(request)
+        abstained = (
+            output.status == "failure"
+            and output.confidence == 0.0
+            and not output.evidence_refs
+            and not output.result.retrieval_results
+            and output.next_action == "needs_review"
+        )
+        negative_results.append({
+            "query": query,
+            "status": output.status,
+            "confidence": output.confidence,
+            "evidence_refs": output.evidence_refs,
+            "retrieved_source_ids": [
+                chunk.source_id for chunk in output.result.retrieval_results
+            ],
+            "next_action": output.next_action,
+            "abstained_as_expected": abstained,
+        })
+        print(
+            f"Negative query: {query!r} | "
+            f"status={output.status} | abstained={abstained}"
+        )
+
+    negative_summary = {
+        "queries_evaluated": len(negative_results),
+        "correct_abstentions": sum(
+            item["abstained_as_expected"] for item in negative_results
+        ),
+    }
+
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "corpus_note": "Small synthetic corpus; results are preliminary.",
         "top_k": K,
         "summary": summary,
         "cases": results_report,
+        "negative_query_summary": negative_summary,
+        "negative_query_cases": negative_results,
     }
 
     OUTPUT_FILE.write_text(
@@ -125,6 +208,10 @@ def main():
     print(f"Mean Precision@{K}: {summary[f'mean_precision_at_{K}']:.3f}")
     print(f"Mean Recall@{K}:    {summary[f'mean_recall_at_{K}']:.3f}")
     print(f"MRR:                {summary['mean_reciprocal_rank']:.3f}")
+    print(
+        f"Correct abstentions: {negative_summary['correct_abstentions']}/"
+        f"{negative_summary['queries_evaluated']}"
+    )
     print(f"\nJSON report saved to: {OUTPUT_FILE.relative_to(ROOT)}")
 
 

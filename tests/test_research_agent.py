@@ -113,3 +113,19 @@ if __name__ == "__main__":
     test_no_regulator_filter_still_ranks_across_corpus()
     test_abstains_when_no_keyword_overlap()
     print("\nAll M3 Day 1/Day 2 checks passed.")
+
+def test_abstains_on_unrelated_restaurant_query():
+    agent = RegulatoryResearchAgent()
+    output = _run_case(
+        agent,
+        case_id="CASE-006",
+        text="What are the best restaurants for a weekend picnic?",
+        language="en",
+        regulator_candidates=[],
+    )
+
+    assert output.status == "failure"
+    assert output.confidence == 0.0
+    assert output.result.retrieval_results == []
+    assert output.evidence_refs == []
+    assert output.next_action == "needs_review"

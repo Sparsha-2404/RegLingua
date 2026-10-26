@@ -1,9 +1,9 @@
 {
-  "generated_at_utc": "2026-10-26T08:16:56.227671+00:00",
+  "generated_at_utc": "2026-10-26T19:53:57.684313+00:00",
   "corpus_note": "Small synthetic corpus; results are preliminary.",
   "top_k": 3,
   "summary": {
-    "queries_evaluated": 6,
+    "queries_evaluated": 11,
     "mean_precision_at_3": 0.3333,
     "mean_recall_at_3": 1.0,
     "mean_reciprocal_rank": 1.0
@@ -92,6 +92,109 @@
       "precision_at_3": 0.3333,
       "recall_at_3": 1.0,
       "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "investment adviser registration requirements for personalized advice",
+      "expected_source_id": "SEBI_IA_001",
+      "ranked_source_ids": [
+        "SEBI_IA_001",
+        "SEBI_MF_003",
+        "SEBI_IA_002"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "mutual fund risk disclosures and past performance",
+      "expected_source_id": "SEBI_MF_003",
+      "ranked_source_ids": [
+        "SEBI_MF_003",
+        "SEBI_IA_002",
+        "RBI_LEND_001"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "wallet balance and deposit insurance claims",
+      "expected_source_id": "RBI_PAY_003",
+      "ranked_source_ids": [
+        "RBI_PAY_003",
+        "RBI_LEND_002",
+        "SEBI_MF_003"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "parental consent for children's data and targeted advertising",
+      "expected_source_id": "DPDP_003",
+      "ranked_source_ids": [
+        "DPDP_003",
+        "DPDP_001",
+        "DPDP_002"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "privacy notice in plain language explaining its purpose",
+      "expected_source_id": "DPDP_002",
+      "ranked_source_ids": [
+        "DPDP_002",
+        "DPDP_HI_004",
+        "DPDP_001"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    }
+  ],
+  "negative_query_summary": {
+    "queries_evaluated": 3,
+    "correct_abstentions": 3
+  },
+  "negative_query_cases": [
+    {
+      "query": "What are the best restaurants for a weekend picnic?",
+      "status": "failure",
+      "confidence": 0.0,
+      "evidence_refs": [],
+      "retrieved_source_ids": [],
+      "next_action": "needs_review",
+      "abstained_as_expected": true
+    },
+    {
+      "query": "How do I grow tomatoes in a home garden?",
+      "status": "failure",
+      "confidence": 0.0,
+      "evidence_refs": [],
+      "retrieved_source_ids": [],
+      "next_action": "needs_review",
+      "abstained_as_expected": true
+    },
+    {
+      "query": "Recommend a science-fiction movie for tonight.",
+      "status": "failure",
+      "confidence": 0.0,
+      "evidence_refs": [],
+      "retrieved_source_ids": [],
+      "next_action": "needs_review",
+      "abstained_as_expected": true
     }
   ]
 }
