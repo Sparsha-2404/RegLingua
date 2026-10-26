@@ -50,10 +50,10 @@ class RegulatoryResearchAgent:
             top_k=request.top_k,
         )
 
-        if not chunks:
-            # Abstain rather than invent a regulation — matches the
-            # reliability section of the architecture doc: "If retrieval
-            # finds no sufficiently relevant evidence, abstain."
+        top_score = chunks[0].score if chunks else 0.0
+
+        # Abstain when retrieval returns no sufficiently relevant evidence.
+        if not chunks or top_score < 0.1:
             return RegulatoryResearchOutput(
                 agent=self.AGENT_NAME,
                 status="failure",
@@ -66,7 +66,6 @@ class RegulatoryResearchAgent:
                 next_action="needs_review",
             )
 
-        top_score = chunks[0].score
         status = "success" if top_score >= 0.5 else "partial"
 
         return RegulatoryResearchOutput(
