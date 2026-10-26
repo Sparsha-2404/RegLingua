@@ -36,7 +36,9 @@ _STOPWORDS = {
     "a", "an", "the", "and", "or", "of", "in", "on", "for", "to", "with",
     "your", "our", "is", "are", "be", "this", "that", "it", "as", "at",
     "no", "not", "into", "from", "by", "we", "you", "will",
-    "है", "के", "का", "की", "और", "को", "में", "पर", "से", "यह",
+    "\u0939\u0948", "\u0915\u0947", "\u0915\u093e", "\u0915\u0940",
+    "\u0914\u0930", "\u0915\u094b", "\u092e\u0947\u0902",
+    "\u092a\u0930", "\u0938\u0947", "\u092f\u0939",
 }
 
 _DEFAULT_CORPUS_PATH = (
