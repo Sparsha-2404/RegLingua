@@ -1,0 +1,97 @@
+{
+  "generated_at_utc": "2026-10-26T08:16:56.227671+00:00",
+  "corpus_note": "Small synthetic corpus; results are preliminary.",
+  "top_k": 3,
+  "summary": {
+    "queries_evaluated": 6,
+    "mean_precision_at_3": 0.3333,
+    "mean_recall_at_3": 1.0,
+    "mean_reciprocal_rank": 1.0
+  },
+  "cases": [
+    {
+      "language": "English",
+      "query": "guaranteed returns on investment products",
+      "expected_source_id": "SEBI_IA_002",
+      "ranked_source_ids": [
+        "SEBI_IA_002",
+        "SEBI_IA_001",
+        "SEBI_MF_003"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "lenders must disclose interest rates fees and total loan cost",
+      "expected_source_id": "RBI_LEND_001",
+      "ranked_source_ids": [
+        "RBI_LEND_001",
+        "RBI_LEND_002",
+        "SEBI_MF_003"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "instant unconditional loan approval claims by lending apps",
+      "expected_source_id": "RBI_LEND_002",
+      "ranked_source_ids": [
+        "RBI_LEND_002",
+        "RBI_LEND_001",
+        "DPDP_001"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "English",
+      "query": "consent for unrelated purposes in a single checkbox",
+      "expected_source_id": "DPDP_001",
+      "ranked_source_ids": [
+        "DPDP_001",
+        "DPDP_HI_004",
+        "DPDP_003"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "Code-mixed",
+      "query": "loan app instant approval nahi milta",
+      "expected_source_id": "RBI_LEND_002",
+      "ranked_source_ids": [
+        "RBI_LEND_002",
+        "RBI_LEND_001",
+        "SEBI_IA_001"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "language": "Hindi",
+      "query": "व्यक्तिगत डेटा की सहमति और चेकबॉक्स",
+      "expected_source_id": "DPDP_HI_004",
+      "ranked_source_ids": [
+        "DPDP_HI_004",
+        "DPDP_001",
+        "DPDP_002"
+      ],
+      "expected_found_in_top_k": true,
+      "precision_at_3": 0.3333,
+      "recall_at_3": 1.0,
+      "reciprocal_rank": 1.0
+    }
+  ]
+}
