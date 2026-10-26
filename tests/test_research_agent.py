@@ -100,19 +100,6 @@ def test_abstains_when_no_keyword_overlap():
         language="en",
         regulator_candidates=[],
     )
-    assert output.status == "failure"
-    assert output.next_action == "needs_review"
-    assert output.result.retrieval_results == []
-
-def test_abstains_when_no_keyword_overlap():
-    agent = RegulatoryResearchAgent()
-    output = _run_case(
-        agent,
-        case_id="CASE-005",
-        text="our weekend picnic menu includes sandwiches and lemonade",
-        language="en",
-        regulator_candidates=[],
-    )
 
     assert output.status == "failure"
     assert output.confidence == 0.0
