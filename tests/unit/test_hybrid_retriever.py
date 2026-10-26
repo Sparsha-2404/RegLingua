@@ -185,3 +185,69 @@ def test_hybrid_retriever_passes_multiple_regulator_filters():
     )
 
     assert vector_index.received_regulator == ["SEBI", "RBI"]
+def test_hybrid_retriever_returns_empty_when_both_sources_have_no_results():
+    class EmptyKeywordRetriever:
+        def retrieve(
+            self,
+            query_text,
+            regulator_candidates=None,
+            topic_hint=None,
+            top_k=5,
+        ):
+            return []
+
+    class EmptyVectorIndex:
+        embeddings = True
+
+        def search(
+            self,
+            query,
+            top_k=5,
+            regulator=None,
+            topic=None,
+            source_id=None,
+        ):
+            return []
+
+    retriever = HybridRetriever(
+        keyword_retriever=EmptyKeywordRetriever(),
+        vector_index=EmptyVectorIndex(),
+    )
+
+    assert retriever.retrieve("unsupported query") == []
+
+
+def test_hybrid_retriever_returns_empty_when_no_regulator_matches():
+    class EmptyFilteredKeywordRetriever:
+        def retrieve(
+            self,
+            query_text,
+            regulator_candidates=None,
+            topic_hint=None,
+            top_k=5,
+        ):
+            return []
+
+    class EmptyFilteredVectorIndex:
+        embeddings = True
+
+        def search(
+            self,
+            query,
+            top_k=5,
+            regulator=None,
+            topic=None,
+            source_id=None,
+        ):
+            assert regulator == ["DPDP"]
+            return []
+
+    retriever = HybridRetriever(
+        keyword_retriever=EmptyFilteredKeywordRetriever(),
+        vector_index=EmptyFilteredVectorIndex(),
+    )
+
+    assert retriever.retrieve(
+        "guaranteed returns",
+        regulator_candidates=["DPDP"],
+    ) == []

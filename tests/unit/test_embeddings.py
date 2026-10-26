@@ -117,3 +117,25 @@ def test_vector_search_supports_multiple_regulator_filters():
     )
     assert any(result["regulator"] == "SEBI" for result in results)
     assert any(result["regulator"] == "RBI" for result in results)
+def test_vector_search_returns_empty_for_unmatched_regulator():
+    index = RegulatoryVectorIndex(encoder=FakeEncoder())
+    index.build()
+
+    results = index.search(
+        "guaranteed returns",
+        regulator="UNKNOWN",
+    )
+
+    assert results == []
+
+
+def test_vector_search_returns_empty_for_unmatched_topic():
+    index = RegulatoryVectorIndex(encoder=FakeEncoder())
+    index.build()
+
+    results = index.search(
+        "guaranteed returns",
+        topic="topic-that-does-not-exist",
+    )
+
+    assert results == []
