@@ -1,81 +1,69 @@
-# M3 — Regulatory Research Agent (Day 1 + Day 2)
+# M3 - Regulatory Research Agent
 
-Scope per the revised ownership table: **retrieval, embeddings, hybrid search only**
-(Evidence/Explainer/Rewriter moved to M4).
+## Scope
 
-## Day 1 — Research agent contract (`core/contracts.py`)
+M3 implements the regulatory research and retrieval layer. Under the revised ownership table, Evidence, Explainer, and Rewriter responsibilities belong to M4. Existing files alone do not prove that all M4 work is complete.
 
-Defines the typed input/output interface for Agent 3 (Regulatory Researcher),
-matching the "Structured Agent Output" shape from the architecture doc:
+## Implemented Components
 
-- `RegulatoryResearchInput` — `case_id`, `normalized_text`, `language`,
-  `risk_prediction` (from the Risk Analyst), `regulator_candidates`
-  (`SEBI`/`RBI`/`DPDP`), optional `topic_hint`, `top_k`.
-- `RegulatoryResearchOutput` — `agent`, `status`
-  (`success`/`partial`/`failure`), `confidence`, `result.retrieval_results`
-  (list of `RetrievedChunk`), `evidence_refs` (source IDs, for the Evidence
-  Agent), `next_action`.
-- `RetrievedChunk` — matches the metadata schema in the architecture doc
-  (`source_id`, `regulator`, `document_title`, `section`, `effective_date`,
-  `text`, `source_url`, `topic`, `score`).
+### 1. Research Agent Contract
 
-**Anyone calling this agent (Supervisor, M4) should only ever import from
-`core/contracts.py`** — never reach into `services/retrieval/` directly.
-That's what lets the retriever implementation change on Day 3–5 without
-touching any other agent's code.
+The research agent uses structured input/output contracts for case identifiers, normalized text, language, regulator candidates, optional topic hints, and retrieval settings. Results include source IDs, regulator, document metadata, text, source URL, topic, and relevance score.
 
-## Day 2 — Deterministic retrieval prototype (`services/retrieval/deterministic_retriever.py`)
+### 2. Deterministic Keyword Retrieval
 
-No embeddings, no ML dependency yet — a keyword-overlap scorer over the
-sample regulatory corpus (`data/regulatory/sample_corpus.json`), with:
+The keyword retriever supports regulator filtering, Devanagari-aware tokenization, stopword handling, and topic hints.
 
-- Metadata filtering by `regulator_candidates` before scoring (as recommended
-  in the architecture doc).
-- Devanagari-aware tokenization, so Hindi and code-mixed queries work too.
-- A small stopword list so generic connector words don't cause false-positive
-  matches.
-- A `topic_hint` boost.
+### 3. Multilingual Embeddings and Vector Index
 
-This is a deliberate stand-in for the Day 5 hybrid (BM25 + vector) retriever —
-same call signature (`retrieve(query_text, regulator_candidates, topic_hint,
-top_k)`), so it's a drop-in swap later.
+The embedding encoder generates multilingual sentence embeddings. The vector index loads the JSON corpus, creates embeddings, supports metadata filters, and ranks candidates using cosine similarity.
 
-## Agent (`agents/regulatory_research_agent.py`)
+### 4. Hybrid Retrieval
 
-`RegulatoryResearchAgent` wraps the retriever behind the Day 1 contract, and
-implements the abstention behavior called for in the architecture doc's
-reliability section: if there's no keyword overlap at all, it returns
-`status="failure"` / `next_action="needs_review"` instead of inventing a
-regulation.
+`services/retrieval/hybrid_retriever.py` combines keyword and vector retrieval using weights of 0.5 each. It merges candidates, computes combined scores, reranks results, and returns the top-k results.
 
-## Sample corpus (`data/regulatory/sample_corpus.json`)
+### 5. Research-Agent Integration and Abstention
 
-10 synthetic (not verbatim-copied) regulatory entries spanning SEBI
-(guaranteed returns, personalized-advice registration trigger, risk
-disclosure), RBI (lending disclosure, instant-approval claims, wallet/deposit
-claims), and DPDP (consent bundling, notice, children's data — including one
-Hindi entry). Swap this file for the real ingested corpus once M1's ingestion
-pipeline (Day 4) is ready — the retriever doesn't care where the JSON came
-from.
+`agents/regulatory_research_agent.py` calls the hybrid retriever. If no results are returned or the top score is below 0.1, the agent returns `failure`, zero confidence, no evidence references, and `needs_review`. Scores of at least 0.5 are marked `success`; other accepted results are marked `partial`.
 
-## Try it
+The 0.1 abstention threshold is provisional and requires calibration against a larger labelled dataset.
 
-```bash
-cd reglingua
-python3 -m tests.test_research_agent
+## Corpus and Evaluation
+
+The current `data/regulatory/sample_corpus.json` contains 10 synthetic regulatory entries covering SEBI, RBI, and DPDP topics, including a Hindi entry. This development corpus is not a substitute for a verified, up-to-date collection of official regulatory sources.
+
+Run retrieval evaluation with:
+
+```powershell
+python tests/evaluation/evaluate_retrieval.py
 ```
 
-Runs 5 scenarios end-to-end (SEBI/English, RBI/English, DPDP/Hindi, no
-regulator filter, and a no-match abstention case) and prints the ranked
-evidence for each.
+The evaluation currently contains six manually labelled English, code-mixed, and Hindi queries. The latest observed run reported:
 
-## What's next (Day 3–5, still M3)
+- Mean Precision@3: 0.333
+- Mean Recall@3: 1.000
+- Mean Reciprocal Rank: 1.000
 
-- Day 3: start embedding index setup.
-- Day 4: build the embedding index + metadata filtering (real vectors).
-- Day 5: add keyword + vector hybrid retrieval with reranking, hand off
-  `ResearchAgent -> EvidenceAgent` (M4 builds `EvidenceAgent` per the revised
-  table).
+These preliminary results are limited by the small corpus and evaluation set. The evaluation script writes `tests/evaluation/retrieval_results.json`, including a generation timestamp.
 
-The contract in `core/contracts.py` should not need to change for any of
-this — only `deterministic_retriever.py` gets replaced/extended.
+## Relevant Tests
+
+- `tests/test_research_agent.py`
+- `tests/unit/test_embeddings.py`
+- `tests/unit/test_hybrid_retriever.py`
+- `tests/unit/test_research_agent.py`
+- `tests/test_integration_day1_day2.py`
+- `tests/test_pipeline.py`
+- `tests/test_m4_day6_9.py`
+- `tests/unit/test_day1_day2_classifier.py`
+- `tests/unit/test_day3_baseline_training.py`
+
+The latest broad regression run passed 61 tests with nine scikit-learn version warnings. Saved model artifacts were created under a different scikit-learn version than the current runtime; a consistent dependency and artifact workflow is still needed.
+
+## Remaining Work
+
+1. Expand labelled retrieval evaluation with relevant and irrelevant queries across supported languages.
+2. Calibrate the abstention threshold using validation data.
+3. Verify retrieval against a larger, authoritative regulatory corpus when ingestion is ready.
+4. Review evidence handoff contracts with the M4 owners.
+5. Keep this README aligned with code and rerun regression tests before committing.
