@@ -1,0 +1,7 @@
+services:
+  reglingua:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      REGLINGUA_DEMO_MODE: "1"      # offline: no network, no API key
+      REGLINGUA_LLM_ENABLED: "0"

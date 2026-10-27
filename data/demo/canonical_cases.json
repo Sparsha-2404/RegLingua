@@ -1,0 +1,38 @@
+[
+  {
+    "id": "C1",
+    "title": "Guaranteed returns (EN, SEBI)",
+    "text": "We guarantee 100% safe returns with no risk on this mutual fund, invest now.",
+    "expect": "RESOLVED via rewrite"
+  },
+  {
+    "id": "C2",
+    "title": "Hinglish guaranteed return",
+    "text": "Mutual fund pakka return milega bina risk ke",
+    "expect": "RISKY; rewritten or ESCALATED"
+  },
+  {
+    "id": "C3",
+    "title": "Consent-less data sharing (Hindi)",
+    "text": "अपना डेटा हमें दे दीजिए, बिना सहमति के हम इसे साझा करेंगे",
+    "expect": "RISKY; Hindi evidence via bridge (RBI consent rule); Hindi rewrite"
+  },
+  {
+    "id": "C4",
+    "title": "Properly hedged statement",
+    "text": "Past performance is not indicative of future results; mutual fund investments are subject to market risks.",
+    "expect": "NEEDS_REVIEW: baseline confidence below the 0.40 abstention floor"
+  },
+  {
+    "id": "C5",
+    "title": "Too short to assess",
+    "text": "hi",
+    "expect": "NEEDS_REVIEW (intake guard)"
+  },
+  {
+    "id": "C6",
+    "title": "Negated claim (known false positive)",
+    "text": "We do not guarantee returns; investments are subject to market risk.",
+    "expect": "Rule layer does not fire, but the baseline ML over-flags it; escalated to a human. Disclose as a known limitation."
+  }
+]

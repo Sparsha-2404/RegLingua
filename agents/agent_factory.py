@@ -40,7 +40,22 @@ from agents.verifier_agent import VerifierAgent as RealVerifierAgent
 from services.classifier.baseline import TfidfLogisticClassifier
 from services.classifier.interface import MockRiskClassifier, RiskClassifier
 from services.classifier.regulator_classifier import RegulatorClassifier
+from core.config import (
+    LABELED_EXAMPLES_PATH,
+    QUERY_BRIDGE_PATH,
+    get_settings,
+)
+try:  # optional, non-M4 components (rule guardrail, bridged retriever): degrade gracefully if absent
+    from services.classifier.rule_augmented import RuleAugmentedClassifier
+except ImportError:  # pragma: no cover
+    RuleAugmentedClassifier = None
 from services.retrieval.deterministic_retriever import DeterministicRetriever
+try:
+    from services.retrieval.bridged_retriever import BridgedHybridRetriever
+    from services.retrieval.query_bridge import load_default_bridge
+except ImportError:  # pragma: no cover
+    BridgedHybridRetriever = None
+    load_default_bridge = None
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -71,6 +86,7 @@ def build_agents(
     regulator_classifier: Optional[RegulatorClassifier] = None,
     corpus_path: Optional[Path] = None,
     use_trained_artifacts: bool = False,
+    production: bool = False,
 ) -> dict[str, object]:
     """Build the full agent roster used by the Supervisor graph.
 
@@ -116,12 +132,35 @@ def build_agents(
     if corpus_path is None and use_trained_artifacts:
         corpus_path = M1_REGULATORY_KB_PATH
 
+    base_classifier = classifier or MockRiskClassifier()
+    fallback_risk_agent = None
+    if production:
+        # Day 10: rule guardrail (can only raise risk) around the weak ML
+        # baseline. The un-augmented baseline stays as the resilience fallback.
+        fallback_risk_agent = RiskAgentAdapter(
+            classifier=base_classifier, regulator_classifier=regulator_classifier
+        )
+        if RuleAugmentedClassifier is not None:
+            base_classifier = RuleAugmentedClassifier(base_classifier)
+
     risk_agent = RiskAgentAdapter(
-        classifier=classifier or MockRiskClassifier(),
+        classifier=base_classifier,
         regulator_classifier=regulator_classifier,
     )
 
-    retriever = DeterministicRetriever(corpus_path=corpus_path) if corpus_path else DeterministicRetriever()
+    deterministic = DeterministicRetriever(corpus_path=corpus_path) if corpus_path else DeterministicRetriever()
+    retriever: object = deterministic
+    fallback_evidence_agent = None
+    if production and BridgedHybridRetriever is not None:
+        try:
+            bridge = load_default_bridge(LABELED_EXAMPLES_PATH, QUERY_BRIDGE_PATH)
+            retriever = BridgedHybridRetriever(corpus_path=corpus_path, bridge=bridge)
+            fallback_evidence_agent = EvidenceAgentAdapter(
+                research_agent=RegulatoryResearchAgent(retriever=deterministic)
+            )
+        except Exception as exc:  # noqa: BLE001 - never fail startup on an optional upgrade
+            print(f"[agent_factory] hybrid retriever unavailable ({exc}); using deterministic retriever.")
+            retriever = deterministic
     research_agent = RegulatoryResearchAgent(retriever=retriever)
     evidence_agent = EvidenceAgentAdapter(research_agent=research_agent)
 
@@ -134,7 +173,20 @@ def build_agents(
         rewriter_agent = MockRewriterAgent()
         verifier_agent = MockVerifierAgent(risk_agent=risk_agent)
 
-    return {
+    fallback_explainer_agent = None
+    if production:
+        fallback_explainer_agent = explainer_agent
+        settings = get_settings()
+        if settings.llm_allowed:
+            try:
+                from agents.llm_agents import AnthropicClient, LLMExplainerAgent
+
+                explainer_agent = LLMExplainerAgent(AnthropicClient())
+            except Exception as exc:  # noqa: BLE001
+                print(f"[agent_factory] LLM explainer unavailable ({exc}); using deterministic explainer.")
+                fallback_explainer_agent = None
+
+    roster = {
         "language_detector": LanguageAgentAdapter(),
         "risk_agent": risk_agent,
         "research_agent": research_agent,
@@ -143,3 +195,8 @@ def build_agents(
         "rewriter_agent": rewriter_agent,
         "verifier_agent": verifier_agent,
     }
+    if production:
+        roster["fallback_risk_agent"] = fallback_risk_agent
+        roster["fallback_evidence_agent"] = fallback_evidence_agent
+        roster["fallback_explainer_agent"] = fallback_explainer_agent
+    return roster

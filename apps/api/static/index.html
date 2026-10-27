@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RegLingua</title>
+<style>
+:root{--bg:#f7f7f5;--fg:#1c1c1a;--card:#fff;--bd:#dcdcd6;--ok:#1a7f4b;--bad:#b3261e;--warn:#9a6700;--mut:#6b6b66;--acc:#2a5bd7}
+@media(prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ececE8;--card:#1f1f1c;--bd:#38382f;--ok:#4cc38a;--bad:#ff8a80;--warn:#e0b050;--mut:#9a9a92;--acc:#7aa2ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif}
+main{max-width:900px;margin:0 auto;padding:20px 16px}h1{font-size:22px;margin:0 0 4px}.sub{color:var(--mut);margin-bottom:16px}
+textarea{width:100%;min-height:90px;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg);font:inherit}
+button{padding:8px 14px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--fg);cursor:pointer;font:inherit}
+button.p{background:var(--acc);color:#fff;border-color:var(--acc)}.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px;margin-top:12px}
+.badge{display:inline-block;padding:2px 10px;border-radius:99px;font-weight:600;font-size:13px;border:1px solid currentColor}
+.RESOLVED,.COMPLIANT{color:var(--ok)}.ESCALATED,.RISKY{color:var(--bad)}.NEEDS_REVIEW,.ABSTAINED,.AMBIGUOUS{color:var(--warn)}
+h3{margin:0 0 6px;font-size:14px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.ev{border-top:1px solid var(--bd);padding:8px 0;font-size:14px}.mut{color:var(--mut)}
+ol{margin:0;padding-left:20px;font-size:13px}code{font-size:12px}
+</style></head><body><main>
+<h1>RegLingua</h1><div class="sub">Multilingual compliance-gap detection for Indian fintech text (SEBI / RBI / DPDP). Decision support, not legal advice.</div>
+<div class="row" id="cases"></div>
+<textarea id="t" placeholder="Paste product text (English, Hindi or Hinglish)"></textarea>
+<div class="row"><button class="p" id="go">Analyze</button><span id="ver" class="mut"></span></div>
+<div id="out"></div>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+async function init(){
+  try{const c=await (await fetch("/api/cases")).json();
+    $("cases").innerHTML=c.cases.map((x,i)=>`<button data-i="${i}">${esc(x.id)}: ${esc(x.title)}</button>`).join("");
+    $("cases").onclick=e=>{const b=e.target.closest("button");if(b){$("t").value=c.cases[b.dataset.i].text;run();}};}catch(e){}
+  try{const v=await (await fetch("/api/version")).json();$("ver").textContent=`${v.release} · contract ${v.contract_version} · ${v.demo_mode?"demo (offline)":"live"}`}catch(e){}
+}
+async function run(){
+  const text=$("t").value;$("go").disabled=true;$("out").innerHTML='<div class="card mut">Analyzing…</div>';
+  try{
+    const r=await fetch("/api/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text})});
+    if(!r.ok)throw new Error("HTTP "+r.status);render(await r.json());
+  }catch(e){$("out").innerHTML=`<div class="card"><span class="badge NEEDS_REVIEW">Service error</span> ${esc(e.message)}. Nothing was assessed.</div>`}
+  $("go").disabled=false;
+}
+function render(d){
+  const rs=String(d.resolution_status).toUpperCase(), rl=String(d.risk_label||"-").toUpperCase();
+  const ev=(d.evidence||[]).map(e=>`<div class="ev"><b>${esc(e.clause_id)}</b> <span class="mut">${esc(e.source_document)} · ${(e.similarity_score*100).toFixed(0)}%</span><br>${esc(e.clause_text)}</div>`).join("")||'<span class="mut">No evidence retrieved.</span>';
+  const tr=(d.trace||[]).map(t=>`<li><b>${esc(t.agent_name)}</b> <code>${esc(t.event_type)}</code> <span class="mut">${esc(JSON.stringify(t.payload||{}).slice(0,140))}</span></li>`).join("");
+  $("out").innerHTML=`
+  <div class="card"><span class="badge ${rs}">${esc(rs)}</span> <span class="badge ${rl}">${esc(rl)}</span>
+   <span class="mut"> ${esc(d.regulator||"")} · ${esc(d.language||"")} · confidence ${d.confidence==null?"-":d.confidence.toFixed(2)} · rewrite attempts ${d.rewrite_attempts}</span></div>
+  ${d.reason?`<div class="card"><h3>Why</h3>${esc(d.reason)}<br><span class="mut">Cited: ${esc(d.clause_cited)}</span></div>`:""}
+  ${d.rewrite_candidate?`<div class="card"><h3>Suggested rewrite ${d.verified_compliant?"(verified)":"(NOT verified)"}</h3>${esc(d.rewrite_candidate)}</div>`:""}
+  <div class="card"><h3>Evidence</h3>${ev}</div>
+  <div class="card"><h3>Agent trace</h3><ol>${tr}</ol></div>
+  <div class="mut" style="margin-top:10px;font-size:13px">${esc(d.disclaimer)}</div>`;
+}
+$("go").onclick=run;init();
+</script></main></body></html>

@@ -25,18 +25,25 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
+import json
+from collections import OrderedDict
+from pathlib import Path
+
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
 
 from agents.agent_factory import REGULATOR_MODEL_PATH, RISK_MODEL_PATH, build_agents
 from agents.supervisor import run_case
 from agents.tools import ToolRegistry, build_tool_registry
+from core.config import CANONICAL_CASES_PATH, get_settings
 from core.schemas import CaseState
+from core import versions
 
 app = FastAPI(
     title="RegLingua API",
     description="Multi-agent compliance scanner for Indian fintech product text (SEBI / RBI / DPDP).",
-    version="0.1.0",
+    version="1.0.0",
 )
 
 # Built lazily (not at import time) so importing this module never requires
@@ -79,6 +86,21 @@ class ScanResponse(BaseModel):
     rewrite_attempts: int
 
 
+# Day 11: small in-memory store so /scan/{id}/trace works.
+_CASES: "OrderedDict[str, CaseState]" = OrderedDict()
+
+
+def _remember(case: CaseState) -> None:
+    _CASES[case.case_id] = case
+    while len(_CASES) > 200:
+        _CASES.popitem(last=False)
+
+
+class AnalyzeRequest(BaseModel):
+    text: str = Field(..., description="Product text (English, Hindi or Hinglish).")
+    max_rewrite_iterations: int = Field(3, ge=1, le=10)
+
+
 class ToolInvokeRequest(BaseModel):
     arguments: dict[str, Any] = Field(default_factory=dict)
 
@@ -105,6 +127,7 @@ def scan(request: ScanRequest) -> ScanResponse:
         use_trained_artifacts=request.use_real_classifier,
     )
 
+    _remember(result)
     return ScanResponse(
         case_id=result.case_id,
         language=result.language,
@@ -121,10 +144,10 @@ def scan(request: ScanRequest) -> ScanResponse:
 
 @app.get("/scan/{case_id}/trace")
 def get_trace(case_id: str) -> dict:
-    # Stub only: a per-case store lands alongside the demo UI, so /scan is
-    # currently stateless. Documenting the contract now so the UI has a
-    # stable endpoint to build the agent-trace panel against.
-    raise HTTPException(status_code=501, detail="Case trace store not implemented yet.")
+    case = _CASES.get(case_id)
+    if case is None:
+        raise HTTPException(status_code=404, detail="Unknown case_id (the store keeps the last 200 cases).")
+    return {"case_id": case_id, "trace": [e.model_dump(mode="json") for e in case.trace]}
 
 
 # ---------------------------------------------------------------------------
@@ -152,3 +175,63 @@ def invoke_tool(name: str, request: ToolInvokeRequest) -> dict:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
     except TypeError as exc:
         raise HTTPException(status_code=422, detail=f"Bad arguments for tool '{name}': {exc}") from exc
+
+
+# ---------------------------------------------------------------------------
+# Day 11-13 (M4): demo-facing API + UI
+# ---------------------------------------------------------------------------
+
+@app.get("/api/version")
+def api_version() -> dict:
+    settings = get_settings()
+    return {
+        **versions.snapshot(),
+        "demo_mode": settings.demo_mode,
+        "llm_enabled": settings.llm_allowed,
+    }
+
+
+@app.post("/api/analyze")
+def api_analyze(request: AnalyzeRequest) -> dict:
+    """Single call that returns everything the UI needs: verdict, evidence,
+    explanation, rewrite, resolution status, the full agent trace, versions.
+    Never raises on a bad input -- it returns NEEDS_REVIEW with the reason."""
+    result = run_case(
+        request.text,
+        max_rewrite_iterations=request.max_rewrite_iterations,
+        use_trained_artifacts=True,
+    )
+    _remember(result)
+    status = result.resolution_status
+    return {
+        "case_id": result.case_id,
+        "input_text": result.input_text,
+        "language": getattr(result.language, "value", result.language),
+        "risk_label": getattr(result.risk_label, "value", result.risk_label),
+        "regulator": getattr(result.regulator, "value", result.regulator),
+        "confidence": result.classifier_confidence,
+        "reason": result.reason,
+        "clause_cited": result.clause_cited,
+        "evidence": [e.model_dump(mode="json") for e in result.evidence],
+        "rewrite_candidate": result.rewrite_candidate,
+        "verified_compliant": result.verified_compliant,
+        "resolution_status": getattr(status, "value", status),
+        "rewrite_attempts": result.rewrite_attempts,
+        "trace": [e.model_dump(mode="json") for e in result.trace],
+        "versions": versions.snapshot(),
+        "disclaimer": "Decision support only; not legal advice. A human compliance reviewer makes the final call.",
+    }
+
+
+@app.get("/api/cases")
+def api_cases() -> dict:
+    """Canonical demo cases (data/demo/canonical_cases.json)."""
+    if not Path(CANONICAL_CASES_PATH).exists():
+        return {"cases": []}
+    with open(CANONICAL_CASES_PATH, encoding="utf-8") as f:
+        return {"cases": json.load(f)}
+
+
+@app.get("/", response_class=HTMLResponse)
+def ui() -> str:
+    return (Path(__file__).parent / "static" / "index.html").read_text(encoding="utf-8")

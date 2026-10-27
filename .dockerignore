@@ -1,0 +1,4 @@
+.git
+**/__pycache__
+*.pyc
+data/raw/sample_labeled_examples.csv

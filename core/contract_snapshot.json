@@ -1,0 +1,117 @@
+{
+  "contract_version": "1.0.0",
+  "enums": {
+    "EventType": [
+      "abstained",
+      "agent_error",
+      "case_resolved",
+      "case_started",
+      "escalated",
+      "evidence_retrieved",
+      "explanation_generated",
+      "iteration_retry",
+      "language_detected",
+      "rewrite_proposed",
+      "risk_classified",
+      "verification_run"
+    ],
+    "Language": [
+      "en",
+      "hi",
+      "hi-en"
+    ],
+    "Regulator": [
+      "DPDP",
+      "General",
+      "RBI",
+      "SEBI"
+    ],
+    "ResolutionStatus": [
+      "escalated",
+      "needs_review",
+      "pending",
+      "resolved"
+    ],
+    "RiskLabel": [
+      "Ambiguous",
+      "Compliant",
+      "Risky"
+    ]
+  },
+  "models": {
+    "AgentEvent": [
+      "agent_name",
+      "case_id",
+      "error",
+      "event_id",
+      "event_type",
+      "payload",
+      "timestamp"
+    ],
+    "CaseState": [
+      "case_id",
+      "classifier_confidence",
+      "clause_cited",
+      "evidence",
+      "input_text",
+      "language",
+      "max_rewrite_iterations",
+      "reason",
+      "regulator",
+      "resolution_status",
+      "rewrite_attempts",
+      "rewrite_candidate",
+      "risk_label",
+      "risk_phrase",
+      "trace",
+      "verified_compliant",
+      "verifier_feedback"
+    ],
+    "EvidenceItem": [
+      "clause_id",
+      "clause_text",
+      "similarity_score",
+      "source_document"
+    ],
+    "EvidenceRequest": [
+      "case_id",
+      "flagged_text",
+      "language",
+      "regulator_hint",
+      "top_k"
+    ],
+    "EvidenceResponse": [
+      "case_id",
+      "evidence",
+      "retrieval_method"
+    ],
+    "ExplainerRequest": [
+      "case_id",
+      "evidence",
+      "flagged_text",
+      "risk_label"
+    ],
+    "ExplainerResponse": [
+      "case_id",
+      "clause_cited",
+      "grounded",
+      "reason",
+      "risk_phrase"
+    ],
+    "RewriteRequest": [
+      "attempt_number",
+      "case_id",
+      "clause_cited",
+      "flagged_text",
+      "prior_attempt",
+      "reason",
+      "verifier_feedback"
+    ],
+    "RewriteResponse": [
+      "attempt_number",
+      "case_id",
+      "rationale",
+      "rewritten_text"
+    ]
+  }
+}
