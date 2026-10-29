@@ -3694,5 +3694,17 @@
     "topic": "Grievance Redressal",
     "chunk_id": "RBI_DL_GUIDELINES_2022_010",
     "embedding_id": "pending"
+  },
+  {
+      "source_id":  "DPDP_RULES_2025",
+      "regulator":  "DPDP",
+      "document_title":  "Digital Personal Data Protection Rules, 2025",
+      "section":  "First Schedule, Part A – Conditions for Registration of Consent Manager",
+      "effective_date":  "14-11-2025 (staggered commencement; see Rule 4)",
+      "text":  "The First Schedule, Part A sets out nine conditions for registration as a Consent Manager: (1) the applicant must be a company incorporated in India; (2) it must have sufficient technical, operational and financial capacity; (3) its financial condition and management character must be sound; (4) its net worth must be at least ₹2 crore; (5) its expected business volume, capital structure and earning prospects must be adequate; (6) its directors, key managerial personnel and senior management must have a general reputation and record of fairness and integrity; (7) its constitutional documents must contain provisions requiring adherence to Part B items 9 and 10, with amendments to those provisions requiring prior Board approval; (8) its proposed operations must be in the interests of Data Principals; and (9) independent certification must confirm that the interoperable consent platform meets applicable data-protection standards and assurance framework, and that appropriate technical and organisational measures are in place.",
+      "source_url":  "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa?pageTitle=Digital-Personal-Data-Protection-Rules-2025",
+      "topic":  "Consent Manager registration eligibility",
+      "chunk_id":  "DPDP_RULES_2025_142",
+      "embedding_id":  "pending"
   }
 ]
