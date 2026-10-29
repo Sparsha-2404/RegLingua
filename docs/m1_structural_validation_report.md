@@ -108,9 +108,11 @@ This cleanup establishes metadata consistency only. It does not independently es
 ### 7. Final Validation - 29 October 2026
 
 #### Automated tests
-- Focused M1 verification-policy tests: 3 passed, 0 failed.
-- Full project test suite: 78 passed, 0 failed (86.26 seconds).
-- These results confirm the tested software behavior; they do not establish legal accuracy, regulatory compliance, or semantic correctness of the underlying data.
+- Focused M1 verification-policy tests: **3 passed, 0 failed**.
+- Latest reproducible full test suite in the M1 worktree: **33 passed, 0 failed** in 1.71 seconds.
+- Explanation-grounding evaluation: **3/3 cases passed structural checks**. All three cases remain flagged for manual substantive evidence review.
+- The earlier 78-test results are retained as historical results from previous validation runs; they are not the result of the latest full test run documented above.
+- These tests validate the tested software behavior and structural integration. They do not establish legal accuracy, regulatory compliance, or semantic correctness of the underlying data.
 
 #### Regulatory registry and knowledge-base integrity
 - Registry records: 9.
@@ -123,6 +125,7 @@ This cleanup establishes metadata consistency only. It does not independently es
 #### Remaining limitations and follow-up
 - Seven sources remain UNVERIFIED; official status, applicability, and currentness checks are not complete.
 - The historical RBI records require confirmation against official withdrawal or repeal notices and applicable replacement directions.
+- All three explanation-grounding cases require manual review of substantive evidence support.
 - Pending embedding IDs require clarification from the retrieval/integration workflow.
 - Structural integrity and passing tests do not establish legal accuracy, source reachability, translation fidelity, or regulatory compliance.
 
