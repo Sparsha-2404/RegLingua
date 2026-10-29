@@ -107,6 +107,9 @@ class DeterministicRetriever:
                     source_url=entry["source_url"],
                     topic=entry.get("topic", ""),
                     score=round(min(score, 1.0), 4),
+                    publication_date=entry.get("publication_date"),
+                    commencement_date=entry.get("commencement_date"),
+                    commencement_note=entry.get("commencement_note"),
                 )
             )
         return results

@@ -76,6 +76,9 @@ class RetrievedChunk:
     source_url: str
     topic: str
     score: float
+    publication_date: Optional[str] = None
+    commencement_date: Optional[str] = None
+    commencement_note: Optional[str] = None
 
 
 @dataclass
