@@ -1,0 +1,72 @@
+[
+  {
+    "case_id": "M1-GROUND-001",
+    "flagged_text": "We guarantee 20% returns.",
+    "risk_label": "Risky",
+    "evidence_count": 3,
+    "evidence": [
+      {
+        "source_id": "SEBI_INVESTOR_GUIDANCE",
+        "source_document": "Investor Guidance",
+        "clause_text": "Investments in securities are subject to market risk; there is no guarantee of returns, and the value of an investment can rise or fall depending on market conditions.",
+        "retrieval_score": 1.0
+      },
+      {
+        "source_id": "SEBI_SPOT_SCAM",
+        "source_document": "Spot a Scam",
+        "clause_text": "Securities markets cannot offer assured or guaranteed returns; any entity or scheme promising fixed, assured or unusually high returns should be treated as a red flag for potential fraud.",
+        "retrieval_score": 0.5
+      },
+      {
+        "source_id": "SEBI_SPOT_SCAM",
+        "source_document": "Spot a Scam",
+        "clause_text": "Even SEBI-registered portfolio managers and investment advisers are not permitted to offer products with guaranteed or assured returns; investors should verify an entity's registration status directly on the SEBI website before relying on any return claims.",
+        "retrieval_score": 0.5
+      }
+    ],
+    "clause_cited": "SEBI_INVESTOR_GUIDANCE",
+    "grounded": true,
+    "reason": "The statement \"We guarantee 20% returns.\" appears risky because it conflicts with SEBI_INVESTOR_GUIDANCE (Investor Guidance): \"Investments in securities are subject to market risk; there is no guarantee of returns, and the value of an investment can rise or fall depending on market conditions.\". Related guidance: SEBI_SPOT_SCAM (Spot a Scam), SEBI_SPOT_SCAM (Spot a Scam).",
+    "checks": {
+      "grounded_flag_matches_evidence_presence": true,
+      "citation_matches_supplied_evidence": true,
+      "no_fabricated_regulatory_citation_without_evidence": true
+    },
+    "passed_structural_checks": true,
+    "substantive_support_status": "REQUIRES_MANUAL_SUPPORT_REVIEW"
+  },
+  {
+    "case_id": "M1-GROUND-002",
+    "flagged_text": "We guarantee 20% returns.",
+    "risk_label": "Risky",
+    "evidence_count": 0,
+    "evidence": [],
+    "clause_cited": "UNSUPPORTED",
+    "grounded": false,
+    "reason": "The statement \"We guarantee 20% returns.\" was flagged as risky, but no specific regulatory clause could be retrieved to support the citation. Flagging on classifier signal alone; route for manual review rather than treat this as a confirmed violation.",
+    "checks": {
+      "grounded_flag_matches_evidence_presence": true,
+      "citation_matches_supplied_evidence": true,
+      "no_fabricated_regulatory_citation_without_evidence": true
+    },
+    "passed_structural_checks": true,
+    "substantive_support_status": "ABSTAINED"
+  },
+  {
+    "case_id": "M1-GROUND-003",
+    "flagged_text": "Track your monthly budget.",
+    "risk_label": "Compliant",
+    "evidence_count": 0,
+    "evidence": [],
+    "clause_cited": "N/A",
+    "grounded": false,
+    "reason": "No compliance issue found in \"Track your monthly budget.\".",
+    "checks": {
+      "grounded_flag_matches_evidence_presence": true,
+      "citation_matches_supplied_evidence": true,
+      "no_fabricated_regulatory_citation_without_evidence": true
+    },
+    "passed_structural_checks": true,
+    "substantive_support_status": "UNVERIFIED"
+  }
+]

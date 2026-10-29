@@ -6,7 +6,9 @@
     "EFFECTIVE_DATE": "21-01-2013 (original notification; amended subsequently)",
     "TEXT": "Regulatory requirements governing investment advisers, including registration, risk profiling, suitability, client agreements and responsibilities.",
     "SOURCE_URL": "https://www.sebi.gov.in/legal/regulations/nov-2025/securities-and-exchange-board-of-india-investment-advisers-regulations-2013-and-securities-last-amended-on-november-25-2025-_98246.html",
-    "TOPIC": "Investment Advisers"
+    "TOPIC": "Investment Advisers",
+    "DOCUMENT_STATUS": "UNVERIFIED",
+    "VERSION_NOTES": "Official SEBI-hosted consolidated text reviewed. The PDF identifies the Securities and Exchange Board of India (Investment Advisers) Regulations, 2013, as amended up to 25 November 2025. Check for subsequent amendments, circulars, and applicable directions before treating this version as fully current."
   },
   {
     "SOURCE_ID": "SEBI_MC_IA_2026",
@@ -15,7 +17,9 @@
     "EFFECTIVE_DATE": "06-02-2026",
     "TEXT": "Consolidated regulatory guidance and requirements applicable to investment advisers.",
     "SOURCE_URL": "https://www.sebi.gov.in/legal/master-circulars/feb-2026/master-circular-for-investment-advisers_99569.html",
-    "TOPIC": "Investment Advisers"
+    "TOPIC": "Investment Advisers",
+    "DOCUMENT_STATUS": "UNVERIFIED",
+    "VERSION_NOTES": "Official SEBI-hosted Master Circular for Investment Advisers dated 6 February 2026 reviewed. The circular consolidates applicable instructions and states that circulars listed in its appendix are rescinded to the extent they relate to Investment Advisers, subject to the stated transitional provisions. Check for subsequent circulars or amendments before treating this version as fully current."
   },
   {
     "SOURCE_ID": "SEBI_SPOT_SCAM",
@@ -24,7 +28,9 @@
     "EFFECTIVE_DATE": "—",
     "TEXT": "SEBI investor guidance concerning identification and avoidance of potential scams.",
     "SOURCE_URL": "https://investor.sebi.gov.in/spot-any-scam.html",
-    "TOPIC": "Investor Protection"
+    "TOPIC": "Investor Protection",
+    "DOCUMENT_STATUS": "UNVERIFIED",
+    "VERSION_NOTES": "Official SEBI Investor portal page titled “How to Spot a Scam” opened successfully during verification on 29 October 2026. This is an investor-education webpage rather than a dated regulation. Recheck the official page before relying on its content as current guidance."
   },
   {
     "SOURCE_ID": "SEBI_INVESTOR_GUIDANCE",
@@ -33,7 +39,9 @@
     "EFFECTIVE_DATE": "—",
     "TEXT": "General investor education and guidance published through the SEBI Investor portal.",
     "SOURCE_URL": "https://investor.sebi.gov.in/",
-    "TOPIC": "Investor Education"
+    "TOPIC": "Investor Education",
+    "DOCUMENT_STATUS": "UNVERIFIED",
+    "VERSION_NOTES": "Official SEBI Investor portal opened successfully during verification on 29 October 2026 and displayed investor-education resources. This is a general investor-information portal rather than a single dated regulatory instrument. Verify individual guidance pages when relying on specific regulatory claims."
   },
   {
     "SOURCE_ID": "RBI_DL_GUIDELINES_2022",
@@ -42,7 +50,9 @@
     "EFFECTIVE_DATE": "02-09-2022 (subsequently repealed)",
     "TEXT": "Requirements relating to digital lending, including borrower disclosures, data collection, consent, fees and grievance-related requirements.",
     "SOURCE_URL": "https://rbidocs.rbi.org.in/rdocs/notification/PDFs/GUIDELINESDIGITALLENDINGD5C35A71D8124A0E92AEB940A7D25BB3.PDF",
-    "TOPIC": "Digital Lending"
+    "TOPIC": "Digital Lending",
+    "DOCUMENT_STATUS": "REPEALED",
+    "VERSION_NOTES": "The official RBI notification dated 2 September 2022 was reviewed as a historical digital-lending instrument. It was superseded by the Reserve Bank of India (Digital Lending) Directions, 2025, and a regulatory-tracking record identifies a withdrawal notice dated 28 November 2025. Retain this record for historical reference; do not use it alone to establish current requirements."
   },
   {
     "SOURCE_ID": "RBI_DL_DIRECTIONS_2025",
@@ -51,7 +61,9 @@
     "EFFECTIVE_DATE": "08-05-2025; Para 6 effective 01-11-2025; Para 17 effective 15-06-2025",
     "TEXT": "Official RBI Directions; effective immediately except Para 6 from 01-11-2025 and Para 17 from 15-06-2025.",
     "SOURCE_URL": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=12848&Mode=0",
-    "TOPIC": "Digital Lending"
+    "TOPIC": "Digital Lending",
+    "DOCUMENT_STATUS": "WITHDRAWN",
+    "VERSION_NOTES": "The Reserve Bank of India (Digital Lending) Directions, 2025, dated 8 May 2025, were reviewed as a historical instrument. A regulatory-tracking record identifies a withdrawal notice dated 28 November 2025. Verify that notice and the applicable replacement directions on the official RBI website before relying on this instrument for current compliance requirements."
   },
   {
     "SOURCE_ID": "DPDP_ACT_2023",
@@ -60,7 +72,9 @@
     "EFFECTIVE_DATE": "13-11-2025 (staggered commencement)",
     "TEXT": "Legal requirements governing processing of digital personal data and rights and duties of Data Principals and Data Fiduciaries.",
     "SOURCE_URL": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
-    "TOPIC": "Data Protection"
+    "TOPIC": "Data Protection",
+    "DOCUMENT_STATUS": "UNVERIFIED",
+    "VERSION_NOTES": "Official MeitY-hosted copy of the Digital Personal Data Protection Act, 2023, reviewed. The Central Government notified phased commencement on 13 November 2025, with different provisions commencing on publication, after one year, and after eighteen months. Verify subsequent notifications and provision-specific commencement before treating all provisions as currently applicable."
   },
   {
     "SOURCE_ID": "DPDP_RULES_2025",
@@ -69,7 +83,9 @@
     "EFFECTIVE_DATE": "14-11-2025 (staggered commencement)",
     "TEXT": "Rules providing detailed requirements for implementation of the Digital Personal Data Protection Act, 2023.",
     "SOURCE_URL": "https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf",
-    "TOPIC": "Data Protection"
+    "TOPIC": "Data Protection",
+    "DOCUMENT_STATUS": "UNVERIFIED",
+    "VERSION_NOTES": "Official MeitY-hosted Digital Personal Data Protection Rules, 2025, reviewed. The Rules prescribe phased commencement, and MeitY lists a corrigendum published on 16 December 2025. Check the corrigendum and subsequent official notifications before relying on individual rule provisions or their commencement dates."
   },
   {
     "SOURCE_ID": "SEBI_SMP_DISCLOSURE_2026",
@@ -78,6 +94,8 @@
     "EFFECTIVE_DATE": "26-02-2026",
     "TEXT": "SEBI requires SEBI-regulated entities and their agents to disclose their registered name and registration number on applicable social media platforms.",
     "SOURCE_URL": "https://www.sebi.gov.in/legal/circulars/feb-2026/ease-of-doing-investment-eodi-disclosure-of-registered-name-and-registration-number-by-sebi-regulated-entities-and-their-agents-on-social-media-platforms-smps-_100005.html",
-    "TOPIC": "Social Media Disclosure"
+    "TOPIC": "Social Media Disclosure",
+    "DOCUMENT_STATUS": "UNVERIFIED",
+    "VERSION_NOTES": "Official SEBI circular dated 26 February 2026, titled “Ease of Doing Investment (EoDI)- Disclosure of registered name and registration number by SEBI regulated entities and their agents on Social Media Platforms (SMPs),” located on the SEBI website. SEBI's published summary states that the disclosure requirement starts on 1 May 2026. Check for subsequent amendments or clarifications before treating this as fully current guidance."
   }
 ]
