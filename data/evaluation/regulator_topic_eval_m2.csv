@@ -1,0 +1,517 @@
+query_id,original_id,text,language,true_regulator,true_topic,topic_in_kb,expected_source_id
+EVALQ0001,SEBI001,Our experts provide investment advice based on your financial goals,en,SEBI,Investment Advice,False,SEBI_IA_REG_2013
+EVALQ0002,SEBI002,We recommend investments that match your risk profile,en,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0003,SEBI003,Our platform recommends investments without asking about your financial situation,en,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0004,SEBI004,Our advisors recommend investments according to your financial objectives and risk tolerance,en,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0005,SEBI005,We recommend complex financial products without assessing your investment experience,en,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0006,SEBI006,Our investment recommendations are guaranteed to generate profits,en,SEBI,Returns Claims,True,SEBI_SPOT_SCAM
+EVALQ0007,SEBI007,Earn assured returns from our investment strategy regardless of market conditions,en,SEBI,Returns Claims,True,SEBI_SPOT_SCAM
+EVALQ0008,SEBI008,Investments involve market risk and returns are not guaranteed,en,SEBI,Investor Disclosure,True,SEBI_INVESTOR_GUIDANCE
+EVALQ0009,SEBI009,We provide information to help you understand different investment options,en,SEBI,Investment Information,True,SEBI_INVESTOR_GUIDANCE
+EVALQ0010,SEBI0010,Our advisors assess your risk profile before recommending investments,en,SEBI,Risk Profiling,True,SEBI_IA_REG_2013
+EVALQ0011,SEBI0011,We provide investment advice without requiring clients to complete a risk profile.,en,SEBI,Risk Profiling,True,SEBI_MC_IA_2026
+EVALQ0012,SEBI0012,We conduct risk profiling before providing investment advice,en,SEBI,Risk Profiling,True,SEBI_MC_IA_2026
+EVALQ0013,SEBI0013,Our clients receive information about our fees before entering into an advisory agreement,en,SEBI,Fee Disclosure,False,SEBI_MC_IA_2026
+EVALQ0014,SEBI0014,We do not disclose our fees or compensation to clients before they use our advisory service,en,SEBI,Fee Disclosure,False,SEBI_MC_IA_2026
+EVALQ0015,SEBI0015,We disclose our business affiliations and potential conflicts of interest to clients,en,SEBI,Conflict of Interest,True,SEBI_MC_IA_2026
+EVALQ0016,SEBI0016,We recommend investments without informing clients about our conflicts of interest,en,SEBI,Conflict of Interest,True,SEBI_MC_IA_2026
+EVALQ0017,SEBI0017,Our website displays our SEBI registration details and registration number,en,SEBI,Registration Disclosure,False,SEBI_MC_IA_2026
+EVALQ0018,SEBI0018,We provide investment advisory services without being registered with SEBI,en,SEBI,Registration,True,SEBI_IA_REG_2013
+EVALQ0019,SEBI0019,We maintain records of interactions with clients relating to investment advice,en,SEBI,Record Keeping,True,SEBI_IA_REG_2013
+EVALQ0020,SEBI0020,Our advertisements promote our investment advisory services without following the applicable advertising requirements,en,SEBI,Advertising,False,SEBI_MC_IA_2026
+EVALQ0021,SEBI0021,We keep client information confidential and do not share it without the required permission,en,SEBI,Client Confidentiality,True,SEBI_IA_REG_2013
+EVALQ0022,SEBI0022,We share confidential client information with third parties without obtaining the client's required permission,en,SEBI,Client Confidentiality,True,SEBI_IA_REG_2013
+EVALQ0023,SEBI0023,We follow Know Your Client procedures before providing investment advisory services,en,SEBI,KYC,True,SEBI_IA_REG_2013
+EVALQ0024,SEBI0024,We provide investment advice without completing the required KYC process,en,SEBI,KYC,True,SEBI_IA_REG_2013
+EVALQ0025,SEBI0025,We disclose conflicts of interest that may affect our investment advisory services,en,SEBI,Conflict of Interest,True,SEBI_IA_REG_2013
+EVALQ0026,SEBI0026,We receive compensation from another party for recommending a financial product to our advisory clients without disclosing it.,en,SEBI,Conflict of Interest,True,SEBI_IA_REG_2013
+EVALQ0027,SEBI0027,We use artificial intelligence tools to assist with investment advice and disclose their use to clients,en,SEBI,Artificial Intelligence,True,SEBI_IA_REG_2013
+EVALQ0028,SEBI0028,"Our AI system generates investment advice, but we do not take responsibility for the security or integrity of client data used by the system",en,SEBI,Artificial Intelligence,True,SEBI_IA_REG_2013
+EVALQ0029,SEBI0029,"We maintain records of client KYC, risk profiling and suitability assessments",en,SEBI,Record Keeping,True,SEBI_IA_REG_2013
+EVALQ0030,SEBI0030,We provide investment advice without maintaining records of the client's risk profile or suitability assessment,en,SEBI,Record Keeping,True,SEBI_IA_REG_2013
+EVALQ0031,SEBI0031,We disclose our business affiliations and relevant material information to prospective clients before they decide to use our advisory services.,en,SEBI,Client Disclosure,False,SEBI_MC_IA_2026
+EVALQ0032,SEBI0032,We do not disclose our business affiliations or other material information to prospective clients before they use our advisory services.,en,SEBI,Client Disclosure,False,SEBI_MC_IA_2026
+EVALQ0033,SEBI0033,We disclose any remuneration or compensation received from an associate for distribution or execution services relating to products for which investment advice is provided.,en,SEBI,Compensation Disclosure,False,SEBI_MC_IA_2026
+EVALQ0034,SEBI0034,We recommend a product to a client without disclosing compensation received by our associate for distribution or execution services relating to that product.,en,SEBI,Compensation Disclosure,False,SEBI_MC_IA_2026
+EVALQ0035,SEBI0035,"Before recommending another intermediary, we disclose any remuneration or compensation we may receive if the client uses that intermediary.",en,SEBI,Intermediary Disclosure,False,SEBI_MC_IA_2026
+EVALQ0036,SEBI0036,We recommend a stock broker to clients without disclosing compensation we may receive from that intermediary.,en,SEBI,Intermediary Disclosure,False,SEBI_MC_IA_2026
+EVALQ0037,SEBI0037,We disclose any holdings or positions we have in financial products or securities that are the subject of our investment advice.,en,SEBI,Holdings Disclosure,False,SEBI_MC_IA_2026
+EVALQ0038,SEBI0038,We recommend a security to a client without disclosing that our adviser entity holds a position in that security.,en,SEBI,Holdings Disclosure,False,SEBI_MC_IA_2026
+EVALQ0039,SEBI0039,"We disclose material facts about the key features of a product or security, including relevant performance information, when providing investment advice.",en,SEBI,Product Disclosure,False,SEBI_MC_IA_2026
+EVALQ0040,SEBI0040,We provide investment advice without disclosing material facts about the key features and relevant performance information of the recommended security.,en,SEBI,Product Disclosure,False,SEBI_MC_IA_2026
+EVALQ0041,SEBI0041,We draw the client's attention to relevant warnings and disclaimers in documents or advertising materials relating to a recommended investment product.,en,SEBI,Warnings and Disclaimers,False,SEBI_MC_IA_2026
+EVALQ0042,SEBI0042,We recommend an investment product without drawing the client's attention to the relevant warnings and disclaimers in its documents or advertising materials.,en,SEBI,Warnings and Disclaimers,False,SEBI_MC_IA_2026
+EVALQ0043,SEBI0043,We clearly disclose when an advisory service relates to a product or service outside SEBI's regulatory purview.,en,SEBI,Regulatory Scope Disclosure,False,SEBI_MC_IA_2026
+EVALQ0044,SEBI0044,We provide advisory services for products outside SEBI's regulatory purview without informing the client that SEBI regulatory recourse is unavailable for those services.,en,SEBI,Regulatory Scope Disclosure,False,SEBI_MC_IA_2026
+EVALQ0045,SEBI0045,We maintain a functional website containing the information required for our investment advisory business.,en,SEBI,Website Requirement,False,SEBI_MC_IA_2026
+EVALQ0046,SEBI0046,We provide investment advisory services without maintaining the required functional website.,en,SEBI,Website Requirement,False,SEBI_MC_IA_2026
+EVALQ0047,SEBI0047,"Our website prominently displays our registered name, registration type, registration number and validity.",en,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0048,SEBI0048,We do not display our SEBI registration number and registration validity prominently on our website or client communications.,en,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0049,SEBI0049,We disclose our principal officer's contact details and the relevant SEBI office details through the required communication channels.,en,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0050,SEBI0050,We omit our principal officer's contact details and relevant SEBI office information from required client-facing disclosures.,en,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0051,SEBI0051,We display information about complaints received and their redressal on our website within the prescribed reporting framework.,en,SEBI,Grievance Disclosure,False,SEBI_MC_IA_2026
+EVALQ0052,SEBI0052,We do not disclose the required complaint and redressal information on our website.,en,SEBI,Grievance Disclosure,False,SEBI_MC_IA_2026
+EVALQ0053,SEBI0053,We conduct an annual audit of our compliance with the SEBI Investment Advisers Regulations.,en,SEBI,Compliance Audit,False,SEBI_MC_IA_2026
+EVALQ0054,SEBI0054,We do not conduct the required annual compliance audit of our investment advisory activities.,en,SEBI,Compliance Audit,False,SEBI_MC_IA_2026
+EVALQ0055,SEBI0055,We submit the information and reports required by SEBI through the applicable periodic reporting process.,en,SEBI,Periodic Reporting,False,SEBI_MC_IA_2026
+EVALQ0056,SEBI0056,We do not submit the periodic reports required by SEBI for our investment advisory activities.,en,SEBI,Periodic Reporting,False,SEBI_MC_IA_2026
+EVALQ0057,SEBI0057,We provide investment advice only after the client has signed the investment advisory agreement and received a copy of the signed agreement.,en,SEBI,Client Agreement,True,SEBI_MC_IA_2026
+EVALQ0058,SEBI0058,We begin providing investment advice before the client signs the required investment advisory agreement.,en,SEBI,Client Agreement,True,SEBI_MC_IA_2026
+EVALQ0059,SEBI0059,We charge advisory fees only in accordance with the applicable fee modes and limits prescribed by SEBI.,en,SEBI,Fee Compliance,False,SEBI_MC_IA_2026
+EVALQ0060,SEBI0060,We charge advisory fees above the applicable maximum prescribed by SEBI for the relevant client and fee mode.,en,SEBI,Fee Compliance,False,SEBI_MC_IA_2026
+EVALQ0061,SEBI0061,We ensure that the total fee charged remains within the applicable limit when changing the client's fee mode.,en,SEBI,Fee Compliance,False,SEBI_MC_IA_2026
+EVALQ0062,SEBI0062,We change a client’s fee mode without checking whether the resulting fee remains within the applicable maximum.,en,SEBI,Fee Compliance,False,
+EVALQ0063,SEBI0063,"We do not guarantee returns, profits or risk-free investments through our investment advisory services.",en,SEBI,Guaranteed Returns,False,SEBI_MC_IA_2026
+EVALQ0064,SEBI0064,We offer clients an investment advisory scheme promising assured or guaranteed returns.,en,SEBI,Guaranteed Returns,False,SEBI_MC_IA_2026
+EVALQ0065,SEBI0065,We accept payments only towards our investment advisory fees and do not accept funds or securities in our account on behalf of clients.,en,SEBI,Client Funds,False,SEBI_MC_IA_2026
+EVALQ0066,SEBI0066,We ask clients to transfer securities to our account so that we can manage their investments on their behalf.,en,SEBI,Client Funds,False,SEBI_MC_IA_2026
+EVALQ0067,SEBI0067,"We advise clients on direct plans where such plans are available, in accordance with the applicable SEBI requirements.",en,SEBI,Direct Plans,False,SEBI_MC_IA_2026
+EVALQ0068,SEBI0068,"We advise a commission-based regular plan even though a direct plan is available, without considering the applicable direct-plan requirement.",en,SEBI,Direct Plans,False,
+EVALQ0069,SEBI0069,We maintain the required separation between our investment advisory activities and other activities where segregation requirements apply.,en,SEBI,Segregation of Activities,True,SEBI_MC_IA_2026
+EVALQ0070,SEBI0070,We combine our investment advisory and distribution activities for the same client without maintaining the required client-level segregation.,en,SEBI,Segregation of Activities,True,SEBI_MC_IA_2026
+EVALQ0071,SEBI001,हमारे विशेषज्ञ आपके वित्तीय लक्ष्यों के आधार पर निवेश संबंधी सलाह देते हैं।,hi,SEBI,Investment Advice,False,SEBI_IA_REG_2013
+EVALQ0072,SEBI002,हम आपकी जोखिम प्रोफ़ाइल के अनुरूप निवेश की सिफारिश करते हैं।,hi,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0073,SEBI003,हमारा प्लेटफ़ॉर्म आपकी वित्तीय स्थिति के बारे में पूछे बिना निवेश की सिफारिश करता है।,hi,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0074,SEBI004,हमारे सलाहकार आपके वित्तीय उद्देश्यों और जोखिम सहनशीलता के अनुसार निवेश की सिफारिश करते हैं।,hi,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0075,SEBI005,हम आपके निवेश अनुभव का आकलन किए बिना जटिल वित्तीय उत्पादों की सिफारिश करते हैं।,hi,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0076,SEBI006,हमारी निवेश सिफारिशों से लाभ की गारंटी दी जाती है।,hi,SEBI,Returns Claims,True,SEBI_SPOT_SCAM
+EVALQ0077,SEBI007,हमारी निवेश रणनीति से बाजार की परिस्थितियों की परवाह किए बिना सुनिश्चित रिटर्न अर्जित करने का वादा किया जाता है।,hi,SEBI,Returns Claims,True,SEBI_SPOT_SCAM
+EVALQ0078,SEBI008,निवेश में बाजार जोखिम शामिल होता है और रिटर्न की गारंटी नहीं होती।,hi,SEBI,Investor Disclosure,True,SEBI_INVESTOR_GUIDANCE
+EVALQ0079,SEBI009,हम विभिन्न निवेश विकल्पों को समझने में आपकी सहायता के लिए जानकारी प्रदान करते हैं।,hi,SEBI,Investment Information,True,SEBI_INVESTOR_GUIDANCE
+EVALQ0080,SEBI0010,हमारे सलाहकार निवेश की सिफारिश करने से पहले आपकी जोखिम प्रोफ़ाइल का आकलन करते हैं।,hi,SEBI,Risk Profiling,True,SEBI_IA_REG_2013
+EVALQ0081,SEBI0011,हम ग्राहकों से जोखिम प्रोफ़ाइल पूरा करवाए बिना निवेश संबंधी सलाह प्रदान करते हैं।,hi,SEBI,Risk Profiling,True,SEBI_MC_IA_2026
+EVALQ0082,SEBI0012,हम निवेश संबंधी सलाह देने से पहले जोखिम प्रोफ़ाइल तैयार करते हैं।,hi,SEBI,Risk Profiling,True,SEBI_MC_IA_2026
+EVALQ0083,SEBI0013,हमारे ग्राहकों को सलाहकार समझौता करने से पहले हमारी फीस की जानकारी मिलती है।,hi,SEBI,Fee Disclosure,False,SEBI_MC_IA_2026
+EVALQ0084,SEBI0014,हम ग्राहकों द्वारा हमारी सलाहकार सेवा लेने से पहले अपनी फीस या मुआवज़े का खुलासा नहीं करते।,hi,SEBI,Fee Disclosure,False,SEBI_MC_IA_2026
+EVALQ0085,SEBI0015,हम ग्राहकों को अपने व्यावसायिक संबंधों और संभावित हितों के टकराव का खुलासा करते हैं।,hi,SEBI,Conflict of Interest,True,SEBI_MC_IA_2026
+EVALQ0086,SEBI0016,हम ग्राहकों को अपने हितों के टकराव के बारे में बताए बिना निवेश की सिफारिश करते हैं।,hi,SEBI,Conflict of Interest,True,SEBI_MC_IA_2026
+EVALQ0087,SEBI0017,हमारी वेबसाइट पर हमारा SEBI पंजीकरण विवरण और पंजीकरण संख्या प्रदर्शित होती है।,hi,SEBI,Registration Disclosure,False,SEBI_MC_IA_2026
+EVALQ0088,SEBI0018,हम SEBI के साथ पंजीकृत हुए बिना निवेश सलाहकार सेवाएँ प्रदान करते हैं।,hi,SEBI,Registration,True,SEBI_IA_REG_2013
+EVALQ0089,SEBI0019,हम निवेश सलाह से संबंधित ग्राहकों के साथ हुई बातचीत का रिकॉर्ड रखते हैं।,hi,SEBI,Record Keeping,True,SEBI_IA_REG_2013
+EVALQ0090,SEBI0020,हमारे विज्ञापन लागू विज्ञापन आवश्यकताओं का पालन किए बिना हमारी निवेश सलाहकार सेवाओं का प्रचार करते हैं।,hi,SEBI,Advertising,False,SEBI_MC_IA_2026
+EVALQ0091,SEBI0021,हम ग्राहक की जानकारी को गोपनीय रखते हैं और आवश्यक अनुमति के बिना उसे साझा नहीं करते।,hi,SEBI,Client Confidentiality,True,SEBI_IA_REG_2013
+EVALQ0092,SEBI0022,हम ग्राहक की आवश्यक अनुमति प्राप्त किए बिना उसकी गोपनीय जानकारी तीसरे पक्ष के साथ साझा करते हैं।,hi,SEBI,Client Confidentiality,True,SEBI_IA_REG_2013
+EVALQ0093,SEBI0023,हम निवेश सलाहकार सेवाएँ देने से पहले Know Your Client (KYC) प्रक्रियाओं का पालन करते हैं।,hi,SEBI,KYC,True,SEBI_IA_REG_2013
+EVALQ0094,SEBI0024,हम आवश्यक KYC प्रक्रिया पूरी किए बिना निवेश संबंधी सलाह प्रदान करते हैं।,hi,SEBI,KYC,True,SEBI_IA_REG_2013
+EVALQ0095,SEBI0025,हम उन हितों के टकराव का खुलासा करते हैं जो हमारी निवेश सलाहकार सेवाओं को प्रभावित कर सकते हैं।,hi,SEBI,Conflict of Interest,True,SEBI_IA_REG_2013
+EVALQ0096,SEBI0026,हम अपने सलाहकार ग्राहकों को वित्तीय उत्पाद की सिफारिश करने के लिए किसी अन्य पक्ष से प्राप्त मुआवज़े का खुलासा नहीं करते।,hi,SEBI,Conflict of Interest,True,SEBI_IA_REG_2013
+EVALQ0097,SEBI0027,हम निवेश सलाह में सहायता के लिए कृत्रिम बुद्धिमत्ता उपकरणों का उपयोग करते हैं और ग्राहकों को इसके उपयोग की जानकारी देते हैं।,hi,SEBI,Artificial Intelligence,True,SEBI_IA_REG_2013
+EVALQ0098,SEBI0028,"हमारी AI प्रणाली निवेश संबंधी सलाह तैयार करती है, लेकिन हम प्रणाली द्वारा उपयोग किए गए ग्राहक डेटा की सुरक्षा या अखंडता की जिम्मेदारी नहीं लेते।",hi,SEBI,Artificial Intelligence,True,SEBI_IA_REG_2013
+EVALQ0099,SEBI0029,"हम ग्राहक के KYC, जोखिम प्रोफ़ाइल और उपयुक्तता आकलन के रिकॉर्ड रखते हैं।",hi,SEBI,Record Keeping,True,SEBI_IA_REG_2013
+EVALQ0100,SEBI0030,हम ग्राहक की जोखिम प्रोफ़ाइल या उपयुक्तता आकलन का रिकॉर्ड रखे बिना निवेश संबंधी सलाह प्रदान करते हैं।,hi,SEBI,Record Keeping,True,SEBI_IA_REG_2013
+EVALQ0101,SEBI0031,हम संभावित ग्राहकों को हमारी सलाहकार सेवाएँ लेने का निर्णय करने से पहले अपने व्यावसायिक संबंधों और संबंधित महत्वपूर्ण जानकारी का खुलासा करते हैं।,hi,SEBI,Client Disclosure,False,SEBI_MC_IA_2026
+EVALQ0102,SEBI0032,हम संभावित ग्राहकों द्वारा हमारी सलाहकार सेवाएँ लेने से पहले अपने व्यावसायिक संबंधों या अन्य महत्वपूर्ण जानकारी का खुलासा नहीं करते।,hi,SEBI,Client Disclosure,False,SEBI_MC_IA_2026
+EVALQ0103,SEBI0033,हम उन उत्पादों से संबंधित वितरण या निष्पादन सेवाओं के लिए किसी सहयोगी से प्राप्त पारिश्रमिक या मुआवज़े का खुलासा करते हैं जिनके लिए निवेश सलाह दी जाती है।,hi,SEBI,Compensation Disclosure,False,SEBI_MC_IA_2026
+EVALQ0104,SEBI0034,हम किसी उत्पाद की सिफारिश करते समय उस उत्पाद से संबंधित वितरण या निष्पादन सेवाओं के लिए अपने सहयोगी द्वारा प्राप्त मुआवज़े का खुलासा नहीं करते।,hi,SEBI,Compensation Disclosure,False,SEBI_MC_IA_2026
+EVALQ0105,SEBI0035,किसी अन्य मध्यस्थ की सिफारिश करने से पहले हम ग्राहक को बताते हैं कि ग्राहक द्वारा उस मध्यस्थ का उपयोग करने पर हमें कोई पारिश्रमिक या मुआवज़ा मिल सकता है।,hi,SEBI,Intermediary Disclosure,False,SEBI_MC_IA_2026
+EVALQ0106,SEBI0036,हम ग्राहकों को किसी स्टॉक ब्रोकर की सिफारिश करते हैं लेकिन उस मध्यस्थ से मिलने वाले संभावित मुआवज़े का खुलासा नहीं करते।,hi,SEBI,Intermediary Disclosure,False,SEBI_MC_IA_2026
+EVALQ0107,SEBI0037,हम उन वित्तीय उत्पादों या प्रतिभूतियों में अपनी होल्डिंग या स्थिति का खुलासा करते हैं जिनके बारे में हम निवेश सलाह देते हैं।,hi,SEBI,Holdings Disclosure,False,SEBI_MC_IA_2026
+EVALQ0108,SEBI0038,हम किसी ग्राहक को किसी प्रतिभूति की सिफारिश करते हैं लेकिन यह नहीं बताते कि हमारी सलाहकार संस्था के पास उस प्रतिभूति में स्थिति है।,hi,SEBI,Holdings Disclosure,False,SEBI_MC_IA_2026
+EVALQ0109,SEBI0039,निवेश सलाह देते समय हम किसी उत्पाद या प्रतिभूति की प्रमुख विशेषताओं और संबंधित प्रदर्शन जानकारी सहित महत्वपूर्ण तथ्यों का खुलासा करते हैं।,hi,SEBI,Product Disclosure,False,SEBI_MC_IA_2026
+EVALQ0110,SEBI0040,हम अनुशंसित प्रतिभूति की प्रमुख विशेषताओं और संबंधित प्रदर्शन जानकारी के महत्वपूर्ण तथ्यों का खुलासा किए बिना निवेश सलाह प्रदान करते हैं।,hi,SEBI,Product Disclosure,False,SEBI_MC_IA_2026
+EVALQ0111,SEBI0041,हम अनुशंसित निवेश उत्पाद से संबंधित दस्तावेज़ों या विज्ञापन सामग्री में दिए गए प्रासंगिक चेतावनियों और अस्वीकरणों पर ग्राहक का ध्यान दिलाते हैं।,hi,SEBI,Warnings and Disclaimers,False,SEBI_MC_IA_2026
+EVALQ0112,SEBI0042,हम किसी निवेश उत्पाद की सिफारिश करते समय उसके दस्तावेज़ों या विज्ञापन सामग्री में दिए गए प्रासंगिक चेतावनियों और अस्वीकरणों पर ग्राहक का ध्यान नहीं दिलाते।,hi,SEBI,Warnings and Disclaimers,False,SEBI_MC_IA_2026
+EVALQ0113,SEBI0043,"जब कोई सलाहकार सेवा ऐसे उत्पाद या सेवा से संबंधित होती है जो SEBI के नियामकीय दायरे से बाहर है, तो हम इसे स्पष्ट रूप से बताते हैं।",hi,SEBI,Regulatory Scope Disclosure,False,SEBI_MC_IA_2026
+EVALQ0114,SEBI0044,हम SEBI के नियामकीय दायरे से बाहर के उत्पादों के लिए सलाहकार सेवाएँ प्रदान करते हैं लेकिन ग्राहक को यह नहीं बताते कि उन सेवाओं के लिए SEBI के तहत नियामकीय शिकायत का उपाय उपलब्ध नहीं है।,hi,SEBI,Regulatory Scope Disclosure,False,SEBI_MC_IA_2026
+EVALQ0115,SEBI0045,हम अपनी निवेश सलाहकार गतिविधियों के लिए आवश्यक जानकारी वाली कार्यशील वेबसाइट बनाए रखते हैं।,hi,SEBI,Website Requirement,False,SEBI_MC_IA_2026
+EVALQ0116,SEBI0046,हम आवश्यक कार्यशील वेबसाइट बनाए बिना निवेश सलाहकार सेवाएँ प्रदान करते हैं।,hi,SEBI,Website Requirement,False,SEBI_MC_IA_2026
+EVALQ0117,SEBI0047,"हमारी वेबसाइट पर हमारा पंजीकृत नाम, पंजीकरण का प्रकार, पंजीकरण संख्या और वैधता प्रमुखता से प्रदर्शित होती है।",hi,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0118,SEBI0048,हम अपनी वेबसाइट या ग्राहक संचार में अपनी SEBI पंजीकरण संख्या और पंजीकरण की वैधता प्रमुखता से प्रदर्शित नहीं करते।,hi,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0119,SEBI0049,हम आवश्यक संचार माध्यमों के माध्यम से अपने प्रधान अधिकारी के संपर्क विवरण और संबंधित SEBI कार्यालय के विवरण का खुलासा करते हैं।,hi,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0120,SEBI0050,हम आवश्यक ग्राहक-सामना वाले प्रकटीकरण में अपने प्रधान अधिकारी के संपर्क विवरण और संबंधित SEBI कार्यालय की जानकारी शामिल नहीं करते।,hi,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0121,SEBI0051,हम निर्धारित रिपोर्टिंग ढाँचे के अनुसार अपनी वेबसाइट पर प्राप्त शिकायतों और उनके निवारण की जानकारी प्रदर्शित करते हैं।,hi,SEBI,Grievance Disclosure,False,SEBI_MC_IA_2026
+EVALQ0122,SEBI0052,हम अपनी वेबसाइट पर आवश्यक शिकायत और निवारण संबंधी जानकारी का खुलासा नहीं करते।,hi,SEBI,Grievance Disclosure,False,SEBI_MC_IA_2026
+EVALQ0123,SEBI0053,हम SEBI Investment Advisers Regulations के अनुपालन का वार्षिक ऑडिट करवाते हैं।,hi,SEBI,Compliance Audit,False,SEBI_MC_IA_2026
+EVALQ0124,SEBI0054,हम अपनी निवेश सलाहकार गतिविधियों का आवश्यक वार्षिक अनुपालन ऑडिट नहीं करवाते।,hi,SEBI,Compliance Audit,False,SEBI_MC_IA_2026
+EVALQ0125,SEBI0055,हम लागू आवधिक रिपोर्टिंग प्रक्रिया के माध्यम से SEBI द्वारा आवश्यक जानकारी और रिपोर्ट प्रस्तुत करते हैं।,hi,SEBI,Periodic Reporting,False,SEBI_MC_IA_2026
+EVALQ0126,SEBI0056,हम अपनी निवेश सलाहकार गतिविधियों के लिए SEBI द्वारा आवश्यक आवधिक रिपोर्ट प्रस्तुत नहीं करते।,hi,SEBI,Periodic Reporting,False,SEBI_MC_IA_2026
+EVALQ0127,SEBI0057,हम ग्राहक द्वारा निवेश सलाहकार समझौते पर हस्ताक्षर करने और हस्ताक्षरित समझौते की प्रति प्राप्त करने के बाद ही निवेश सलाह प्रदान करते हैं।,hi,SEBI,Client Agreement,True,SEBI_MC_IA_2026
+EVALQ0128,SEBI0058,हम ग्राहक द्वारा आवश्यक निवेश सलाहकार समझौते पर हस्ताक्षर करने से पहले निवेश सलाह देना शुरू कर देते हैं।,hi,SEBI,Client Agreement,True,SEBI_MC_IA_2026
+EVALQ0129,SEBI0059,हम SEBI द्वारा निर्धारित लागू शुल्क विधियों और सीमाओं के अनुसार ही सलाहकार फीस लेते हैं।,hi,SEBI,Fee Compliance,False,SEBI_MC_IA_2026
+EVALQ0130,SEBI0060,हम संबंधित ग्राहक और शुल्क विधि के लिए SEBI द्वारा निर्धारित लागू अधिकतम सीमा से अधिक सलाहकार फीस लेते हैं।,hi,SEBI,Fee Compliance,False,SEBI_MC_IA_2026
+EVALQ0131,SEBI0061,हम ग्राहक की शुल्क विधि बदलते समय यह सुनिश्चित करते हैं कि कुल लिया गया शुल्क लागू सीमा के भीतर रहे।,hi,SEBI,Fee Compliance,False,SEBI_MC_IA_2026
+EVALQ0132,SEBI0062,हम ग्राहक की शुल्क विधि बदल देते हैं और यह जाँच नहीं करते कि परिणामी शुल्क लागू अधिकतम सीमा के भीतर है या नहीं।,hi,SEBI,Fee Compliance,False,
+EVALQ0133,SEBI0063,"हम अपनी निवेश सलाहकार सेवाओं के माध्यम से रिटर्न, लाभ या जोखिम-मुक्त निवेश की गारंटी नहीं देते।",hi,SEBI,Guaranteed Returns,False,SEBI_MC_IA_2026
+EVALQ0134,SEBI0064,हम ग्राहकों को सुनिश्चित या गारंटीकृत रिटर्न का वादा करने वाली निवेश सलाहकार योजना प्रदान करते हैं।,hi,SEBI,Guaranteed Returns,False,SEBI_MC_IA_2026
+EVALQ0135,SEBI0065,हम केवल अपनी निवेश सलाहकार फीस के लिए भुगतान स्वीकार करते हैं और ग्राहकों की ओर से अपनी खाते में धन या प्रतिभूतियाँ स्वीकार नहीं करते।,hi,SEBI,Client Funds,False,SEBI_MC_IA_2026
+EVALQ0136,SEBI0066,हम ग्राहकों से अपनी ओर से उनके निवेश का प्रबंधन करने के लिए प्रतिभूतियाँ हमारे खाते में स्थानांतरित करने को कहते हैं।,hi,SEBI,Client Funds,False,SEBI_MC_IA_2026
+EVALQ0137,SEBI0067,"जहाँ प्रत्यक्ष योजनाएँ उपलब्ध हैं, वहाँ हम लागू SEBI आवश्यकताओं के अनुसार ग्राहकों को उन योजनाओं पर सलाह देते हैं।",hi,SEBI,Direct Plans,False,SEBI_MC_IA_2026
+EVALQ0138,SEBI0068,हम प्रत्यक्ष योजना उपलब्ध होने के बावजूद कमीशन-आधारित नियमित योजना पर सलाह देते हैं और लागू प्रत्यक्ष-योजना आवश्यकता पर विचार नहीं करते।,hi,SEBI,Direct Plans,False,
+EVALQ0139,SEBI0069,"जहाँ पृथक्करण की आवश्यकताएँ लागू होती हैं, वहाँ हम अपनी निवेश सलाहकार गतिविधियों और अन्य गतिविधियों के बीच आवश्यक पृथक्करण बनाए रखते हैं।",hi,SEBI,Segregation of Activities,True,SEBI_MC_IA_2026
+EVALQ0140,SEBI0070,हम आवश्यक ग्राहक-स्तरीय पृथक्करण बनाए बिना उसी ग्राहक के लिए अपनी निवेश सलाहकार और वितरण गतिविधियों को मिला देते हैं।,hi,SEBI,Segregation of Activities,True,SEBI_MC_IA_2026
+EVALQ0141,SEBI071,"Bas hamare saath invest karo, guaranteed 30% return milega.",hi-en,SEBI,Returns Claims,True,SEBI_SPOT_SCAM
+EVALQ0142,SEBI072,"Aapka risk profile update karna optional hai, hum bina uske bhi recommendation de denge.",hi-en,SEBI,Risk Profiling,True,SEBI_MC_IA_2026
+EVALQ0143,SEBI073,"Fee agreement mein hai, but exact amount baad mein bata denge.",hi-en,SEBI,Fee Disclosure,False,SEBI_MC_IA_2026
+EVALQ0144,SEBI074,"Agar product mein hamara interest hai, disclosure kaun padhta hai? Bas recommendation follow karo.",hi-en,SEBI,Conflict of Interest,True,SEBI_MC_IA_2026
+EVALQ0145,SEBI075,"KYC complete nahi hua toh bhi advice start kar sakte hain, documents baad mein de dena.",hi-en,SEBI,KYC,True,SEBI_IA_REG_2013
+EVALQ0146,SEBI076,"Website pe registration details available hain, bas thoda search karna padega.",hi-en,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0147,SEBI077,"Grievance ke liye support team ko message kar dena, formal complaint ki zarurat nahi.",hi-en,SEBI,Grievance Disclosure,False,SEBI_MC_IA_2026
+EVALQ0148,SEBI078,"Audit toh karte hain, but compliance issues ko next review tak hold kar dete hain.",hi-en,SEBI,Compliance Audit,False,SEBI_MC_IA_2026
+EVALQ0149,SEBI079,"Client agreement sign karne se pehle terms dekh sakte ho, but kuch fee details later share hoti hain.",hi-en,SEBI,Client Agreement,True,SEBI_MC_IA_2026
+EVALQ0150,SEBI080,"Direct plan choose karo, advisory ke saath distribution service bhi automatically add ho jayegi.",hi-en,SEBI,Direct Plans,False,SEBI_MC_IA_2026
+EVALQ0151,SEBI081,"Guaranteed return nahi hai, but market conditions ke hisaab se strong returns expect kar sakte ho.",hi-en,SEBI,Guaranteed Returns,False,SEBI_MC_IA_2026
+EVALQ0152,SEBI082,"Hamari advisory advice aapke profile ke according hoti hai, but har product ka detailed suitability check nahi hota.",hi-en,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0153,SEBI083,"We recommend products after reviewing the client's risk profile, but some recommendations are based on the profile recorded at the previous review.",en,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0154,SEBI083,"हम ग्राहक की जोखिम प्रोफ़ाइल की समीक्षा करने के बाद उत्पाद सुझाते हैं, लेकिन कुछ सिफारिशें पिछली समीक्षा में दर्ज प्रोफ़ाइल पर आधारित होती हैं।",hi,SEBI,Investment Recommendation,False,SEBI_IA_REG_2013
+EVALQ0155,SEBI084,"We update a client's risk profile when we receive material information, although some changes are captured only at the next scheduled review.",en,SEBI,Risk Profiling,True,SEBI_IA_REG_2013
+EVALQ0156,SEBI084,"जब हमें ग्राहक की वित्तीय स्थिति में महत्वपूर्ण बदलाव की जानकारी मिलती है तो हम जोखिम प्रोफ़ाइल अपडेट करते हैं, हालांकि कुछ बदलाव अगली निर्धारित समीक्षा में दर्ज होते हैं।",hi,SEBI,Risk Profiling,True,SEBI_IA_REG_2013
+EVALQ0157,SEBI085,"We disclose the advisory fee in the client agreement, while some optional service charges are explained separately during onboarding.",en,SEBI,Fee Disclosure,False,SEBI_MC_IA_2026
+EVALQ0158,SEBI085,"हम क्लाइंट एग्रीमेंट में सलाहकारी शुल्क बताते हैं, जबकि कुछ वैकल्पिक सेवा शुल्क onboarding के दौरान अलग से बताए जाते हैं।",hi,SEBI,Fee Disclosure,False,SEBI_MC_IA_2026
+EVALQ0159,SEBI086,"We disclose potential conflicts in our documentation, but the disclosure appears in a detailed section rather than the main recommendation screen.",en,SEBI,Conflict of Interest,True,SEBI_MC_IA_2026
+EVALQ0160,SEBI086,"हम अपने दस्तावेज़ों में संभावित हितों के टकराव का खुलासा करते हैं, लेकिन यह जानकारी मुख्य recommendation screen के बजाय एक विस्तृत सेक्शन में दिखाई जाती है।",hi,SEBI,Conflict of Interest,True,SEBI_MC_IA_2026
+EVALQ0161,SEBI087,"We normally complete KYC before providing advice, but a small number of cases proceed while document verification is still being completed.",en,SEBI,KYC,True,SEBI_IA_REG_2013
+EVALQ0162,SEBI087,"हम सामान्यतः सलाह देने से पहले KYC पूरा करते हैं, लेकिन कुछ मामलों में दस्तावेज़ सत्यापन पूरा होने से पहले प्रक्रिया आगे बढ़ जाती है।",hi,SEBI,KYC,True,SEBI_IA_REG_2013
+EVALQ0163,SEBI088,"We provide the required client disclosures before onboarding, but some updated information is communicated only when the agreement is renewed.",en,SEBI,Client Disclosure,False,SEBI_MC_IA_2026
+EVALQ0164,SEBI088,"हम onboarding से पहले आवश्यक client disclosures देते हैं, लेकिन कुछ updated information केवल agreement renew होने पर साझा की जाती है।",hi,SEBI,Client Disclosure,False,SEBI_MC_IA_2026
+EVALQ0165,SEBI089,"Our website displays the registration details, while some additional investor information is available through a separate disclosure page.",en,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0166,SEBI089,"हमारी वेबसाइट पर registration details दिखाई जाती हैं, जबकि कुछ अतिरिक्त investor information एक अलग disclosure page पर उपलब्ध है।",hi,SEBI,Website Disclosure,False,SEBI_MC_IA_2026
+EVALQ0167,SEBI090,"We provide a grievance contact, but clients are directed to a separate support section to find the complaint process and contact details.",en,SEBI,Grievance Disclosure,False,SEBI_MC_IA_2026
+EVALQ0168,SEBI090,"हम grievance contact उपलब्ध कराते हैं, लेकिन clients को complaint process और contact details के लिए एक अलग support section पर जाना पड़ता है।",hi,SEBI,Grievance Disclosure,False,SEBI_MC_IA_2026
+EVALQ0169,SEBI091,"We complete the compliance review each year, but one supporting audit document is finalized shortly after the internal review date.",en,SEBI,Compliance Audit,False,SEBI_MC_IA_2026
+EVALQ0170,SEBI091,"हम हर वर्ष compliance review पूरा करते हैं, लेकिन एक supporting audit document internal review date के थोड़े समय बाद finalize होता है।",hi,SEBI,Compliance Audit,False,SEBI_MC_IA_2026
+EVALQ0171,SEBI092,"We provide the advisory agreement before services begin, but certain operational details are updated later through a separate client communication.",en,SEBI,Client Agreement,True,SEBI_MC_IA_2026
+EVALQ0172,SEBI092,"हम services शुरू होने से पहले advisory agreement देते हैं, लेकिन कुछ operational details बाद में अलग client communication के माध्यम से update की जाती हैं।",hi,SEBI,Client Agreement,True,SEBI_MC_IA_2026
+EVALQ0173,RBI001,We clearly disclose the all-inclusive annual percentage rate (APR) of the digital loan before you take the loan,en,RBI,APR Disclosure,False,RBI_DL_GUIDELINES_2022
+EVALQ0174,RBI002,We do not disclose the total annual cost of your digital loan before you accept it,en,RBI,APR Disclosure,False,RBI_DL_GUIDELINES_2022
+EVALQ0175,RBI003,We provide a Key Fact Statement before you enter into the digital loan contract,en,RBI,Key Fact Statement,True,RBI_DL_GUIDELINES_2022
+EVALQ0176,RBI004,We charge additional fees that are not mentioned in the Key Fact Statement,en,RBI,Loan Charges,False,RBI_DL_GUIDELINES_2022
+EVALQ0177,RBI005,Our digital lending app collects only the data necessary for providing the loan service,en,RBI,Data Collection,True,RBI_DL_GUIDELINES_2022
+EVALQ0178,RBI006,Our loan app collects your contacts and other phone data without asking for your explicit consent,en,RBI,Data Collection,True,RBI_DL_GUIDELINES_2022
+EVALQ0179,RBI007,You can choose whether to allow us to use specific personal data.,en,RBI,Data Consent,False,RBI_DL_GUIDELINES_2022
+EVALQ0180,RBI008,We share your personal information with third parties without obtaining your explicit consent,en,RBI,Data Sharing,False,RBI_DL_GUIDELINES_2022
+EVALQ0181,RBI009,Our digital lending app provides a clear privacy policy explaining how borrower data is handled.,en,RBI,Privacy Policy,True,RBI_DL_GUIDELINES_2022
+EVALQ0182,RBI010,Our lending app does not provide borrowers with a clear privacy policy,en,RBI,Privacy Policy,True,RBI_DL_GUIDELINES_2022
+EVALQ0183,RBI011,We disburse the approved loan directly into the borrower's bank account,en,RBI,Loan Disbursal,True,RBI_DL_GUIDELINES_2022
+EVALQ0184,RBI012,We disburse digital loans into the lending app's or third-party account instead of the borrower's bank account.,en,RBI,Loan Disbursal,True,RBI_DL_GUIDELINES_2022
+EVALQ0185,RBI013,Borrowers make loan repayments directly into the regulated entity's bank account,en,RBI,Loan Repayment,True,RBI_DL_GUIDELINES_2022
+EVALQ0186,RBI014,Borrowers repay their loans through a third-party pool account operated by our lending service provider,en,RBI,Loan Repayment,True,RBI_DL_GUIDELINES_2022
+EVALQ0187,RBI015,We obtain explicit consent before increasing a borrower's credit limit.,en,RBI,Credit Limit,False,RBI_DL_GUIDELINES_2022
+EVALQ0188,RBI016,We automatically increase your credit limit without asking for your explicit consent.,en,RBI,Credit Limit,False,RBI_DL_GUIDELINES_2022
+EVALQ0189,RBI017,Borrowers can exit the digital loan during the cooling-off period by paying the principal and proportionate APR without penalty,en,RBI,Cooling-off Period,True,RBI_DL_GUIDELINES_2022
+EVALQ0190,RBI018,We do not provide borrowers with an option to exit the digital loan during the cooling-off period,en,RBI,Cooling-off Period,True,RBI_DL_GUIDELINES_2022
+EVALQ0191,RBI019,We tell borrowers which recovery agent is authorized to contact them when recovery responsibility is transferred,en,RBI,Recovery Agent Disclosure,True,RBI_DL_GUIDELINES_2022
+EVALQ0192,RBI020,We transfer recovery responsibilities to an agent without informing the borrower which agent is authorized to contact them,en,RBI,Recovery Agent Disclosure,True,RBI_DL_GUIDELINES_2022
+EVALQ0193,RBI021,We clearly disclose all applicable fees and charges to borrowers before they accept the digital loan,en,RBI,Fee Disclosure,False,RBI_DL_GUIDELINES_2022
+EVALQ0194,RBI022,We charge borrowers fees directly for services provided by our Lending Service Provider (LSP),en,RBI,LSP Fees,False,RBI_DL_GUIDELINES_2022
+EVALQ0195,RBI023,We disclose the applicable penal charges upfront in the Key Fact Statement,en,RBI,Penal Charges,True,RBI_DL_GUIDELINES_2022
+EVALQ0196,RBI024,We do not disclose the applicable penal charges in the Key Fact Statement before the borrower accepts the loan,en,RBI,Penal Charges,True,RBI_DL_GUIDELINES_2022
+EVALQ0197,RBI025,Borrowers can easily find the contact details of our grievance redressal officer on our digital lending app and website,en,RBI,Grievance Redressal,True,RBI_DL_GUIDELINES_2022
+EVALQ0198,RBI026,Our digital lending app does not provide borrowers with a clear way to submit complaints or contact a grievance redressal officer,en,RBI,Grievance Redressal,True,RBI_DL_GUIDELINES_2022
+EVALQ0199,RBI027,"We assess a borrower's economic profile, including relevant information such as age, occupation and income, before extending a digital loan",en,RBI,Creditworthiness Assessment,True,RBI_DL_GUIDELINES_2022
+EVALQ0200,RBI028,We provide digital loans without assessing the borrower's economic profile or creditworthiness,en,RBI,Creditworthiness Assessment,True,RBI_DL_GUIDELINES_2022
+EVALQ0201,RBI029,"We clearly display information about our digital loan products, including product features, loan limits, and costs",en,RBI,Product Information,False,RBI_DL_GUIDELINES_2022
+EVALQ0202,RBI030,We collect personal data only after explaining the purpose of collecting it and obtaining the borrower's explicit consent,en,RBI,Data Consent,False,RBI_DL_GUIDELINES_2022
+EVALQ0203,RBI031,Our lending service provider completes enhanced due diligence before entering into a digital lending agreement with us,en,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0204,RBI032,We engage a lending service provider without conducting enhanced due diligence on its data privacy and borrower protection practices,en,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0205,RBI033,We display matching loan offers from different lenders with enough information for borrowers to make a fair comparison.,en,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0206,RBI034,Our lending platform promotes one lender's loan offer over others without providing borrowers with an unbiased comparison,en,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0207,RBI035,Our digital lending app allows borrowers to give or deny consent for the use of specific personal data,en,RBI,Data Consent,False,RBI_DL_DIRECTIONS_2025
+EVALQ0208,RBI036,Our digital lending app accesses a borrower's contact list and call logs without the borrower's explicit consent.,en,RBI,Data Privacy,False,RBI_DL_DIRECTIONS_2025
+EVALQ0209,RBI037,We provide borrowers with an option to revoke consent previously given for collecting their personal data.,en,RBI,Consent Revocation,False,RBI_DL_DIRECTIONS_2025
+EVALQ0210,RBI038,We share borrowers' personal information with third parties without obtaining explicit consent.,en,RBI,Third-Party Data Sharing,False,RBI_DL_DIRECTIONS_2025
+EVALQ0211,RBI039,"We ensure that borrower data is stored only on servers located within India, subject to applicable regulatory requirements",en,RBI,Data Storage,False,RBI_DL_DIRECTIONS_2025
+EVALQ0212,RBI040,We store borrowers' personal data on servers outside India without following applicable RBI requirements for data processing and storage,en,RBI,Data Storage,False,RBI_DL_DIRECTIONS_2025
+EVALQ0213,RBI041,We conduct due diligence on every Lending Service Provider before entering into a digital lending arrangement.,en,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0214,RBI042,We onboard a Lending Service Provider for digital lending without conducting the required due diligence.,en,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0215,RBI043,We periodically review the conduct of our Lending Service Providers against the terms of their agreements.,en,RBI,LSP Monitoring,False,RBI_DL_DIRECTIONS_2025
+EVALQ0216,RBI044,We continue using a Lending Service Provider even after identifying material deviations from its contractual obligations without taking appropriate action.,en,RBI,LSP Monitoring,False,RBI_DL_DIRECTIONS_2025
+EVALQ0217,RBI045,Our agreements with Lending Service Providers clearly define the respective roles and responsibilities of the regulated entity and the LSP.,en,RBI,LSP Agreement,False,RBI_DL_DIRECTIONS_2025
+EVALQ0218,RBI046,We use a Lending Service Provider under an arrangement that does not clearly define the responsibilities of the parties.,en,RBI,LSP Agreement,False,RBI_DL_DIRECTIONS_2025
+EVALQ0219,RBI047,"When an LSP works with multiple lenders, we ensure that the digital lending platform displays loan offers that match the borrower's request.",en,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0220,RBI048,Our platform displays only the loan offer from the lender that pays us the highest commercial fee even when other matching offers are available.,en,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0221,RBI049,We use a consistent mechanism for matching similarly placed borrowers with suitable lender offers.,en,RBI,Lender Matching,False,RBI_DL_DIRECTIONS_2025
+EVALQ0222,RBI050,We change our lender-matching mechanism for similar borrowers without documenting the change.,en,RBI,Lender Matching,False,
+EVALQ0223,RBI051,"We display the lender name, loan amount, tenor, APR, monthly repayment obligation and applicable penal charges for matching loan offers.",en,RBI,Loan Offer Disclosure,False,RBI_DL_DIRECTIONS_2025
+EVALQ0224,RBI052,"We show borrowers a loan offer without providing enough information about the lender, APR, repayment obligation and applicable charges to compare it fairly with other offers.",en,RBI,Loan Offer Disclosure,False,RBI_DL_DIRECTIONS_2025
+EVALQ0225,RBI053,We provide a link to the Key Facts Statement for each digital loan offer displayed to the borrower.,en,RBI,KFS Access,False,RBI_DL_DIRECTIONS_2025
+EVALQ0226,RBI054,We display multiple loan offers but do not provide borrowers access to the relevant Key Facts Statements.,en,RBI,KFS Access,False,RBI_DL_DIRECTIONS_2025
+EVALQ0227,RBI055,Our digital loan-offer display uses an objective and unbiased presentation of matching lender offers.,en,RBI,Unbiased Presentation,False,RBI_DL_DIRECTIONS_2025
+EVALQ0228,RBI056,We use deceptive interface elements to push borrowers toward a particular lender's loan offer.,en,RBI,Dark Patterns,False,RBI_DL_DIRECTIONS_2025
+EVALQ0229,RBI057,We assess a borrower's creditworthiness using relevant information before extending digital credit.,en,RBI,Creditworthiness Assessment,True,RBI_DL_DIRECTIONS_2025
+EVALQ0230,RBI058,We approve digital loans without assessing the borrower's creditworthiness.,en,RBI,Creditworthiness Assessment,True,RBI_DL_DIRECTIONS_2025
+EVALQ0231,RBI059,We disburse the digital loan directly into the borrower's bank account unless a permitted regulatory or specific end-use exception applies.,en,RBI,Loan Disbursal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0232,RBI060,We routinely disburse digital loans into the Lending Service Provider's bank account instead of the borrower's account.,en,RBI,Loan Disbursal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0233,RBI061,We give borrowers an explicit option to exit a digital loan during the applicable cooling-off period by paying the principal and proportionate APR without penalty.,en,RBI,Cooling-Off Period,False,RBI_DL_DIRECTIONS_2025
+EVALQ0234,RBI062,We deny borrowers the applicable cooling-off option for exiting a digital loan without penalty.,en,RBI,Cooling-Off Period,False,RBI_DL_DIRECTIONS_2025
+EVALQ0235,RBI063,We disclose any permissible one-time processing fee applicable when a borrower exits during the cooling-off period in the Key Facts Statement.,en,RBI,Cooling-Off Fee,False,RBI_DL_DIRECTIONS_2025
+EVALQ0236,RBI064,We impose an undisclosed exit fee on borrowers who exercise the cooling-off option.,en,RBI,Cooling-Off Fee,False,RBI_DL_DIRECTIONS_2025
+EVALQ0237,RBI065,We designate a nodal grievance redressal officer to handle complaints relating to our digital lending activities.,en,RBI,Grievance Redressal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0238,RBI066,We do not provide borrowers with a designated channel or officer for resolving complaints about our digital lending services.,en,RBI,Grievance Redressal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0239,RBI067,We ensure that personal data collected through our digital lending application is handled in accordance with applicable data-protection and regulatory requirements.,en,RBI,Data Protection,False,RBI_DL_DIRECTIONS_2025
+EVALQ0240,RBI068,"We collect personal information through our digital lending application without following the applicable consent, privacy and data-handling requirements.",en,RBI,Data Protection,False,RBI_DL_DIRECTIONS_2025
+EVALQ0241,RBI069,We ensure that digital lending activities and associated service providers comply with applicable cybersecurity requirements.,en,RBI,Cybersecurity,False,RBI_DL_DIRECTIONS_2025
+EVALQ0242,RBI070,We allow our digital lending application and service providers to operate without addressing applicable cybersecurity requirements.,en,RBI,Cybersecurity,False,RBI_DL_DIRECTIONS_2025
+EVALQ0243,RBI001,हम डिजिटल ऋण लेने से पहले उसकी सभी लागतों को शामिल करने वाली वार्षिक प्रतिशत दर (APR) स्पष्ट रूप से बताते हैं।,hi,RBI,APR Disclosure,False,RBI_DL_GUIDELINES_2022
+EVALQ0244,RBI002,हम डिजिटल ऋण स्वीकार करने से पहले उसकी कुल वार्षिक लागत का खुलासा नहीं करते।,hi,RBI,APR Disclosure,False,RBI_DL_GUIDELINES_2022
+EVALQ0245,RBI003,हम डिजिटल ऋण अनुबंध में प्रवेश करने से पहले मुख्य तथ्य विवरण (KFS) प्रदान करते हैं।,hi,RBI,Key Fact Statement,True,RBI_DL_GUIDELINES_2022
+EVALQ0246,RBI004,हम ऐसे अतिरिक्त शुल्क लेते हैं जिनका मुख्य तथ्य विवरण (KFS) में उल्लेख नहीं है।,hi,RBI,Loan Charges,False,RBI_DL_GUIDELINES_2022
+EVALQ0247,RBI005,हमारा डिजिटल ऋण ऐप ऋण सेवा प्रदान करने के लिए केवल आवश्यक डेटा एकत्र करता है।,hi,RBI,Data Collection,True,RBI_DL_GUIDELINES_2022
+EVALQ0248,RBI006,हमारा ऋण ऐप आपकी स्पष्ट सहमति लिए बिना आपके संपर्क और फोन का अन्य डेटा एकत्र करता है।,hi,RBI,Data Collection,True,RBI_DL_GUIDELINES_2022
+EVALQ0249,RBI007,आप यह चुन सकते हैं कि हमें विशिष्ट व्यक्तिगत डेटा का उपयोग करने की अनुमति देनी है या नहीं।,hi,RBI,Data Consent,False,RBI_DL_GUIDELINES_2022
+EVALQ0250,RBI008,हम आपकी स्पष्ट सहमति प्राप्त किए बिना आपकी व्यक्तिगत जानकारी तीसरे पक्ष के साथ साझा करते हैं।,hi,RBI,Data Sharing,False,RBI_DL_GUIDELINES_2022
+EVALQ0251,RBI009,"हमारा डिजिटल ऋण ऐप उधारकर्ता के डेटा को कैसे संभाला जाता है, यह समझाने वाली स्पष्ट गोपनीयता नीति उपलब्ध कराता है।",hi,RBI,Privacy Policy,True,RBI_DL_GUIDELINES_2022
+EVALQ0252,RBI010,हमारा ऋण ऐप उधारकर्ताओं को स्पष्ट गोपनीयता नीति उपलब्ध नहीं कराता।,hi,RBI,Privacy Policy,True,RBI_DL_GUIDELINES_2022
+EVALQ0253,RBI011,हम स्वीकृत ऋण को सीधे उधारकर्ता के बैंक खाते में वितरित करते हैं।,hi,RBI,Loan Disbursal,True,RBI_DL_GUIDELINES_2022
+EVALQ0254,RBI012,हम उधारकर्ता के बैंक खाते के बजाय ऋण ऐप या तीसरे पक्ष के खाते में डिजिटल ऋण वितरित करते हैं।,hi,RBI,Loan Disbursal,True,RBI_DL_GUIDELINES_2022
+EVALQ0255,RBI013,उधारकर्ता ऋण की चुकौती सीधे विनियमित संस्था के बैंक खाते में करते हैं।,hi,RBI,Loan Repayment,True,RBI_DL_GUIDELINES_2022
+EVALQ0256,RBI014,उधारकर्ता हमारे Lending Service Provider द्वारा संचालित तीसरे पक्ष के पूल खाते के माध्यम से ऋण की चुकौती करते हैं।,hi,RBI,Loan Repayment,True,RBI_DL_GUIDELINES_2022
+EVALQ0257,RBI015,हम उधारकर्ता की क्रेडिट सीमा बढ़ाने से पहले स्पष्ट सहमति प्राप्त करते हैं।,hi,RBI,Credit Limit,False,RBI_DL_GUIDELINES_2022
+EVALQ0258,RBI016,हम आपकी स्पष्ट सहमति लिए बिना आपकी क्रेडिट सीमा अपने आप बढ़ा देते हैं।,hi,RBI,Credit Limit,False,RBI_DL_GUIDELINES_2022
+EVALQ0259,RBI017,उधारकर्ता कूलिंग-ऑफ अवधि के दौरान मूलधन और आनुपातिक APR का भुगतान करके बिना दंड के डिजिटल ऋण से बाहर निकल सकते हैं।,hi,RBI,Cooling-off Period,True,RBI_DL_GUIDELINES_2022
+EVALQ0260,RBI018,हम उधारकर्ताओं को कूलिंग-ऑफ अवधि के दौरान डिजिटल ऋण से बाहर निकलने का विकल्प नहीं देते।,hi,RBI,Cooling-off Period,True,RBI_DL_GUIDELINES_2022
+EVALQ0261,RBI019,"जब वसूली की जिम्मेदारी स्थानांतरित की जाती है, तो हम उधारकर्ता को बताते हैं कि उससे संपर्क करने के लिए कौन-सा रिकवरी एजेंट अधिकृत है।",hi,RBI,Recovery Agent Disclosure,True,RBI_DL_GUIDELINES_2022
+EVALQ0262,RBI020,हम उधारकर्ता को यह बताए बिना वसूली की जिम्मेदारी किसी एजेंट को सौंप देते हैं कि उससे संपर्क करने के लिए कौन-सा एजेंट अधिकृत है।,hi,RBI,Recovery Agent Disclosure,True,RBI_DL_GUIDELINES_2022
+EVALQ0263,RBI021,हम उधारकर्ता द्वारा डिजिटल ऋण स्वीकार करने से पहले सभी लागू फीस और शुल्कों का स्पष्ट खुलासा करते हैं।,hi,RBI,Fee Disclosure,False,RBI_DL_GUIDELINES_2022
+EVALQ0264,RBI022,हम अपने Lending Service Provider (LSP) द्वारा प्रदान की गई सेवाओं के लिए उधारकर्ताओं से सीधे शुल्क लेते हैं।,hi,RBI,LSP Fees,False,RBI_DL_GUIDELINES_2022
+EVALQ0265,RBI023,हम मुख्य तथ्य विवरण (KFS) में लागू दंडात्मक शुल्कों का पहले से खुलासा करते हैं।,hi,RBI,Penal Charges,True,RBI_DL_GUIDELINES_2022
+EVALQ0266,RBI024,उधारकर्ता द्वारा ऋण स्वीकार करने से पहले हम लागू दंडात्मक शुल्कों का मुख्य तथ्य विवरण (KFS) में खुलासा नहीं करते।,hi,RBI,Penal Charges,True,RBI_DL_GUIDELINES_2022
+EVALQ0267,RBI025,उधारकर्ता हमारे डिजिटल ऋण ऐप और वेबसाइट पर शिकायत निवारण अधिकारी के संपर्क विवरण आसानी से पा सकते हैं।,hi,RBI,Grievance Redressal,True,RBI_DL_GUIDELINES_2022
+EVALQ0268,RBI026,हमारा डिजिटल ऋण ऐप उधारकर्ताओं को शिकायत दर्ज करने या शिकायत निवारण अधिकारी से संपर्क करने का स्पष्ट तरीका उपलब्ध नहीं कराता।,hi,RBI,Grievance Redressal,True,RBI_DL_GUIDELINES_2022
+EVALQ0269,RBI027,"डिजिटल ऋण देने से पहले हम उधारकर्ता की आर्थिक प्रोफ़ाइल का आकलन करते हैं, जिसमें आयु, व्यवसाय और आय जैसी प्रासंगिक जानकारी शामिल है।",hi,RBI,Creditworthiness Assessment,True,RBI_DL_GUIDELINES_2022
+EVALQ0270,RBI028,हम उधारकर्ता की आर्थिक प्रोफ़ाइल या ऋण-योग्यता का आकलन किए बिना डिजिटल ऋण प्रदान करते हैं।,hi,RBI,Creditworthiness Assessment,True,RBI_DL_GUIDELINES_2022
+EVALQ0271,RBI029,"हम अपने डिजिटल ऋण उत्पादों की जानकारी, जिसमें उत्पाद की विशेषताएँ, ऋण सीमाएँ और लागत शामिल हैं, स्पष्ट रूप से प्रदर्शित करते हैं।",hi,RBI,Product Information,False,RBI_DL_GUIDELINES_2022
+EVALQ0272,RBI030,हम व्यक्तिगत डेटा एकत्र करने का उद्देश्य समझाने और उधारकर्ता की स्पष्ट सहमति प्राप्त करने के बाद ही डेटा एकत्र करते हैं।,hi,RBI,Data Consent,False,RBI_DL_GUIDELINES_2022
+EVALQ0273,RBI031,हमारा Lending Service Provider हमारे साथ डिजिटल ऋण समझौता करने से पहले उन्नत जाँच-पड़ताल पूरी करता है।,hi,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0274,RBI032,हम डेटा गोपनीयता और उधारकर्ता संरक्षण संबंधी उसकी प्रक्रियाओं पर उन्नत जाँच-पड़ताल किए बिना किसी Lending Service Provider को नियुक्त करते हैं।,hi,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0275,RBI033,हम विभिन्न ऋणदाताओं के मिलान किए गए ऋण प्रस्ताव पर्याप्त जानकारी के साथ दिखाते हैं ताकि उधारकर्ता उचित तुलना कर सकें।,hi,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0276,RBI034,हमारा डिजिटल ऋण प्लेटफ़ॉर्म उधारकर्ताओं को निष्पक्ष तुलना दिए बिना एक ऋणदाता के प्रस्ताव को दूसरों की तुलना में बढ़ावा देता है।,hi,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0277,RBI035,हमारा डिजिटल ऋण ऐप उधारकर्ताओं को विशिष्ट व्यक्तिगत डेटा के उपयोग के लिए सहमति देने या मना करने का विकल्प देता है।,hi,RBI,Data Consent,False,RBI_DL_DIRECTIONS_2025
+EVALQ0278,RBI036,हमारा डिजिटल ऋण ऐप उधारकर्ता की स्पष्ट सहमति के बिना उसकी संपर्क सूची और कॉल लॉग तक पहुँचता है।,hi,RBI,Data Privacy,False,RBI_DL_DIRECTIONS_2025
+EVALQ0279,RBI037,हम उधारकर्ताओं को उनके व्यक्तिगत डेटा के संग्रह के लिए पहले दी गई सहमति वापस लेने का विकल्प देते हैं।,hi,RBI,Consent Revocation,False,RBI_DL_DIRECTIONS_2025
+EVALQ0280,RBI038,हम स्पष्ट सहमति प्राप्त किए बिना उधारकर्ताओं की व्यक्तिगत जानकारी तीसरे पक्ष के साथ साझा करते हैं।,hi,RBI,Third-Party Data Sharing,False,RBI_DL_DIRECTIONS_2025
+EVALQ0281,RBI039,हम यह सुनिश्चित करते हैं कि उधारकर्ता का डेटा लागू नियामकीय आवश्यकताओं के अधीन केवल भारत में स्थित सर्वरों पर संग्रहीत हो।,hi,RBI,Data Storage,False,RBI_DL_DIRECTIONS_2025
+EVALQ0282,RBI040,हम डेटा प्रसंस्करण और भंडारण के लिए लागू RBI आवश्यकताओं का पालन किए बिना उधारकर्ताओं का व्यक्तिगत डेटा भारत के बाहर स्थित सर्वरों पर संग्रहीत करते हैं।,hi,RBI,Data Storage,False,RBI_DL_DIRECTIONS_2025
+EVALQ0283,RBI041,हम डिजिटल ऋण व्यवस्था में प्रवेश करने से पहले प्रत्येक Lending Service Provider की उचित जाँच-पड़ताल करते हैं।,hi,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0284,RBI042,हम आवश्यक जाँच-पड़ताल किए बिना किसी Lending Service Provider को डिजिटल ऋण के लिए नियुक्त करते हैं।,hi,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0285,RBI043,हम अपने Lending Service Providers के आचरण की उनके समझौतों की शर्तों के अनुसार समय-समय पर समीक्षा करते हैं।,hi,RBI,LSP Monitoring,False,RBI_DL_DIRECTIONS_2025
+EVALQ0286,RBI044,हम महत्वपूर्ण संविदात्मक विचलन पाए जाने के बाद भी उचित कार्रवाई किए बिना किसी Lending Service Provider का उपयोग जारी रखते हैं।,hi,RBI,LSP Monitoring,False,RBI_DL_DIRECTIONS_2025
+EVALQ0287,RBI045,हमारे Lending Service Providers के साथ समझौतों में विनियमित संस्था और LSP की संबंधित भूमिकाएँ और जिम्मेदारियाँ स्पष्ट रूप से परिभाषित होती हैं।,hi,RBI,LSP Agreement,False,RBI_DL_DIRECTIONS_2025
+EVALQ0288,RBI046,हम ऐसी व्यवस्था के तहत Lending Service Provider का उपयोग करते हैं जिसमें पक्षों की जिम्मेदारियाँ स्पष्ट रूप से परिभाषित नहीं हैं।,hi,RBI,LSP Agreement,False,RBI_DL_DIRECTIONS_2025
+EVALQ0289,RBI047,"जब कोई LSP कई ऋणदाताओं के साथ काम करता है, तो हम सुनिश्चित करते हैं कि डिजिटल ऋण प्लेटफ़ॉर्म उधारकर्ता के अनुरोध से मेल खाने वाले ऋण प्रस्ताव दिखाए।",hi,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0290,RBI048,अन्य उपयुक्त प्रस्ताव उपलब्ध होने पर भी हमारा प्लेटफ़ॉर्म केवल उस ऋणदाता का प्रस्ताव दिखाता है जो हमें सबसे अधिक व्यावसायिक शुल्क देता है।,hi,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0291,RBI049,हम समान परिस्थितियों वाले उधारकर्ताओं के लिए उपयुक्त ऋणदाता प्रस्तावों का मिलान करने की एक सुसंगत व्यवस्था का उपयोग करते हैं।,hi,RBI,Lender Matching,False,RBI_DL_DIRECTIONS_2025
+EVALQ0292,RBI050,हम समान उधारकर्ताओं के लिए अपनी ऋणदाता-मिलान व्यवस्था में बदलाव को दस्तावेज़ित किए बिना बदल देते हैं।,hi,RBI,Lender Matching,False,
+EVALQ0293,RBI051,"हम मिलान किए गए ऋण प्रस्तावों के लिए ऋणदाता का नाम, ऋण राशि, अवधि, APR, मासिक पुनर्भुगतान दायित्व और लागू दंडात्मक शुल्क प्रदर्शित करते हैं।",hi,RBI,Loan Offer Disclosure,False,RBI_DL_DIRECTIONS_2025
+EVALQ0294,RBI052,"हम उधारकर्ताओं को ऋणदाता, APR, पुनर्भुगतान दायित्व और लागू शुल्कों के बारे में पर्याप्त जानकारी दिए बिना ऋण प्रस्ताव दिखाते हैं ताकि वे उचित तुलना कर सकें।",hi,RBI,Loan Offer Disclosure,False,RBI_DL_DIRECTIONS_2025
+EVALQ0295,RBI053,हम उधारकर्ता को प्रदर्शित प्रत्येक डिजिटल ऋण प्रस्ताव के लिए मुख्य तथ्य विवरण (KFS) का लिंक प्रदान करते हैं।,hi,RBI,KFS Access,False,RBI_DL_DIRECTIONS_2025
+EVALQ0296,RBI054,हम कई ऋण प्रस्ताव प्रदर्शित करते हैं लेकिन उधारकर्ताओं को संबंधित मुख्य तथ्य विवरण उपलब्ध नहीं कराते।,hi,RBI,KFS Access,False,RBI_DL_DIRECTIONS_2025
+EVALQ0297,RBI055,हमारा डिजिटल ऋण-प्रस्ताव प्रदर्शन मिलान किए गए ऋणदाता प्रस्तावों को वस्तुनिष्ठ और निष्पक्ष तरीके से प्रस्तुत करता है।,hi,RBI,Unbiased Presentation,False,RBI_DL_DIRECTIONS_2025
+EVALQ0298,RBI056,हम भ्रामक इंटरफ़ेस तत्वों का उपयोग करके उधारकर्ताओं को किसी विशेष ऋणदाता के प्रस्ताव की ओर आकर्षित करते हैं।,hi,RBI,Dark Patterns,False,RBI_DL_DIRECTIONS_2025
+EVALQ0299,RBI057,हम डिजिटल ऋण देने से पहले प्रासंगिक जानकारी का उपयोग करके उधारकर्ता की ऋण-योग्यता का आकलन करते हैं।,hi,RBI,Creditworthiness Assessment,True,RBI_DL_DIRECTIONS_2025
+EVALQ0300,RBI058,हम उधारकर्ता की ऋण-योग्यता का आकलन किए बिना डिजिटल ऋण स्वीकृत करते हैं।,hi,RBI,Creditworthiness Assessment,True,RBI_DL_DIRECTIONS_2025
+EVALQ0301,RBI059,"हम डिजिटल ऋण को सीधे उधारकर्ता के बैंक खाते में वितरित करते हैं, जब तक कि कोई अनुमत नियामकीय या विशिष्ट अंतिम-उपयोग अपवाद लागू न हो।",hi,RBI,Loan Disbursal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0302,RBI060,हम उधारकर्ता के खाते के बजाय नियमित रूप से डिजिटल ऋण को Lending Service Provider के बैंक खाते में वितरित करते हैं।,hi,RBI,Loan Disbursal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0303,RBI061,हम उधारकर्ता को लागू कूलिंग-ऑफ अवधि के दौरान मूलधन और आनुपातिक APR का भुगतान करके बिना दंड के डिजिटल ऋण से बाहर निकलने का स्पष्ट विकल्प देते हैं।,hi,RBI,Cooling-Off Period,False,RBI_DL_DIRECTIONS_2025
+EVALQ0304,RBI062,हम उधारकर्ताओं को बिना दंड के डिजिटल ऋण से बाहर निकलने के लागू कूलिंग-ऑफ विकल्प से वंचित करते हैं।,hi,RBI,Cooling-Off Period,False,RBI_DL_DIRECTIONS_2025
+EVALQ0305,RBI063,हम कूलिंग-ऑफ अवधि के दौरान ऋण से बाहर निकलने पर लागू किसी अनुमत एकमुश्त प्रोसेसिंग शुल्क का मुख्य तथ्य विवरण (KFS) में खुलासा करते हैं।,hi,RBI,Cooling-Off Fee,False,RBI_DL_DIRECTIONS_2025
+EVALQ0306,RBI064,हम कूलिंग-ऑफ विकल्प का उपयोग करने वाले उधारकर्ताओं पर ऐसा निकासी शुल्क लगाते हैं जिसका खुलासा नहीं किया गया था।,hi,RBI,Cooling-Off Fee,False,RBI_DL_DIRECTIONS_2025
+EVALQ0307,RBI065,हम डिजिटल ऋण गतिविधियों से संबंधित शिकायतों को संभालने के लिए एक नोडल शिकायत निवारण अधिकारी नियुक्त करते हैं।,hi,RBI,Grievance Redressal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0308,RBI066,हम उधारकर्ताओं को अपनी डिजिटल ऋण सेवाओं से संबंधित शिकायतों के समाधान के लिए कोई निर्धारित चैनल या अधिकारी उपलब्ध नहीं कराते।,hi,RBI,Grievance Redressal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0309,RBI067,हम सुनिश्चित करते हैं कि हमारे डिजिटल ऋण आवेदन के माध्यम से एकत्र व्यक्तिगत डेटा को लागू डेटा-सुरक्षा और नियामकीय आवश्यकताओं के अनुसार संभाला जाए।,hi,RBI,Data Protection,False,RBI_DL_DIRECTIONS_2025
+EVALQ0310,RBI068,"हम लागू सहमति, गोपनीयता और डेटा-प्रबंधन आवश्यकताओं का पालन किए बिना अपने डिजिटल ऋण आवेदन के माध्यम से व्यक्तिगत जानकारी एकत्र करते हैं।",hi,RBI,Data Protection,False,RBI_DL_DIRECTIONS_2025
+EVALQ0311,RBI069,हम सुनिश्चित करते हैं कि डिजिटल ऋण गतिविधियाँ और उनसे जुड़े सेवा प्रदाता लागू साइबर सुरक्षा आवश्यकताओं का पालन करें।,hi,RBI,Cybersecurity,False,RBI_DL_DIRECTIONS_2025
+EVALQ0312,RBI070,हम अपने डिजिटल ऋण आवेदन और सेवा प्रदाताओं को लागू साइबर सुरक्षा आवश्यकताओं को संबोधित किए बिना संचालित होने देते हैं।,hi,RBI,Cybersecurity,False,RBI_DL_DIRECTIONS_2025
+EVALQ0313,RBI071,"Loan offers compare karte time lender ka naam, APR aur repayment details clearly dikhate hain.",hi-en,RBI,Loan Offer Disclosure,False,RBI_DL_DIRECTIONS_2025
+EVALQ0314,RBI072,"Hamari app borrower ke contacts access karti hai bina explicit consent ke, because verification ke liye needed hai.",hi-en,RBI,Data Privacy,False,RBI_DL_DIRECTIONS_2025
+EVALQ0315,RBI073,"Agar borrower consent withdraw kare, toh hum future data collection rok dete hain, but pehle collected data automatically delete nahi hota.",hi-en,RBI,Consent Revocation,False,RBI_DL_DIRECTIONS_2025
+EVALQ0316,RBI074,Multiple lenders ke offers mein hum wahi offer top pe dikhate hain jahan hume highest commercial fee milti hai.,hi-en,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0317,RBI075,"Borrower ka creditworthiness check karke hi loan approve karte hain, but kuch repeat customers ko simplified review milta hai.",hi-en,RBI,Creditworthiness Assessment,True,RBI_DL_DIRECTIONS_2025
+EVALQ0318,RBI076,LSP onboard karne se pehle proper due diligence karte hain aur agreement mein roles clearly mention hote hain.,hi-en,RBI,LSP Due Diligence,False,RBI_DL_DIRECTIONS_2025
+EVALQ0319,RBI077,"Cooling-off period mein loan exit kar sakte ho, bas applicable principal aur proportionate APR pay karna hoga.",hi-en,RBI,Cooling-Off Period,False,RBI_DL_DIRECTIONS_2025
+EVALQ0320,RBI078,Cooling-off period mein exit karoge toh ek extra exit fee lagegi jo pehle clearly disclose nahi ki gayi thi.,hi-en,RBI,Cooling-Off Fee,False,RBI_DL_DIRECTIONS_2025
+EVALQ0321,RBI079,"Borrower data India mein store karte hain, except where applicable RBI requirements allow another arrangement.",hi-en,RBI,Data Storage,False,RBI_DL_DIRECTIONS_2025
+EVALQ0322,RBI080,App mein deceptive pop-ups use karke borrower ko ek particular lender select karne ke liye push karte hain.,hi-en,RBI,Dark Patterns,False,RBI_DL_DIRECTIONS_2025
+EVALQ0323,RBI081,"Cybersecurity controls implemented hain, but third-party LSP ke systems ka review quarterly hota hai.",hi-en,RBI,Cybersecurity,False,RBI_DL_DIRECTIONS_2025
+EVALQ0324,RBI082,"Grievance officer ka contact app mein hai, but complaint process ke detailed steps support page par diye hain.",hi-en,RBI,Grievance Redressal,True,RBI_DL_DIRECTIONS_2025
+EVALQ0325,RBI083,"We display matching offers from multiple lenders, but the way the offers are ordered can depend on commercial arrangements.",en,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0326,RBI083,"हम कई lenders के matching offers दिखाते हैं, लेकिन offers का order commercial arrangements पर depend कर सकता है।",hi,RBI,Multi-Lender Transparency,False,RBI_DL_DIRECTIONS_2025
+EVALQ0327,RBI084,"Borrowers can give or deny consent for specific data uses, although some permissions are bundled together in the same consent flow.",en,RBI,Data Consent,False,RBI_DL_DIRECTIONS_2025
+EVALQ0328,RBI084,"Borrowers specific data uses के लिए consent दे या deny कर सकते हैं, हालांकि कुछ permissions एक ही consent flow में bundled होती हैं।",hi,RBI,Data Consent,False,RBI_DL_DIRECTIONS_2025
+EVALQ0329,RBI085,"We allow borrowers to withdraw consent, but the effect of withdrawal can differ depending on the data-processing activity involved.",en,RBI,Consent Revocation,False,RBI_DL_DIRECTIONS_2025
+EVALQ0330,RBI085,"Borrowers consent withdraw कर सकते हैं, लेकिन withdrawal का effect अलग-अलग data-processing activities के अनुसार अलग हो सकता है।",hi,RBI,Consent Revocation,False,RBI_DL_DIRECTIONS_2025
+EVALQ0331,RBI086,"We share borrower data with service providers only for stated purposes, although the exact third-party access may vary by service.",en,RBI,Third-Party Data Sharing,False,RBI_DL_DIRECTIONS_2025
+EVALQ0332,RBI086,"हम borrower data service providers के साथ stated purposes के लिए share करते हैं, हालांकि exact third-party access service के अनुसार बदल सकता है।",hi,RBI,Third-Party Data Sharing,False,RBI_DL_DIRECTIONS_2025
+EVALQ0333,RBI087,"Borrower data is stored in India, but a limited part of the processing may involve systems located outside India subject to applicable requirements.",en,RBI,Data Storage,False,RBI_DL_DIRECTIONS_2025
+EVALQ0334,RBI087,"Borrower data India में store किया जाता है, लेकिन applicable requirements के अधीन processing का एक सीमित हिस्सा India के बाहर स्थित systems से जुड़ सकता है।",hi,RBI,Data Storage,False,RBI_DL_DIRECTIONS_2025
+EVALQ0335,RBI088,"We review LSP conduct periodically, but the timing of the review depends on the risk and nature of the arrangement.",en,RBI,LSP Monitoring,False,RBI_DL_DIRECTIONS_2025
+EVALQ0336,RBI088,"हम LSP conduct की periodic review करते हैं, लेकिन review का timing arrangement के risk और nature पर depend करता है।",hi,RBI,LSP Monitoring,False,RBI_DL_DIRECTIONS_2025
+EVALQ0337,RBI089,"Our LSP agreement defines the parties' responsibilities, while some operational responsibilities are described in linked procedures.",en,RBI,LSP Agreement,False,RBI_DL_DIRECTIONS_2025
+EVALQ0338,RBI089,"हमारे LSP agreement में parties की responsibilities define हैं, जबकि कुछ operational responsibilities linked procedures में बताई गई हैं।",hi,RBI,LSP Agreement,False,RBI_DL_DIRECTIONS_2025
+EVALQ0339,RBI090,"We use a consistent lender-matching process, but the matching criteria can be updated when the platform's lending products change.",en,RBI,Lender Matching,False,RBI_DL_DIRECTIONS_2025
+EVALQ0340,RBI090,"हम consistent lender-matching process use करते हैं, लेकिन lending products बदलने पर matching criteria update हो सकते हैं।",hi,RBI,Lender Matching,False,RBI_DL_DIRECTIONS_2025
+EVALQ0341,RBI091,"We provide a Key Fact Statement link for loan offers, but the link may appear only after the borrower selects an offer.",en,RBI,KFS Access,False,RBI_DL_DIRECTIONS_2025
+EVALQ0342,RBI091,"हम loan offers के लिए Key Fact Statement का link देते हैं, लेकिन link borrower के offer select करने के बाद दिखाई दे सकता है।",hi,RBI,KFS Access,False,RBI_DL_DIRECTIONS_2025
+EVALQ0343,RBI092,"We provide borrowers a cooling-off option, but the applicable exit terms depend on the specific digital loan arrangement.",en,RBI,Cooling-Off Period,False,RBI_DL_DIRECTIONS_2025
+EVALQ0344,RBI092,"हम borrowers को cooling-off option देते हैं, लेकिन applicable exit terms specific digital loan arrangement पर depend करते हैं।",hi,RBI,Cooling-Off Period,False,RBI_DL_DIRECTIONS_2025
+EVALQ0345,DPDP001,We clearly inform users about the personal data we collect and the purpose for which we process it,en,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0346,DPDP002,We collect personal data without informing users about what data is being collected or why it is being processed,en,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0347,DPDP003,Our notice uses clear and plain language so users can understand how their personal data will be processed.,en,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0348,DPDP004,Our privacy notice is difficult to understand and does not clearly explain the purposes for which personal data is processed,en,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0349,DPDP005,We obtain consent from users before processing their personal data where consent is the applicable basis for processing,en,DPDP,Consent,True,DPDP_ACT_2023
+EVALQ0350,DPDP006,We process users' personal data without obtaining the required consent,en,DPDP,Consent,True,DPDP_ACT_2023
+EVALQ0351,DPDP007,Users can withdraw their consent for processing personal data as easily as they gave it,en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0352,DPDP008,We make it significantly harder for users to withdraw consent than it was to provide consent,en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0353,DPDP009,We process personal data only for a lawful purpose for which the user has provided consent or another permitted basis applies,en,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0354,DPDP010,We use personal data for purposes unrelated to the purpose communicated to the user and without another permitted basis for processing,en,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0355,DPDP011,We implement reasonable security safeguards to protect users' personal data from unauthorized access or disclosure.,en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0356,DPDP012,We do not implement reasonable security safeguards to protect users' personal data.,en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0357,DPDP013,We notify affected users when we become aware of a personal data breach involving their information,en,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0358,DPDP014,We do not notify affected users after becoming aware of a personal data breach involving their information.,en,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0359,DPDP015,"We erase personal data when the specified purpose is no longer being served, unless retention is required by law.",en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0360,DPDP016,We continue retaining users' personal data even after the specified purpose is no longer being served and no legal requirement to retain it applies,en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0361,DPDP017,We publish contact information for a person who can answer users' questions about the processing of their personal data.,en,DPDP,Data Fiduciary Contact,False,DPDP_ACT_2023
+EVALQ0362,DPDP018,We do not provide users with contact information for questions about how their personal data is processed,en,DPDP,Data Fiduciary Contact,False,DPDP_ACT_2023
+EVALQ0363,DPDP019,We establish an effective mechanism for users to submit and resolve grievances relating to the processing of their personal data,en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0364,DPDP020,We do not provide users with an effective mechanism to raise grievances about the processing of their personal data,en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0365,DPDP021,We obtain verifiable consent from a parent before processing the personal data of a child,en,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0366,DPDP022,We process a child's personal data without obtaining verifiable consent from the parent,en,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0367,DPDP023,We do not undertake processing of children's personal data that is likely to cause a detrimental effect on their well-being,en,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0368,DPDP024,We process children's personal data in ways that are likely to cause a detrimental effect on their well-being,en,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0369,DPDP025,We do not track or behaviourally monitor children or direct targeted advertising at children,en,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0370,DPDP026,We track children's behaviour and use their personal data for targeted advertising directed at children,en,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0371,DPDP027,We appoint a Data Protection Officer based in India when we are notified as a Significant Data Fiduciary.,en,DPDP,Significant Data Fiduciary,True,DPDP_ACT_2023
+EVALQ0372,DPDP028,"As a Significant Data Fiduciary, we do not appoint a Data Protection Officer based in India",en,DPDP,Significant Data Fiduciary,True,DPDP_ACT_2023
+EVALQ0373,DPDP029,"As a Significant Data Fiduciary, we appoint an independent data auditor to evaluate our compliance with the Act.",en,DPDP,Data Audit,False,DPDP_ACT_2023
+EVALQ0374,DPDP030,"As a Significant Data Fiduciary, we do not appoint an independent data auditor to evaluate our compliance with the Act.",en,DPDP,Data Audit,False,DPDP_ACT_2023
+EVALQ0375,DPDP031,We provide users with information about the personal data being processed by us when they exercise their right to access information,en,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0376,DPDP032,We do not provide users with information about the personal data being processed when they exercise their right to access information,en,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0377,DPDP033,"We allow users to request correction, completion, updating, or erasure of their personal data where applicable",en,DPDP,Data Correction and Erasure,False,DPDP_ACT_2023
+EVALQ0378,DPDP034,We do not provide users with a mechanism to request correction or erasure of their personal data where applicable,en,DPDP,Data Correction and Erasure,False,DPDP_ACT_2023
+EVALQ0379,DPDP035,We provide users with a mechanism to raise grievances regarding the processing of their personal data,en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0380,DPDP036,We do not provide users with a mechanism to raise grievances regarding the processing of their personal data,en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0381,DPDP037,Users can nominate another individual to exercise their rights in accordance with the DPDP Act if they die or become incapable of exercising their rights.,en,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0382,DPDP038,We do not provide users with a mechanism to make a nomination for exercising their rights under the DPDP Act.,en,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0383,DPDP039,We require users to provide authentic information when exercising their rights under the DPDP Act.,en,DPDP,Data Principal Duties,False,DPDP_ACT_2023
+EVALQ0384,DPDP040,Users may provide false or misleading information when exercising their rights under the DPDP Act without any requirement to provide authentic information,en,DPDP,Data Principal Duties,False,DPDP_ACT_2023
+EVALQ0385,DPDP041,We maintain appropriate technical and organisational measures to protect personal data in our custody or control.,en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0386,DPDP042,We store personal data without implementing reasonable security safeguards against unauthorised access or processing.,en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0387,DPDP043,We take reasonable security safeguards to prevent personal data breaches.,en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0388,DPDP044,We do not maintain safeguards to prevent unauthorised access to the personal data we process.,en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0389,DPDP045,We inform the Data Protection Board and affected Data Principals about a personal data breach as required by applicable rules.,en,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0390,DPDP046,We delay notifying the relevant authority and affected individuals after discovering a personal data breach.,en,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0391,DPDP047,"We erase personal data when the specified purpose for which it was collected is no longer being served, subject to applicable legal requirements.",en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0392,DPDP048,We retain personal data indefinitely even after the purpose for processing it has been fulfilled.,en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0393,DPDP049,We ensure that personal data is erased when retention is no longer necessary and there is no overriding legal requirement to retain it.,en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0394,DPDP050,"We continue storing customer personal data solely because it may be useful someday, without a defined retention purpose.",en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0395,DPDP051,We provide a clear mechanism for Data Principals to exercise their rights under the applicable provisions of the Act.,en,DPDP,Data Principal Rights,True,DPDP_ACT_2023
+EVALQ0396,DPDP052,"We make it difficult for Data Principals to exercise their rights relating to access, correction, erasure and grievance redressal.",en,DPDP,Data Principal Rights,True,DPDP_ACT_2023
+EVALQ0397,DPDP053,We allow Data Principals to obtain information about the personal data being processed by us through the prescribed process.,en,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0398,DPDP054,We refuse a valid request from a Data Principal to obtain information about their personal data without an applicable exception.,en,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0399,DPDP055,We provide a mechanism for Data Principals to request correction of inaccurate or misleading personal data.,en,DPDP,Correction,False,DPDP_ACT_2023
+EVALQ0400,DPDP056,We ignore valid requests from Data Principals to correct inaccurate personal data.,en,DPDP,Correction,False,DPDP_ACT_2023
+EVALQ0401,DPDP057,We provide a mechanism for Data Principals to request erasure of personal data that is no longer necessary for the specified purpose.,en,DPDP,Erasure,False,DPDP_ACT_2023
+EVALQ0402,DPDP058,We continue processing personal data after receiving a valid erasure request even when there is no legal requirement to retain it.,en,DPDP,Erasure,False,DPDP_ACT_2023
+EVALQ0403,DPDP059,We provide a channel through which Data Principals can register grievances regarding the processing of their personal data.,en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0404,DPDP060,We do not provide any practical channel for Data Principals to raise grievances about our processing of personal data.,en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0405,DPDP061,"We enable Data Principals to nominate another individual to exercise their rights in the event of their death or incapacity, as provided by the Act.",en,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0406,DPDP062,We prevent Data Principals from using the nomination mechanism provided under the Act without a valid legal basis.,en,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0407,DPDP063,We provide a clear and accessible process for Data Principals to withdraw consent where consent is the legal basis for processing.,en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0408,DPDP064,We make withdrawing consent substantially more difficult than giving consent.,en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0409,DPDP065,"We ensure that processing based on consent stops when a Data Principal validly withdraws that consent, subject to applicable legal requirements.",en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0410,DPDP066,We continue processing personal data on the basis of withdrawn consent without identifying another lawful basis for the processing.,en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0411,DPDP067,We use clear and plain language when providing privacy notices to Data Principals.,en,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0412,DPDP068,We provide privacy information in a way that is difficult for Data Principals to understand or access independently.,en,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0413,DPDP069,Our privacy notice clearly describes the personal data being collected and the specific purposes for which it will be processed.,en,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0414,DPDP070,Our privacy notice does not clearly identify the personal data collected or the specific purposes for which it will be processed.,en,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0415,DPDP001,हम एकत्र किए जाने वाले व्यक्तिगत डेटा और उसे संसाधित करने के उद्देश्य के बारे में उपयोगकर्ताओं को स्पष्ट रूप से सूचित करते हैं।,hi,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0416,DPDP002,हम उपयोगकर्ताओं को यह बताए बिना व्यक्तिगत डेटा एकत्र करते हैं कि कौन-सा डेटा एकत्र किया जा रहा है या उसका प्रसंस्करण क्यों किया जा रहा है।,hi,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0417,DPDP003,हमारी सूचना स्पष्ट और सरल भाषा का उपयोग करती है ताकि उपयोगकर्ता समझ सकें कि उनके व्यक्तिगत डेटा को कैसे संसाधित किया जाएगा।,hi,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0418,DPDP004,हमारी गोपनीयता सूचना समझना कठिन है और यह स्पष्ट रूप से नहीं बताती कि व्यक्तिगत डेटा किन उद्देश्यों के लिए संसाधित किया जाता है।,hi,DPDP,Notice,True,DPDP_ACT_2023
+EVALQ0419,DPDP005,"जहाँ सहमति प्रसंस्करण का लागू आधार है, वहाँ हम व्यक्तिगत डेटा संसाधित करने से पहले उपयोगकर्ताओं की सहमति प्राप्त करते हैं।",hi,DPDP,Consent,True,DPDP_ACT_2023
+EVALQ0420,DPDP006,हम आवश्यक सहमति प्राप्त किए बिना उपयोगकर्ताओं के व्यक्तिगत डेटा को संसाधित करते हैं।,hi,DPDP,Consent,True,DPDP_ACT_2023
+EVALQ0421,DPDP007,उपयोगकर्ता व्यक्तिगत डेटा के प्रसंस्करण के लिए अपनी सहमति उतनी ही आसानी से वापस ले सकते हैं जितनी आसानी से उन्होंने सहमति दी थी।,hi,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0422,DPDP008,हम उपयोगकर्ताओं के लिए सहमति वापस लेना सहमति देने की तुलना में काफी अधिक कठिन बना देते हैं।,hi,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0423,DPDP009,हम व्यक्तिगत डेटा को केवल उस वैध उद्देश्य के लिए संसाधित करते हैं जिसके लिए उपयोगकर्ता ने सहमति दी है या जहाँ कोई अन्य अनुमत आधार लागू होता है।,hi,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0424,DPDP010,हम व्यक्तिगत डेटा का उपयोग उपयोगकर्ता को बताए गए उद्देश्य से असंबंधित उद्देश्यों के लिए और किसी अन्य अनुमत प्रसंस्करण आधार के बिना करते हैं।,hi,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0425,DPDP011,हम उपयोगकर्ताओं के व्यक्तिगत डेटा को अनधिकृत पहुँच या प्रकटीकरण से बचाने के लिए उचित सुरक्षा उपाय लागू करते हैं।,hi,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0426,DPDP012,हम उपयोगकर्ताओं के व्यक्तिगत डेटा की सुरक्षा के लिए उचित सुरक्षा उपाय लागू नहीं करते।,hi,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0427,DPDP013,"जब हमें उपयोगकर्ता की जानकारी से संबंधित व्यक्तिगत डेटा उल्लंघन का पता चलता है, तो हम प्रभावित उपयोगकर्ताओं को सूचित करते हैं।",hi,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0428,DPDP014,उपयोगकर्ता की जानकारी से संबंधित व्यक्तिगत डेटा उल्लंघन का पता चलने के बाद हम प्रभावित उपयोगकर्ताओं को सूचित नहीं करते।,hi,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0429,DPDP015,"जब व्यक्तिगत डेटा एकत्र करने का निर्दिष्ट उद्देश्य पूरा नहीं रह जाता, तो हम डेटा मिटा देते हैं, जब तक कि कानून के तहत उसे बनाए रखना आवश्यक न हो।",hi,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0430,DPDP016,निर्दिष्ट उद्देश्य पूरा हो जाने और डेटा बनाए रखने की कोई कानूनी आवश्यकता न होने के बाद भी हम उपयोगकर्ताओं का व्यक्तिगत डेटा रखते रहते हैं।,hi,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0431,DPDP017,हम उस व्यक्ति की संपर्क जानकारी प्रकाशित करते हैं जो उपयोगकर्ताओं के व्यक्तिगत डेटा के प्रसंस्करण से जुड़े प्रश्नों का उत्तर दे सकता है।,hi,DPDP,Data Fiduciary Contact,False,DPDP_ACT_2023
+EVALQ0432,DPDP018,हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण के बारे में प्रश्न पूछने के लिए संपर्क जानकारी उपलब्ध नहीं कराते।,hi,DPDP,Data Fiduciary Contact,False,DPDP_ACT_2023
+EVALQ0433,DPDP019,हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण से संबंधित शिकायतें दर्ज करने और उनका समाधान कराने के लिए प्रभावी व्यवस्था स्थापित करते हैं।,hi,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0434,DPDP020,हम उपयोगकर्ताओं को व्यक्तिगत डेटा के प्रसंस्करण के बारे में शिकायत दर्ज करने के लिए प्रभावी व्यवस्था उपलब्ध नहीं कराते।,hi,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0435,DPDP021,हम बच्चे के व्यक्तिगत डेटा को संसाधित करने से पहले माता-पिता की सत्यापन योग्य सहमति प्राप्त करते हैं।,hi,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0436,DPDP022,हम माता-पिता की सत्यापन योग्य सहमति प्राप्त किए बिना बच्चे के व्यक्तिगत डेटा को संसाधित करते हैं।,hi,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0437,DPDP023,हम बच्चों के व्यक्तिगत डेटा का ऐसा प्रसंस्करण नहीं करते जिससे उनके कल्याण पर हानिकारक प्रभाव पड़ने की संभावना हो।,hi,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0438,DPDP024,हम बच्चों के व्यक्तिगत डेटा को ऐसे तरीकों से संसाधित करते हैं जिनसे उनके कल्याण पर हानिकारक प्रभाव पड़ने की संभावना है।,hi,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0439,DPDP025,हम बच्चों को ट्रैक या व्यवहारिक रूप से मॉनिटर नहीं करते और न ही बच्चों को लक्षित विज्ञापन दिखाते हैं।,hi,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0440,DPDP026,हम बच्चों के व्यवहार को ट्रैक करते हैं और उनके व्यक्तिगत डेटा का उपयोग बच्चों को लक्षित विज्ञापन देने के लिए करते हैं।,hi,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0441,DPDP027,"जब हमें Significant Data Fiduciary के रूप में अधिसूचित किया जाता है, तो हम भारत में स्थित Data Protection Officer नियुक्त करते हैं।",hi,DPDP,Significant Data Fiduciary,True,DPDP_ACT_2023
+EVALQ0442,DPDP028,Significant Data Fiduciary होने के बावजूद हम भारत में स्थित Data Protection Officer नियुक्त नहीं करते।,hi,DPDP,Significant Data Fiduciary,True,DPDP_ACT_2023
+EVALQ0443,DPDP029,Significant Data Fiduciary के रूप में हम अधिनियम के अनुपालन का मूल्यांकन करने के लिए एक स्वतंत्र data auditor नियुक्त करते हैं।,hi,DPDP,Data Audit,False,DPDP_ACT_2023
+EVALQ0444,DPDP030,Significant Data Fiduciary के रूप में हम अधिनियम के अनुपालन का मूल्यांकन करने के लिए स्वतंत्र data auditor नियुक्त नहीं करते।,hi,DPDP,Data Audit,False,DPDP_ACT_2023
+EVALQ0445,DPDP031,"जब उपयोगकर्ता अपने सूचना तक पहुँच के अधिकार का प्रयोग करते हैं, तो हम उनके द्वारा संसाधित किए जा रहे व्यक्तिगत डेटा की जानकारी प्रदान करते हैं।",hi,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0446,DPDP032,"जब उपयोगकर्ता सूचना तक पहुँच के अपने अधिकार का प्रयोग करते हैं, तो हम संसाधित किए जा रहे उनके व्यक्तिगत डेटा की जानकारी प्रदान नहीं करते।",hi,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0447,DPDP033,"जहाँ लागू हो, हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा में सुधार, उसे पूरा करने, अद्यतन करने या मिटाने का अनुरोध करने की सुविधा देते हैं।",hi,DPDP,Data Correction and Erasure,False,DPDP_ACT_2023
+EVALQ0448,DPDP034,"जहाँ लागू हो, हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा में सुधार या उसे मिटाने का अनुरोध करने की व्यवस्था उपलब्ध नहीं कराते।",hi,DPDP,Data Correction and Erasure,False,DPDP_ACT_2023
+EVALQ0449,DPDP035,हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण से संबंधित शिकायतें दर्ज करने की व्यवस्था उपलब्ध कराते हैं।,hi,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0450,DPDP036,हम उपयोगकर्ताओं को उनके व्यक्तिगत डेटा के प्रसंस्करण से संबंधित शिकायतें दर्ज करने की व्यवस्था उपलब्ध नहीं कराते।,hi,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0451,DPDP037,"यदि उपयोगकर्ता की मृत्यु हो जाती है या वह अपने अधिकारों का प्रयोग करने में असमर्थ हो जाता है, तो वह DPDP Act के अनुसार अपने अधिकारों का प्रयोग करने के लिए किसी अन्य व्यक्ति को नामित कर सकता है।",hi,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0452,DPDP038,हम उपयोगकर्ताओं को DPDP Act के तहत अपने अधिकारों के प्रयोग के लिए किसी अन्य व्यक्ति को नामित करने की व्यवस्था उपलब्ध नहीं कराते।,hi,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0453,DPDP039,हम उपयोगकर्ताओं से DPDP Act के तहत अपने अधिकारों का प्रयोग करते समय प्रामाणिक जानकारी देने की अपेक्षा करते हैं।,hi,DPDP,Data Principal Duties,False,DPDP_ACT_2023
+EVALQ0454,DPDP040,उपयोगकर्ता अपने अधिकारों का प्रयोग करते समय बिना प्रामाणिक जानकारी देने की आवश्यकता के गलत या भ्रामक जानकारी दे सकते हैं।,hi,DPDP,Data Principal Duties,False,DPDP_ACT_2023
+EVALQ0455,DPDP041,हम अपने कब्जे या नियंत्रण में व्यक्तिगत डेटा की सुरक्षा के लिए उचित तकनीकी और संगठनात्मक उपाय बनाए रखते हैं।,hi,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0456,DPDP042,हम अनधिकृत पहुँच या प्रसंस्करण से बचाने के लिए उचित सुरक्षा उपाय लागू किए बिना व्यक्तिगत डेटा संग्रहीत करते हैं।,hi,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0457,DPDP043,हम व्यक्तिगत डेटा उल्लंघनों को रोकने के लिए उचित सुरक्षा उपाय अपनाते हैं।,hi,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0458,DPDP044,हम अपने द्वारा संसाधित व्यक्तिगत डेटा तक अनधिकृत पहुँच रोकने के लिए सुरक्षा उपाय बनाए नहीं रखते।,hi,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0459,DPDP045,हम लागू नियमों के अनुसार Data Protection Board और प्रभावित Data Principals को व्यक्तिगत डेटा उल्लंघन के बारे में सूचित करते हैं।,hi,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0460,DPDP046,व्यक्तिगत डेटा उल्लंघन का पता चलने के बाद हम संबंधित प्राधिकरण और प्रभावित व्यक्तियों को सूचित करने में देरी करते हैं।,hi,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0461,DPDP047,"जब व्यक्तिगत डेटा एकत्र करने का निर्दिष्ट उद्देश्य पूरा नहीं रह जाता, तो हम लागू कानूनी आवश्यकताओं के अधीन उस डेटा को मिटा देते हैं।",hi,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0462,DPDP048,प्रसंस्करण का उद्देश्य पूरा हो जाने के बाद भी हम व्यक्तिगत डेटा को अनिश्चित काल तक बनाए रखते हैं।,hi,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0463,DPDP049,"जब डेटा रखना आवश्यक नहीं रह जाता और उसे बनाए रखने की कोई अन्य कानूनी आवश्यकता नहीं होती, तो हम व्यक्तिगत डेटा मिटा देते हैं।",hi,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0464,DPDP050,"हम केवल इसलिए ग्राहक का व्यक्तिगत डेटा संग्रहीत करते रहते हैं क्योंकि भविष्य में वह उपयोगी हो सकता है, बिना किसी निर्धारित प्रतिधारण उद्देश्य के।",hi,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0465,DPDP051,हम Data Principals को अधिनियम के लागू प्रावधानों के तहत अपने अधिकारों का प्रयोग करने के लिए स्पष्ट व्यवस्था उपलब्ध कराते हैं।,hi,DPDP,Data Principal Rights,True,DPDP_ACT_2023
+EVALQ0466,DPDP052,"हम Data Principals के लिए पहुँच, सुधार, मिटाने और शिकायत निवारण से संबंधित अपने अधिकारों का प्रयोग करना कठिन बना देते हैं।",hi,DPDP,Data Principal Rights,True,DPDP_ACT_2023
+EVALQ0467,DPDP053,हम Data Principals को निर्धारित प्रक्रिया के माध्यम से अपने द्वारा संसाधित किए जा रहे व्यक्तिगत डेटा की जानकारी प्राप्त करने की सुविधा देते हैं।,hi,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0468,DPDP054,हम किसी लागू अपवाद के बिना Data Principal के अपने व्यक्तिगत डेटा की जानकारी प्राप्त करने के वैध अनुरोध को अस्वीकार करते हैं।,hi,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0469,DPDP055,हम Data Principals को गलत या भ्रामक व्यक्तिगत डेटा में सुधार का अनुरोध करने की व्यवस्था उपलब्ध कराते हैं।,hi,DPDP,Correction,False,DPDP_ACT_2023
+EVALQ0470,DPDP056,हम गलत व्यक्तिगत डेटा को सुधारने के Data Principal के वैध अनुरोधों को अनदेखा करते हैं।,hi,DPDP,Correction,False,DPDP_ACT_2023
+EVALQ0471,DPDP057,हम Data Principals को ऐसे व्यक्तिगत डेटा को मिटाने का अनुरोध करने की व्यवस्था उपलब्ध कराते हैं जिसकी निर्दिष्ट उद्देश्य के लिए अब आवश्यकता नहीं है।,hi,DPDP,Erasure,False,DPDP_ACT_2023
+EVALQ0472,DPDP058,कानूनी रूप से डेटा बनाए रखने की आवश्यकता न होने पर भी वैध मिटाने के अनुरोध के बाद हम व्यक्तिगत डेटा का प्रसंस्करण जारी रखते हैं।,hi,DPDP,Erasure,False,DPDP_ACT_2023
+EVALQ0473,DPDP059,हम Data Principals को अपने व्यक्तिगत डेटा के प्रसंस्करण के बारे में शिकायत दर्ज करने के लिए एक माध्यम उपलब्ध कराते हैं।,hi,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0474,DPDP060,हम Data Principals को अपने व्यक्तिगत डेटा के प्रसंस्करण के बारे में शिकायत दर्ज करने के लिए कोई व्यावहारिक माध्यम उपलब्ध नहीं कराते।,hi,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0475,DPDP061,हम अधिनियम के अनुसार Data Principals को उनकी मृत्यु या अक्षमता की स्थिति में अपने अधिकारों का प्रयोग करने के लिए किसी अन्य व्यक्ति को नामित करने की सुविधा देते हैं।,hi,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0476,DPDP062,हम Data Principals को वैध कानूनी आधार के बिना अधिनियम द्वारा प्रदान की गई नामांकन व्यवस्था का उपयोग करने से रोकते हैं।,hi,DPDP,Nomination,True,DPDP_ACT_2023
+EVALQ0477,DPDP063,"जहाँ सहमति प्रसंस्करण का कानूनी आधार है, वहाँ हम Data Principals को सहमति वापस लेने की स्पष्ट और सुलभ प्रक्रिया उपलब्ध कराते हैं।",hi,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0478,DPDP064,हम सहमति वापस लेने की प्रक्रिया को सहमति देने की प्रक्रिया की तुलना में काफी अधिक कठिन बना देते हैं।,hi,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0479,DPDP065,"जब Data Principal वैध रूप से सहमति वापस लेता है, तो हम उस सहमति के आधार पर प्रसंस्करण रोक देते हैं, लागू कानूनी आवश्यकताओं के अधीन।",hi,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0480,DPDP066,हम सहमति वापस लिए जाने के बाद भी प्रसंस्करण के लिए किसी अन्य वैध आधार की पहचान किए बिना व्यक्तिगत डेटा संसाधित करते रहते हैं।,hi,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0481,DPDP067,हम Data Principals को गोपनीयता सूचनाएँ देते समय स्पष्ट और सरल भाषा का उपयोग करते हैं।,hi,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0482,DPDP068,हम गोपनीयता संबंधी जानकारी ऐसे तरीके से प्रदान करते हैं जिसे Data Principals के लिए समझना या स्वतंत्र रूप से प्राप्त करना कठिन है।,hi,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0483,DPDP069,हमारी गोपनीयता सूचना एकत्र किए जाने वाले व्यक्तिगत डेटा और उसके प्रसंस्करण के विशिष्ट उद्देश्यों का स्पष्ट वर्णन करती है।,hi,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0484,DPDP070,हमारी गोपनीयता सूचना एकत्र किए जाने वाले व्यक्तिगत डेटा या उसके प्रसंस्करण के विशिष्ट उद्देश्यों को स्पष्ट रूप से नहीं बताती।,hi,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0485,DPDP071,"User ko data collect karne se pehle clear notice dete hain, but notice app ke terms page mein available hai.",hi-en,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0486,DPDP072,"Consent lete waqt user ko specific purpose explain karte hain, but saare permissions ek hi screen par bundled hain.",hi-en,DPDP,Consent,True,DPDP_ACT_2023
+EVALQ0487,DPDP073,"User consent withdraw kar sakta hai, but withdrawal process thoda hidden hai aur multiple steps lagte hain.",hi-en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0488,DPDP074,"Data sirf stated purpose ke liye use karte hain, bina extra purpose ke reuse nahi karte.",hi-en,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0489,DPDP075,"Security controls hain, but encryption sabhi stored personal data ke liye consistently enabled nahi hai.",hi-en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0490,DPDP076,"Data breach hone par users ko inform karte hain, but notification kuch cases mein delay ho sakta hai.",hi-en,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0491,DPDP077,Personal data ko business need khatam hone ke baad bhi indefinitely retain karte hain.,hi-en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0492,DPDP078,"Users ko access request raise karne ka option dete hain, but response process manual hai.",hi-en,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0493,DPDP079,"Correction request accept karte hain, but supporting documents mangne ke baad update process complete hota hai.",hi-en,DPDP,Correction,False,DPDP_ACT_2023
+EVALQ0494,DPDP080,"Grievance officer ka contact available hai, but complaint resolution timeline case ke according vary kar sakta hai.",hi-en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0495,DPDP081,"Children ke data ke liye required safeguards follow karte hain, but age verification kuch cases mein self-declaration par based hai.",hi-en,DPDP,Children's Data,False,DPDP_ACT_2023
+EVALQ0496,DPDP082,"User ke data ko bina proper purpose bataye marketing ke liye reuse karna allowed nahi hai, phir bhi team kabhi-kabhi old leads ko contact karti hai.",hi-en,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0497,DPDP083,"We provide users with a clear notice about the data collected, but some details about processing are available through a linked policy.",en,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0498,DPDP083,"हम users को collected data के बारे में clear notice देते हैं, लेकिन processing की कुछ details linked policy में उपलब्ध हैं।",hi,DPDP,Notice,True,DPDP_RULES_2025
+EVALQ0499,DPDP084,"We obtain consent before processing personal data, although some related purposes are presented together in the same consent flow.",en,DPDP,Consent,True,DPDP_ACT_2023
+EVALQ0500,DPDP084,"हम personal data process करने से पहले consent लेते हैं, हालांकि कुछ related purposes एक ही consent flow में साथ दिखाए जाते हैं।",hi,DPDP,Consent,True,DPDP_ACT_2023
+EVALQ0501,DPDP085,"Users can withdraw consent through the account settings, but the withdrawal process requires several steps before it takes effect.",en,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0502,DPDP085,"Users account settings से consent withdraw कर सकते हैं, लेकिन withdrawal effective होने से पहले कई steps पूरे करने पड़ते हैं।",hi,DPDP,Consent Withdrawal,False,DPDP_ACT_2023
+EVALQ0503,DPDP086,"We use personal data for the stated service purpose, while a limited additional use may occur where another applicable purpose is documented.",en,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0504,DPDP086,"हम personal data को stated service purpose के लिए use करते हैं, जबकि एक सीमित additional use किसी अन्य documented applicable purpose के तहत हो सकता है।",hi,DPDP,Purpose Limitation,False,DPDP_ACT_2023
+EVALQ0505,DPDP087,"We maintain reasonable security safeguards, but the exact controls applied can vary depending on the type of personal data and system involved.",en,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0506,DPDP087,"हम reasonable security safeguards maintain करते हैं, लेकिन applied controls personal data और system के type के अनुसार अलग हो सकते हैं।",hi,DPDP,Data Security,False,DPDP_ACT_2023
+EVALQ0507,DPDP088,"We notify users about personal data breaches, although the timing of notification may depend on when the incident is confirmed and the applicable requirement.",en,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0508,DPDP088,"हम personal data breaches के बारे में users को notify करते हैं, हालांकि notification का timing incident की confirmation और applicable requirement पर depend कर सकता है।",hi,DPDP,Data Breach,False,DPDP_ACT_2023
+EVALQ0509,DPDP089,"We retain personal data only while it is needed for the stated purpose, but some records are kept longer where another legal or operational requirement applies.",en,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0510,DPDP089,"हम personal data को stated purpose के लिए आवश्यक रहने तक retain करते हैं, लेकिन किसी अन्य legal या operational requirement के कारण कुछ records अधिक समय तक रखे जा सकते हैं।",hi,DPDP,Data Retention,False,DPDP_ACT_2023
+EVALQ0511,DPDP090,"We provide a channel for data-access requests, but requests may require identity verification before the information is disclosed.",en,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0512,DPDP090,"हम data-access requests के लिए channel देते हैं, लेकिन information disclose करने से पहले identity verification आवश्यक हो सकती है।",hi,DPDP,Right to Access,False,DPDP_ACT_2023
+EVALQ0513,DPDP091,"We process correction requests, but some changes require supporting information before the record can be updated.",en,DPDP,Correction,False,DPDP_ACT_2023
+EVALQ0514,DPDP091,"हम correction requests process करते हैं, लेकिन record update करने से पहले कुछ changes के लिए supporting information आवश्यक होती है।",hi,DPDP,Correction,False,DPDP_ACT_2023
+EVALQ0515,DPDP092,"We provide a grievance mechanism, but the time needed to resolve a complaint depends on the nature of the request.",en,DPDP,Grievance Redressal,True,DPDP_ACT_2023
+EVALQ0516,DPDP092,"हम grievance mechanism उपलब्ध कराते हैं, लेकिन complaint resolve होने में लगने वाला समय request की nature पर depend करता है।",hi,DPDP,Grievance Redressal,True,DPDP_ACT_2023

@@ -1,0 +1,10 @@
+﻿language,regulator,n,consistent,flagged-wrong-evidence,flagged-no-evidence,unverifiable,false-alarm,missed-risk,missed-risk-review,ambiguous-predicted-compliant,correct-clear,abstained,unclassified,VP01_PASS,VP01_FAIL,VP02_PASS,VP02_FAIL,VP02_UNVERIFIABLE,VP04_PASS,VP04_UNDER_FLAGGED,VP04_OVER_FLAGGED,VP11_REVIEW
+en,DPDP,80,44,0,0,0,3,0,1,0,32,0,0,47,0,44,0,0,76,1,3,0
+en,RBI,80,40,1,0,1,3,0,2,0,32,1,0,45,0,40,1,1,72,4,3,1
+en,SEBI,80,43,0,0,2,3,0,0,0,32,0,0,48,0,43,0,2,77,0,3,0
+hi,DPDP,80,40,0,0,0,6,0,4,1,29,0,0,46,0,40,0,0,68,5,7,0
+hi,RBI,80,37,2,0,1,3,0,4,0,33,0,0,43,0,37,2,1,73,4,3,0
+hi,SEBI,80,38,2,0,2,2,0,3,0,33,0,0,44,0,38,2,2,73,3,4,0
+hi-en,DPDP,12,9,0,0,0,1,0,0,0,2,0,0,10,0,9,0,0,11,0,1,0
+hi-en,RBI,12,8,0,0,0,2,0,0,0,1,1,0,10,0,8,0,0,9,0,2,1
+hi-en,SEBI,12,10,0,0,0,0,0,0,0,2,0,0,10,0,10,0,0,12,0,0,0

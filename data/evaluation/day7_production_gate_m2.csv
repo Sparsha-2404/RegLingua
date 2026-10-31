@@ -1,0 +1,11 @@
+﻿row_id,regulator,original_text,before_risk,rewritten_text,after_risk,all_fields_present,error
+RW001,SEBI,We guarantee 20% assured returns on your investment.,Risky,,,False,
+RW002,SEBI,This is a risk-free investment with zero risk of loss.,Compliant,This is a subject to market risks investment with regulated risk of loss.,Compliant,True,
+RW003,SEBI,Our fund offers the highest returns in the market guaranteed.,Ambiguous,,,False,
+RW004,SEBI,Double your money in just 6 months with our sure-shot profit plan.,Compliant,,,False,
+RW005,RBI,This loan offers instant approval with zero risk and no paperwork.,Compliant,This loan offers instant approval with regulated risk and no paperwork. This is subject to credit approval.,Compliant,True,
+RW006,RBI,No questions asked loan with hidden charges waived forever.,Compliant,loan subject to standard verification with all charges disclosed upfront. This is subject to credit approval.,Compliant,True,
+RW007,DPDP,We can share your data with anyone we choose.,Compliant,We can share your data only as permitted under applicable law we choose.,Compliant,True,
+RW008,DPDP,We will sell your data to third parties without asking.,Risky,,,False,
+RW009,DPDP,Sign up today - no consent required to use your information.,Risky,,,False,
+RW010,SEBI,Invest now and get 100% safe guaranteed returns with zero risk.,Risky,,,False,
