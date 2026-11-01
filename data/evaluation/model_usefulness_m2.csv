@@ -1,0 +1,128 @@
+mode,question,slice,metric,candidate,baseline,candidate_value,delta,ci_low,ci_high,n,verdict,note
+real,overall,all,macro_f1,embedding,0.5513,0.7604,0.2092,0.1193,0.3041,104,better,
+real,overall,all,accuracy,embedding,0.5288,0.7692,0.2404,0.1442,0.3395,104,better,
+real,a_language,en,macro_f1,embedding,0.5821,0.7527,0.1706,0.0552,0.3037,43,better,
+real,a_language,hi,macro_f1,embedding,0.5323,0.8118,0.2796,0.1005,0.4768,55,better,
+real,a_language,hi-en,macro_f1,embedding,0.5238,0.2222,-0.3016,-0.6667,0.0,6,no detectable difference,small n: CI unreliable
+real,a_vs_english,hi,macro_f1_gain_minus_en_gain,embedding,,,0.109,-0.1223,0.342,55,no detectable difference,positive = candidate helps this language more than English
+real,a_vs_english,hi-en,macro_f1_gain_minus_en_gain,embedding,,,-0.4722,-0.7931,-0.0982,6,worse,positive = candidate helps this language more than English
+real,overall,all,macro_f1,ensemble,0.5513,0.7498,0.1985,0.1149,0.2856,104,better,
+real,overall,all,accuracy,ensemble,0.5288,0.7596,0.2308,0.1456,0.3204,104,better,
+real,a_language,en,macro_f1,ensemble,0.5821,0.7292,0.147,0.0388,0.2702,43,better,
+real,a_language,hi,macro_f1,ensemble,0.5323,0.7985,0.2663,0.0924,0.456,55,better,
+real,a_language,hi-en,macro_f1,ensemble,0.5238,0.4444,-0.0794,-0.1429,0.0222,6,no detectable difference,small n: CI unreliable
+real,a_vs_english,hi,macro_f1_gain_minus_en_gain,ensemble,,,0.1192,-0.1015,0.3469,55,no detectable difference,positive = candidate helps this language more than English
+real,a_vs_english,hi-en,macro_f1_gain_minus_en_gain,ensemble,,,-0.2264,-0.3376,-0.0517,6,worse,positive = candidate helps this language more than English
+real,c_calibration,all,ece_top_label,baseline,,0.0846,,0.0458,0.189,104,,lower is better
+real,c_calibration,all,ece_top_label,embedding,,0.0575,,0.0431,0.1598,104,,lower is better
+real,c_calibration,all,ece_top_label,ensemble,,0.1683,,0.1049,0.2488,104,,lower is better
+real,c_calibration,all,ece_diff,embedding,0.0846,0.0575,-0.0271,-0.1186,0.0862,104,no detectable difference,lower is better
+real,c_calibration,all,ece_diff,ensemble,0.0846,0.1683,0.0837,-0.0259,0.158,104,no detectable difference,lower is better
+real,b_classifier_blind,day7_originals,low_despite_banned_phrase,baseline,,7,,2.0,12.0,305,,"of 15 originals with a banned phrase (n_total=305; 194 train rows scored out-of-fold, rest unseen)"
+real,b_classifier_blind,day7_originals,low_despite_banned_phrase,embedding,,3,,0.0,7.0,305,,"of 15 originals with a banned phrase (n_total=305; 194 train rows scored out-of-fold, rest unseen)"
+real,b_classifier_blind,day7_originals,low_despite_banned_phrase,ensemble,,4,,1.0,8.0,305,,"of 15 originals with a banned phrase (n_total=305; 194 train rows scored out-of-fold, rest unseen)"
+real,b_classifier_blind,day7_originals,blind_count_diff,embedding,7,3,-4,-10.0,1.0,305,no detectable difference,only 15 rows can be blind: CI is coarse; lower is better
+real,b_classifier_blind,day7_originals,blind_count_diff,ensemble,7,4,-3,-9.0,2.0,305,no detectable difference,only 15 rows can be blind: CI is coarse; lower is better
+real,b_classifier_blind,day7_originals,low_despite_banned_phrase,committed_tfidf_stored,,5,,,,305,,REFERENCE ONLY: committed model's Day 7 before_label; in-sample for its 412 training rows
+real,e_abstention,balanced,abstain_floor,baseline,,0.53,,,,336,,"re-selected on baseline's own out-of-fold probs, 336 leak-free train rows; budget(train)=3"
+real,e_abstention,balanced,compliant_floor,baseline,,0.55,,,,336,,"re-selected on baseline's own out-of-fold probs, 336 leak-free train rows; budget(train)=3"
+real,e_abstention,balanced,selection_coverage,baseline,,0.0804,,,,336,,accepted=27
+real,e_abstention,balanced,selection_accuracy_on_accepted,baseline,,0.7037,,,,27,,min_acc=0.7
+real,e_abstention,balanced,selection_false_compliant,baseline,,1,,,,8,,budget(train)=3; low_accepted=8
+real,e_abstention,balanced,selection_fc_ucb95,baseline,,0.4707,,,,8,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,balanced,heldout_coverage,baseline,,0.2212,,0.1428,0.3113,104,,"held-out (report-only, frozen thresholds a=0.53 c=0.55); 95% cluster-bootstrap CI by original_id; accepted=23 review=1 abstain=80"
+real,e_abstention,balanced,heldout_accuracy_on_accepted,baseline,,0.7826,,0.5882,0.9412,23,,"held-out (report-only, frozen thresholds a=0.53 c=0.55); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,balanced,heldout_false_compliant,baseline,,0,,0.0,0.0,2,,"held-out (report-only, frozen thresholds a=0.53 c=0.55); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 2 LOW accepted"
+real,e_abstention,balanced,heldout_fc_ucb95,baseline,,0.7764,,,,2,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,conservative,abstain_floor,baseline,,0.55,,,,336,,"re-selected on baseline's own out-of-fold probs, 336 leak-free train rows; budget(train)=0"
+real,e_abstention,conservative,compliant_floor,baseline,,1.0,,,,336,,"re-selected on baseline's own out-of-fold probs, 336 leak-free train rows; budget(train)=0; compliant acceptance switched off"
+real,e_abstention,conservative,selection_coverage,baseline,,0.0357,,,,336,,accepted=12
+real,e_abstention,conservative,selection_accuracy_on_accepted,baseline,,0.75,,,,12,,min_acc=0.7
+real,e_abstention,conservative,selection_false_compliant,baseline,,0,,,,0,,budget(train)=0; low_accepted=0
+real,e_abstention,conservative,selection_fc_ucb95,baseline,,1.0,,,,0,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,conservative,heldout_coverage,baseline,,0.1346,,0.068,0.2143,104,,"held-out (report-only, frozen thresholds a=0.55 c=1.00); 95% cluster-bootstrap CI by original_id; accepted=14 review=2 abstain=88"
+real,e_abstention,conservative,heldout_accuracy_on_accepted,baseline,,0.7857,,0.5,1.0,14,,"held-out (report-only, frozen thresholds a=0.55 c=1.00); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,conservative,heldout_false_compliant,baseline,,0,,0.0,0.0,0,,"held-out (report-only, frozen thresholds a=0.55 c=1.00); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 0 LOW accepted"
+real,e_abstention,conservative,heldout_fc_ucb95,baseline,,1.0,,,,0,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,permissive,abstain_floor,baseline,,0.43,,,,336,,"re-selected on baseline's own out-of-fold probs, 336 leak-free train rows; budget(train)=10"
+real,e_abstention,permissive,compliant_floor,baseline,,0.52,,,,336,,"re-selected on baseline's own out-of-fold probs, 336 leak-free train rows; budget(train)=10"
+real,e_abstention,permissive,selection_coverage,baseline,,0.4018,,,,336,,accepted=135
+real,e_abstention,permissive,selection_accuracy_on_accepted,baseline,,0.7037,,,,135,,min_acc=0.7
+real,e_abstention,permissive,selection_false_compliant,baseline,,4,,,,22,,budget(train)=10; low_accepted=22
+real,e_abstention,permissive,selection_fc_ucb95,baseline,,0.3691,,,,22,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,permissive,heldout_coverage,baseline,,0.5192,,0.42,0.62,104,,"held-out (report-only, frozen thresholds a=0.43 c=0.52); 95% cluster-bootstrap CI by original_id; accepted=54 review=19 abstain=31"
+real,e_abstention,permissive,heldout_accuracy_on_accepted,baseline,,0.6296,,0.4815,0.7647,54,,"held-out (report-only, frozen thresholds a=0.43 c=0.52); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,permissive,heldout_false_compliant,baseline,,3,,0.0,7.0,7,,"held-out (report-only, frozen thresholds a=0.43 c=0.52); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 7 LOW accepted"
+real,e_abstention,permissive,heldout_fc_ucb95,baseline,,0.7747,,,,7,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,balanced,abstain_floor,embedding,,0.4,,,,336,,"re-selected on embedding's own out-of-fold probs, 336 leak-free train rows; budget(train)=3"
+real,e_abstention,balanced,compliant_floor,embedding,,0.87,,,,336,,"re-selected on embedding's own out-of-fold probs, 336 leak-free train rows; budget(train)=3"
+real,e_abstention,balanced,selection_coverage,embedding,,0.6905,,,,336,,accepted=232
+real,e_abstention,balanced,selection_accuracy_on_accepted,embedding,,0.819,,,,232,,min_acc=0.7
+real,e_abstention,balanced,selection_false_compliant,embedding,,2,,,,51,,budget(train)=3; low_accepted=51
+real,e_abstention,balanced,selection_fc_ucb95,embedding,,0.1183,,,,51,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,balanced,heldout_coverage,embedding,,0.7596,,0.6666,0.8366,104,,"held-out (report-only, frozen thresholds a=0.40 c=0.87); 95% cluster-bootstrap CI by original_id; accepted=79 review=23 abstain=2"
+real,e_abstention,balanced,heldout_accuracy_on_accepted,embedding,,0.7848,,0.6824,0.881,79,,"held-out (report-only, frozen thresholds a=0.40 c=0.87); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,balanced,heldout_false_compliant,embedding,,0,,0.0,0.0,11,,"held-out (report-only, frozen thresholds a=0.40 c=0.87); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 11 LOW accepted"
+real,e_abstention,balanced,heldout_fc_ucb95,embedding,,0.2384,,,,11,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,conservative,abstain_floor,embedding,,0.4,,,,336,,"re-selected on embedding's own out-of-fold probs, 336 leak-free train rows; budget(train)=0"
+real,e_abstention,conservative,compliant_floor,embedding,,0.93,,,,336,,"re-selected on embedding's own out-of-fold probs, 336 leak-free train rows; budget(train)=0"
+real,e_abstention,conservative,selection_coverage,embedding,,0.6458,,,,336,,accepted=217
+real,e_abstention,conservative,selection_accuracy_on_accepted,embedding,,0.8157,,,,217,,min_acc=0.7
+real,e_abstention,conservative,selection_false_compliant,embedding,,0,,,,36,,budget(train)=0; low_accepted=36
+real,e_abstention,conservative,selection_fc_ucb95,embedding,,0.0798,,,,36,safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,conservative,heldout_coverage,embedding,,0.7115,,0.6095,0.8056,104,,"held-out (report-only, frozen thresholds a=0.40 c=0.93); 95% cluster-bootstrap CI by original_id; accepted=74 review=28 abstain=2"
+real,e_abstention,conservative,heldout_accuracy_on_accepted,embedding,,0.7703,,0.6625,0.8714,74,,"held-out (report-only, frozen thresholds a=0.40 c=0.93); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,conservative,heldout_false_compliant,embedding,,0,,0.0,0.0,6,,"held-out (report-only, frozen thresholds a=0.40 c=0.93); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 6 LOW accepted"
+real,e_abstention,conservative,heldout_fc_ucb95,embedding,,0.393,,,,6,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,permissive,abstain_floor,embedding,,0.4,,,,336,,"re-selected on embedding's own out-of-fold probs, 336 leak-free train rows; budget(train)=10"
+real,e_abstention,permissive,compliant_floor,embedding,,0.76,,,,336,,"re-selected on embedding's own out-of-fold probs, 336 leak-free train rows; budget(train)=10"
+real,e_abstention,permissive,selection_coverage,embedding,,0.7798,,,,336,,accepted=262
+real,e_abstention,permissive,selection_accuracy_on_accepted,embedding,,0.8092,,,,262,,min_acc=0.7
+real,e_abstention,permissive,selection_false_compliant,embedding,,10,,,,81,,budget(train)=10; low_accepted=81
+real,e_abstention,permissive,selection_fc_ucb95,embedding,,0.2004,,,,81,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,permissive,heldout_coverage,embedding,,0.8365,,0.7619,0.9029,104,,"held-out (report-only, frozen thresholds a=0.40 c=0.76); 95% cluster-bootstrap CI by original_id; accepted=87 review=15 abstain=2"
+real,e_abstention,permissive,heldout_accuracy_on_accepted,embedding,,0.7931,,0.6966,0.8837,87,,"held-out (report-only, frozen thresholds a=0.40 c=0.76); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,permissive,heldout_false_compliant,embedding,,1,,0.0,3.0,19,,"held-out (report-only, frozen thresholds a=0.40 c=0.76); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 19 LOW accepted"
+real,e_abstention,permissive,heldout_fc_ucb95,embedding,,0.2264,,,,19,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,balanced,abstain_floor,ensemble,,0.36,,,,336,,"re-selected on ensemble's own out-of-fold probs, 336 leak-free train rows; budget(train)=3"
+real,e_abstention,balanced,compliant_floor,ensemble,,0.66,,,,336,,"re-selected on ensemble's own out-of-fold probs, 336 leak-free train rows; budget(train)=3"
+real,e_abstention,balanced,selection_coverage,ensemble,,0.6964,,,,336,,accepted=234
+real,e_abstention,balanced,selection_accuracy_on_accepted,ensemble,,0.8162,,,,234,,min_acc=0.7
+real,e_abstention,balanced,selection_false_compliant,ensemble,,2,,,,47,,budget(train)=3; low_accepted=47
+real,e_abstention,balanced,selection_fc_ucb95,ensemble,,0.128,,,,47,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,balanced,heldout_coverage,ensemble,,0.7404,,0.6442,0.8286,104,,"held-out (report-only, frozen thresholds a=0.36 c=0.66); 95% cluster-bootstrap CI by original_id; accepted=77 review=25 abstain=2"
+real,e_abstention,balanced,heldout_accuracy_on_accepted,ensemble,,0.7792,,0.676,0.8816,77,,"held-out (report-only, frozen thresholds a=0.36 c=0.66); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,balanced,heldout_false_compliant,ensemble,,1,,0.0,3.0,10,,"held-out (report-only, frozen thresholds a=0.36 c=0.66); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 10 LOW accepted"
+real,e_abstention,balanced,heldout_fc_ucb95,ensemble,,0.3942,,,,10,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,conservative,abstain_floor,ensemble,,0.36,,,,336,,"re-selected on ensemble's own out-of-fold probs, 336 leak-free train rows; budget(train)=0"
+real,e_abstention,conservative,compliant_floor,ensemble,,1.0,,,,336,,"re-selected on ensemble's own out-of-fold probs, 336 leak-free train rows; budget(train)=0; compliant acceptance switched off"
+real,e_abstention,conservative,selection_coverage,ensemble,,0.5565,,,,336,,accepted=187
+real,e_abstention,conservative,selection_accuracy_on_accepted,ensemble,,0.7807,,,,187,,min_acc=0.7
+real,e_abstention,conservative,selection_false_compliant,ensemble,,0,,,,0,,budget(train)=0; low_accepted=0
+real,e_abstention,conservative,selection_fc_ucb95,ensemble,,1.0,,,,0,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,conservative,heldout_coverage,ensemble,,0.6442,,0.5446,0.7453,104,,"held-out (report-only, frozen thresholds a=0.36 c=1.00); 95% cluster-bootstrap CI by original_id; accepted=67 review=35 abstain=2"
+real,e_abstention,conservative,heldout_accuracy_on_accepted,ensemble,,0.7612,,0.6462,0.8696,67,,"held-out (report-only, frozen thresholds a=0.36 c=1.00); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,conservative,heldout_false_compliant,ensemble,,0,,0.0,0.0,0,,"held-out (report-only, frozen thresholds a=0.36 c=1.00); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 0 LOW accepted"
+real,e_abstention,conservative,heldout_fc_ucb95,ensemble,,1.0,,,,0,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,permissive,abstain_floor,ensemble,,0.36,,,,336,,"re-selected on ensemble's own out-of-fold probs, 336 leak-free train rows; budget(train)=10"
+real,e_abstention,permissive,compliant_floor,ensemble,,0.59,,,,336,,"re-selected on ensemble's own out-of-fold probs, 336 leak-free train rows; budget(train)=10"
+real,e_abstention,permissive,selection_coverage,ensemble,,0.7917,,,,336,,accepted=266
+real,e_abstention,permissive,selection_accuracy_on_accepted,ensemble,,0.812,,,,266,,min_acc=0.7
+real,e_abstention,permissive,selection_false_compliant,ensemble,,9,,,,79,,budget(train)=10; low_accepted=79
+real,e_abstention,permissive,selection_fc_ucb95,ensemble,,0.1904,,,,79,not safe,exact one-sided 95% upper bound on false-compliant rate among accepted LOW; safe = low_accepted>0 and ucb<=0.1
+real,e_abstention,permissive,heldout_coverage,ensemble,,0.8269,,0.75,0.8972,104,,"held-out (report-only, frozen thresholds a=0.36 c=0.59); 95% cluster-bootstrap CI by original_id; accepted=86 review=16 abstain=2"
+real,e_abstention,permissive,heldout_accuracy_on_accepted,ensemble,,0.8023,,0.7093,0.8941,86,,"held-out (report-only, frozen thresholds a=0.36 c=0.59); 95% cluster-bootstrap CI by original_id"
+real,e_abstention,permissive,heldout_false_compliant,ensemble,,1,,0.0,3.0,19,,"held-out (report-only, frozen thresholds a=0.36 c=0.59); 95% cluster-bootstrap CI by original_id; count of accepted-LOW whose true label is not LOW, of 19 LOW accepted"
+real,e_abstention,permissive,heldout_fc_ucb95,ensemble,,0.2264,,,,19,,exact one-sided 95% upper bound on the false-compliant rate among accepted LOW (1.0 = nothing to bound)
+real,e_abstention,balanced,heldout_coverage,day9_committed_tfidf_ref,,0.5385,,0.4423,0.6346,104,,"REFERENCE: stored Day 9 held-out (committed model trained on 412 rows, thresholds tuned on its out-of-fold probs)"
+real,e_abstention,balanced,heldout_accuracy_on_accepted,day9_committed_tfidf_ref,,0.7143,,0.5882,0.8302,56,,
+real,e_abstention,balanced,heldout_false_compliant,day9_committed_tfidf_ref,,2,,0,5,7,,
+real,e_abstention,conservative,heldout_coverage,day9_committed_tfidf_ref,,0.3846,,0.2978,0.4712,104,,"REFERENCE: stored Day 9 held-out (committed model trained on 412 rows, thresholds tuned on its out-of-fold probs)"
+real,e_abstention,conservative,heldout_accuracy_on_accepted,day9_committed_tfidf_ref,,0.7500,,0.6111,0.8837,40,,
+real,e_abstention,conservative,heldout_false_compliant,day9_committed_tfidf_ref,,0,,0,0,0,,
+real,e_abstention,permissive,heldout_coverage,day9_committed_tfidf_ref,,0.6346,,0.5385,0.7212,104,,"REFERENCE: stored Day 9 held-out (committed model trained on 412 rows, thresholds tuned on its out-of-fold probs)"
+real,e_abstention,permissive,heldout_accuracy_on_accepted,day9_committed_tfidf_ref,,0.6364,,0.5139,0.7500,66,,
+real,e_abstention,permissive,heldout_false_compliant,day9_committed_tfidf_ref,,10,,4,17,17,,
+real,recommendation,default,model,baseline,,,,,,,,"rule: a candidate is default only if no slice is 'worse' and at least one key slice (overall macro-F1, ECE, banned-LOW) is 'better'; else the deterministic TF-IDF baseline stays default. Abstention (e) is reported per model with re-selected thresholds and does not gate this rule. Cost from model_comparison_m2.csv: saved_model_kb: base=263.4766 emb=9.8682; encoder_fp32_mb: base=0 emb=470.615; latency_ms_mean: base=2.1149 emb=15.2769;"
+real,recommendation,fallback,model,MockRiskClassifier (rule-based keywords),,,,,,,,
+real,consistency,all,agreement_with_prompt3_predictions,baseline/embedding,1.0,1.0,,,,104,,agreement with model_comparison_predictions_m2.csv: baseline=1.000 embedding=1.000

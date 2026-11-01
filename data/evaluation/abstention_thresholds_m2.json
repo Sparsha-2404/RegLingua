@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "bootstrap_seed": 42,
+    "false_compliant_budget_fraction": {
+      "balanced": 0.01,
+      "conservative": 0.0,
+      "permissive": 0.03
+    },
+    "false_compliant_definition": "accepted as LOW (compliant) while true_risk_level != LOW",
+    "grid": {
+      "abstain_floor": [
+        0.35,
+        0.7,
+        0.01
+      ],
+      "compliant_floor": [
+        0.35,
+        1.0,
+        0.01
+      ]
+    },
+    "max_fc_upper95_for_compliant_acceptance": 0.1,
+    "min_accuracy_on_accepted": 0.7,
+    "n_held_out": 104,
+    "n_non_held_out": 412,
+    "selection_data": "non-held-out rows only (out-of-fold probabilities)"
+  },
+  "operating_points": {
+    "balanced": {
+      "compliant_acceptance": "enabled",
+      "config": {
+        "abstain_floor": 0.43,
+        "compliant_floor": 0.54,
+        "entropy_ceiling": null,
+        "language_abstain_floors": {},
+        "margin_floor": null
+      },
+      "false_compliant_budget_non_held_out": 4,
+      "safe_for_compliant_acceptance": false,
+      "selected_on_non_held_out": {
+        "abstain": 132,
+        "accepted": 175,
+        "accuracy_on_accepted": 0.7028571428571428,
+        "coverage": 0.42475728155339804,
+        "false_compliant": 1,
+        "false_compliant_high": 1,
+        "fc_upper95_among_low_accepted": 0.2793961936128765,
+        "low_accepted": 15,
+        "n": 412,
+        "review": 105
+      }
+    },
+    "conservative": {
+      "compliant_acceptance": "disabled",
+      "config": {
+        "abstain_floor": 0.46,
+        "compliant_floor": 1.0,
+        "entropy_ceiling": null,
+        "language_abstain_floors": {},
+        "margin_floor": null
+      },
+      "false_compliant_budget_non_held_out": 0,
+      "safe_for_compliant_acceptance": false,
+      "selected_on_non_held_out": {
+        "abstain": 228,
+        "accepted": 113,
+        "accuracy_on_accepted": 0.7079646017699115,
+        "coverage": 0.27427184466019416,
+        "false_compliant": 0,
+        "false_compliant_high": 0,
+        "fc_upper95_among_low_accepted": 1.0,
+        "low_accepted": 0,
+        "n": 412,
+        "review": 71
+      }
+    },
+    "permissive": {
+      "compliant_acceptance": "enabled",
+      "config": {
+        "abstain_floor": 0.43,
+        "compliant_floor": 0.49,
+        "entropy_ceiling": null,
+        "language_abstain_floors": {},
+        "margin_floor": null
+      },
+      "false_compliant_budget_non_held_out": 12,
+      "safe_for_compliant_acceptance": false,
+      "selected_on_non_held_out": {
+        "abstain": 132,
+        "accepted": 211,
+        "accuracy_on_accepted": 0.7014218009478673,
+        "coverage": 0.5121359223300971,
+        "false_compliant": 12,
+        "false_compliant_high": 12,
+        "fc_upper95_among_low_accepted": 0.3531720651747229,
+        "low_accepted": 51,
+        "n": 412,
+        "review": 69
+      }
+    }
+  },
+  "verdict": "No operating point can safely auto-accept Compliant predictions. On non-held-out rows the most LOW predictions that can be accepted with zero false-compliant is 4 (exact 95% upper bound on the false-compliant rate 52.7%); the safety rule (upper bound <= 10%) needs at least 29 such acceptances with zero errors. The conservative point therefore switches compliant acceptance off (compliant_floor = 1.0)."
+}

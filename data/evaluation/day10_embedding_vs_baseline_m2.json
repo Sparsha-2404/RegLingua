@@ -1,0 +1,145 @@
+{
+  "protocol": {
+    "train_rows": 336,
+    "held_out_rows": 104,
+    "seed": 42,
+    "n_boot": 2000,
+    "bootstrap": "paired cluster (original_id), percentile 95% CI",
+    "leak_free": true,
+    "train_rows_before_dedup": 412,
+    "dropped_train_rows": 76,
+    "held_out_original_ids_in_train_before_dedup": 76,
+    "held_out_original_ids_in_train": 0,
+    "best_C": 10.0,
+    "cv_macro_f1": {
+      "0.1": 0.7056879017042229,
+      "1.0": 0.7455409446384677,
+      "10.0": 0.7533909050043167,
+      "100.0": 0.7430217654402164
+    },
+    "encoder": "paraphrase-multilingual-MiniLM-L12-v2",
+    "library_versions": {
+      "python": "3.13.15",
+      "numpy": "2.1.3",
+      "scikit-learn": "1.9.1",
+      "sentence-transformers": "6.2.0"
+    }
+  },
+  "metrics": {
+    "accuracy": {
+      "n": 104,
+      "baseline": 0.5288461538461539,
+      "embedding": 0.7692307692307693,
+      "delta": 0.24038461538461542,
+      "ci_low": 0.1441964285714285,
+      "ci_high": 0.3394538687900294,
+      "verdict": "improvement"
+    },
+    "macro_f1": {
+      "n": 104,
+      "baseline": 0.5512763448668992,
+      "embedding": 0.7604288499025341,
+      "delta": 0.20915250503563487,
+      "ci_low": 0.11934795798808825,
+      "ci_high": 0.3041176121663648,
+      "verdict": "improvement"
+    },
+    "high_recall": {
+      "n": 104,
+      "baseline": 0.5813953488372093,
+      "embedding": 0.8837209302325582,
+      "delta": 0.3023255813953488,
+      "ci_low": 0.13636363636363635,
+      "ci_high": 0.475,
+      "verdict": "improvement"
+    },
+    "accuracy@en": {
+      "n": 43,
+      "baseline": 0.5581395348837209,
+      "embedding": 0.7674418604651163,
+      "delta": 0.2093023255813954,
+      "ci_low": 0.09302325581395354,
+      "ci_high": 0.3421052631578947,
+      "verdict": "improvement"
+    },
+    "macro_f1@en": {
+      "n": 43,
+      "baseline": 0.5821409644939056,
+      "embedding": 0.7527490726020138,
+      "delta": 0.17060810810810823,
+      "ci_low": 0.055199748929407995,
+      "ci_high": 0.30370852933846587,
+      "verdict": "improvement"
+    },
+    "high_recall@en": {
+      "n": 43,
+      "baseline": 0.5882352941176471,
+      "embedding": 0.9411764705882353,
+      "delta": 0.3529411764705882,
+      "ci_low": 0.125,
+      "ci_high": 0.588235294117647,
+      "verdict": "improvement"
+    },
+    "accuracy@hi": {
+      "n": 55,
+      "baseline": 0.509090909090909,
+      "embedding": 0.8181818181818182,
+      "delta": 0.3090909090909092,
+      "ci_low": 0.16659836065573766,
+      "ci_high": 0.4509803921568627,
+      "verdict": "improvement"
+    },
+    "macro_f1@hi": {
+      "n": 55,
+      "baseline": 0.532259796027912,
+      "embedding": 0.8118241235888295,
+      "delta": 0.27956432756091754,
+      "ci_low": 0.10050963290356153,
+      "ci_high": 0.47677477476286356,
+      "verdict": "improvement"
+    },
+    "high_recall@hi": {
+      "n": 55,
+      "baseline": 0.56,
+      "embedding": 0.88,
+      "delta": 0.31999999999999995,
+      "ci_low": 0.09988095238095236,
+      "ci_high": 0.5416666666666667,
+      "verdict": "improvement"
+    },
+    "accuracy@hi-en": {
+      "n": 6,
+      "baseline": 0.5,
+      "embedding": 0.3333333333333333,
+      "delta": -0.16666666666666669,
+      "ci_low": -0.5462121212121213,
+      "ci_high": 0.0,
+      "verdict": "no significant difference"
+    },
+    "macro_f1@hi-en": {
+      "n": 6,
+      "baseline": 0.5238095238095238,
+      "embedding": 0.2222222222222222,
+      "delta": -0.3015873015873016,
+      "ci_low": -0.6666666666666667,
+      "ci_high": 0.0,
+      "verdict": "no significant difference"
+    },
+    "high_recall@hi-en": {
+      "n": 6,
+      "baseline": 1.0,
+      "embedding": 0.0,
+      "delta": -1.0,
+      "ci_low": NaN,
+      "ci_high": NaN,
+      "verdict": "undetermined"
+    }
+  },
+  "discordant": {
+    "both_correct": 52,
+    "only_baseline_correct": 3,
+    "only_embedding_correct": 28,
+    "both_wrong": 21
+  },
+  "baseline_refit_vs_committed_agreement": "n/a (different train set)"
+}

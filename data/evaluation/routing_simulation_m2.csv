@@ -1,0 +1,5 @@
+﻿scenario,abstain_floor,compliant_floor,n,compliant_fast_path,gather_evidence,abstain,fast_path_share,fast_lo,fast_hi,gather_share,gather_lo,gather_hi,abstain_share,abstain_lo,abstain_hi,false_compliant_fast_path,fc_lo,fc_hi,false_compliant_high,true_low_total,true_low_on_fast_path
+"current_constants (a=0.35, c=0.7)",0.35,0.7,104,0,102,2,0.0000,0.0000,0.0000,0.9808,0.9519,1.0000,0.0192,0.0000,0.0481,0,0,0,0,45,0
+conservative,0.43,1.0,104,0,78,26,0.0000,0.0000,0.0000,0.7500,0.6635,0.8269,0.2500,0.1731,0.3365,0,0,0,0,45,0
+balanced,0.42,0.59,104,5,76,23,0.0481,0.0096,0.0962,0.7308,0.6442,0.8077,0.2212,0.1442,0.2981,1,0,3,1,45,4
+permissive,0.42,0.53,104,8,73,23,0.0769,0.0288,0.1346,0.7019,0.6058,0.7885,0.2212,0.1442,0.2981,3,0,7,3,45,5
