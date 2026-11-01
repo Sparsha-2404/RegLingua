@@ -2,6 +2,7 @@
 .venv-reglingua/
 venv/
 .env
+.venv/
 
 # Python
 __pycache__/
