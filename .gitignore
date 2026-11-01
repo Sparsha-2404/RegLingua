@@ -37,3 +37,8 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Track the processed M1 dataset required for reproducible training and tests
+!data/raw/
+data/raw/*
+!data/raw/labeled_examples_m1.csv

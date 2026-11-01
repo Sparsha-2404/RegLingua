@@ -1,6 +1,6 @@
 """
 Extract M1's labelled examples (SEBI/RBI/DPDP sheets) from
-RegLingua_M1_FINAL_v2.xlsx into data/raw/labeled_examples_m1.csv.
+data/evaluation/RegLingua_M1_FINAL.xlsx into data/raw/labeled_examples_m1.csv.
 
 This regenerates a file that docs/INTEGRATION_NOTES.md already documents as
 existing (516 rows), but which was not actually included in this zip.
@@ -18,7 +18,7 @@ from pathlib import Path
 import openpyxl
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-XLSX_PATH = REPO_ROOT / "RegLingua_M1_FINAL_v2.xlsx"
+XLSX_PATH = REPO_ROOT / "data/evaluation/RegLingua_M1_FINAL.xlsx"
 OUT_PATH = REPO_ROOT / "data" / "raw" / "labeled_examples_m1.csv"
 
 SHEETS = ["SEBI", "RBI", "DPDP"]

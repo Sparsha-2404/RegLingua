@@ -20,7 +20,7 @@ Day 5 onward) can keep changing without the Supervisor noticing.
 
 from __future__ import annotations
 
-from typing import Optional
+from typing import Literal, Optional
 
 from agents.regulatory_research_agent import RegulatoryResearchAgent
 from agents.research_contracts import RegulatoryResearchInput
@@ -32,8 +32,13 @@ class EvidenceAgentAdapter:
     """Implements `agents.contracts.EvidenceAgent` on top of M3's
     `RegulatoryResearchAgent`."""
 
-    def __init__(self, research_agent: Optional[RegulatoryResearchAgent] = None) -> None:
+    def __init__(
+        self,
+        research_agent: Optional[RegulatoryResearchAgent] = None,
+        retrieval_method: Literal['vector', 'hybrid', 'keyword'] = 'hybrid',
+    ) -> None:
         self.research_agent = research_agent or RegulatoryResearchAgent()
+        self.retrieval_method = retrieval_method
 
     def gather(self, request: EvidenceRequest) -> EvidenceResponse:
         regulator_candidates = (
@@ -73,5 +78,5 @@ class EvidenceAgentAdapter:
         return EvidenceResponse(
             case_id=request.case_id,
             evidence=evidence,
-            retrieval_method="keyword",  # M3's Day 2 deterministic retriever; "hybrid" lands Day 5
+            retrieval_method=self.retrieval_method,
         )

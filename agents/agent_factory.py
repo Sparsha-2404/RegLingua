@@ -1,5 +1,5 @@
 """
-RegLingua — Agent Factory
+RegLingua - Agent Factory
 ============================
 Owned by: M4 (wiring), consuming M1/M2/M3 components.
 
@@ -10,7 +10,7 @@ integration merge, RiskAgent, EvidenceAgent and the language detector are
 real M2/M3 components (via adapters); Explainer, Rewriter and Verifier
 remain mocks until Day 6-8 per the 14-day plan.
 
-Nothing in `agents/supervisor.py` changed to make this swap — it already
+Nothing in `agents/supervisor.py` changed to make this swap - it already
 only depends on the `agents.contracts` Protocols, which is exactly the
 point of defining agent contracts on Day 1 before any real implementation
 existed.
@@ -21,7 +21,7 @@ train_baseline_classifier.py` and `docs/model_card_baseline_m2.md`) and M1's
 real 308-chunk knowledge base has been the default regulatory corpus since
 the Day 1-2 merge. `build_agents(use_trained_artifacts=True)` is the M4
 switch that wires the Supervisor to these real artifacts instead of the
-Day 1-2 mocks — see its docstring below for exactly what changes.
+Day 1-2 mocks - see its docstring below for exactly what changes.
 """
 
 from __future__ import annotations
@@ -40,7 +40,24 @@ from agents.verifier_agent import VerifierAgent as RealVerifierAgent
 from services.classifier.baseline import TfidfLogisticClassifier
 from services.classifier.interface import MockRiskClassifier, RiskClassifier
 from services.classifier.regulator_classifier import RegulatorClassifier
+from core.config import (
+    LABELED_EXAMPLES_PATH,
+    QUERY_BRIDGE_PATH,
+    get_settings,
+)
+try:  # optional, non-M4 components (rule guardrail, bridged retriever): degrade gracefully if absent
+    from services.classifier.rule_augmented import RuleAugmentedClassifier
+except ImportError:  # pragma: no cover
+    RuleAugmentedClassifier = None
 from services.retrieval.deterministic_retriever import DeterministicRetriever
+from services.retrieval.hybrid_retriever import HybridRetriever
+from services.embeddings.vector_index import RegulatoryVectorIndex
+try:
+    from services.retrieval.bridged_retriever import BridgedHybridRetriever
+    from services.retrieval.query_bridge import load_default_bridge
+except ImportError:  # pragma: no cover
+    BridgedHybridRetriever = None
+    load_default_bridge = None
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -51,7 +68,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 M1_REGULATORY_KB_PATH = REPO_ROOT / "data" / "regulatory" / "regulatory_kb_m1.json"
 
 # M2's Day 3 trained artifact (see scripts/train_baseline_classifier.py).
-# Gitignored — a fresh checkout needs to run
+# Gitignored - a fresh checkout needs to run
 # `scripts/extract_m1_labeled_csv.py` then `scripts/train_baseline_classifier.py`
 # to regenerate it locally before `use_trained_artifacts=True` can load it.
 RISK_MODEL_PATH = REPO_ROOT / "models" / "risk_classifier_tfidf_logreg.pkl"
@@ -71,6 +88,7 @@ def build_agents(
     regulator_classifier: Optional[RegulatorClassifier] = None,
     corpus_path: Optional[Path] = None,
     use_trained_artifacts: bool = False,
+    production: bool = False,
 ) -> dict[str, object]:
     """Build the full agent roster used by the Supervisor graph.
 
@@ -79,7 +97,7 @@ def build_agents(
             (Day 1-2 dependency-free keyword mock) unless
             `use_trained_artifacts` says otherwise.
         regulator_classifier: fills `regulator_candidates` when `classifier`
-            doesn't supply any — see `agents/risk_agent_adapter.py`.
+            doesn't supply any - see `agents/risk_agent_adapter.py`.
         corpus_path: regulatory corpus for M3's retriever. Defaults to
             M3's small demo corpus (`data/regulatory/sample_corpus.json`,
             used by M3's own unit tests) unless `use_trained_artifacts` says
@@ -89,7 +107,7 @@ def build_agents(
             `classifier`/`regulator_classifier` weren't passed explicitly,
             auto-loads `models/risk_classifier_tfidf_logreg.pkl` /
             `models/regulator_classifier.pkl` if present (falling back to
-            the Day 1-2 mocks with a note on stderr if they aren't — e.g. a
+            the Day 1-2 mocks with a note on stderr if they aren't - e.g. a
             fresh checkout that hasn't run the training scripts yet), and
             defaults `corpus_path` to `M1_REGULATORY_KB_PATH`. Also swaps in
             the real Day 6-8 `ExplainerAgent`/`RewriterAgent`/`VerifierAgent`
@@ -105,7 +123,7 @@ def build_agents(
             classifier = TfidfLogisticClassifier().load(str(RISK_MODEL_PATH))
         else:
             print(
-                f"[agent_factory] {RISK_MODEL_PATH} not found — falling back to "
+                f"[agent_factory] {RISK_MODEL_PATH} not found - falling back to "
                 "MockRiskClassifier. Run scripts/extract_m1_labeled_csv.py then "
                 "scripts/train_baseline_classifier.py to use the real classifier.",
             )
@@ -116,12 +134,44 @@ def build_agents(
     if corpus_path is None and use_trained_artifacts:
         corpus_path = M1_REGULATORY_KB_PATH
 
+    base_classifier = classifier or MockRiskClassifier()
+    fallback_risk_agent = None
+    if production:
+        # Day 10: rule guardrail (can only raise risk) around the weak ML
+        # baseline. The un-augmented baseline stays as the resilience fallback.
+        fallback_risk_agent = RiskAgentAdapter(
+            classifier=base_classifier, regulator_classifier=regulator_classifier
+        )
+        if RuleAugmentedClassifier is not None:
+            base_classifier = RuleAugmentedClassifier(base_classifier)
+
     risk_agent = RiskAgentAdapter(
-        classifier=classifier or MockRiskClassifier(),
+        classifier=base_classifier,
         regulator_classifier=regulator_classifier,
     )
 
-    retriever = DeterministicRetriever(corpus_path=corpus_path) if corpus_path else DeterministicRetriever()
+    deterministic = (
+        DeterministicRetriever(corpus_path=corpus_path)
+        if corpus_path
+        else DeterministicRetriever()
+    )
+
+    vector_index = RegulatoryVectorIndex(corpus_path=corpus_path)
+    vector_index.build()
+
+    retriever = HybridRetriever(
+        keyword_retriever=deterministic,
+        vector_index=vector_index,
+    )
+
+    fallback_evidence_agent = None
+
+    if production:
+        fallback_evidence_agent = EvidenceAgentAdapter(
+            research_agent=RegulatoryResearchAgent(retriever=deterministic),
+            retrieval_method="keyword",
+        )
+
     research_agent = RegulatoryResearchAgent(retriever=retriever)
     evidence_agent = EvidenceAgentAdapter(research_agent=research_agent)
 
@@ -134,7 +184,20 @@ def build_agents(
         rewriter_agent = MockRewriterAgent()
         verifier_agent = MockVerifierAgent(risk_agent=risk_agent)
 
-    return {
+    fallback_explainer_agent = None
+    if production:
+        fallback_explainer_agent = explainer_agent
+        settings = get_settings()
+        if settings.llm_allowed:
+            try:
+                from agents.llm_agents import AnthropicClient, LLMExplainerAgent
+
+                explainer_agent = LLMExplainerAgent(AnthropicClient())
+            except Exception as exc:  # noqa: BLE001
+                print(f"[agent_factory] LLM explainer unavailable ({exc}); using deterministic explainer.")
+                fallback_explainer_agent = None
+
+    roster = {
         "language_detector": LanguageAgentAdapter(),
         "risk_agent": risk_agent,
         "research_agent": research_agent,
@@ -143,3 +206,8 @@ def build_agents(
         "rewriter_agent": rewriter_agent,
         "verifier_agent": verifier_agent,
     }
+    if production:
+        roster["fallback_risk_agent"] = fallback_risk_agent
+        roster["fallback_evidence_agent"] = fallback_evidence_agent
+        roster["fallback_explainer_agent"] = fallback_explainer_agent
+    return roster
