@@ -7,7 +7,7 @@ is chosen by 5-fold GroupKFold (by original_id) on TRAIN rows only; held-out is
 touched once, for the final comparison. Paired cluster bootstrap, seed 42.
 
 Usage (needs sentence-transformers + HF model download):
-    python3 scripts/compare_baseline_vs_multilingual.py
+    python scripts/compare_baseline_vs_multilingual.py
 """
 from __future__ import annotations
 

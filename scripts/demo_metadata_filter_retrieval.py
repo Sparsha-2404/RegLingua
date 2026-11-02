@@ -21,7 +21,7 @@ head(3) would only ever exercise SEBI filtering and silently miss a bug
 specific to RBI or DPDP.
 
 Usage:
-    python3 scripts/demo_metadata_filter_retrieval.py
+    python scripts/demo_metadata_filter_retrieval.py
 """
 from __future__ import annotations
 

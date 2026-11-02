@@ -11,7 +11,7 @@ Seeded + deterministic (split seed 42, PYTHONHASHSEED=0). Policy:
 Large model files are never committed by this script.
 
 Clean machine, ONE command (build what is missing, then verify against the committed manifest, write nothing):
-    python scripts\\prepare_demo_artifacts.py --verify          (bash: python3 scripts/prepare_demo_artifacts.py --verify)
+    python scripts\\prepare_demo_artifacts.py --verify          (bash: python scripts/prepare_demo_artifacts.py --verify)
   Verification is by sha256 AND by prediction drift on fixed probe texts: small drift across
   library versions is tolerated (status DRIFT_OK) but always reported; --tol sets the limit.
   Exit code 1 on any FAIL. Use --update-manifest (not --verify) once to record probes / accept new hashes.

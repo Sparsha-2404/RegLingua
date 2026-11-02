@@ -1,6 +1,6 @@
 r"""Audit M2 model artifacts (Day 13, M2) -> data\evaluation\artifact_audit_m2.csv
 
-  python scripts\audit_model_artifacts.py [--no-rebuild]      (bash: python3 scripts/audit_model_artifacts.py)
+  python scripts/audit_model_artifacts.py [--no-rebuild]      
 
 Rebuilds are in-memory/temp only; committed artifacts are never touched.
 """

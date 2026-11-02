@@ -17,7 +17,7 @@ data/raw/labeled_examples_m1.csv -- it writes a new, separate evaluation
 file used only for retrieval evaluation, not classifier training.
 
 Usage:
-    python3 scripts/build_regulator_topic_eval_labels.py
+    python scripts/build_regulator_topic_eval_labels.py
 """
 from __future__ import annotations
 

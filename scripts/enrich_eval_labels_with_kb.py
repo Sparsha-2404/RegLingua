@@ -23,7 +23,7 @@ Adds two columns to data/evaluation/regulator_topic_eval_m2.csv:
       source metadata and document versions"), not this script's job.
 
 Usage:
-    python3 scripts/enrich_eval_labels_with_kb.py
+    python scripts/enrich_eval_labels_with_kb.py
 """
 from __future__ import annotations
 

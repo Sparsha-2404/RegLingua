@@ -11,7 +11,7 @@ either file changes today -- Day 1-2 built the machinery specifically so
 Day 3 would just be "point it at real data and run it."
 
 Usage:
-    python3 scripts/train_baseline_classifier.py
+    python scripts/train_baseline_classifier.py
 """
 from __future__ import annotations
 

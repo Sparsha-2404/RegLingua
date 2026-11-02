@@ -15,7 +15,7 @@ comes from that run). Exit code 0 only if every step PASSes and no HIGH static f
 Steps run with HF_HUB_OFFLINE=1 by default (the demo gate is offline); --online lifts that.
 
   Windows cmd:  python scripts\\simulate_fresh_checkout_m2.py [--static-only] [--online] [--keep] [--pip-arg ARG]
-  bash:         python3 scripts/simulate_fresh_checkout_m2.py [--static-only] [--online] [--keep] [--pip-arg ARG]
+  bash:         python scripts/simulate_fresh_checkout_m2.py [--static-only] [--online] [--keep] [--pip-arg ARG]
 """
 from __future__ import annotations
 

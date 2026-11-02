@@ -9,7 +9,7 @@ story), and surfaces concrete failing examples so a human can see WHY
 they failed, not just that they failed.
 
 Usage:
-    python3 scripts/analyze_retrieval_errors.py
+    python scripts/analyze_retrieval_errors.py
 """
 from __future__ import annotations
 

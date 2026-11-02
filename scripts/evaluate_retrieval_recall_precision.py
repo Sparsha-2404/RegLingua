@@ -17,8 +17,8 @@ needs a one-time Hugging Face embedding-model download, so it only works
 in an environment with normal internet access.
 
 Usage:
-    python3 scripts/evaluate_retrieval_recall_precision.py
-    python3 scripts/evaluate_retrieval_recall_precision.py --hybrid
+    python scripts/evaluate_retrieval_recall_precision.py
+    python scripts/evaluate_retrieval_recall_precision.py --hybrid
 """
 from __future__ import annotations
 
