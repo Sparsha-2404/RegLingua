@@ -18,9 +18,10 @@ Mapping schema (JSON):
       "occurrence": 0,                       # which match (default 0 = first)
       "source": "data/evaluation/final_eval_results_m2.csv",
       "select": {...CSV...} | "key": "a.b.c" (JSON dotted path; list indices allowed),
-      "format": "percent" | "number" | "int"   # percent: expected = value * 100
+      "format": "percent" | "number" | "int",  # percent: expected = value * 100
+      "derived": {"num": id, "den": id}      # instead of source/select: ratio of two earlier claims' source values
   }]}
-CSV select: {"op": first|count|mean|sum|share|agree|f1|macro_f1, "column": ..., "where": {col: value, ...},
+CSV select: {"op": first|count|nunique|mean|sum|share|agree|f1|macro_f1, "column": ..., "where": {col: value, ...},
              "equals": value or [values] (share), "other": column (agree/f1: truth column), "label": class (f1),
              "labels": [classes] (macro_f1), "column_map": {raw: label} (translate predicted labels first)}
              "where" values may be lists (match any). column/other = predicted/truth columns for agree, f1, macro_f1.
@@ -75,6 +76,8 @@ def csv_value(path: Path, sel: dict) -> float:
         raise CheckError("no rows match 'where'")
     if col not in rows[0]:
         raise CheckError(f"column {col!r} not in {path.name}")
+    if op == "nunique":
+        return float(len({r[col] for r in rows}))
     if op == "first":
         if len(rows) != 1:
             raise CheckError(f"'first' needs exactly one matching row, found {len(rows)}")
@@ -128,7 +131,7 @@ def quoted_value(text: str, chk: dict) -> tuple[float, int, str]:
         pat = re.compile(chk["regex"])
         ms = list(pat.finditer(text))
         if not ms or pat.groups < 1:
-            raise CheckError("regex has no match (or no capture group) in the document")
+            raise CheckError(f"regex has no match (or no capture group) in the document: {chk['regex'][:70]}")
     else:
         pat = re.compile(re.escape(chk["label"]) + r"[^\d\n]{0,80}?" + NUM)
         ms = list(pat.finditer(text))
@@ -151,7 +154,7 @@ def expected(value: float, fmt: str) -> float:
     raise CheckError(f"unknown format {fmt!r}")
 
 
-def check_one(root: Path, chk: dict) -> dict:
+def check_one(root: Path, chk: dict, known: Optional[dict] = None) -> dict:
     res = {"id": chk.get("id", "?"), "document": chk.get("document", "?"), "status": "FAIL", "detail": ""}
     try:
         doc = root / str(chk["document"]).replace("\\", "/")
@@ -159,10 +162,16 @@ def check_one(root: Path, chk: dict) -> dict:
             raise CheckError(f"document missing: {chk['document']}")
         q, dec, _ = quoted_value(doc.read_text(encoding="utf-8"), chk)
         fmt = chk.get("format", "number")
-        e = expected(source_value(root, chk), fmt)
+        if "derived" in chk:                                   # ratio of two other claims' source values (same run)
+            d = chk["derived"]
+            if d["num"] not in (known or {}) or d["den"] not in (known or {}):
+                raise CheckError(f"derived claim needs {d['num']!r} and {d['den']!r} defined earlier in the mapping")
+            e = expected(known[d["num"]] / known[d["den"]], fmt)
+        else:
+            e = expected(source_value(root, chk), fmt)
         tol = 0.5 * 10 ** (-dec) + 1e-9
         ok = abs(q - e) <= tol
-        res.update(status="PASS" if ok else "FAIL", quoted=q, expected=e, decimals=dec)
+        res.update(status="PASS" if ok else "FAIL", quoted=q, expected=e, decimals=dec, raw=e / 100.0 if fmt == "percent" else e)
         res["detail"] = f"doc={q:g} source={e:.{max(dec + 2, 4)}f} (tolerance +/-{tol:.4g})"
     except (CheckError, KeyError) as exc:
         res["detail"] = f"ERROR: {exc if isinstance(exc, CheckError) else 'missing mapping field ' + str(exc)}"
@@ -171,7 +180,13 @@ def check_one(root: Path, chk: dict) -> dict:
 
 def run_checks(root: Path, map_path: Path) -> list:
     spec = json.loads(Path(map_path).read_text(encoding="utf-8"))
-    return [check_one(root, c) for c in spec["checks"]]
+    out, known = [], {}
+    for c in spec["checks"]:
+        r = check_one(root, c, known)
+        out.append(r)
+        if "raw" in r:
+            known[r["id"]] = r["raw"]
+    return out
 
 
 def _ascii(s: str) -> str:

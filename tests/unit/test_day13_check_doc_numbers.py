@@ -48,3 +48,18 @@ def test_pattern_not_found_and_ambiguous_first(tmp_path, capsys):
     assert chk.main(build(tmp_path, "x 0.5", checks)) == 1
     out = capsys.readouterr().out
     assert out.count("ERROR") == 2 and "exactly one" in out
+
+
+def test_nunique_and_derived_ratio(tmp_path, capsys):
+    doc = "groups 2. ratio 50.0%. wrong 40.0%."
+    checks = [ck("nu", r"groups (\d+)", fmt="int", select={"op": "nunique", "column": "grp"}),
+              ck("n_x", r"zzz (\d+)", fmt="int", select={"op": "count", "where": {"grp": "x"}}),
+              {"id": "ok", "regex": r"ratio ([0-9.]+)%", "format": "percent", "derived": {"num": "a", "den": "b"}},
+              {"id": "bad", "regex": r"wrong ([0-9.]+)%", "format": "percent", "derived": {"num": "a", "den": "b"}}]
+    # a = rows with grp x (2), b = all rows (4): 2/4 = 50%
+    checks.insert(0, ck("b", r"groups (\d+)", fmt="int", select={"op": "count"}))
+    checks.insert(0, ck("a", r"groups (\d+)", fmt="int", select={"op": "count", "where": {"grp": "x"}}))
+    rc = chk.main(build(tmp_path, doc, checks))
+    out = capsys.readouterr().out
+    assert "PASS  docs/x.md  [nu]" in out and "PASS  docs/x.md  [ok]" in out and "FAIL  docs/x.md  [bad]" in out
+    assert rc == 1
