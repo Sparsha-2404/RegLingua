@@ -1,0 +1,1087 @@
+{
+ "abst.balanced.abstain": {
+  "derivation": "row operating_point=balanced, group_type=all, column abstain",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 26.0
+ },
+ "abst.balanced.abstain_floor": {
+  "derivation": "row operating_point=balanced, group_type=all, column abstain_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.43
+ },
+ "abst.balanced.accepted": {
+  "derivation": "row operating_point=balanced, group_type=all, column accept",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 56.0
+ },
+ "abst.balanced.accuracy_on_accepted": {
+  "derivation": "row operating_point=balanced, group_type=all, column accuracy_on_accepted",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.7143
+ },
+ "abst.balanced.accuracy_on_accepted.ci_high": {
+  "derivation": "row operating_point=balanced, group_type=all, column acc_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.8302
+ },
+ "abst.balanced.accuracy_on_accepted.ci_low": {
+  "derivation": "row operating_point=balanced, group_type=all, column acc_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.5882
+ },
+ "abst.balanced.compliant_floor": {
+  "derivation": "row operating_point=balanced, group_type=all, column compliant_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.54
+ },
+ "abst.balanced.coverage": {
+  "derivation": "row operating_point=balanced, group_type=all, column coverage",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.5385
+ },
+ "abst.balanced.coverage.ci_high": {
+  "derivation": "row operating_point=balanced, group_type=all, column coverage_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.6346
+ },
+ "abst.balanced.coverage.ci_low": {
+  "derivation": "row operating_point=balanced, group_type=all, column coverage_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.4423
+ },
+ "abst.balanced.false_compliant": {
+  "derivation": "row operating_point=balanced, group_type=all, column false_compliant",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 2.0
+ },
+ "abst.balanced.n": {
+  "derivation": "row operating_point=balanced, group_type=all, column n",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 104.0
+ },
+ "abst.balanced.review": {
+  "derivation": "row operating_point=balanced, group_type=all, column review",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 22.0
+ },
+ "abst.conservative.abstain": {
+  "derivation": "row operating_point=conservative, group_type=all, column abstain",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 42.0
+ },
+ "abst.conservative.abstain_floor": {
+  "derivation": "row operating_point=conservative, group_type=all, column abstain_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.46
+ },
+ "abst.conservative.accepted": {
+  "derivation": "row operating_point=conservative, group_type=all, column accept",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 40.0
+ },
+ "abst.conservative.accuracy_on_accepted": {
+  "derivation": "row operating_point=conservative, group_type=all, column accuracy_on_accepted",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.75
+ },
+ "abst.conservative.accuracy_on_accepted.ci_high": {
+  "derivation": "row operating_point=conservative, group_type=all, column acc_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.8837
+ },
+ "abst.conservative.accuracy_on_accepted.ci_low": {
+  "derivation": "row operating_point=conservative, group_type=all, column acc_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.6111
+ },
+ "abst.conservative.compliant_floor": {
+  "derivation": "row operating_point=conservative, group_type=all, column compliant_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 1.0
+ },
+ "abst.conservative.coverage": {
+  "derivation": "row operating_point=conservative, group_type=all, column coverage",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.3846
+ },
+ "abst.conservative.coverage.ci_high": {
+  "derivation": "row operating_point=conservative, group_type=all, column coverage_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.4712
+ },
+ "abst.conservative.coverage.ci_low": {
+  "derivation": "row operating_point=conservative, group_type=all, column coverage_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.2978
+ },
+ "abst.conservative.false_compliant": {
+  "derivation": "row operating_point=conservative, group_type=all, column false_compliant",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.0
+ },
+ "abst.conservative.n": {
+  "derivation": "row operating_point=conservative, group_type=all, column n",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 104.0
+ },
+ "abst.conservative.review": {
+  "derivation": "row operating_point=conservative, group_type=all, column review",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 22.0
+ },
+ "abst.permissive.abstain": {
+  "derivation": "row operating_point=permissive, group_type=all, column abstain",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 26.0
+ },
+ "abst.permissive.abstain_floor": {
+  "derivation": "row operating_point=permissive, group_type=all, column abstain_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.43
+ },
+ "abst.permissive.accepted": {
+  "derivation": "row operating_point=permissive, group_type=all, column accept",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 66.0
+ },
+ "abst.permissive.accuracy_on_accepted": {
+  "derivation": "row operating_point=permissive, group_type=all, column accuracy_on_accepted",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.6364
+ },
+ "abst.permissive.accuracy_on_accepted.ci_high": {
+  "derivation": "row operating_point=permissive, group_type=all, column acc_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.75
+ },
+ "abst.permissive.accuracy_on_accepted.ci_low": {
+  "derivation": "row operating_point=permissive, group_type=all, column acc_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.5139
+ },
+ "abst.permissive.compliant_floor": {
+  "derivation": "row operating_point=permissive, group_type=all, column compliant_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.49
+ },
+ "abst.permissive.coverage": {
+  "derivation": "row operating_point=permissive, group_type=all, column coverage",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.6346
+ },
+ "abst.permissive.coverage.ci_high": {
+  "derivation": "row operating_point=permissive, group_type=all, column coverage_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.7212
+ },
+ "abst.permissive.coverage.ci_low": {
+  "derivation": "row operating_point=permissive, group_type=all, column coverage_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.5385
+ },
+ "abst.permissive.false_compliant": {
+  "derivation": "row operating_point=permissive, group_type=all, column false_compliant",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 10.0
+ },
+ "abst.permissive.n": {
+  "derivation": "row operating_point=permissive, group_type=all, column n",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 104.0
+ },
+ "abst.permissive.review": {
+  "derivation": "row operating_point=permissive, group_type=all, column review",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 12.0
+ },
+ "abst.supervisor_default.abstain": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column abstain",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 2.0
+ },
+ "abst.supervisor_default.abstain_floor": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column abstain_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.35
+ },
+ "abst.supervisor_default.accepted": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column accept",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 64.0
+ },
+ "abst.supervisor_default.accuracy_on_accepted": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column accuracy_on_accepted",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.625
+ },
+ "abst.supervisor_default.accuracy_on_accepted.ci_high": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column acc_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.7429
+ },
+ "abst.supervisor_default.accuracy_on_accepted.ci_low": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column acc_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.507
+ },
+ "abst.supervisor_default.compliant_floor": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column compliant_floor",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.7
+ },
+ "abst.supervisor_default.coverage": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column coverage",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.6154
+ },
+ "abst.supervisor_default.coverage.ci_high": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column coverage_hi",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.7115
+ },
+ "abst.supervisor_default.coverage.ci_low": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column coverage_lo",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.5192
+ },
+ "abst.supervisor_default.false_compliant": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column false_compliant",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 0.0
+ },
+ "abst.supervisor_default.n": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column n",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 104.0
+ },
+ "abst.supervisor_default.review": {
+  "derivation": "row operating_point=supervisor_default (reference, not tuned), group_type=all, column review",
+  "source": [
+   "data/evaluation/abstention_operating_points_m2.csv"
+  ],
+  "value": 38.0
+ },
+ "abst.verdict_text": {
+  "derivation": "field 'verdict' (quoted verbatim)",
+  "source": [
+   "data/evaluation/abstention_thresholds_m2.json"
+  ],
+  "value": "No operating point can safely auto-accept Compliant predictions. On non-held-out rows the most LOW predictions that can be accepted with zero false-compliant is 4 (exact 95% upper bound on the false-compliant rate 52.7%); the safety rule (upper bound <= 10%) needs at least 29 such acceptances with zero errors. The conservative point therefore switches compliant acceptance off (compliant_floor = 1.0)."
+ },
+ "clf.heldout.accuracy": {
+  "derivation": "rows with split == held_out; accuracy(true_risk, pred_label)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6153846153846154
+ },
+ "clf.heldout.accuracy.ci_high": {
+  "derivation": "rows with split == held_out; accuracy(true_risk, pred_label) (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.7100070093457943
+ },
+ "clf.heldout.accuracy.ci_low": {
+  "derivation": "rows with split == held_out; accuracy(true_risk, pred_label) (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5188679245283019
+ },
+ "clf.heldout.accuracy.en": {
+  "derivation": "rows with split == held_out; language == en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6976744186046512
+ },
+ "clf.heldout.accuracy.en.ci_high": {
+  "derivation": "rows with split == held_out; language == en (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.8372093023255814
+ },
+ "clf.heldout.accuracy.en.ci_low": {
+  "derivation": "rows with split == held_out; language == en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5581395348837209
+ },
+ "clf.heldout.accuracy.hi": {
+  "derivation": "rows with split == held_out; language == hi",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5636363636363636
+ },
+ "clf.heldout.accuracy.hi-en": {
+  "derivation": "rows with split == held_out; language == hi-en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5
+ },
+ "clf.heldout.accuracy.hi-en.ci_high": {
+  "derivation": "rows with split == held_out; language == hi-en (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.8333333333333334
+ },
+ "clf.heldout.accuracy.hi-en.ci_low": {
+  "derivation": "rows with split == held_out; language == hi-en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.16666666666666666
+ },
+ "clf.heldout.accuracy.hi.ci_high": {
+  "derivation": "rows with split == held_out; language == hi (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6909090909090909
+ },
+ "clf.heldout.accuracy.hi.ci_low": {
+  "derivation": "rows with split == held_out; language == hi (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.43636363636363634
+ },
+ "clf.heldout.ece": {
+  "derivation": "rows with split == held_out; top-label ECE, 10 equal-width bins, max_prob vs correct",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.1413941442307692
+ },
+ "clf.heldout.ece.ci_high": {
+  "derivation": "rows with split == held_out; top-label ECE, 10 equal-width bins, max_prob vs correct (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.24065861433021804
+ },
+ "clf.heldout.ece.ci_low": {
+  "derivation": "rows with split == held_out; top-label ECE, 10 equal-width bins, max_prob vs correct (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.07443040479426725
+ },
+ "clf.heldout.macro_f1": {
+  "derivation": "rows with split == held_out; macro-F1",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.640342429106474
+ },
+ "clf.heldout.macro_f1.ci_high": {
+  "derivation": "rows with split == held_out; macro-F1 (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.7288981720128589
+ },
+ "clf.heldout.macro_f1.ci_low": {
+  "derivation": "rows with split == held_out; macro-F1 (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5406792186571598
+ },
+ "clf.heldout.n": {
+  "derivation": "rows with split == held_out",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 104
+ },
+ "clf.heldout.n.en": {
+  "derivation": "rows with split == held_out; language == en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 43
+ },
+ "clf.heldout.n.hi": {
+  "derivation": "rows with split == held_out; language == hi",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 55
+ },
+ "clf.heldout.n.hi-en": {
+  "derivation": "rows with split == held_out; language == hi-en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 6
+ },
+ "clf.heldout.prob_source": {
+  "derivation": "unique prob_source values",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": "committed"
+ },
+ "clf.oof.accuracy": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); accuracy(true_risk, pred_label)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6067961165048543
+ },
+ "clf.oof.accuracy.ci_high": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); accuracy(true_risk, pred_label) (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6580910492945677
+ },
+ "clf.oof.accuracy.ci_low": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); accuracy(true_risk, pred_label) (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5558311149389289
+ },
+ "clf.oof.accuracy.en": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6954314720812182
+ },
+ "clf.oof.accuracy.en.ci_high": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == en (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.7563451776649747
+ },
+ "clf.oof.accuracy.en.ci_low": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6294416243654822
+ },
+ "clf.oof.accuracy.hi": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5297297297297298
+ },
+ "clf.oof.accuracy.hi-en": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi-en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.5
+ },
+ "clf.oof.accuracy.hi-en.ci_high": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi-en (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6666666666666666
+ },
+ "clf.oof.accuracy.hi-en.ci_low": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi-en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.3333333333333333
+ },
+ "clf.oof.accuracy.hi.ci_high": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6
+ },
+ "clf.oof.accuracy.hi.ci_low": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.4540540540540541
+ },
+ "clf.oof.ece": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); top-label ECE, 10 equal-width bins, max_prob vs correct",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.142691390776699
+ },
+ "clf.oof.ece.ci_high": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); top-label ECE, 10 equal-width bins, max_prob vs correct (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.19270186472783457
+ },
+ "clf.oof.ece.ci_low": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); top-label ECE, 10 equal-width bins, max_prob vs correct (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.09366008049417214
+ },
+ "clf.oof.macro_f1": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); macro-F1",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6256807185401277
+ },
+ "clf.oof.macro_f1.ci_high": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); macro-F1 (95% CI upper)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.6765131827313791
+ },
+ "clf.oof.macro_f1.ci_low": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); macro-F1 (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 0.570755470169565
+ },
+ "clf.oof.n": {
+  "derivation": "rows with split != held_out (out-of-fold predictions)",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 412
+ },
+ "clf.oof.n.en": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 197
+ },
+ "clf.oof.n.hi": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 185
+ },
+ "clf.oof.n.hi-en": {
+  "derivation": "rows with split != held_out (out-of-fold predictions); language == hi-en",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 30
+ },
+ "clf.oof.prob_source": {
+  "derivation": "unique prob_source values",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": "oof_fold"
+ },
+ "leak.heldout_ids": {
+  "derivation": "distinct original_id among held-out rows",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 93
+ },
+ "leak.heldout_ids_with_partner_in_train": {
+  "derivation": "held-out original_ids that also occur among non-held-out (training-pool) rows",
+  "source": [
+   "data/evaluation/confidence_signals_m2.csv"
+  ],
+  "value": 76
+ },
+ "pipe.all.n": {
+  "derivation": "rows with expected_source_available True (all)",
+  "source": [
+   "data/evaluation/day6_consistency/risk_evidence_consistency_all.csv"
+  ],
+  "value": 510
+ },
+ "pipe.all.top1": {
+  "derivation": "share of rows with expected_source_top1 True among expected_source_available rows (all)",
+  "source": [
+   "data/evaluation/day6_consistency/risk_evidence_consistency_all.csv"
+  ],
+  "value": 0.6627450980392157
+ },
+ "pipe.all.top3": {
+  "derivation": "share of rows with expected_source_in_top3 True among expected_source_available rows (all)",
+  "source": [
+   "data/evaluation/day6_consistency/risk_evidence_consistency_all.csv"
+  ],
+  "value": 0.9882352941176471
+ },
+ "pipe.heldout.n": {
+  "derivation": "rows with expected_source_available True (heldout)",
+  "source": [
+   "data/evaluation/day6_consistency/risk_evidence_consistency_all.csv"
+  ],
+  "value": 104
+ },
+ "pipe.heldout.top1": {
+  "derivation": "share of rows with expected_source_top1 True among expected_source_available rows (heldout)",
+  "source": [
+   "data/evaluation/day6_consistency/risk_evidence_consistency_all.csv"
+  ],
+  "value": 0.6923076923076923
+ },
+ "pipe.heldout.top3": {
+  "derivation": "share of rows with expected_source_in_top3 True among expected_source_available rows (heldout)",
+  "source": [
+   "data/evaluation/day6_consistency/risk_evidence_consistency_all.csv"
+  ],
+  "value": 0.9615384615384616
+ },
+ "pipe.regulator_acc_heldout": {
+  "derivation": "predicted_regulator == true_regulator over held-out rows",
+  "source": [
+   "data/evaluation/pipeline_retrieval_results_m2.csv"
+  ],
+  "value": 0.9326923076923077
+ },
+ "pipe.regulator_acc_heldout.n": {
+  "derivation": "held-out rows",
+  "source": [
+   "data/evaluation/pipeline_retrieval_results_m2.csv"
+  ],
+  "value": 104
+ },
+ "retr.hybrid.n": {
+  "derivation": "number of query rows",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 510
+ },
+ "retr.hybrid.n.en": {
+  "derivation": "language == en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 237
+ },
+ "retr.hybrid.n.hi": {
+  "derivation": "language == hi",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 237
+ },
+ "retr.hybrid.n.hi-en": {
+  "derivation": "language == hi-en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 36
+ },
+ "retr.hybrid.recall@1": {
+  "derivation": "mean of hit_at_1; row-level bootstrap",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.6725490196078432
+ },
+ "retr.hybrid.recall@1.ci_high": {
+  "derivation": "mean of hit_at_1; row-level bootstrap (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.7137254901960784
+ },
+ "retr.hybrid.recall@1.ci_low": {
+  "derivation": "mean of hit_at_1; row-level bootstrap (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.6313725490196078
+ },
+ "retr.hybrid.recall@1.en": {
+  "derivation": "mean hit_at_1, language == en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.6835443037974683
+ },
+ "retr.hybrid.recall@1.en.ci_high": {
+  "derivation": "mean hit_at_1, language == en (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.7385021097046407
+ },
+ "retr.hybrid.recall@1.en.ci_low": {
+  "derivation": "mean hit_at_1, language == en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.620253164556962
+ },
+ "retr.hybrid.recall@1.hi": {
+  "derivation": "mean hit_at_1, language == hi",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.6371308016877637
+ },
+ "retr.hybrid.recall@1.hi-en": {
+  "derivation": "mean hit_at_1, language == hi-en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.8333333333333334
+ },
+ "retr.hybrid.recall@1.hi-en.ci_high": {
+  "derivation": "mean hit_at_1, language == hi-en (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.9444444444444444
+ },
+ "retr.hybrid.recall@1.hi-en.ci_low": {
+  "derivation": "mean hit_at_1, language == hi-en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.6944444444444444
+ },
+ "retr.hybrid.recall@1.hi.ci_high": {
+  "derivation": "mean hit_at_1, language == hi (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.70042194092827
+ },
+ "retr.hybrid.recall@1.hi.ci_low": {
+  "derivation": "mean hit_at_1, language == hi (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.5738396624472574
+ },
+ "retr.hybrid.recall@3": {
+  "derivation": "mean of hit_at_3; row-level bootstrap",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.996078431372549
+ },
+ "retr.hybrid.recall@3.ci_high": {
+  "derivation": "mean of hit_at_3; row-level bootstrap (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 1.0
+ },
+ "retr.hybrid.recall@3.ci_low": {
+  "derivation": "mean of hit_at_3; row-level bootstrap (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 0.9901960784313726
+ },
+ "retr.hybrid.recall@5": {
+  "derivation": "mean of hit_at_5; row-level bootstrap",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 1.0
+ },
+ "retr.hybrid.recall@5.ci_high": {
+  "derivation": "mean of hit_at_5; row-level bootstrap (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 1.0
+ },
+ "retr.hybrid.recall@5.ci_low": {
+  "derivation": "mean of hit_at_5; row-level bootstrap (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_hybrid.csv"
+  ],
+  "value": 1.0
+ },
+ "retr.keyword.n": {
+  "derivation": "number of query rows",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 510
+ },
+ "retr.keyword.n.en": {
+  "derivation": "language == en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 237
+ },
+ "retr.keyword.n.hi": {
+  "derivation": "language == hi",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 237
+ },
+ "retr.keyword.n.hi-en": {
+  "derivation": "language == hi-en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 36
+ },
+ "retr.keyword.recall@1": {
+  "derivation": "mean of hit_at_1; row-level bootstrap",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.5058823529411764
+ },
+ "retr.keyword.recall@1.ci_high": {
+  "derivation": "mean of hit_at_1; row-level bootstrap (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.5490686274509802
+ },
+ "retr.keyword.recall@1.ci_low": {
+  "derivation": "mean of hit_at_1; row-level bootstrap (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.4627450980392157
+ },
+ "retr.keyword.recall@1.en": {
+  "derivation": "mean hit_at_1, language == en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.6877637130801688
+ },
+ "retr.keyword.recall@1.en.ci_high": {
+  "derivation": "mean hit_at_1, language == en (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.7426160337552743
+ },
+ "retr.keyword.recall@1.en.ci_low": {
+  "derivation": "mean hit_at_1, language == en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.6244725738396625
+ },
+ "retr.keyword.recall@1.hi": {
+  "derivation": "mean hit_at_1, language == hi",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.2742616033755274
+ },
+ "retr.keyword.recall@1.hi-en": {
+  "derivation": "mean hit_at_1, language == hi-en",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.8333333333333334
+ },
+ "retr.keyword.recall@1.hi-en.ci_high": {
+  "derivation": "mean hit_at_1, language == hi-en (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.9444444444444444
+ },
+ "retr.keyword.recall@1.hi-en.ci_low": {
+  "derivation": "mean hit_at_1, language == hi-en (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.6944444444444444
+ },
+ "retr.keyword.recall@1.hi.ci_high": {
+  "derivation": "mean hit_at_1, language == hi (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.3291139240506329
+ },
+ "retr.keyword.recall@1.hi.ci_low": {
+  "derivation": "mean hit_at_1, language == hi (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.21940928270042195
+ },
+ "retr.keyword.recall@3": {
+  "derivation": "mean of hit_at_3; row-level bootstrap",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.6196078431372549
+ },
+ "retr.keyword.recall@3.ci_high": {
+  "derivation": "mean of hit_at_3; row-level bootstrap (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.660833333333333
+ },
+ "retr.keyword.recall@3.ci_low": {
+  "derivation": "mean of hit_at_3; row-level bootstrap (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.5764705882352941
+ },
+ "retr.keyword.recall@5": {
+  "derivation": "mean of hit_at_5; row-level bootstrap",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.6725490196078432
+ },
+ "retr.keyword.recall@5.ci_high": {
+  "derivation": "mean of hit_at_5; row-level bootstrap (95% CI upper)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.711764705882353
+ },
+ "retr.keyword.recall@5.ci_low": {
+  "derivation": "mean of hit_at_5; row-level bootstrap (95% CI lower, cluster bootstrap seed 42, 2000 resamples)",
+  "source": [
+   "data/evaluation/retrieval_eval_results_m2_keyword.csv"
+  ],
+  "value": 0.6313725490196078
+ },
+ "supervisor.abstain_floor": {
+  "derivation": "constant _ABSTENTION_CONFIDENCE_FLOOR (read-only)",
+  "source": [
+   "agents/supervisor.py"
+  ],
+  "value": 0.35
+ },
+ "supervisor.compliant_floor": {
+  "derivation": "constant _COMPLIANT_CONFIDENCE_FLOOR (read-only)",
+  "source": [
+   "agents/supervisor.py"
+  ],
+  "value": 0.7
+ }
+}

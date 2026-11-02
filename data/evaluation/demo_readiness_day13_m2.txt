@@ -1,0 +1,46 @@
+# Day 13 (M2) demo-readiness capture. Environment: python 3.12.3, scikit-learn 1.8.0, offline env vars set, Linux sandbox, scratch copy of the repo working tree.
+# commands: python scripts/prepare_demo_artifacts.py ; HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python scripts/check_demo_readiness.py
+## prepare_demo_artifacts.py
+OK   models/risk_classifier_tfidf_logreg.pkl: present, verified only (not touched)
+OK   models/regulator_classifier.pkl: present (not retrained)
+WROTE models/MANIFEST_m2.json (6 files)
+  models/risk_classifier_tfidf_logreg.pkl                        220c734878c1  rows=412  sklearn=1.8.0
+  models/regulator_classifier.pkl                                bb1071c431ac  rows=None  sklearn=1.9.1
+  data/regulatory/regulatory_kb_m1.json                          80846078da1b  rows=None  sklearn=-
+  data/raw/labeled_examples_m1.csv                               ee73d998fb5d  rows=516  sklearn=-
+  models/risk_classifier_embedding_logreg_minilm.pkl             08811bfe6862  rows=None  sklearn=1.9.1
+  models/risk_classifier_embedding_logreg_minilm.pkl.meta.json   fd6a680ad147  rows=None  sklearn=-
+
+## check_demo_readiness.py
+#  check                                                         status    detail
+1  models/risk_classifier_tfidf_logreg.pkl                       PASS      hash matches manifest
+1  models/regulator_classifier.pkl                               WARN      hash OK; pickled with scikit-learn 1.9.1, installed 1.8.0 (version warning on load)
+1  data/regulatory/regulatory_kb_m1.json                         PASS      hash matches manifest
+1  data/raw/labeled_examples_m1.csv                              PASS      hash matches manifest
+1  models/risk_classifier_embedding_logreg_minilm.pkl            WARN      hash OK; pickled with scikit-learn 1.9.1, installed 1.8.0 (version warning on load)
+1  models/risk_classifier_embedding_logreg_minilm.pkl.meta.json  PASS      hash matches manifest
+2  encoder paraphrase-multilingual-MiniLM-L12-v2 (offline)       FAIL      encoder not loadable offline: ModuleNotFoundError: No module named 'sentence_transformers'. Impact: embedding classifier/hybrid retrieval unavailable; TF-IDF + keyword retrieval path still works
+3  smoke request, working tree, offline                          FAIL      missing package 'langgraph' (pip install -r requirements.txt)
+4  smoke request, fresh checkout (245 git-tracked files)         FAIL      missing package 'langgraph' (pip install -r requirements.txt)
+R1 agent_factory retriever wiring (M3/M4-owned, read-only)       WARN      agent_factory still injects DeterministicRetriever (keyword-only); HybridRetriever file=True, d72dfb2 in history=True
+R2 Day 7 production gate re-run (temp CSV)                       FAIL      could not run scripts/check_day7_gate.py
+
+Fresh-checkout findings (what a teammate's clone is missing):
+  - models/regulator_classifier.pkl: untracked (never `git add`ed) [REQUIRED]; create: python scripts\prepare_demo_artifacts.py (scripts/train_regulator_classifier.py alone fails: no regulator column in committed CSV)
+  - note: 105 tracked file(s) modified vs HEAD; the temp copy uses working-tree content (a real clone gets HEAD): ['.env.example', '.gitignore', 'CONTRIBUTING.md', 'README.md', 'README_M2_Day1_Day2.md']
+  - smoke stderr tail:
+      File "/tmp/reglingua_fresh_cvv_bjz6/agents/supervisor.py", line 45, in <module>
+        from langgraph.graph import END, StateGraph
+    ModuleNotFoundError: No module named 'langgraph'
+
+GATE (end-to-end request completes offline, no manual step; working tree AND fresh checkout): NOT MET
+
+Commands for a clean machine:
+  git clone <repo-url> RegLingua && cd RegLingua
+  python -m venv .venv && .venv\Scripts\activate          (POSIX: source .venv/bin/activate)
+  pip install -r requirements.txt
+  python -c "from sentence_transformers import SentenceTransformer as S; S('paraphrase-multilingual-MiniLM-L12-v2')"   # ONE online run to fill the HF cache
+  python scripts\prepare_demo_artifacts.py                  # trains models\regulator_classifier.pkl, verifies baseline, writes models\MANIFEST_m2.json
+  python scripts\prepare_demo_artifacts.py --with-embedding # optional: embedding classifier (needs the cached encoder)
+  set HF_HUB_OFFLINE=1 && set TRANSFORMERS_OFFLINE=1        (POSIX: export ...)
+  python scripts\check_demo_readiness.py

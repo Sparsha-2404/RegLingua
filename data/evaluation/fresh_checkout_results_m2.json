@@ -1,0 +1,1000 @@
+{
+ "generated": "2026-11-02T02:00:30",
+ "head": "cea331e",
+ "verdict": "PARTIAL - NOT A GATE RESULT (WHAT-IF: untracked files copied + NOT A CLEAN INSTALL; 4 failed step(s), 46 HIGH static finding(s))",
+ "mode": {
+  "repo": "/tmp/claude-0/-home-claude/2a5c33f5-d048-588d-b0ff-f511c0222d56/scratchpad/repo/RegLingua",
+  "static_only": false,
+  "online": false,
+  "system_site_packages": true,
+  "as_if_committed": true,
+  "keep": false,
+  "pip_arg": [],
+  "prepare_args": [
+   "--verify"
+  ],
+  "pytest_arg": [
+   "--continue-on-collection-errors"
+  ],
+  "run_no_argparse": false,
+  "timeout_pip": 3000,
+  "timeout_step": 900,
+  "timeout_help": 120,
+  "report": "docs/fresh_checkout_report_m2.md",
+  "json": "data/evaluation/fresh_checkout_results_m2.json"
+ },
+ "steps": [
+  {
+   "step": "create clean venv (+system site-packages)",
+   "status": "PASS",
+   "seconds": 1.81,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": ""
+  },
+  {
+   "step": "pip install -r requirements.txt",
+   "status": "SKIP",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "NOT RUN (--system-site-packages): uses packages already installed here, so this is NOT a clean-install result",
+   "output_tail": ""
+  },
+  {
+   "step": "M2 artifact preparation",
+   "status": "FAIL",
+   "seconds": 0.89,
+   "returncode": 1,
+   "first_error": "models/regulator_classifier.pkl                               FAIL      sha256 differs and no recorded probe, drift cannot be measured",
+   "output_tail": "                OK        sha256 matches\ndata/regulatory/regulatory_kb_m1.json                         OK        sha256 matches\nmodels/regulator_classifier.pkl                               FAIL      sha256 differs and no recorded probe, drift cannot be measured\nmodels/risk_classifier_embedding_logreg_minilm.pkl            OK        sha256 matches\nmodels/risk_classifier_embedding_logreg_minilm.pkl.meta.json  OK        sha256 matches\nmodels/risk_classifier_tfidf_logreg.pkl                       OK        sha256 matches; no recorded probe (run with --update-manifest to add)\nsummary: FAIL=1, OK=5"
+  },
+  {
+   "step": "M2 test suite (tests/unit)",
+   "status": "FAIL",
+   "seconds": 15.98,
+   "returncode": 1,
+   "first_error": "tests/unit/test_day9_routing_mirror.py:14: in <module>",
+   "pytest": {
+    "line": "431 passed, 2 xfailed, 39 warnings, 3 errors in 15.65s",
+    "counts": {
+     "passed": 431,
+     "xfailed": 2,
+     "errors": 3
+    },
+    "skip_reasons": {}
+   },
+   "output_tail": ".py: 12 warnings\ntests/unit/test_day3_baseline_training.py: 1 warning\n  /usr/local/lib/python3.13/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator LogisticRegression from version 1.8.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\n  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n431 passed, 2 xfailed, 39 warnings, 3 errors in 15.65s"
+  },
+  {
+   "step": "smoke request (canonical text, trained artifacts)",
+   "status": "FAIL",
+   "seconds": 0.03,
+   "returncode": 1,
+   "first_error": "ModuleNotFoundError: No module named 'langgraph'",
+   "output_tail": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n    from agents.supervisor import run_case\n  File \"/tmp/reglingua_fresh_m2_5p8blv07/agents/supervisor.py\", line 45, in <module>\n    from langgraph.graph import END, StateGraph\nModuleNotFoundError: No module named 'langgraph'"
+  },
+  {
+   "step": "--help scripts/analyze_confidence_signals.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/analyze_retrieval_errors.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/analyze_risk_evidence_consistency.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "ot retrain models or modify production routing/retrieval.\n\nUsage (from the repo root):\n    python scripts/analyze_risk_evidence_consistency.py\n    python scripts/analyze_risk_evidence_consistency.py --config C\n    python scripts/analyze_risk_evidence_consistency.py --use-stored-route   # skip the Supervisor import\n\noptions:\n  -h, --help            show this help message and exit\n  --input INPUT\n  --output-dir OUTPUT_DIR\n  --config {A,B,C,D}\n  --use-stored-route    Trust the CSV's route column instead of recomputing it\n                        with the real Supervisor (needs pydantic/langgraph)."
+  },
+  {
+   "step": "--help scripts/build_regulator_topic_eval_labels.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/build_rewrite_eval_m2.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: build_rewrite_eval_m2.py [-h] [--source SOURCE] [--curated CURATED]\n                                [--out OUT]\n\nBuild data/evaluation/rewrite_eval_m2.csv from M2's labelled eval and M1's\ncurated set. Run from any directory: python scripts/build_rewrite_eval_m2.py\n\noptions:\n  -h, --help         show this help message and exit\n  --source SOURCE\n  --curated CURATED\n  --out OUT"
+  },
+  {
+   "step": "--help scripts/build_risk_evidence_eval.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "s evidence QA (->\nevidence_status), on normalised text + language (not on ID alone -- IDs repeat\nacross language variants). Row count is preserved; unmatched rows are kept and\nflagged, never dropped. Usage: python scripts/build_risk_evidence_eval.py\npython scripts/build_risk_evidence_eval.py --strict # exit 1 on any\nunmatched/ambiguous row\n\noptions:\n  -h, --help            show this help message and exit\n  --eval EVAL\n  --labeled LABELED\n  --evidence-qa EVIDENCE_QA\n  --out OUT\n  --strict              Exit with status 1 if any eval row is unmatched,\n                        ambiguous or invalid."
+  },
+  {
+   "step": "--help scripts/build_verifier_failure_cases.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/build_verifier_known_cases.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: build_verifier_known_cases.py [-h] [--seed SEED]\n\noptions:\n  -h, --help   show this help message and exit\n  --seed SEED"
+  },
+  {
+   "step": "--help scripts/check_day6_gate.py",
+   "status": "PASS",
+   "seconds": 0.04,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "ited: its retriever constructor is swapped in-process.\n    python scripts/check_day6_gate.py --retriever hybrid\n\noptions:\n  -h, --help            show this help message and exit\n  --limit LIMIT         first N rows\n  --sample SAMPLE       random sample of N rows (seeded)\n  --seed SEED\n  --show SHOW           print the first N full explanations\n  --retriever {keyword,hybrid}\n                        keyword = the pipeline as it is today (default);\n                        hybrid = as if the factory injected the fixed\n                        HybridRetriever (needs the embedding model).\n  --out OUT"
+  },
+  {
+   "step": "--help scripts/check_day7_gate.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: check_day7_gate.py [-h] [--input INPUT] [--output OUTPUT]\n\noptions:\n  -h, --help       show this help message and exit\n  --input INPUT\n  --output OUTPUT"
+  },
+  {
+   "step": "--help scripts/check_offline_models.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: check_offline_models.py [-h] [--json]\n\noptions:\n  -h, --help  show this help message and exit\n  --json"
+  },
+  {
+   "step": "--help scripts/compare_baseline_vs_multilingual.py",
+   "status": "PASS",
+   "seconds": 0.76,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: compare_baseline_vs_multilingual.py [-h] [--no-save] [--skip-leaky]\n                                           [--n-boot N_BOOT]\n\noptions:\n  -h, --help       show this help message and exit\n  --no-save        do not write the model artifact\n  --skip-leaky     run only the leak-free comparison\n  --n-boot N_BOOT"
+  },
+  {
+   "step": "--help scripts/compare_risk_models.py",
+   "status": "PASS",
+   "seconds": 0.8,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: compare_risk_models.py [-h] [--fake-encoder] [--n-boot N_BOOT]\n                              [--out-dir OUT_DIR]\n\noptions:\n  -h, --help         show this help message and exit\n  --fake-encoder     smoke test with a fake encoder; outputs prefixed\n                     FAKE_SMOKE_ and NOT for reporting\n  --n-boot N_BOOT\n  --out-dir OUT_DIR\n\nReal mode commands:\npip install sentence-transformers\npython scripts\\compare_risk_models.py"
+  },
+  {
+   "step": "--help scripts/demo_conditional_routing_m2.py",
+   "status": "PASS",
+   "seconds": 0.05,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: demo_conditional_routing_m2.py [-h] [--preflight-only]\n\noptions:\n  -h, --help        show this help message and exit\n  --preflight-only"
+  },
+  {
+   "step": "--help scripts/demo_metadata_filter_retrieval.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/demo_trained_risk_agent.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/enrich_eval_labels_with_kb.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/evaluate_day10_model_comparison_m2.py",
+   "status": "PASS",
+   "seconds": 0.93,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: evaluate_day10_model_comparison_m2.py [-h] [--n-boot N_BOOT]\n\noptions:\n  -h, --help       show this help message and exit\n  --n-boot N_BOOT"
+  },
+  {
+   "step": "--help scripts/evaluate_model_usefulness.py",
+   "status": "PASS",
+   "seconds": 0.86,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: evaluate_model_usefulness.py [-h] [--fake-encoder] [--n-boot N_BOOT]\n                                    [--out-dir OUT_DIR]\n\noptions:\n  -h, --help         show this help message and exit\n  --fake-encoder     smoke test; outputs prefixed FAKE_SMOKE_; NOT for\n                     reporting\n  --n-boot N_BOOT\n  --out-dir OUT_DIR"
+  },
+  {
+   "step": "--help scripts/evaluate_pipeline_retrieval.py",
+   "status": "PASS",
+   "seconds": 0.04,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "egulator_classifier.pkl)\n    python scripts/build_risk_evidence_eval.py\n\nUsage:\n    python scripts/evaluate_pipeline_retrieval.py\n    python scripts/evaluate_pipeline_retrieval.py --configs A,D        # keyword only, no model download\n    python scripts/evaluate_pipeline_retrieval.py --limit 20           # quick smoke test\n\noptions:\n  -h, --help         show this help message and exit\n  --configs CONFIGS  Comma-separated subset of A,B,C,D (default: all). B and C\n                     need the one-time embedding-model download.\n  --limit LIMIT      Only the first N rows (smoke test).\n  --out OUT"
+  },
+  {
+   "step": "--help scripts/evaluate_retrieval_recall_precision.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "s anywhere, no network needed. Pass --hybrid to\nevaluate HybridRetriever (keyword + vector) instead; this needs a one-time\nHugging Face embedding-model download, so it only works in an environment with\nnormal internet access. Usage: python3\nscripts/evaluate_retrieval_recall_precision.py python3\nscripts/evaluate_retrieval_recall_precision.py --hybrid\n\noptions:\n  -h, --help  show this help message and exit\n  --hybrid    Evaluate HybridRetriever (keyword+vector) instead of the default\n              keyword-only DeterministicRetriever. Requires a one-time Hugging\n              Face model download."
+  },
+  {
+   "step": "--help scripts/evaluate_rewrite_risk_reduction.py",
+   "status": "FAIL",
+   "seconds": 0.08,
+   "returncode": 1,
+   "first_error": "ModuleNotFoundError: No module named 'sentence_transformers'",
+   "output_tail": "etrieval.hybrid_retriever import HybridRetriever\n  File \"/tmp/reglingua_fresh_m2_5p8blv07/services/retrieval/hybrid_retriever.py\", line 22, in <module>\n    from services.embeddings.vector_index import RegulatoryVectorIndex\n  File \"/tmp/reglingua_fresh_m2_5p8blv07/services/embeddings/vector_index.py\", line 23, in <module>\n    from services.embeddings.encoder import MultilingualEncoder\n  File \"/tmp/reglingua_fresh_m2_5p8blv07/services/embeddings/encoder.py\", line 14, in <module>\n    from sentence_transformers import SentenceTransformer\nModuleNotFoundError: No module named 'sentence_transformers'"
+  },
+  {
+   "step": "--help scripts/evaluate_verifier_known_cases.py",
+   "status": "PASS",
+   "seconds": 0.93,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: evaluate_verifier_known_cases.py [-h]\n                                        [--regulator-source {case,pipeline}]\n                                        [--out OUT]\n\noptions:\n  -h, --help            show this help message and exit\n  --regulator-source {case,pipeline}\n  --out OUT"
+  },
+  {
+   "step": "--help scripts/evidence_qa_day6.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/extract_m1_labeled_csv.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/inspect_regulator_misses.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/inspect_rewrite_failures.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: inspect_rewrite_failures.py [-h] [--input INPUT] [--output OUTPUT]\n                                   [--skip-verifier]\n\nM2 Day 7 rewrite failure inspection + read-only Day 8 verifier comparison. Run\nfrom repository root: python scripts/inspect_rewrite_failures.py Consumes\ndata/evaluation/rewrite_eval_results_m2.csv; it does not rerun or modify the\nRewriterAgent, classifier, VerifierAgent, or policy.\n\noptions:\n  -h, --help       show this help message and exit\n  --input INPUT\n  --output OUTPUT\n  --skip-verifier  Run text/label heuristics only; skip real VerifierAgent."
+  },
+  {
+   "step": "--help scripts/select_abstention_thresholds.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/simulate_routing_m2.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/train_baseline_classifier.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/train_regulator_classifier.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/adversarial_classifier_tests_m2.py",
+   "status": "PASS",
+   "seconds": 0.88,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: adversarial_classifier_tests_m2.py [-h] [--model {tfidf,embedding}]\n\noptions:\n  -h, --help            show this help message and exit\n  --model {tfidf,embedding}"
+  },
+  {
+   "step": "--help scripts/analyze_classification_errors.py",
+   "status": "PASS",
+   "seconds": 0.87,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: analyze_classification_errors.py [-h] [--model {tfidf,embedding}]\n                                        [--suspect-conf SUSPECT_CONF]\n\noptions:\n  -h, --help            show this help message and exit\n  --model {tfidf,embedding}\n  --suspect-conf SUSPECT_CONF\n                        min confidence for a suspected label error (default:\n                        90th percentile of all OOF confidences)"
+  },
+  {
+   "step": "--help scripts/audit_eval_data.py",
+   "status": "PASS",
+   "seconds": 0.83,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: audit_eval_data.py [-h] [--semantic]\n\noptions:\n  -h, --help  show this help message and exit\n  --semantic"
+  },
+  {
+   "step": "--help scripts/audit_model_artifacts.py",
+   "status": "PASS",
+   "seconds": 0.04,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: audit_model_artifacts.py [-h] [--no-rebuild] [--out OUT]\n\noptions:\n  -h, --help    show this help message and exit\n  --no-rebuild\n  --out OUT"
+  },
+  {
+   "step": "--help scripts/build_canonical_cases.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/build_day12_doc_m2.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/build_model_card_m2.py",
+   "status": "WARN",
+   "seconds": 0.0,
+   "returncode": null,
+   "first_error": "no argparse: --help would execute the script; not run",
+   "output_tail": ""
+  },
+  {
+   "step": "--help scripts/check_demo_readiness.py",
+   "status": "PASS",
+   "seconds": 0.05,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: check_demo_readiness.py [-h] [--text TEXT] [--skip-day7-gate]\n                               [--keep-fresh]\n\noptions:\n  -h, --help        show this help message and exit\n  --text TEXT\n  --skip-day7-gate\n  --keep-fresh      keep the temp fresh-checkout folder and print its path"
+  },
+  {
+   "step": "--help scripts/make_final_split.py",
+   "status": "PASS",
+   "seconds": 0.83,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: make_final_split.py [-h] [--verify]\n\noptions:\n  -h, --help  show this help message and exit\n  --verify"
+  },
+  {
+   "step": "--help scripts/prepare_demo_artifacts.py",
+   "status": "PASS",
+   "seconds": 0.05,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "         show this help message and exit\n  --force            retrain AND overwrite existing artifacts, incl. the\n                     committed baseline\n  --with-embedding   also build the optional embedding classifier (local HF\n                     cache only)\n  --update-manifest  accept on-disk hashes that differ from the existing\n                     manifest\n  --verify           build missing artifacts, verify against\n                     models/MANIFEST_m2.json, write nothing\n  --tol TOL          max tolerated |probability| drift for classifier pickles\n                     (policy value)"
+  },
+  {
+   "step": "--help scripts/run_canonical_cases_m2.py",
+   "status": "PASS",
+   "seconds": 0.04,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: run_canonical_cases_m2.py [-h] [--timeout TIMEOUT] [--out OUT]\n                                 [--worker {normal,offline}]\n                                 [--json-out JSON_OUT]\n\noptions:\n  -h, --help            show this help message and exit\n  --timeout TIMEOUT     per-case timeout (s)\n  --out OUT\n  --worker {normal,offline}\n  --json-out JSON_OUT"
+  },
+  {
+   "step": "--help scripts/run_m2_final_evaluation.py",
+   "status": "PASS",
+   "seconds": 0.87,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: run_m2_final_evaluation.py [-h] [--seed SEED] [--n-boot N_BOOT]\n                                  [--embedding {auto,on,off}] [--eval EVAL]\n                                  [--split SPLIT] [--out-dir OUT_DIR]\n                                  [--results-dir RESULTS_DIR]\n\noptions:\n  -h, --help            show this help message and exit\n  --seed SEED\n  --n-boot N_BOOT\n  --embedding {auto,on,off}\n  --eval EVAL\n  --split SPLIT\n  --out-dir OUT_DIR\n  --results-dir RESULTS_DIR"
+  },
+  {
+   "step": "--help scripts/simulate_fresh_checkout_m2.py",
+   "status": "PASS",
+   "seconds": 0.04,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "tra pip install argument (repeatable), e.g. --pip-\n                        arg=--index-url=URL\n  --prepare-args [PREPARE_ARGS ...]\n                        args for prepare_demo_artifacts.py (default: --verify)\n  --pytest-arg PYTEST_ARG\n                        extra pytest argument (repeatable), e.g. --pytest-\n                        arg=--continue-on-collection-errors\n  --run-no-argparse     also run scripts without argparse with --help\n                        (executes them)\n  --timeout-pip TIMEOUT_PIP\n  --timeout-step TIMEOUT_STEP\n  --timeout-help TIMEOUT_HELP\n  --report REPORT\n  --json JSON"
+  },
+  {
+   "step": "--help scripts/update_contract_snapshot.py",
+   "status": "PASS",
+   "seconds": 0.03,
+   "returncode": 0,
+   "first_error": "",
+   "output_tail": "usage: update_contract_snapshot.py [-h] [--update] [--api-report]\n\noptions:\n  -h, --help    show this help message and exit\n  --update      rewrite the snapshot file\n  --api-report  print plan-vs-live API mismatches"
+  }
+ ],
+ "extra": {
+  "n_files_copied": 315
+ },
+ "static": {
+  "n_tracked": 245,
+  "n_py_scope": 127,
+  "untracked_imports": [
+   {
+    "file": "tests/unit/test_manifest_verify.py",
+    "line": 7,
+    "what": "services/evaluation/manifest_verify.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day13_model_card_m2.py",
+    "line": 7,
+    "what": "services/evaluation/model_card_m2.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_perturbations.py",
+    "line": 4,
+    "what": "services/evaluation/perturbations.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_error_analysis.py",
+    "line": 3,
+    "what": "services/evaluation/error_analysis.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "services/evaluation/error_analysis.py",
+    "line": 10,
+    "what": "services/evaluation/classification_metrics.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_determinism.py",
+    "line": 10,
+    "what": "services/evaluation/classification_metrics.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_determinism.py",
+    "line": 11,
+    "what": "services/evaluation/final_eval.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "services/evaluation/final_eval.py",
+    "line": 32,
+    "what": "services/evaluation/data_audit.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "services/evaluation/final_eval.py",
+    "line": 33,
+    "what": "services/evaluation/classification_metrics.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "services/evaluation/final_eval.py",
+    "line": 34,
+    "what": "services/evaluation/final_split.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "services/evaluation/final_eval.py",
+    "line": 36,
+    "what": "services/evaluation/sanity_baselines.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "services/evaluation/sanity_baselines.py",
+    "line": 11,
+    "what": "services/evaluation/classification_metrics.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_data_audit_split.py",
+    "line": 11,
+    "what": "services/evaluation/data_audit.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_data_audit_split.py",
+    "line": 13,
+    "what": "services/evaluation/final_split.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_classification_metrics.py",
+    "line": 13,
+    "what": "services/evaluation/classification_metrics.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day12_classification_metrics.py",
+    "line": 16,
+    "what": "services/evaluation/sanity_baselines.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day11_demo_readiness.py",
+    "line": 10,
+    "what": "services/evaluation/demo_readiness.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_day11_contract_snapshot.py",
+    "line": 6,
+    "what": "services/evaluation/contract_snapshot.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "tests/unit/test_canonical_run.py",
+    "line": 5,
+    "what": "services/evaluation/canonical_run.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "services/evaluation/artifact_audit.py",
+    "line": 17,
+    "what": "services/evaluation/manifest_verify.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/update_contract_snapshot.py",
+    "line": 18,
+    "what": "services/evaluation/contract_snapshot.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/run_m2_final_evaluation.py",
+    "line": 21,
+    "what": "services/evaluation/final_eval.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/run_canonical_cases_m2.py",
+    "line": 36,
+    "what": "services/evaluation/canonical_run.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/prepare_demo_artifacts.py",
+    "line": 32,
+    "what": "services/evaluation/demo_readiness.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/prepare_demo_artifacts.py",
+    "line": 36,
+    "what": "services/evaluation/manifest_verify.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/make_final_split.py",
+    "line": 24,
+    "what": "services/evaluation/data_audit.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/make_final_split.py",
+    "line": 25,
+    "what": "services/evaluation/final_split.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/check_demo_readiness.py",
+    "line": 23,
+    "what": "services/evaluation/demo_readiness.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/build_model_card_m2.py",
+    "line": 11,
+    "what": "services/evaluation/model_card_m2.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/audit_model_artifacts.py",
+    "line": 16,
+    "what": "services/evaluation/artifact_audit.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/audit_eval_data.py",
+    "line": 22,
+    "what": "services/evaluation/data_audit.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/audit_eval_data.py",
+    "line": 23,
+    "what": "services/evaluation/final_split.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/analyze_classification_errors.py",
+    "line": 32,
+    "what": "services/evaluation/classification_metrics.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/analyze_classification_errors.py",
+    "line": 33,
+    "what": "services/evaluation/data_audit.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/analyze_classification_errors.py",
+    "line": 34,
+    "what": "services/evaluation/error_analysis.py",
+    "kind": "UNTRACKED_IMPORT"
+   },
+   {
+    "file": "scripts/adversarial_classifier_tests_m2.py",
+    "line": 35,
+    "what": "services/evaluation/perturbations.py",
+    "kind": "UNTRACKED_IMPORT"
+   }
+  ],
+  "gitignored_imports": [],
+  "missing_imports": [],
+  "undeclared_packages": [
+   {
+    "file": "services/evaluation/model_card_m2.py",
+    "line": 11,
+    "what": "pandas",
+    "kind": "UNDECLARED_PACKAGE",
+    "optional": false,
+    "via": ""
+   },
+   {
+    "file": "scripts/build_day12_doc_m2.py",
+    "line": 13,
+    "what": "pandas",
+    "kind": "UNDECLARED_PACKAGE",
+    "optional": false,
+    "via": ""
+   }
+  ],
+  "transitive_packages": [
+   {
+    "file": "services/evaluation/abstention_eval.py",
+    "line": 11,
+    "what": "scipy",
+    "kind": "TRANSITIVE_ONLY",
+    "optional": false,
+    "via": "scikit-learn"
+   },
+   {
+    "file": "services/evaluation/confidence_signals.py",
+    "line": 12,
+    "what": "scipy",
+    "kind": "TRANSITIVE_ONLY",
+    "optional": false,
+    "via": "scikit-learn"
+   }
+  ],
+  "referenced_untracked": [
+   {
+    "what": "docs/day12_risk_classification_eval_m2.md",
+    "file": "services/evaluation/model_card_m2.py:35",
+    "n_refs": 1
+   },
+   {
+    "what": "models/MANIFEST_m2.json",
+    "file": "services/evaluation/manifest_verify.py:24",
+    "n_refs": 6
+   },
+   {
+    "what": "models/regulator_classifier.pkl",
+    "file": "services/evaluation/manifest_verify.py:26",
+    "n_refs": 15
+   },
+   {
+    "what": "results/MANIFEST_m2.json",
+    "file": "services/evaluation/model_card_m2.py:20",
+    "n_refs": 1
+   },
+   {
+    "what": "scripts/prepare_demo_artifacts.py",
+    "file": "services/evaluation/demo_readiness.py:106",
+    "n_refs": 1
+   },
+   {
+    "what": "scripts/run_m2_final_evaluation.py",
+    "file": "services/evaluation/final_eval.py:399",
+    "n_refs": 1
+   },
+   {
+    "what": "scripts/simulate_fresh_checkout_m2.py",
+    "file": "tests/unit/test_day13_fresh_checkout_m2.py:19",
+    "n_refs": 1
+   },
+   {
+    "what": "tests/unit/conftest.py",
+    "file": "tests/unit/test_day13_fresh_checkout_m2.py:20",
+    "n_refs": 1
+   }
+  ],
+  "referenced_gitignored": [],
+  "referenced_absent": [
+   {
+    "what": "data/gone.json",
+    "file": "tests/unit/test_manifest_verify.py:40",
+    "n_refs": 2
+   },
+   {
+    "what": "data/gone_opt.json",
+    "file": "tests/unit/test_manifest_verify.py:40",
+    "n_refs": 2
+   },
+   {
+    "what": "data/in.csv",
+    "file": "tests/unit/test_day13_fresh_checkout_m2.py:63",
+    "n_refs": 2
+   },
+   {
+    "what": "data/kb.json",
+    "file": "tests/unit/test_manifest_verify.py:38",
+    "n_refs": 4
+   },
+   {
+    "what": "data/kb2.json",
+    "file": "tests/unit/test_manifest_verify.py:41",
+    "n_refs": 3
+   },
+   {
+    "what": "data/raw/does_not_exist.csv",
+    "file": "tests/unit/test_day1_day2_classifier.py:151",
+    "n_refs": 1
+   },
+   {
+    "what": "models/x.pkl",
+    "file": "tests/unit/test_day13_fresh_checkout_m2.py:26",
+    "n_refs": 1
+   },
+   {
+    "what": "services/evaluation/helper.py",
+    "file": "tests/unit/test_day13_fresh_checkout_m2.py:61",
+    "n_refs": 2
+   },
+   {
+    "what": "services/evaluation/main.py",
+    "file": "tests/unit/test_day13_fresh_checkout_m2.py:59",
+    "n_refs": 2
+   }
+  ],
+  "abs_paths_code": [],
+  "abs_paths_text": [
+   {
+    "file": "data/evaluation/canonical_run_m2_summary.txt",
+    "line": 24,
+    "what": "Saved C:\\Users\\tanis\\Downloads\\RegLingua\\data\\evaluation\\canonical_run_m2.csv",
+    "where": "untracked"
+   },
+   {
+    "file": "data/evaluation/demo_readiness_day13_m2.txt",
+    "line": 32,
+    "what": "File \"/tmp/reglingua_fresh_cvv_bjz6/agents/supervisor.py\", line 45, in <module>",
+    "where": "untracked"
+   },
+   {
+    "file": "data/evaluation/fresh_checkout_results_m2.json",
+    "line": 6,
+    "what": "\"repo\": \"/tmp/claude-0/-home-claude/2a5c33f5-d048-588d-b0ff-f511c0222d56/scratchpad/repo/RegLingua\",",
+    "where": "untracked"
+   }
+  ],
+  "untracked_m2_unreferenced": [
+   "data/evaluation/adversarial_brittle_m2.csv",
+   "data/evaluation/adversarial_mft_cases_m2.csv",
+   "data/evaluation/adversarial_results_m2.csv",
+   "data/evaluation/adversarial_results_m2.meta.json",
+   "data/evaluation/artifact_audit_m2.csv",
+   "data/evaluation/audit_eval_data_m2.json",
+   "data/evaluation/audit_eval_data_m2.txt",
+   "data/evaluation/canonical_cases_m2.csv",
+   "data/evaluation/canonical_run_m2.csv",
+   "data/evaluation/canonical_run_m2_summary.txt",
+   "data/evaluation/classification_error_analysis_m2.txt",
+   "data/evaluation/classification_errors_m2.csv",
+   "data/evaluation/demo_readiness_day13_m2.txt",
+   "data/evaluation/final_eval_confusions_m2.csv",
+   "data/evaluation/final_eval_oof_predictions_m2.csv",
+   "data/evaluation/final_eval_results_m2.csv",
+   "data/evaluation/final_split_m2.csv",
+   "data/evaluation/final_split_m2.meta.json",
+   "data/evaluation/fresh_checkout_results_m2.json",
+   "data/evaluation/suspected_label_errors_m2.csv",
+   "data/fixtures/contract_snapshot_m2.json",
+   "docs/artifact_provenance_m2.md",
+   "docs/day11_integration_m2.md",
+   "docs/day11_m2_handoff.md",
+   "docs/day12_m2_handoff.md",
+   "docs/day13_m2_handoff.md",
+   "docs/day13_snippets_for_others_m2.md",
+   "docs/fresh_checkout_report_m2.md",
+   "scripts/adversarial_classifier_tests_m2.py",
+   "scripts/analyze_classification_errors.py",
+   "scripts/audit_eval_data.py",
+   "scripts/audit_model_artifacts.py",
+   "scripts/build_canonical_cases.py",
+   "scripts/build_day12_doc_m2.py",
+   "scripts/build_model_card_m2.py",
+   "scripts/check_demo_readiness.py",
+   "scripts/make_final_split.py",
+   "scripts/run_canonical_cases_m2.py",
+   "scripts/update_contract_snapshot.py",
+   "tests/unit/test_canonical_run.py",
+   "tests/unit/test_day11_contract_snapshot.py",
+   "tests/unit/test_day11_demo_readiness.py",
+   "tests/unit/test_day12_classification_metrics.py",
+   "tests/unit/test_day12_data_audit_split.py",
+   "tests/unit/test_day12_determinism.py",
+   "tests/unit/test_day12_error_analysis.py",
+   "tests/unit/test_day12_perturbations.py",
+   "tests/unit/test_day13_fresh_checkout_m2.py",
+   "tests/unit/test_day13_model_card_m2.py",
+   "tests/unit/test_manifest_verify.py"
+  ],
+  "gitignored_m2_unreferenced": [],
+  "modified_tracked": [
+   "docs/model_card_baseline_m2.md"
+  ],
+  "staged_not_committed": [],
+  "tracked_but_deleted": [],
+  "network_tests": [
+   {
+    "file": "tests/unit/test_day13_fresh_checkout_m2.py",
+    "patterns": [
+     "huggingface.co"
+    ],
+    "marked": false,
+    "hermetic_hint": false
+   }
+  ],
+  "scripts_untracked": [
+   "scripts/adversarial_classifier_tests_m2.py",
+   "scripts/analyze_classification_errors.py",
+   "scripts/audit_eval_data.py",
+   "scripts/audit_model_artifacts.py",
+   "scripts/build_canonical_cases.py",
+   "scripts/build_day12_doc_m2.py",
+   "scripts/build_model_card_m2.py",
+   "scripts/check_demo_readiness.py",
+   "scripts/make_final_split.py",
+   "scripts/prepare_demo_artifacts.py",
+   "scripts/run_canonical_cases_m2.py",
+   "scripts/run_m2_final_evaluation.py",
+   "scripts/simulate_fresh_checkout_m2.py",
+   "scripts/update_contract_snapshot.py"
+  ],
+  "scripts_tracked": [
+   "scripts/analyze_confidence_signals.py",
+   "scripts/analyze_retrieval_errors.py",
+   "scripts/analyze_risk_evidence_consistency.py",
+   "scripts/build_regulator_topic_eval_labels.py",
+   "scripts/build_rewrite_eval_m2.py",
+   "scripts/build_risk_evidence_eval.py",
+   "scripts/build_verifier_failure_cases.py",
+   "scripts/build_verifier_known_cases.py",
+   "scripts/check_day6_gate.py",
+   "scripts/check_day7_gate.py",
+   "scripts/check_offline_models.py",
+   "scripts/compare_baseline_vs_multilingual.py",
+   "scripts/compare_risk_models.py",
+   "scripts/demo_conditional_routing_m2.py",
+   "scripts/demo_metadata_filter_retrieval.py",
+   "scripts/demo_trained_risk_agent.py",
+   "scripts/enrich_eval_labels_with_kb.py",
+   "scripts/evaluate_day10_model_comparison_m2.py",
+   "scripts/evaluate_model_usefulness.py",
+   "scripts/evaluate_pipeline_retrieval.py",
+   "scripts/evaluate_retrieval_recall_precision.py",
+   "scripts/evaluate_rewrite_risk_reduction.py",
+   "scripts/evaluate_verifier_known_cases.py",
+   "scripts/evidence_qa_day6.py",
+   "scripts/extract_m1_labeled_csv.py",
+   "scripts/inspect_regulator_misses.py",
+   "scripts/inspect_rewrite_failures.py",
+   "scripts/select_abstention_thresholds.py",
+   "scripts/simulate_routing_m2.py",
+   "scripts/train_baseline_classifier.py",
+   "scripts/train_regulator_classifier.py"
+  ],
+  "as_if_extra": [
+   "data/evaluation/adversarial_brittle_m2.csv",
+   "data/evaluation/adversarial_mft_cases_m2.csv",
+   "data/evaluation/adversarial_results_m2.csv",
+   "data/evaluation/adversarial_results_m2.meta.json",
+   "data/evaluation/artifact_audit_m2.csv",
+   "data/evaluation/audit_eval_data_m2.json",
+   "data/evaluation/audit_eval_data_m2.txt",
+   "data/evaluation/canonical_cases_m2.csv",
+   "data/evaluation/canonical_run_m2.csv",
+   "data/evaluation/canonical_run_m2_summary.txt",
+   "data/evaluation/classification_error_analysis_m2.txt",
+   "data/evaluation/classification_errors_m2.csv",
+   "data/evaluation/demo_readiness_day13_m2.txt",
+   "data/evaluation/final_eval_confusions_m2.csv",
+   "data/evaluation/final_eval_oof_predictions_m2.csv",
+   "data/evaluation/final_eval_results_m2.csv",
+   "data/evaluation/final_split_m2.csv",
+   "data/evaluation/final_split_m2.meta.json",
+   "data/evaluation/fresh_checkout_results_m2.json",
+   "data/evaluation/suspected_label_errors_m2.csv",
+   "data/fixtures/contract_snapshot_m2.json",
+   "docs/artifact_provenance_m2.md",
+   "docs/day11_integration_m2.md",
+   "docs/day11_m2_handoff.md",
+   "docs/day12_m2_handoff.md",
+   "docs/day12_risk_classification_eval_m2.md",
+   "docs/day13_m2_handoff.md",
+   "docs/day13_snippets_for_others_m2.md",
+   "docs/fresh_checkout_report_m2.md",
+   "models/MANIFEST_m2.json",
+   "results/MANIFEST_m2.json",
+   "scripts/adversarial_classifier_tests_m2.py",
+   "scripts/analyze_classification_errors.py",
+   "scripts/audit_eval_data.py",
+   "scripts/audit_model_artifacts.py",
+   "scripts/build_canonical_cases.py",
+   "scripts/build_day12_doc_m2.py",
+   "scripts/build_model_card_m2.py",
+   "scripts/check_demo_readiness.py",
+   "scripts/make_final_split.py",
+   "scripts/prepare_demo_artifacts.py",
+   "scripts/run_canonical_cases_m2.py",
+   "scripts/run_m2_final_evaluation.py",
+   "scripts/simulate_fresh_checkout_m2.py",
+   "scripts/update_contract_snapshot.py",
+   "services/evaluation/artifact_audit.py",
+   "services/evaluation/canonical_run.py",
+   "services/evaluation/classification_metrics.py",
+   "services/evaluation/contract_snapshot.py",
+   "services/evaluation/data_audit.py",
+   "services/evaluation/demo_readiness.py",
+   "services/evaluation/error_analysis.py",
+   "services/evaluation/final_eval.py",
+   "services/evaluation/final_split.py",
+   "services/evaluation/manifest_verify.py",
+   "services/evaluation/model_card_m2.py",
+   "services/evaluation/perturbations.py",
+   "services/evaluation/sanity_baselines.py",
+   "tests/unit/conftest.py",
+   "tests/unit/test_canonical_run.py",
+   "tests/unit/test_day11_contract_snapshot.py",
+   "tests/unit/test_day11_demo_readiness.py",
+   "tests/unit/test_day12_classification_metrics.py",
+   "tests/unit/test_day12_data_audit_split.py",
+   "tests/unit/test_day12_determinism.py",
+   "tests/unit/test_day12_error_analysis.py",
+   "tests/unit/test_day12_perturbations.py",
+   "tests/unit/test_day13_fresh_checkout_m2.py",
+   "tests/unit/test_day13_model_card_m2.py",
+   "tests/unit/test_manifest_verify.py"
+  ]
+ }
+}

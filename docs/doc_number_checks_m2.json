@@ -1,0 +1,1172 @@
+{
+  "comment": "Claims verified by scripts/check_doc_numbers_m2.py. Add one entry per quoted number; source paths are relative to the repo root.",
+  "checks": [
+    {
+      "id": "clf_acc_value",
+      "document": "docs/m2_results_summary.md",
+      "regex": "TF-IDF\\+LogReg: accuracy ([0-9.]+) \\[",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "value",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "accuracy"
+        }
+      }
+    },
+    {
+      "id": "clf_acc_ci_lo",
+      "document": "docs/m2_results_summary.md",
+      "regex": "TF-IDF\\+LogReg: accuracy [0-9.]+ \\[([0-9.]+),",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_lo",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "accuracy"
+        }
+      }
+    },
+    {
+      "id": "clf_acc_ci_hi",
+      "document": "docs/m2_results_summary.md",
+      "regex": "TF-IDF\\+LogReg: accuracy [0-9.]+ \\[[0-9.]+, ([0-9.]+)\\]",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_hi",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "accuracy"
+        }
+      }
+    },
+    {
+      "id": "clf_f1_value",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 ([0-9.]+) \\[",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "value",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "macro_f1"
+        }
+      }
+    },
+    {
+      "id": "clf_f1_ci_lo",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 [0-9.]+ \\[([0-9.]+),",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_lo",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "macro_f1"
+        }
+      }
+    },
+    {
+      "id": "clf_f1_ci_hi",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 [0-9.]+ \\[[0-9.]+, ([0-9.]+)\\]",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_hi",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "macro_f1"
+        }
+      }
+    },
+    {
+      "id": "clf_fc_value",
+      "document": "docs/m2_results_summary.md",
+      "regex": "false-compliant rate ([0-9.]+) \\[",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "value",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "false_compliant_rate"
+        }
+      }
+    },
+    {
+      "id": "clf_fc_ci_lo",
+      "document": "docs/m2_results_summary.md",
+      "regex": "false-compliant rate [0-9.]+ \\[([0-9.]+),",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_lo",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "false_compliant_rate"
+        }
+      }
+    },
+    {
+      "id": "clf_fc_ci_hi",
+      "document": "docs/m2_results_summary.md",
+      "regex": "false-compliant rate [0-9.]+ \\[[0-9.]+, ([0-9.]+)\\]",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_hi",
+        "where": {
+          "phase": "final_test",
+          "scope": "overall",
+          "model": "tfidf_logreg",
+          "metric": "false_compliant_rate"
+        }
+      }
+    },
+    {
+      "id": "clf_diff_rule_value",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 difference \\+([0-9.]+) \\[",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "value",
+        "where": {
+          "phase": "final_test",
+          "scope": "paired_overall",
+          "model": "tfidf_logreg",
+          "metric": "macro_f1",
+          "comparator": "banned_phrase_rule"
+        }
+      }
+    },
+    {
+      "id": "clf_diff_rule_ci_lo",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 difference \\+[0-9.]+ \\[([0-9.]+),",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_lo",
+        "where": {
+          "phase": "final_test",
+          "scope": "paired_overall",
+          "model": "tfidf_logreg",
+          "metric": "macro_f1",
+          "comparator": "banned_phrase_rule"
+        }
+      }
+    },
+    {
+      "id": "clf_diff_rule_ci_hi",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 difference \\+[0-9.]+ \\[[0-9.]+, ([0-9.]+)\\]",
+      "source": "data/evaluation/final_eval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "ci_hi",
+        "where": {
+          "phase": "final_test",
+          "scope": "paired_overall",
+          "model": "tfidf_logreg",
+          "metric": "macro_f1",
+          "comparator": "banned_phrase_rule"
+        }
+      }
+    },
+    {
+      "id": "err_low_high",
+      "document": "docs/m2_results_summary.md",
+      "regex": "LOW->HIGH ([0-9.]+) and",
+      "source": "data/evaluation/classification_errors_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "value",
+        "where": {
+          "section": "confusion_pair",
+          "error_type": "LOW->HIGH"
+        }
+      }
+    },
+    {
+      "id": "err_high_low",
+      "document": "docs/m2_results_summary.md",
+      "regex": "HIGH->LOW ([0-9.]+) errors",
+      "source": "data/evaluation/classification_errors_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "value",
+        "where": {
+          "section": "confusion_pair",
+          "error_type": "HIGH->LOW"
+        }
+      }
+    },
+    {
+      "id": "suspected_rows",
+      "document": "docs/m2_results_summary.md",
+      "regex": "([0-9]+) rows listed",
+      "source": "data/evaluation/classification_errors_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "first",
+        "column": "value",
+        "where": {
+          "section": "suspected_label_errors"
+        }
+      }
+    },
+    {
+      "id": "retr_hybrid_r1",
+      "document": "docs/m2_results_summary.md",
+      "regex": "Recall@1 ([0-9.]+), Recall@3",
+      "source": "data/evaluation/retrieval_eval_results_m2_hybrid.csv",
+      "format": "number",
+      "select": {
+        "op": "mean",
+        "column": "hit_at_1"
+      }
+    },
+    {
+      "id": "retr_hybrid_r3",
+      "document": "docs/m2_results_summary.md",
+      "regex": "Recall@3 ([0-9.]+), Recall@5",
+      "source": "data/evaluation/retrieval_eval_results_m2_hybrid.csv",
+      "format": "number",
+      "select": {
+        "op": "mean",
+        "column": "hit_at_3"
+      }
+    },
+    {
+      "id": "retr_hybrid_r5",
+      "document": "docs/m2_results_summary.md",
+      "regex": "Recall@5 ([0-9.]+) over",
+      "source": "data/evaluation/retrieval_eval_results_m2_hybrid.csv",
+      "format": "number",
+      "select": {
+        "op": "mean",
+        "column": "hit_at_5"
+      }
+    },
+    {
+      "id": "retr_queries",
+      "document": "docs/m2_results_summary.md",
+      "regex": "over ([0-9]+) queries",
+      "source": "data/evaluation/retrieval_eval_results_m2_hybrid.csv",
+      "format": "int",
+      "select": {
+        "op": "count"
+      }
+    },
+    {
+      "id": "retr_keyword_r1",
+      "document": "docs/m2_results_summary.md",
+      "regex": "keyword-only Recall@1 ([0-9.]+)",
+      "source": "data/evaluation/retrieval_eval_results_m2_keyword.csv",
+      "format": "number",
+      "select": {
+        "op": "mean",
+        "column": "hit_at_1"
+      }
+    },
+    {
+      "id": "rw_rows",
+      "document": "docs/m2_results_summary.md",
+      "regex": "([0-9]+) rows evaluated",
+      "source": "data/evaluation/rewrite_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count"
+      }
+    },
+    {
+      "id": "rw_reduced",
+      "document": "docs/m2_results_summary.md",
+      "regex": "moved ([0-9]+) of",
+      "source": "data/evaluation/rewrite_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "direction": "reduced"
+        }
+      }
+    },
+    {
+      "id": "rw_addressable",
+      "document": "docs/m2_results_summary.md",
+      "regex": "of ([0-9]+) addressable",
+      "source": "data/evaluation/rewrite_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "addressable": "True"
+        }
+      }
+    },
+    {
+      "id": "rw_share",
+      "document": "docs/m2_results_summary.md",
+      "regex": "\\(([0-9.]+)%\\), none",
+      "source": "data/evaluation/rewrite_eval_results_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "share",
+        "column": "direction",
+        "equals": "reduced",
+        "where": {
+          "addressable": "True"
+        }
+      }
+    },
+    {
+      "id": "rw_day6_reduced",
+      "document": "docs/m2_results_summary.md",
+      "regex": "none \\(([0-9]+) of",
+      "source": "data/evaluation/rewrite_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "direction": "reduced",
+          "cohort": "day6_source"
+        }
+      }
+    },
+    {
+      "id": "rw_day6_addressable",
+      "document": "docs/m2_results_summary.md",
+      "regex": "none \\([0-9]+ of ([0-9]+)\\)",
+      "source": "data/evaluation/rewrite_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "addressable": "True",
+          "cohort": "day6_source"
+        }
+      }
+    },
+    {
+      "id": "ver_cases",
+      "document": "docs/m2_results_summary.md",
+      "regex": "on ([0-9]+) known cases",
+      "source": "data/evaluation/verifier_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count"
+      }
+    },
+    {
+      "id": "ver_correct",
+      "document": "docs/m2_results_summary.md",
+      "regex": "([0-9]+) correct \\(",
+      "source": "data/evaluation/verifier_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "outcome": [
+            "CORRECT_PASS",
+            "CORRECT_FAIL"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ver_correct_pct",
+      "document": "docs/m2_results_summary.md",
+      "regex": "correct \\(([0-9.]+)%\\)",
+      "source": "data/evaluation/verifier_eval_results_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "share",
+        "column": "outcome",
+        "equals": [
+          "CORRECT_PASS",
+          "CORRECT_FAIL"
+        ]
+      }
+    },
+    {
+      "id": "ver_false_pass",
+      "document": "docs/m2_results_summary.md",
+      "regex": "([0-9]+) unsafe false PASS",
+      "source": "data/evaluation/verifier_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "outcome": "FALSE_PASS"
+        }
+      }
+    },
+    {
+      "id": "ver_false_fail",
+      "document": "docs/m2_results_summary.md",
+      "regex": "([0-9]+) false FAIL",
+      "source": "data/evaluation/verifier_eval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "outcome": "FALSE_FAIL"
+        }
+      }
+    },
+    {
+      "id": "abs_cons_a",
+      "document": "docs/m2_results_summary.md",
+      "regex": "floors ([0-9.]+) / [0-9.]+",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "abstain_floor",
+        "where": {
+          "operating_point": "conservative",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_cons_c",
+      "document": "docs/m2_results_summary.md",
+      "regex": "floors [0-9.]+ / ([0-9.]+)",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "first",
+        "column": "compliant_floor",
+        "where": {
+          "operating_point": "conservative",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_cons_cov",
+      "document": "docs/m2_results_summary.md",
+      "regex": "coverage ([0-9.]+)% \\[",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "first",
+        "column": "coverage",
+        "where": {
+          "operating_point": "conservative",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_cons_cov_lo",
+      "document": "docs/m2_results_summary.md",
+      "regex": "coverage [0-9.]+% \\[([0-9.]+)%,",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "first",
+        "column": "coverage_lo",
+        "where": {
+          "operating_point": "conservative",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_cons_cov_hi",
+      "document": "docs/m2_results_summary.md",
+      "regex": "coverage [0-9.]+% \\[[0-9.]+%, ([0-9.]+)%\\]",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "first",
+        "column": "coverage_hi",
+        "where": {
+          "operating_point": "conservative",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_bal_fc",
+      "document": "docs/m2_results_summary.md",
+      "regex": "Balanced: ([0-9]+) of [0-9]+",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "first",
+        "column": "false_compliant",
+        "where": {
+          "operating_point": "balanced",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_bal_low",
+      "document": "docs/m2_results_summary.md",
+      "regex": "Balanced: [0-9]+ of ([0-9]+)",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "first",
+        "column": "low_accepted",
+        "where": {
+          "operating_point": "balanced",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_perm_fc",
+      "document": "docs/m2_results_summary.md",
+      "regex": "permissive: ([0-9]+) of [0-9]+",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "first",
+        "column": "false_compliant",
+        "where": {
+          "operating_point": "permissive",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "abs_perm_low",
+      "document": "docs/m2_results_summary.md",
+      "regex": "permissive: [0-9]+ of ([0-9]+)",
+      "source": "data/evaluation/abstention_operating_points_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "first",
+        "column": "low_accepted",
+        "where": {
+          "operating_point": "permissive",
+          "group_type": "all"
+        }
+      }
+    },
+    {
+      "id": "mc_emb_acc",
+      "document": "docs/m2_results_summary.md",
+      "regex": "accuracy ([0-9.]+) vs [0-9.]+",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "number",
+      "key": "metrics.embedding.accuracy"
+    },
+    {
+      "id": "mc_base_acc",
+      "document": "docs/m2_results_summary.md",
+      "regex": "accuracy [0-9.]+ vs ([0-9.]+);",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "number",
+      "key": "metrics.baseline.accuracy"
+    },
+    {
+      "id": "mc_emb_f1",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 ([0-9.]+) vs [0-9.]+ \\(",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "number",
+      "key": "metrics.embedding.macro_f1"
+    },
+    {
+      "id": "mc_base_f1",
+      "document": "docs/m2_results_summary.md",
+      "regex": "macro-F1 [0-9.]+ vs ([0-9.]+) \\(",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "number",
+      "key": "metrics.baseline.macro_f1"
+    },
+    {
+      "id": "mc_diff",
+      "document": "docs/m2_results_summary.md",
+      "regex": "\\(difference \\+([0-9.]+) \\[",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "number",
+      "key": "paired_macro_f1_bootstrap_embedding_minus_baseline.diff"
+    },
+    {
+      "id": "mc_diff_lo",
+      "document": "docs/m2_results_summary.md",
+      "regex": "\\(difference \\+[0-9.]+ \\[([0-9.]+),",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "number",
+      "key": "paired_macro_f1_bootstrap_embedding_minus_baseline.ci_low"
+    },
+    {
+      "id": "mc_diff_hi",
+      "document": "docs/m2_results_summary.md",
+      "regex": "\\(difference \\+[0-9.]+ \\[[0-9.]+, ([0-9.]+)\\]",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "number",
+      "key": "paired_macro_f1_bootstrap_embedding_minus_baseline.ci_high"
+    },
+    {
+      "id": "mc_hien_n",
+      "document": "docs/m2_results_summary.md",
+      "regex": "only ([0-9]+) held-out rows",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "int",
+      "key": "metrics.embedding.by_language.hi-en.n"
+    },
+    {
+      "id": "mc_train",
+      "document": "docs/m2_results_summary.md",
+      "regex": "([0-9]+) train, [0-9]+ held-out",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "int",
+      "key": "protocol.train_rows"
+    },
+    {
+      "id": "mc_held",
+      "document": "docs/m2_results_summary.md",
+      "regex": "[0-9]+ train, ([0-9]+) held-out",
+      "source": "data/evaluation/day10_model_comparison_m2.json",
+      "format": "int",
+      "key": "protocol.held_out_rows"
+    },
+    {
+      "id": "card_rows",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "([0-9]+) labelled",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count"
+      }
+    },
+    {
+      "id": "card_lang_en",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "en ([0-9]+) ·",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "language": "en"
+        }
+      }
+    },
+    {
+      "id": "card_lang_hi",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "hi ([0-9]+) ·",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "language": "hi"
+        }
+      }
+    },
+    {
+      "id": "card_lang_hi-en",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "code-mixed\\) ([0-9]+)",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "language": "hi-en"
+        }
+      }
+    },
+    {
+      "id": "card_per_reg",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "([0-9]+) examples each",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "true_regulator": "SEBI"
+        }
+      }
+    },
+    {
+      "id": "card_cls_LOW_n",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\| LOW\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "true_risk_level": "LOW"
+        }
+      }
+    },
+    {
+      "id": "card_cls_LOW_share",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\| LOW\\s+\\| [0-9]+\\s+\\| ([0-9.]+)%",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "share",
+        "column": "true_risk_level",
+        "equals": "LOW"
+      }
+    },
+    {
+      "id": "card_cls_HIGH_n",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\| HIGH\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "true_risk_level": "HIGH"
+        }
+      }
+    },
+    {
+      "id": "card_cls_HIGH_share",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\| HIGH\\s+\\| [0-9]+\\s+\\| ([0-9.]+)%",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "share",
+        "column": "true_risk_level",
+        "equals": "HIGH"
+      }
+    },
+    {
+      "id": "card_cls_MEDIUM_n",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\| MEDIUM\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "true_risk_level": "MEDIUM"
+        }
+      }
+    },
+    {
+      "id": "card_cls_MEDIUM_share",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\| MEDIUM\\s+\\| [0-9]+\\s+\\| ([0-9.]+)%",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "share",
+        "column": "true_risk_level",
+        "equals": "MEDIUM"
+      }
+    },
+    {
+      "id": "card_train",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*([0-9]+) train",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "False"
+        }
+      }
+    },
+    {
+      "id": "card_test",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "train / ([0-9]+) test",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True"
+        }
+      }
+    },
+    {
+      "id": "card_test_n",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "test set, n=([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True"
+        }
+      }
+    },
+    {
+      "id": "card_acc",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "Accuracy\\s+\\| ([0-9.]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "agree",
+        "column": "predicted_risk_label",
+        "other": "true_risk_level",
+        "column_map": {
+          "Risky": "HIGH",
+          "Compliant": "LOW",
+          "Ambiguous": "MEDIUM"
+        },
+        "where": {
+          "held_out": "True"
+        }
+      }
+    },
+    {
+      "id": "card_macro_f1",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "Macro F1\\s+\\| ([0-9.]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "macro_f1",
+        "column": "predicted_risk_label",
+        "other": "true_risk_level",
+        "column_map": {
+          "Risky": "HIGH",
+          "Compliant": "LOW",
+          "Ambiguous": "MEDIUM"
+        },
+        "labels": [
+          "HIGH",
+          "LOW",
+          "MEDIUM"
+        ],
+        "where": {
+          "held_out": "True"
+        }
+      }
+    },
+    {
+      "id": "card_f1_HIGH",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "F1 — HIGH\\s+\\| ([0-9.]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "f1",
+        "column": "predicted_risk_label",
+        "other": "true_risk_level",
+        "column_map": {
+          "Risky": "HIGH",
+          "Compliant": "LOW",
+          "Ambiguous": "MEDIUM"
+        },
+        "label": "HIGH",
+        "where": {
+          "held_out": "True"
+        }
+      }
+    },
+    {
+      "id": "card_f1_LOW",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "F1 — LOW\\s+\\| ([0-9.]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "f1",
+        "column": "predicted_risk_label",
+        "other": "true_risk_level",
+        "column_map": {
+          "Risky": "HIGH",
+          "Compliant": "LOW",
+          "Ambiguous": "MEDIUM"
+        },
+        "label": "LOW",
+        "where": {
+          "held_out": "True"
+        }
+      }
+    },
+    {
+      "id": "card_f1_MEDIUM",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "F1 — MEDIUM\\s+\\| ([0-9.]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "number",
+      "select": {
+        "op": "f1",
+        "column": "predicted_risk_label",
+        "other": "true_risk_level",
+        "column_map": {
+          "Risky": "HIGH",
+          "Compliant": "LOW",
+          "Ambiguous": "MEDIUM"
+        },
+        "label": "MEDIUM",
+        "where": {
+          "held_out": "True"
+        }
+      }
+    },
+    {
+      "id": "card_cm_HIGH_HIGH",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*HIGH\\*\\*\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "HIGH",
+          "predicted_risk_label": "Risky"
+        }
+      }
+    },
+    {
+      "id": "card_cm_HIGH_LOW",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*HIGH\\*\\*\\s+\\|\\s*[0-9]+\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "HIGH",
+          "predicted_risk_label": "Compliant"
+        }
+      }
+    },
+    {
+      "id": "card_cm_HIGH_MEDIUM",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*HIGH\\*\\*\\s+\\|\\s*[0-9]+\\s+\\|\\s*[0-9]+\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "HIGH",
+          "predicted_risk_label": "Ambiguous"
+        }
+      }
+    },
+    {
+      "id": "card_cm_LOW_HIGH",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*LOW\\*\\*\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "LOW",
+          "predicted_risk_label": "Risky"
+        }
+      }
+    },
+    {
+      "id": "card_cm_LOW_LOW",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*LOW\\*\\*\\s+\\|\\s*[0-9]+\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "LOW",
+          "predicted_risk_label": "Compliant"
+        }
+      }
+    },
+    {
+      "id": "card_cm_LOW_MEDIUM",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*LOW\\*\\*\\s+\\|\\s*[0-9]+\\s+\\|\\s*[0-9]+\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "LOW",
+          "predicted_risk_label": "Ambiguous"
+        }
+      }
+    },
+    {
+      "id": "card_cm_MEDIUM_HIGH",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*MEDIUM\\*\\*\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "MEDIUM",
+          "predicted_risk_label": "Risky"
+        }
+      }
+    },
+    {
+      "id": "card_cm_MEDIUM_LOW",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*MEDIUM\\*\\*\\s+\\|\\s*[0-9]+\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "MEDIUM",
+          "predicted_risk_label": "Compliant"
+        }
+      }
+    },
+    {
+      "id": "card_cm_MEDIUM_MEDIUM",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "\\*\\*MEDIUM\\*\\*\\s+\\|\\s*[0-9]+\\s+\\|\\s*[0-9]+\\s+\\| ([0-9]+)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "MEDIUM",
+          "predicted_risk_label": "Ambiguous"
+        }
+      }
+    },
+    {
+      "id": "card_min_support",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "as low as ([0-9]+) \\(MEDIUM\\)",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "MEDIUM"
+        }
+      }
+    },
+    {
+      "id": "card_high_as_low",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "([0-9]+) HIGH statements are predicted LOW",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "HIGH",
+          "predicted_risk_label": "Compliant"
+        }
+      }
+    },
+    {
+      "id": "card_low_as_high",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "([0-9]+) LOW statements predicted HIGH",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "True",
+          "true_risk_level": "LOW",
+          "predicted_risk_label": "Risky"
+        }
+      }
+    },
+    {
+      "id": "card_hien_count",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "only ([0-9]+) of 516 examples",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "language": "hi-en"
+        }
+      }
+    },
+    {
+      "id": "card_hien_pct",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "of 516 examples \\(([0-9]+)%\\)",
+      "source": "data/evaluation/risk_evidence_eval_m2.csv",
+      "format": "percent",
+      "select": {
+        "op": "share",
+        "column": "language",
+        "equals": "hi-en"
+      }
+    },
+    {
+      "id": "card_train_examples",
+      "document": "docs/model_card_baseline_m2.md",
+      "regex": "([0-9]+) training examples",
+      "source": "data/evaluation/pipeline_retrieval_results_m2.csv",
+      "format": "int",
+      "select": {
+        "op": "count",
+        "where": {
+          "held_out": "False"
+        }
+      }
+    }
+  ]
+}
