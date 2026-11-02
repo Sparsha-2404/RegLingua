@@ -1,0 +1,37 @@
+{
+  "seed": 42,
+  "n_candidates": 2000,
+  "chosen_candidate": 771,
+  "balance_loss": 4.2842,
+  "test_rows": 103,
+  "rows": 516,
+  "test_groups": 55,
+  "groups": 274,
+  "eval_file": "risk_evidence_eval_m2.csv",
+  "eval_sha256": "abf1541bebe39a429f559abd8e060776a7fef995a1d99ad6deae5f0b84354c65",
+  "sklearn": "1.8.0",
+  "duplicate_links_merged": 3,
+  "verification": {
+    "rows": 516,
+    "unique_row_ids": 516,
+    "original_ids_straddling": 0,
+    "leak_groups_straddling": 0,
+    "final_test_rows": 103,
+    "train_pool_rows": 413
+  },
+  "final_test_by_risk": {
+    "LOW": 43,
+    "HIGH": 43,
+    "MEDIUM": 17
+  },
+  "final_test_by_language": {
+    "en": 48,
+    "hi": 48,
+    "hi-en": 7
+  },
+  "final_test_by_regulator": {
+    "SEBI": 32,
+    "RBI": 37,
+    "DPDP": 34
+  }
+}

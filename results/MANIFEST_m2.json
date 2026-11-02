@@ -1,0 +1,56 @@
+{
+  "bootstrap": "percentile 95% CI, whole leak groups resampled, identical resamples across models",
+  "cv": {
+    "folds": 5,
+    "groups": "leak groups (original_id + near-duplicate links)",
+    "repeats": 3,
+    "splitter": "StratifiedGroupKFold(shuffle=True, random_state=seed+repeat)",
+    "stratified_by": "true_risk_level"
+  },
+  "data_files_sha256": {
+    "final_split_m2.csv": "65e4c79f7d4f526f6f00591f8bfdb1af3a51b8cc871b5a166d33c4780267886f",
+    "risk_evidence_eval_m2.csv": "abf1541bebe39a429f559abd8e060776a7fef995a1d99ad6deae5f0b84354c65"
+  },
+  "embedding": {
+    "reason": "RuntimeError: encoder 'paraphrase-multilingual-MiniLM-L12-v2' is not in the local Hugging Face cache",
+    "status": "skipped"
+  },
+  "library_versions": {
+    "numpy": "2.5.3",
+    "python": "3.13.18",
+    "scikit-learn": "1.9.1",
+    "sentence-transformers": null
+  },
+  "model_notes": {
+    "banned_phrase_rule": "uses the row's TRUE regulator (oracle input); English-only phrase lists",
+    "majority_class": "fit on training-fold labels only",
+    "tfidf_logreg": "re-fitted per fold and on the train pool; committed .pkl never loaded"
+  },
+  "models": [
+    "majority_class",
+    "banned_phrase_rule",
+    "tfidf_logreg"
+  ],
+  "n_boot": 2000,
+  "outputs_sha256": {
+    "final_eval_confusions_m2.csv": "1212871ad5d734978810071a496eccfdccedc62271fa28bce22de4a2cd7a9476",
+    "final_eval_oof_predictions_m2.csv": "bd28811b1fd8fcb0b50d0f057e43c551a08ee0113de03d56bb6a06b74d9b8399",
+    "final_eval_results_m2.csv": "ec0c6557fda313249cc8d6cb1b49cbe96281f47d72e85a115fe667961b7ec046"
+  },
+  "script": "scripts/run_m2_final_evaluation.py",
+  "seed": 42,
+  "split": {
+    "final_test_rows": 103,
+    "final_test_scored_once": true,
+    "hash_sha256": "379491205811b3b0956dad77db613be2406b992125005c9da80a284230550626",
+    "train_pool_rows": 413,
+    "verification": {
+      "final_test_rows": 103,
+      "leak_groups_straddling": 0,
+      "original_ids_straddling": 0,
+      "rows": 516,
+      "train_pool_rows": 413,
+      "unique_row_ids": 516
+    }
+  }
+}

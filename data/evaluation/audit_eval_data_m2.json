@@ -1,0 +1,64 @@
+{
+  "files": {
+    "eval_rows": 516,
+    "raw_identical_to_eval": true,
+    "backup_identical_to_raw": true,
+    "xlsx": "516 rows in SEBI/RBI/DPDP sheets; 516 exact + 0 near-only matches into eval; eval rows not in xlsx: 0"
+  },
+  "cross_file": {
+    "rewrite_eval_m2.csv[text]": {
+      "exact": 295,
+      "none": 10
+    },
+    "rewrite_eval_set_m1.csv[original_text]": {
+      "none": 10
+    },
+    "canonical_cases_m2.csv[text]": {
+      "none": 12
+    },
+    "verifier_known_cases_m2.csv[original]": {
+      "exact": 23,
+      "none": 40
+    },
+    "verifier_known_cases_m2.csv[rewrite]": {
+      "exact": 20,
+      "none": 43
+    }
+  },
+  "duplicates": {
+    "exact_groups": 0,
+    "near_pairs": 3,
+    "links_cross_original_id": 3,
+    "links_label_conflict": 3
+  },
+  "grouping": {
+    "groups": 276,
+    "sizes": {
+      "2": 240,
+      "1": 36
+    },
+    "combos": {
+      "en+hi": 240,
+      "hi-en": 36
+    },
+    "label_conflict_groups": 0,
+    "hi_en_rows": 36,
+    "hi_en_max_lexical_sim": 0.378
+  },
+  "baseline": {
+    "train_rows_seen": 412,
+    "unseen_rows": 104,
+    "unseen_with_sibling_in_train": 76,
+    "pickle_check": "vocabulary Jaccard vs pickle: refit on the 412 train rows=0.994, refit on all 516 rows=0.864 -> pickle matches the 80% train split, not the full file (exact equality not provable: CSV/pickle have no recorded data hash and the pickle (Sep 24) predates the only committed CSV (Sep 27))",
+    "split_reproduces_held_out_flag": true
+  },
+  "split": {
+    "rows": 516,
+    "unique_row_ids": 516,
+    "original_ids_straddling": 0,
+    "leak_groups_straddling": 0,
+    "final_test_rows": 103,
+    "train_pool_rows": 413,
+    "final_test_in_old_held_out": 25
+  }
+}

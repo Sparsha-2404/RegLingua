@@ -1,0 +1,19 @@
+{
+  "model": "tfidf",
+  "train_rows": 413,
+  "final_test_rows": 103,
+  "final_test_labels_read": false,
+  "seed": 42,
+  "n_boot": 2000,
+  "sklearn": "1.8.0",
+  "eval_sha256": "abf1541bebe39a429f559abd8e060776a7fef995a1d99ad6deae5f0b84354c65",
+  "n_handwritten": 33,
+  "negation_cases_flagged_by_policy_substring_check": 3,
+  "limitations": [
+    "variants are sampled (3 per row per perturbation), not exhaustive",
+    "typos/casing do not touch Devanagari, so pure-Hindi rows are mostly 'not effective' for them",
+    "B01-B06 (banned-phrase statements) were added after the first run to give directional_replace_banned usable power (only 1 final_test row contains a banned phrase)",
+    "hand-written expectations marked judgement are opinions, reported separately from strict/documented ones",
+    "directional/invariance checks compare the model with itself, not with gold labels"
+  ]
+}

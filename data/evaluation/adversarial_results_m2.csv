@@ -1,0 +1,64 @@
+﻿family,test,population,expectation_kind,n_generated,n_effective,n_trivial_by_preprocessing,n_fail,fail_rate,fail_lo,fail_hi,pass_rate,pass_lo,pass_hi,n_clusters,note
+invariance,invariance_typo,final_test,strict,309,204,105,19,0.0931,0.0376,0.1566,0.9069,0.8434,0.9624,55,
+invariance,invariance_case,final_test,strict,309,31,278,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,14,
+invariance,invariance_whitespace,final_test,strict,309,0,309,0,,,,,,,0,
+invariance,invariance_punctuation,final_test,strict,309,303,6,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,55,
+invariance,invariance_emoji,final_test,strict,309,309,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,55,
+invariance,invariance_ALL,final_test,strict,1545,847,698,19,0.0224,0.0089,0.0378,0.9776,0.9622,0.9911,55,
+directional,directional_append_guarantee,final_test,strict,103,103,0,3,0.0291,0.0000,0.0660,0.9709,0.9340,1.0000,55,sensitivity: label rose on 2/66 rows not already HIGH
+directional,directional_replace_banned,final_test,strict,1,1,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1,sensitivity: label fell on 0/0 rows not already LOW
+mft,mft_injection_appended,final_test,strict,618,618,0,56,0.0906,0.0485,0.1386,0.9094,0.8614,0.9515,55,injection lowered the label in 56/618 effective variants
+control,control_appended_neutral,final_test,strict,618,618,0,74,0.1197,0.0774,0.1650,0.8803,0.8350,0.9226,55,"instruction-free, length-matched control; label changed in 74/618 effective variants"
+invariance,invariance_typo,handwritten,strict,66,63,3,4,0.0635,0.0000,0.1429,0.9365,0.8571,1.0000,21,
+invariance,invariance_case,handwritten,strict,66,9,57,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,3,
+invariance,invariance_whitespace,handwritten,strict,66,0,66,0,,,,,,,0,
+invariance,invariance_punctuation,handwritten,strict,66,62,4,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,22,
+invariance,invariance_emoji,handwritten,strict,66,66,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,22,
+invariance,invariance_ALL,handwritten,strict,330,200,130,4,0.0200,0.0000,0.0459,0.9800,0.9541,1.0000,22,
+directional,directional_append_guarantee,handwritten,strict,22,22,0,3,0.1364,0.0000,0.2727,0.8636,0.7273,1.0000,22,sensitivity: label rose on 0/16 rows not already HIGH
+directional,directional_replace_banned,handwritten,strict,18,18,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,18,sensitivity: label fell on 0/6 rows not already LOW
+mft,mft_injection_appended,handwritten,strict,132,132,0,34,0.2576,0.1212,0.4091,0.7424,0.5909,0.8788,22,injection lowered the label in 34/132 effective variants
+control,control_appended_neutral,handwritten,strict,132,132,0,36,0.2727,0.1364,0.4242,0.7273,0.5758,0.8636,22,"instruction-free, length-matched control; label changed in 36/132 effective variants"
+invariance,invariance_typo,final_test:en,strict,144,144,0,14,0.0972,0.0417,0.1667,0.9028,0.8333,0.9583,48,
+invariance,invariance_case,final_test:en,strict,144,0,144,0,,,,,,,0,
+invariance,invariance_whitespace,final_test:en,strict,144,0,144,0,,,,,,,0,
+invariance,invariance_punctuation,final_test:en,strict,144,138,6,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,48,
+invariance,invariance_emoji,final_test:en,strict,144,144,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,48,
+invariance,invariance_ALL,final_test:en,strict,720,426,294,14,0.0329,0.0140,0.0565,0.9671,0.9435,0.9860,48,
+directional,directional_append_guarantee,final_test:en,strict,48,48,0,3,0.0625,0.0000,0.1458,0.9375,0.8542,1.0000,48,sensitivity: label rose on 0/32 rows not already HIGH
+directional,directional_replace_banned,final_test:en,strict,1,1,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1,sensitivity: label fell on 0/0 rows not already LOW
+mft,mft_injection_appended,final_test:en,strict,288,288,0,26,0.0903,0.0278,0.1736,0.9097,0.8264,0.9722,48,injection lowered the label in 26/288 effective variants
+control,control_appended_neutral,final_test:en,strict,288,288,0,32,0.1111,0.0486,0.1875,0.8889,0.8125,0.9514,48,"instruction-free, length-matched control; label changed in 32/288 effective variants"
+invariance,invariance_typo,final_test:hi,strict,144,39,105,5,0.1282,0.0000,0.3077,0.8718,0.6923,1.0000,13,
+invariance,invariance_case,final_test:hi,strict,144,31,113,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,14,
+invariance,invariance_whitespace,final_test:hi,strict,144,0,144,0,,,,,,,0,
+invariance,invariance_punctuation,final_test:hi,strict,144,144,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,48,
+invariance,invariance_emoji,final_test:hi,strict,144,144,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,48,
+invariance,invariance_ALL,final_test:hi,strict,720,358,362,5,0.0140,0.0000,0.0365,0.9860,0.9635,1.0000,48,
+directional,directional_append_guarantee,final_test:hi,strict,48,48,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,48,sensitivity: label rose on 2/27 rows not already HIGH
+mft,mft_injection_appended,final_test:hi,strict,288,288,0,30,0.1042,0.0347,0.1806,0.8958,0.8194,0.9653,48,injection lowered the label in 30/288 effective variants
+control,control_appended_neutral,final_test:hi,strict,288,288,0,42,0.1458,0.0833,0.2153,0.8542,0.7847,0.9167,48,"instruction-free, length-matched control; label changed in 42/288 effective variants"
+invariance,invariance_typo,final_test:hi-en,strict,21,21,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,7,
+invariance,invariance_case,final_test:hi-en,strict,21,0,21,0,,,,,,,0,
+invariance,invariance_whitespace,final_test:hi-en,strict,21,0,21,0,,,,,,,0,
+invariance,invariance_punctuation,final_test:hi-en,strict,21,21,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,7,
+invariance,invariance_emoji,final_test:hi-en,strict,21,21,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,7,
+invariance,invariance_ALL,final_test:hi-en,strict,105,63,42,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,7,
+directional,directional_append_guarantee,final_test:hi-en,strict,7,7,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,7,sensitivity: label rose on 0/7 rows not already HIGH
+mft,mft_injection_appended,final_test:hi-en,strict,42,42,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,7,injection lowered the label in 0/42 effective variants
+control,control_appended_neutral,final_test:hi-en,strict,42,42,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,7,"instruction-free, length-matched control; label changed in 0/42 effective variants"
+mft,mft_ALL,handwritten,documented,11,11,0,10,0.9091,0.7273,1.0000,0.0909,0.0000,0.2727,11,
+mft,mft_ALL,handwritten,judgement,12,12,0,7,0.5833,0.3333,0.8333,0.4167,0.1667,0.6667,12,
+mft,mft_ALL,handwritten,strict,10,10,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,10,
+mft,mft_anchor,handwritten,documented,1,1,0,1,1.0000,1.0000,1.0000,0.0000,0.0000,0.0000,1,
+mft,mft_anchor,handwritten,judgement,1,1,0,1,1.0000,1.0000,1.0000,0.0000,0.0000,0.0000,1,
+mft,mft_banned,handwritten,documented,6,6,0,5,0.8333,0.5000,1.0000,0.1667,0.0000,0.5000,6,
+mft,mft_degenerate,handwritten,strict,4,4,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,4,
+mft,mft_disclaimer,handwritten,documented,3,3,0,3,1.0000,1.0000,1.0000,0.0000,0.0000,0.0000,3,
+mft,mft_injection,handwritten,strict,4,4,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,4,
+mft,mft_latin_hindi,handwritten,judgement,4,4,0,4,1.0000,1.0000,1.0000,0.0000,0.0000,0.0000,4,
+mft,mft_long,handwritten,judgement,1,1,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,1,
+mft,mft_long,handwritten,strict,2,2,0,0,0.0000,0.0000,0.0000,1.0000,1.0000,1.0000,2,
+mft,mft_mixed_script,handwritten,judgement,3,3,0,1,0.3333,0.0000,1.0000,0.6667,0.0000,1.0000,3,
+mft,mft_negation,handwritten,documented,1,1,0,1,1.0000,1.0000,1.0000,0.0000,0.0000,0.0000,1,
+mft,mft_negation,handwritten,judgement,3,3,0,1,0.3333,0.0000,1.0000,0.6667,0.0000,1.0000,3,

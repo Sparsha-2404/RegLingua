@@ -1,0 +1,151 @@
+CLASSIFICATION ERROR ANALYSIS (M2, Day 12) -- model=tfidf, OUT-OF-FOLD on the train pool only
+data: risk_evidence_eval_m2.csv (516 rows; same rows as RegLingua_M1_FINAL.xlsx per the data audit) -> train_pool 413 rows / 219 leak groups; final_test (103 rows) untouched
+protocol: StratifiedGroupKFold(k=5, shuffle, seed=42) by leak group; bootstrap 2000x resampling leak groups, 95% percentile CI; sklearn 1.8.0; eval sha256 abf1541bebe3
+
+1. OVERALL (OOF)
+  accuracy: 0.588  [0.528, 0.643]
+  macro_f1: 0.617  [0.556, 0.670]
+  false_compliant_rate: 0.328  [0.258, 0.402]
+  confusion (rows=true, cols=pred; LOW MEDIUM HIGH): LOW: [102, 5, 71] | MEDIUM: [12, 43, 10] | HIGH: [65, 7, 98]
+  errors: 170/413
+
+2. TOP CONFUSION PAIRS (true->pred)
+  LOW->HIGH       71     42% of errors     40% of true LOW   
+  HIGH->LOW       65     38% of errors     38% of true HIGH  
+  MEDIUM->LOW     12     7% of errors      18% of true MEDIUM
+  MEDIUM->HIGH    10     6% of errors      15% of true MEDIUM
+  HIGH->MEDIUM    7      4% of errors      4% of true HIGH   
+  LOW->MEDIUM     5      3% of errors      3% of true LOW    
+
+3. FALSE-COMPLIANT vs FALSE-RISKY
+  false_compliant (MEDIUM/HIGH predicted LOW): 77/235 = 32.8% of risky rows  (HIGH->LOW 65, MEDIUM->LOW 12)
+  false_risky (LOW predicted MEDIUM/HIGH): 76/178 = 42.7% of LOW rows
+  severity-only: under_severity HIGH->MEDIUM 7, over_severity MEDIUM->HIGH 10
+  WORSE for this project: false-compliant. A risky claim cleared as LOW is published/shipped un-reviewed, and the verifier (core/verification_policy.py check 1) passes a rewrite when the classifier says LOW, so one false LOW can also wave through a bad rewrite. A false-risky costs only analyst review time.
+
+4. ERROR RATE vs CONFIDENCE BAND (max predicted probability)
+  <0.50       310    130      41.9%     [35.6%, 48.1%]    FC 54 
+  0.50-0.60   97     39       40.2%     [29.4%, 51.6%]    FC 23 
+  0.60-0.70   6      1        16.7%     [0.0%, 50.0%]     FC 0  
+  0.70-0.80   0      0        -         -                 FC 0  
+  >=0.80      0      0        -         -                 FC 0  
+  errors with conf>=0.6: 1
+  errors with conf>=0.7: 0
+  errors with conf>=0.8: 0
+  errors with conf>=0.9: 0
+
+5. ERRORS BY SLICE (error rate [95% CI]; FC = false-compliant / risky rows; FR = false-risky / LOW rows)
+ by language
+  en              192    67     34.9%    [28.4%, 41.9%]    FC 31/107  FR 31/85 
+  hi              192    89     46.4%    [39.3%, 53.4%]    FC 43/107  FR 40/85 
+  hi-en           29     14     48.3%    [31.0%, 65.5%]    FC 3/21    FR 5/8   
+ by regulator
+  DPDP            138    57     41.3%    [31.3%, 52.2%]    FC 31/77   FR 24/61 
+  RBI             135    51     37.8%    [27.3%, 48.6%]    FC 25/74   FR 21/61 
+  SEBI            140    62     44.3%    [34.7%, 54.2%]    FC 21/84   FR 31/56 
+ by true_risk
+  HIGH            170    72     42.4%    [33.5%, 52.1%]    FC 65/170  FR 0/0   
+  LOW             178    76     42.7%    [34.1%, 51.7%]    FC 0/0     FR 76/178
+  MEDIUM          65     22     33.8%    [20.7%, 47.5%]    FC 12/65   FR 0/0   
+ by language x regulator
+  en|DPDP         64     23     35.9%    [24.2%, 48.4%]    FC 13/35   FR 10/29 
+  en|RBI          63     22     34.9%    [23.8%, 47.6%]    FC 9/34    FR 10/29 
+  en|SEBI         65     22     33.8%    [21.5%, 46.2%]    FC 9/38    FR 11/27 
+  hi-en|DPDP      10     5      50.0%    [20.0%, 80.0%]    FC 1/7     FR 3/3   
+  hi-en|RBI       9      2      22.2%    [0.0%, 55.6%]     FC 1/6     FR 0/3   
+  hi-en|SEBI      10     7      70.0%    [40.0%, 100.0%]   FC 1/8     FR 2/2   
+  hi|DPDP         64     29     45.3%    [32.3%, 58.7%]    FC 17/35   FR 11/29 
+  hi|RBI          63     27     42.9%    [30.2%, 55.6%]    FC 15/34   FR 11/29 
+  hi|SEBI         65     33     50.8%    [38.5%, 63.1%]    FC 11/38   FR 18/27 
+
+6. MOST DISCRIMINATIVE TF-IDF TERMS BEHIND THE TOP 3 ERROR TYPES
+  score = sum over that type's misclassified docs of tfidf * (coef[pred]-coef[true]) from the fold model that made the error; n_err = error docs containing the term; n_ok = correctly-classified docs of the TRUE class containing it.
+ LOW->HIGH (71 errors)
+  हम                            2.309     39      41    
+  नह                            1.918     7       2     
+  not                           1.107     5       0     
+  हक                            0.879     13      4     
+  do                            0.750     4       0     
+  do not                        0.750     4       0     
+  नह करत                        0.660     3       0     
+  we do                         0.548     2       0     
+  आपक                           0.476     2       0     
+  अपन                           0.420     8       8     
+  बन                            0.418     4       0     
+  उध                            0.352     8       8     
+ HIGH->LOW (65 errors)
+  और                            1.715     12      6     
+  करन                           1.473     9       6     
+  data                          0.896     15      19    
+  and                           0.786     9       8     
+  data principals               0.762     4       3     
+  principals                    0.762     4       3     
+  अन                            0.559     7       7     
+  टल                            0.548     7       3     
+  टल ऋण                         0.548     7       3     
+  टर                            0.477     1       0     
+  उपय गकर                       0.469     7       2     
+  गकर                           0.469     7       2     
+ MEDIUM->LOW (12 errors)
+  disclose                      0.270     2       0     
+  we                            0.264     5       14    
+  पहल                           0.202     2       5     
+  करत                           0.178     3       6     
+  data                          0.177     5       13    
+  करन                           0.169     1       3     
+  of                            0.165     3       3     
+  kyc                           0.152     2       0     
+  जब                            0.147     1       0     
+  we disclose                   0.140     1       0     
+  borrower                      0.139     2       1     
+  हम                            0.134     5       12    
+
+6b. DIAGNOSTICS (descriptive, same OOF rows)
+  polarity-cue lexicon: not|no|never|without|cannot|nahi|nahin|bina|नहीं|नही|बिना
+  error rate with cue: 70/165 = 42.4%
+  error rate no cue: 100/248 = 40.3%
+  LOW->HIGH: cue in 15/71 errors (21%) vs 7/102 correct true-LOW rows (7%)
+  HIGH->LOW: cue in 43/65 errors (66%) vs 85/98 correct true-HIGH rows (87%)
+  MEDIUM->LOW: cue in 2/12 errors (17%) vs 3/43 correct true-MEDIUM rows (7%)
+  tokenization: default TfidfVectorizer token_pattern does not keep 3286/3697 = 89% of Devanagari words as one token (vowel signs are not \w) -- the fragments seen in section 6 (e.g. नह, गकर).
+
+7. 10 REPRESENTATIVE EXAMPLES PER TOP ERROR TYPE (round-robin over language x regulator, most confident first, distinct original_id first)
+ LOW->HIGH
+   1. EVALQ0369 DPDP025 en/DPDP conf=0.57 | We do not track or behaviourally monitor children or direct targeted advertising at children
+   2. EVALQ0209 RBI037 en/RBI conf=0.48 | We provide borrowers with an option to revoke consent previously given for collecting their personal data.
+   3. EVALQ0021 SEBI0021 en/SEBI conf=0.63 | We keep client information confidential and do not share it without the required permission
+   4. EVALQ0483 DPDP069 hi/DPDP conf=0.57 | हमारी गोपनीयता सूचना एकत्र किए जाने वाले व्यक्तिगत डेटा और उसके प्रसंस्करण के विशिष्ट उद्देश्यों का स्पष्ट वर्
+   5. EVALQ0295 RBI053 hi/RBI conf=0.54 | हम उधारकर्ता को प्रदर्शित प्रत्येक डिजिटल ऋण प्रस्ताव के लिए मुख्य तथ्य विवरण (KFS) का लिंक प्रदान करते हैं।
+   6. EVALQ0135 SEBI0065 hi/SEBI conf=0.58 | हम केवल अपनी निवेश सलाहकार फीस के लिए भुगतान स्वीकार करते हैं और ग्राहकों की ओर से अपनी खाते में धन या प्रतिभू
+   7. EVALQ0488 DPDP074 hi-en/DPDP conf=0.37 | Data sirf stated purpose ke liye use karte hain, bina extra purpose ke reuse nahi karte.
+   8. EVALQ0355 DPDP011 en/DPDP conf=0.48 | We implement reasonable security safeguards to protect users' personal data from unauthorized access or disclo
+   9. EVALQ0203 RBI031 en/RBI conf=0.45 | Our lending service provider completes enhanced due diligence before entering into a digital lending agreement
+  10. EVALQ0063 SEBI0063 en/SEBI conf=0.56 | We do not guarantee returns, profits or risk-free investments through our investment advisory services.
+ HIGH->LOW
+   1. EVALQ0396 DPDP052 en/DPDP conf=0.57 | We make it difficult for Data Principals to exercise their rights relating to access, correction, erasure and 
+   2. EVALQ0224 RBI052 en/RBI conf=0.52 | We show borrowers a loan offer without providing enough information about the lender, APR, repayment obligatio
+   3. EVALQ0066 SEBI0066 en/SEBI conf=0.52 | We ask clients to transfer securities to our account so that we can manage their investments on their behalf.
+   4. EVALQ0476 DPDP062 hi/DPDP conf=0.58 | हम Data Principals को वैध कानूनी आधार के बिना अधिनियम द्वारा प्रदान की गई नामांकन व्यवस्था का उपयोग करने से रो
+   5. EVALQ0270 RBI028 hi/RBI conf=0.55 | हम उधारकर्ता की आर्थिक प्रोफ़ाइल या ऋण-योग्यता का आकलन किए बिना डिजिटल ऋण प्रदान करते हैं।
+   6. EVALQ0088 SEBI0018 hi/SEBI conf=0.52 | हम SEBI के साथ पंजीकृत हुए बिना निवेश सलाहकार सेवाएँ प्रदान करते हैं।
+   7. EVALQ0491 DPDP077 hi-en/DPDP conf=0.35 | Personal data ko business need khatam hone ke baad bhi indefinitely retain karte hain.
+   8. EVALQ0320 RBI078 hi-en/RBI conf=0.44 | Cooling-off period mein exit karoge toh ek extra exit fee lagegi jo pehle clearly disclose nahi ki gayi thi.
+   9. EVALQ0141 SEBI071 hi-en/SEBI conf=0.35 | Bas hamare saath invest karo, guaranteed 30% return milega.
+  10. EVALQ0400 DPDP056 en/DPDP conf=0.54 | We ignore valid requests from Data Principals to correct inaccurate personal data.
+ MEDIUM->LOW
+   1. EVALQ0507 DPDP088 en/DPDP conf=0.38 | We notify users about personal data breaches, although the timing of notification may depend on when the incid
+   2. EVALQ0333 RBI087 en/RBI conf=0.39 | Borrower data is stored in India, but a limited part of the processing may involve systems located outside Ind
+   3. EVALQ0159 SEBI086 en/SEBI conf=0.37 | We disclose potential conflicts in our documentation, but the disclosure appears in a detailed section rather 
+   4. EVALQ0512 DPDP090 hi/DPDP conf=0.49 | हम data-access requests के लिए channel देते हैं, लेकिन information disclose करने से पहले identity verification
+   5. EVALQ0292 RBI050 hi/RBI conf=0.37 | हम समान उधारकर्ताओं के लिए अपनी ऋणदाता-मिलान व्यवस्था में बदलाव को दस्तावेज़ित किए बिना बदल देते हैं।
+   6. EVALQ0162 SEBI087 hi/SEBI conf=0.45 | हम सामान्यतः सलाह देने से पहले KYC पूरा करते हैं, लेकिन कुछ मामलों में दस्तावेज़ सत्यापन पूरा होने से पहले प्र
+   7. EVALQ0503 DPDP086 en/DPDP conf=0.36 | We use personal data for the stated service purpose, while a limited additional use may occur where another ap
+   8. EVALQ0062 SEBI0062 en/SEBI conf=0.36 | We change a client’s fee mode without checking whether the resulting fee remains within the applicable maximum
+   9. EVALQ0344 RBI092 hi/RBI conf=0.35 | हम borrowers को cooling-off option देते हैं, लेकिन applicable exit terms specific digital loan arrangement पर 
+  10. EVALQ0156 SEBI084 hi/SEBI conf=0.42 | जब हमें ग्राहक की वित्तीय स्थिति में महत्वपूर्ण बदलाव की जानकारी मिलती है तो हम जोखिम प्रोफ़ाइल अपडेट करते हैं
+
+8. SUSPECTED LABEL ERRORS (for M1 review; NO label changed)
+  rule: OOF error with model confidence >= 0.542 (90th percentile of all OOF confidences; max OOF confidence is 0.678, so a fixed 0.7/0.8 cut-off selects nothing): 15 rows (14 original_ids); 11 of them have a translation sibling mislabelled the same way.
+  all-versions-wrong-the-same-way: 50/192 multi-version original_ids (any confidence)
+  rows also in a near-duplicate pair with conflicting labels: 0
+  caution: a high-confidence disagreement is a REVIEW CANDIDATE, not evidence the label is wrong -- the model can be confidently wrong (e.g. keyword shortcuts).

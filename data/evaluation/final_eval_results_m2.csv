@@ -1,0 +1,338 @@
+phase,scope,group,model,comparator,metric,value,ci_lo,ci_hi,n,n_valid,p_value,verdict,note
+cv_oof,overall,all,majority_class,,accuracy,0.430993,0.365852,0.497573,1239,2000,,,
+cv_oof,overall,all,majority_class,,macro_f1,0.200790,0.178571,0.221502,1239,2000,,,
+cv_oof,overall,all,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,1239,2000,,,
+cv_oof,overall,all,banned_phrase_rule,,accuracy,0.433414,0.368675,0.500000,1239,2000,,,
+cv_oof,overall,all,banned_phrase_rule,,macro_f1,0.211933,0.186820,0.237216,1239,2000,,,
+cv_oof,overall,all,banned_phrase_rule,,false_compliant_rate,0.982979,0.964758,0.996032,1239,2000,,,
+cv_oof,overall,all,tfidf_logreg,,accuracy,0.602098,0.552076,0.650057,1239,2000,,,
+cv_oof,overall,all,tfidf_logreg,,macro_f1,0.632044,0.579215,0.679149,1239,2000,,,
+cv_oof,overall,all,tfidf_logreg,,false_compliant_rate,0.307801,0.246131,0.369599,1239,2000,,,
+cv_oof,class,LOW,majority_class,,precision,0.430993,0.365852,0.497573,534,2000,,,n = true support of LOW
+cv_oof,class,LOW,majority_class,,recall,1.000000,1.000000,1.000000,534,2000,,,n = true support of LOW
+cv_oof,class,LOW,majority_class,,f1,0.602369,0.535713,0.664506,534,2000,,,n = true support of LOW
+cv_oof,class,MEDIUM,majority_class,,precision,0.000000,0.000000,0.000000,195,2000,,,n = true support of MEDIUM
+cv_oof,class,MEDIUM,majority_class,,recall,0.000000,0.000000,0.000000,195,2000,,,n = true support of MEDIUM
+cv_oof,class,MEDIUM,majority_class,,f1,0.000000,0.000000,0.000000,195,2000,,,n = true support of MEDIUM
+cv_oof,class,HIGH,majority_class,,precision,0.000000,0.000000,0.000000,510,2000,,,n = true support of HIGH
+cv_oof,class,HIGH,majority_class,,recall,0.000000,0.000000,0.000000,510,2000,,,n = true support of HIGH
+cv_oof,class,HIGH,majority_class,,f1,0.000000,0.000000,0.000000,510,2000,,,n = true support of HIGH
+cv_oof,class,LOW,banned_phrase_rule,,precision,0.432432,0.366744,0.500030,534,2000,,,n = true support of LOW
+cv_oof,class,LOW,banned_phrase_rule,,recall,0.988764,0.971906,1.000000,534,2000,,,n = true support of LOW
+cv_oof,class,LOW,banned_phrase_rule,,f1,0.601709,0.534539,0.664463,534,2000,,,n = true support of LOW
+cv_oof,class,MEDIUM,banned_phrase_rule,,precision,0.000000,0.000000,0.000000,195,2000,,,n = true support of MEDIUM
+cv_oof,class,MEDIUM,banned_phrase_rule,,recall,0.000000,0.000000,0.000000,195,2000,,,n = true support of MEDIUM
+cv_oof,class,MEDIUM,banned_phrase_rule,,f1,0.000000,0.000000,0.000000,195,2000,,,n = true support of MEDIUM
+cv_oof,class,HIGH,banned_phrase_rule,,precision,0.500000,0.000000,1.000000,510,2000,,,n = true support of HIGH
+cv_oof,class,HIGH,banned_phrase_rule,,recall,0.017647,0.000000,0.039806,510,2000,,,n = true support of HIGH
+cv_oof,class,HIGH,banned_phrase_rule,,f1,0.034091,0.000000,0.075686,510,2000,,,n = true support of HIGH
+cv_oof,class,LOW,tfidf_logreg,,precision,0.585086,0.496102,0.674702,534,2000,,,n = true support of LOW
+cv_oof,class,LOW,tfidf_logreg,,recall,0.573034,0.497003,0.646414,534,2000,,,n = true support of LOW
+cv_oof,class,LOW,tfidf_logreg,,f1,0.578997,0.507842,0.644539,534,2000,,,n = true support of LOW
+cv_oof,class,MEDIUM,tfidf_logreg,,precision,0.782857,0.664885,0.882353,195,2000,,,n = true support of MEDIUM
+cv_oof,class,MEDIUM,tfidf_logreg,,recall,0.702564,0.578415,0.818195,195,2000,,,n = true support of MEDIUM
+cv_oof,class,MEDIUM,tfidf_logreg,,f1,0.740541,0.642055,0.823873,195,2000,,,n = true support of MEDIUM
+cv_oof,class,HIGH,tfidf_logreg,,precision,0.560074,0.468401,0.647177,510,2000,,,n = true support of HIGH
+cv_oof,class,HIGH,tfidf_logreg,,recall,0.594118,0.516537,0.672551,510,2000,,,n = true support of HIGH
+cv_oof,class,HIGH,tfidf_logreg,,f1,0.576594,0.501548,0.642730,510,2000,,,n = true support of HIGH
+cv_oof,paired_overall,all,tfidf_logreg,banned_phrase_rule,accuracy,0.168684,0.081316,0.256780,1239,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_overall,all,tfidf_logreg,banned_phrase_rule,macro_f1,0.420110,0.357714,0.473747,1239,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_overall,all,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.675177,-0.740745,-0.608127,1239,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_overall,all,tfidf_logreg,majority_class,accuracy,0.171106,0.084931,0.258284,1239,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_overall,all,tfidf_logreg,majority_class,macro_f1,0.431254,0.372540,0.483257,1239,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_overall,all,tfidf_logreg,majority_class,false_compliant_rate,-0.692199,-0.753869,-0.630401,1239,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,language,en,majority_class,,accuracy,0.442708,0.374342,0.510417,576,2000,,,
+cv_oof,language,en,majority_class,,macro_f1,0.204573,0.181586,0.225287,576,2000,,,
+cv_oof,language,en,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,576,2000,,,
+cv_oof,language,en,banned_phrase_rule,,accuracy,0.442708,0.373057,0.507853,576,2000,,,
+cv_oof,language,en,banned_phrase_rule,,macro_f1,0.218559,0.186731,0.251329,576,2000,,,
+cv_oof,language,en,banned_phrase_rule,,false_compliant_rate,0.981308,0.952830,1.000000,576,2000,,,
+cv_oof,language,en,tfidf_logreg,,accuracy,0.680556,0.623037,0.735104,576,2000,,,
+cv_oof,language,en,tfidf_logreg,,macro_f1,0.713574,0.651157,0.765511,576,2000,,,
+cv_oof,language,en,tfidf_logreg,,false_compliant_rate,0.236760,0.169869,0.310359,576,2000,,,
+cv_oof,paired_language,en,tfidf_logreg,banned_phrase_rule,accuracy,0.237847,0.145833,0.331606,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,en,tfidf_logreg,banned_phrase_rule,macro_f1,0.495015,0.423300,0.560109,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,en,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.744548,-0.820513,-0.657486,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_language,en,tfidf_logreg,majority_class,accuracy,0.237847,0.146043,0.333333,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,en,tfidf_logreg,majority_class,macro_f1,0.509001,0.442838,0.567449,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,en,tfidf_logreg,majority_class,false_compliant_rate,-0.763240,-0.830131,-0.689641,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,language,hi,majority_class,,accuracy,0.442708,0.374342,0.510417,576,2000,,,
+cv_oof,language,hi,majority_class,,macro_f1,0.204573,0.181586,0.225287,576,2000,,,
+cv_oof,language,hi,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,576,2000,,,
+cv_oof,language,hi,banned_phrase_rule,,accuracy,0.442708,0.374342,0.510417,576,2000,,,
+cv_oof,language,hi,banned_phrase_rule,,macro_f1,0.204573,0.181586,0.225287,576,2000,,,
+cv_oof,language,hi,banned_phrase_rule,,false_compliant_rate,1.000000,1.000000,1.000000,576,2000,,,
+cv_oof,language,hi,tfidf_logreg,,accuracy,0.534722,0.472212,0.596868,576,2000,,,
+cv_oof,language,hi,tfidf_logreg,,macro_f1,0.572196,0.492293,0.638739,576,2000,,,
+cv_oof,language,hi,tfidf_logreg,,false_compliant_rate,0.414330,0.339222,0.498471,576,2000,,,
+cv_oof,paired_language,hi,tfidf_logreg,banned_phrase_rule,accuracy,0.092014,0.000000,0.184806,576,2000,0.056000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi,tfidf_logreg,banned_phrase_rule,macro_f1,0.367623,0.287303,0.437981,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.585670,-0.660778,-0.501529,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_language,hi,tfidf_logreg,majority_class,accuracy,0.092014,0.000000,0.184806,576,2000,0.056000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi,tfidf_logreg,majority_class,macro_f1,0.367623,0.287303,0.437981,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi,tfidf_logreg,majority_class,false_compliant_rate,-0.585670,-0.660778,-0.501529,576,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,language,hi-en,majority_class,,accuracy,0.275862,0.137931,0.448276,87,2000,,,
+cv_oof,language,hi-en,majority_class,,macro_f1,0.144144,0.080808,0.206349,87,2000,,,
+cv_oof,language,hi-en,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,87,2000,,,
+cv_oof,language,hi-en,banned_phrase_rule,,accuracy,0.310345,0.137931,0.482759,87,2000,,,
+cv_oof,language,hi-en,banned_phrase_rule,,macro_f1,0.207937,0.098039,0.333333,87,2000,,,
+cv_oof,language,hi-en,banned_phrase_rule,,false_compliant_rate,0.904762,0.772640,1.000000,87,2000,,,
+cv_oof,language,hi-en,tfidf_logreg,,accuracy,0.528736,0.367816,0.689655,87,2000,,,
+cv_oof,language,hi-en,tfidf_logreg,,macro_f1,0.460430,0.290735,0.608652,87,2000,,,
+cv_oof,language,hi-en,tfidf_logreg,,false_compliant_rate,0.126984,0.015152,0.266731,87,2000,,,
+cv_oof,paired_language,hi-en,tfidf_logreg,banned_phrase_rule,accuracy,0.218391,-0.057471,0.494253,87,2000,0.149000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi-en,tfidf_logreg,banned_phrase_rule,macro_f1,0.252493,0.034264,0.460799,87,2000,0.032000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi-en,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.777778,-0.954545,-0.543860,87,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_language,hi-en,tfidf_logreg,majority_class,accuracy,0.252874,-0.011494,0.517241,87,2000,0.074000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi-en,tfidf_logreg,majority_class,macro_f1,0.316285,0.130788,0.485208,87,2000,0.001000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_language,hi-en,tfidf_logreg,majority_class,false_compliant_rate,-0.873016,-0.984848,-0.733269,87,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,regulator,DPDP,majority_class,,accuracy,0.442029,0.328464,0.557971,414,2000,,,
+cv_oof,regulator,DPDP,majority_class,,macro_f1,0.204355,0.164834,0.238760,414,2000,,,
+cv_oof,regulator,DPDP,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,414,2000,,,
+cv_oof,regulator,DPDP,banned_phrase_rule,,accuracy,0.442029,0.328464,0.557971,414,2000,,,
+cv_oof,regulator,DPDP,banned_phrase_rule,,macro_f1,0.204355,0.164834,0.238760,414,2000,,,
+cv_oof,regulator,DPDP,banned_phrase_rule,,false_compliant_rate,1.000000,1.000000,1.000000,414,2000,,,
+cv_oof,regulator,DPDP,tfidf_logreg,,accuracy,0.601449,0.512433,0.686724,414,2000,,,
+cv_oof,regulator,DPDP,tfidf_logreg,,macro_f1,0.635684,0.545110,0.708611,414,2000,,,
+cv_oof,regulator,DPDP,tfidf_logreg,,false_compliant_rate,0.402597,0.291183,0.517094,414,2000,,,
+cv_oof,paired_regulator,DPDP,tfidf_logreg,banned_phrase_rule,accuracy,0.159420,0.026162,0.290406,414,2000,0.025000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,DPDP,tfidf_logreg,banned_phrase_rule,macro_f1,0.431329,0.332602,0.511396,414,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,DPDP,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.597403,-0.708817,-0.482906,414,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_regulator,DPDP,tfidf_logreg,majority_class,accuracy,0.159420,0.026162,0.290406,414,2000,0.025000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,DPDP,tfidf_logreg,majority_class,macro_f1,0.431329,0.332602,0.511396,414,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,DPDP,tfidf_logreg,majority_class,false_compliant_rate,-0.597403,-0.708817,-0.482906,414,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,regulator,RBI,majority_class,,accuracy,0.451852,0.333333,0.569369,405,2000,,,
+cv_oof,regulator,RBI,majority_class,,macro_f1,0.207483,0.166667,0.241867,405,2000,,,
+cv_oof,regulator,RBI,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,405,2000,,,
+cv_oof,regulator,RBI,banned_phrase_rule,,accuracy,0.451852,0.333333,0.569369,405,2000,,,
+cv_oof,regulator,RBI,banned_phrase_rule,,macro_f1,0.207483,0.166667,0.241867,405,2000,,,
+cv_oof,regulator,RBI,banned_phrase_rule,,false_compliant_rate,1.000000,1.000000,1.000000,405,2000,,,
+cv_oof,regulator,RBI,tfidf_logreg,,accuracy,0.609877,0.517157,0.701768,405,2000,,,
+cv_oof,regulator,RBI,tfidf_logreg,,macro_f1,0.636909,0.524497,0.728069,405,2000,,,
+cv_oof,regulator,RBI,tfidf_logreg,,false_compliant_rate,0.319820,0.213542,0.441450,405,2000,,,
+cv_oof,paired_regulator,RBI,tfidf_logreg,banned_phrase_rule,accuracy,0.158025,0.009875,0.309011,405,2000,0.034000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,RBI,tfidf_logreg,banned_phrase_rule,macro_f1,0.429426,0.314113,0.531309,405,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,RBI,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.680180,-0.786458,-0.558550,405,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_regulator,RBI,tfidf_logreg,majority_class,accuracy,0.158025,0.009875,0.309011,405,2000,0.034000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,RBI,tfidf_logreg,majority_class,macro_f1,0.429426,0.314113,0.531309,405,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,RBI,tfidf_logreg,majority_class,false_compliant_rate,-0.680180,-0.786458,-0.558550,405,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,regulator,SEBI,majority_class,,accuracy,0.400000,0.289655,0.507435,420,2000,,,
+cv_oof,regulator,SEBI,majority_class,,macro_f1,0.190476,0.149733,0.224414,420,2000,,,
+cv_oof,regulator,SEBI,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,420,2000,,,
+cv_oof,regulator,SEBI,banned_phrase_rule,,accuracy,0.407143,0.299270,0.510949,420,2000,,,
+cv_oof,regulator,SEBI,banned_phrase_rule,,macro_f1,0.220724,0.167180,0.275993,420,2000,,,
+cv_oof,regulator,SEBI,banned_phrase_rule,,false_compliant_rate,0.952381,0.898734,0.989250,420,2000,,,
+cv_oof,regulator,SEBI,tfidf_logreg,,accuracy,0.595238,0.507140,0.673813,420,2000,,,
+cv_oof,regulator,SEBI,tfidf_logreg,,macro_f1,0.616352,0.519433,0.693688,420,2000,,,
+cv_oof,regulator,SEBI,tfidf_logreg,,false_compliant_rate,0.210317,0.124029,0.306670,420,2000,,,
+cv_oof,paired_regulator,SEBI,tfidf_logreg,banned_phrase_rule,accuracy,0.188095,0.030093,0.343069,420,2000,0.013000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,SEBI,tfidf_logreg,banned_phrase_rule,macro_f1,0.395629,0.277970,0.493832,420,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,SEBI,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.742063,-0.851852,-0.621399,420,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_regulator,SEBI,tfidf_logreg,majority_class,accuracy,0.195238,0.038006,0.348183,420,2000,0.013000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,SEBI,tfidf_logreg,majority_class,macro_f1,0.425876,0.322542,0.513401,420,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+cv_oof,paired_regulator,SEBI,tfidf_logreg,majority_class,false_compliant_rate,-0.789683,-0.875971,-0.693330,420,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+cv_oof,paired_mcnemar,all,tfidf_logreg,banned_phrase_rule,exact_p,0.000000,,,1239,,0.000000,,"b=440 (tfidf_logreg right, banned_phrase_rule wrong) c=231; row-level, ignores group clustering: reference only"
+cv_oof,paired_mcnemar,all,tfidf_logreg,majority_class,exact_p,0.000000,,,1239,,0.000000,,"b=440 (tfidf_logreg right, majority_class wrong) c=228; row-level, ignores group clustering: reference only"
+cv_oof,per_repeat,repeat0,majority_class,,accuracy,0.430993,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,majority_class,,macro_f1,0.200790,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,majority_class,,false_compliant_rate,1.000000,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,majority_class,,accuracy,0.430993,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,majority_class,,macro_f1,0.200790,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,majority_class,,false_compliant_rate,1.000000,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,majority_class,,accuracy,0.430993,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,majority_class,,macro_f1,0.200790,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,majority_class,,false_compliant_rate,1.000000,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,banned_phrase_rule,,accuracy,0.433414,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,banned_phrase_rule,,macro_f1,0.211933,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,banned_phrase_rule,,false_compliant_rate,0.982979,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,banned_phrase_rule,,accuracy,0.433414,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,banned_phrase_rule,,macro_f1,0.211933,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,banned_phrase_rule,,false_compliant_rate,0.982979,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,banned_phrase_rule,,accuracy,0.433414,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,banned_phrase_rule,,macro_f1,0.211933,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,banned_phrase_rule,,false_compliant_rate,0.982979,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,tfidf_logreg,,accuracy,0.585956,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,tfidf_logreg,,macro_f1,0.622569,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat0,tfidf_logreg,,false_compliant_rate,0.319149,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,tfidf_logreg,,accuracy,0.619855,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,tfidf_logreg,,macro_f1,0.641968,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat1,tfidf_logreg,,false_compliant_rate,0.297872,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,tfidf_logreg,,accuracy,0.600484,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,tfidf_logreg,,macro_f1,0.631857,,,413,,,,"point estimate, one CV repeat"
+cv_oof,per_repeat,repeat2,tfidf_logreg,,false_compliant_rate,0.306383,,,413,,,,"point estimate, one CV repeat"
+cv_oof,paired_en_hi,en,majority_class,,accuracy,0.442708,0.369792,0.510417,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,hi,majority_class,,accuracy,0.442708,0.369792,0.510417,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,en_minus_hi,majority_class,,accuracy,0.000000,0.000000,0.000000,576,2000,,no significant difference,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only; difference en - hi; CI excludes 0 -> language gap
+cv_oof,paired_en_hi,en,majority_class,,macro_f1,0.204573,0.179975,0.225287,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,hi,majority_class,,macro_f1,0.204573,0.179975,0.225287,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,en_minus_hi,majority_class,,macro_f1,0.000000,0.000000,0.000000,576,2000,,no significant difference,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only; difference en - hi; CI excludes 0 -> language gap
+cv_oof,paired_en_hi,mcnemar_exact,majority_class,,p_value,1.000000,,,192,,1.000000,,"discordant pairs: en right/hi wrong=0, en wrong/hi right=0; exact two-sided binomial"
+cv_oof,paired_en_hi,en,banned_phrase_rule,,accuracy,0.442708,0.369792,0.510417,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,hi,banned_phrase_rule,,accuracy,0.442708,0.369792,0.510417,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,en_minus_hi,banned_phrase_rule,,accuracy,0.000000,-0.020833,0.020833,576,2000,,no significant difference,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only; difference en - hi; CI excludes 0 -> language gap
+cv_oof,paired_en_hi,en,banned_phrase_rule,,macro_f1,0.218559,0.186212,0.252896,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,hi,banned_phrase_rule,,macro_f1,0.204573,0.179975,0.225287,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,en_minus_hi,banned_phrase_rule,,macro_f1,0.013986,-0.005468,0.041942,576,2000,,no significant difference,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only; difference en - hi; CI excludes 0 -> language gap
+cv_oof,paired_en_hi,mcnemar_exact,banned_phrase_rule,,p_value,1.000000,,,192,,1.000000,,"discordant pairs: en right/hi wrong=2, en wrong/hi right=2; exact two-sided binomial"
+cv_oof,paired_en_hi,en,tfidf_logreg,,accuracy,0.680556,0.621528,0.736111,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,hi,tfidf_logreg,,accuracy,0.534722,0.470486,0.595486,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,en_minus_hi,tfidf_logreg,,accuracy,0.145833,0.088542,0.201389,576,2000,,improvement,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only; difference en - hi; CI excludes 0 -> language gap
+cv_oof,paired_en_hi,en,tfidf_logreg,,macro_f1,0.713574,0.653800,0.767551,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,hi,tfidf_logreg,,macro_f1,0.572196,0.495105,0.639410,576,2000,,,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only
+cv_oof,paired_en_hi,en_minus_hi,tfidf_logreg,,macro_f1,0.141378,0.074951,0.217070,576,2000,,improvement,192 en/hi original_id pairs x 3 CV repeats pooled; McNemar uses repeat 0 only; difference en - hi; CI excludes 0 -> language gap
+cv_oof,paired_en_hi,mcnemar_exact,tfidf_logreg,,p_value,0.000717,,,192,,0.000717,,"discordant pairs: en right/hi wrong=36, en wrong/hi right=12; exact two-sided binomial"
+final_test,overall,all,majority_class,,accuracy,0.417476,0.283019,0.549056,103,2000,,,
+final_test,overall,all,majority_class,,macro_f1,0.196347,0.147059,0.236297,103,2000,,,
+final_test,overall,all,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,103,2000,,,
+final_test,overall,all,banned_phrase_rule,,accuracy,0.427184,0.294118,0.556726,103,2000,,,
+final_test,overall,all,banned_phrase_rule,,macro_f1,0.212853,0.157760,0.268431,103,2000,,,
+final_test,overall,all,banned_phrase_rule,,false_compliant_rate,0.983333,0.944444,1.000000,103,2000,,,
+final_test,overall,all,tfidf_logreg,,accuracy,0.621359,0.523798,0.717204,103,2000,,,
+final_test,overall,all,tfidf_logreg,,macro_f1,0.621099,0.514234,0.712071,103,2000,,,
+final_test,overall,all,tfidf_logreg,,false_compliant_rate,0.350000,0.209677,0.492063,103,2000,,,
+final_test,class,LOW,majority_class,,precision,0.417476,0.283019,0.549056,43,2000,,,n = true support of LOW
+final_test,class,LOW,majority_class,,recall,1.000000,1.000000,1.000000,43,2000,,,n = true support of LOW
+final_test,class,LOW,majority_class,,f1,0.589041,0.441176,0.708891,43,2000,,,n = true support of LOW
+final_test,class,MEDIUM,majority_class,,precision,0.000000,0.000000,0.000000,17,2000,,,n = true support of MEDIUM
+final_test,class,MEDIUM,majority_class,,recall,0.000000,0.000000,0.000000,17,2000,,,n = true support of MEDIUM
+final_test,class,MEDIUM,majority_class,,f1,0.000000,0.000000,0.000000,17,2000,,,n = true support of MEDIUM
+final_test,class,HIGH,majority_class,,precision,0.000000,0.000000,0.000000,43,2000,,,n = true support of HIGH
+final_test,class,HIGH,majority_class,,recall,0.000000,0.000000,0.000000,43,2000,,,n = true support of HIGH
+final_test,class,HIGH,majority_class,,f1,0.000000,0.000000,0.000000,43,2000,,,n = true support of HIGH
+final_test,class,LOW,banned_phrase_rule,,precision,0.421569,0.287093,0.554455,43,2000,,,n = true support of LOW
+final_test,class,LOW,banned_phrase_rule,,recall,1.000000,1.000000,1.000000,43,2000,,,n = true support of LOW
+final_test,class,LOW,banned_phrase_rule,,f1,0.593103,0.446111,0.713376,43,2000,,,n = true support of LOW
+final_test,class,MEDIUM,banned_phrase_rule,,precision,0.000000,0.000000,0.000000,17,2000,,,n = true support of MEDIUM
+final_test,class,MEDIUM,banned_phrase_rule,,recall,0.000000,0.000000,0.000000,17,2000,,,n = true support of MEDIUM
+final_test,class,MEDIUM,banned_phrase_rule,,f1,0.000000,0.000000,0.000000,17,2000,,,n = true support of MEDIUM
+final_test,class,HIGH,banned_phrase_rule,,precision,1.000000,0.000000,1.000000,43,2000,,,n = true support of HIGH
+final_test,class,HIGH,banned_phrase_rule,,recall,0.023256,0.000000,0.081675,43,2000,,,n = true support of HIGH
+final_test,class,HIGH,banned_phrase_rule,,f1,0.045455,0.000000,0.151016,43,2000,,,n = true support of HIGH
+final_test,class,LOW,tfidf_logreg,,precision,0.588235,0.404245,0.758637,43,2000,,,n = true support of LOW
+final_test,class,LOW,tfidf_logreg,,recall,0.697674,0.548368,0.840023,43,2000,,,n = true support of LOW
+final_test,class,LOW,tfidf_logreg,,f1,0.638298,0.487789,0.756103,43,2000,,,n = true support of LOW
+final_test,class,MEDIUM,tfidf_logreg,,precision,0.666667,0.400000,0.900000,17,2000,,,n = true support of MEDIUM
+final_test,class,MEDIUM,tfidf_logreg,,recall,0.588235,0.392758,0.812500,17,2000,,,n = true support of MEDIUM
+final_test,class,MEDIUM,tfidf_logreg,,f1,0.625000,0.428463,0.777778,17,2000,,,n = true support of MEDIUM
+final_test,class,HIGH,tfidf_logreg,,precision,0.648649,0.441123,0.828571,43,2000,,,n = true support of HIGH
+final_test,class,HIGH,tfidf_logreg,,recall,0.558140,0.372873,0.729730,43,2000,,,n = true support of HIGH
+final_test,class,HIGH,tfidf_logreg,,f1,0.600000,0.417879,0.736868,43,2000,,,n = true support of HIGH
+final_test,paired_overall,all,tfidf_logreg,banned_phrase_rule,accuracy,0.194175,0.040394,0.345794,103,2000,0.013000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_overall,all,tfidf_logreg,banned_phrase_rule,macro_f1,0.408247,0.288977,0.507996,103,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_overall,all,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.633333,-0.777778,-0.483319,103,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_overall,all,tfidf_logreg,majority_class,accuracy,0.203883,0.050492,0.352996,103,2000,0.009000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_overall,all,tfidf_logreg,majority_class,macro_f1,0.424752,0.308966,0.523754,103,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_overall,all,tfidf_logreg,majority_class,false_compliant_rate,-0.650000,-0.790323,-0.507937,103,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,language,en,majority_class,,accuracy,0.437500,0.291667,0.583333,48,2000,,,
+final_test,language,en,majority_class,,macro_f1,0.202899,0.150538,0.245614,48,2000,,,
+final_test,language,en,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,48,2000,,,
+final_test,language,en,banned_phrase_rule,,accuracy,0.458333,0.312500,0.604167,48,2000,,,
+final_test,language,en,banned_phrase_rule,,macro_f1,0.237628,0.166667,0.318925,48,2000,,,
+final_test,language,en,banned_phrase_rule,,false_compliant_rate,0.962963,0.880000,1.000000,48,2000,,,
+final_test,language,en,tfidf_logreg,,accuracy,0.708333,0.583333,0.833333,48,2000,,,
+final_test,language,en,tfidf_logreg,,macro_f1,0.719767,0.555539,0.848197,48,2000,,,
+final_test,language,en,tfidf_logreg,,false_compliant_rate,0.333333,0.149954,0.518519,48,2000,,,
+final_test,paired_language,en,tfidf_logreg,banned_phrase_rule,accuracy,0.250000,0.083333,0.416667,48,2000,0.005000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,en,tfidf_logreg,banned_phrase_rule,macro_f1,0.482139,0.293040,0.635572,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,en,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.629630,-0.840000,-0.413793,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_language,en,tfidf_logreg,majority_class,accuracy,0.270833,0.104167,0.437500,48,2000,0.001000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,en,tfidf_logreg,majority_class,macro_f1,0.516869,0.340603,0.651829,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,en,tfidf_logreg,majority_class,false_compliant_rate,-0.666667,-0.850046,-0.481481,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,language,hi,majority_class,,accuracy,0.437500,0.291667,0.583333,48,2000,,,
+final_test,language,hi,majority_class,,macro_f1,0.202899,0.150538,0.245614,48,2000,,,
+final_test,language,hi,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,48,2000,,,
+final_test,language,hi,banned_phrase_rule,,accuracy,0.437500,0.291667,0.583333,48,2000,,,
+final_test,language,hi,banned_phrase_rule,,macro_f1,0.202899,0.150538,0.245614,48,2000,,,
+final_test,language,hi,banned_phrase_rule,,false_compliant_rate,1.000000,1.000000,1.000000,48,2000,,,
+final_test,language,hi,tfidf_logreg,,accuracy,0.562500,0.416667,0.708333,48,2000,,,
+final_test,language,hi,tfidf_logreg,,macro_f1,0.531676,0.336551,0.703409,48,2000,,,
+final_test,language,hi,tfidf_logreg,,false_compliant_rate,0.444444,0.250000,0.642857,48,2000,,,
+final_test,paired_language,hi,tfidf_logreg,banned_phrase_rule,accuracy,0.125000,-0.041667,0.312500,48,2000,0.207000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi,tfidf_logreg,banned_phrase_rule,macro_f1,0.328777,0.131730,0.502637,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.555556,-0.750000,-0.357143,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_language,hi,tfidf_logreg,majority_class,accuracy,0.125000,-0.041667,0.312500,48,2000,0.207000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi,tfidf_logreg,majority_class,macro_f1,0.328777,0.131730,0.502637,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi,tfidf_logreg,majority_class,false_compliant_rate,-0.555556,-0.750000,-0.357143,48,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,language,hi-en,majority_class,,accuracy,0.142857,0.000000,0.428571,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,majority_class,,macro_f1,0.083333,0.000000,0.222222,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,banned_phrase_rule,,accuracy,0.142857,0.000000,0.428571,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,banned_phrase_rule,,macro_f1,0.083333,0.000000,0.222222,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,banned_phrase_rule,,false_compliant_rate,1.000000,1.000000,1.000000,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,tfidf_logreg,,accuracy,0.428571,0.142857,0.857143,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,tfidf_logreg,,macro_f1,0.200000,0.083333,0.461538,7,2000,,,small n (<15): CI unreliable
+final_test,language,hi-en,tfidf_logreg,,false_compliant_rate,0.000000,0.000000,0.000000,7,2000,,,small n (<15): CI unreliable
+final_test,paired_language,hi-en,tfidf_logreg,banned_phrase_rule,accuracy,0.285714,-0.285714,0.714286,7,2000,0.392000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi-en,tfidf_logreg,banned_phrase_rule,macro_f1,0.116667,-0.116667,0.416667,7,2000,0.392000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi-en,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-1.000000,-1.000000,-1.000000,7,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_language,hi-en,tfidf_logreg,majority_class,accuracy,0.285714,-0.285714,0.714286,7,2000,0.392000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi-en,tfidf_logreg,majority_class,macro_f1,0.116667,-0.116667,0.416667,7,2000,0.392000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_language,hi-en,tfidf_logreg,majority_class,false_compliant_rate,-1.000000,-1.000000,-1.000000,7,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,regulator,DPDP,majority_class,,accuracy,0.352941,0.121212,0.571429,34,2000,,,
+final_test,regulator,DPDP,majority_class,,macro_f1,0.173913,0.072072,0.252874,34,2000,,,
+final_test,regulator,DPDP,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,34,2000,,,
+final_test,regulator,DPDP,banned_phrase_rule,,accuracy,0.352941,0.121212,0.571429,34,2000,,,
+final_test,regulator,DPDP,banned_phrase_rule,,macro_f1,0.173913,0.072072,0.252874,34,2000,,,
+final_test,regulator,DPDP,banned_phrase_rule,,false_compliant_rate,1.000000,1.000000,1.000000,34,2000,,,
+final_test,regulator,DPDP,tfidf_logreg,,accuracy,0.617647,0.441176,0.777778,34,2000,,,
+final_test,regulator,DPDP,tfidf_logreg,,macro_f1,0.654560,0.485149,0.797980,34,2000,,,
+final_test,regulator,DPDP,tfidf_logreg,,false_compliant_rate,0.363636,0.176471,0.545455,34,2000,,,
+final_test,paired_regulator,DPDP,tfidf_logreg,banned_phrase_rule,accuracy,0.264706,-0.028571,0.542857,34,2000,0.092000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,DPDP,tfidf_logreg,banned_phrase_rule,macro_f1,0.480647,0.291772,0.630715,34,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,DPDP,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.636364,-0.823529,-0.454545,34,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_regulator,DPDP,tfidf_logreg,majority_class,accuracy,0.264706,-0.028571,0.542857,34,2000,0.092000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,DPDP,tfidf_logreg,majority_class,macro_f1,0.480647,0.291772,0.630715,34,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,DPDP,tfidf_logreg,majority_class,false_compliant_rate,-0.636364,-0.823529,-0.454545,34,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,regulator,RBI,majority_class,,accuracy,0.405405,0.194444,0.628571,37,2000,,,
+final_test,regulator,RBI,majority_class,,macro_f1,0.192308,0.108527,0.260417,37,2000,,,
+final_test,regulator,RBI,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,37,2000,,,
+final_test,regulator,RBI,banned_phrase_rule,,accuracy,0.405405,0.194444,0.628571,37,2000,,,
+final_test,regulator,RBI,banned_phrase_rule,,macro_f1,0.192308,0.108527,0.260417,37,2000,,,
+final_test,regulator,RBI,banned_phrase_rule,,false_compliant_rate,1.000000,1.000000,1.000000,37,2000,,,
+final_test,regulator,RBI,tfidf_logreg,,accuracy,0.648649,0.459459,0.810811,37,2000,,,
+final_test,regulator,RBI,tfidf_logreg,,macro_f1,0.641636,0.404059,0.801061,37,2000,,,
+final_test,regulator,RBI,tfidf_logreg,,false_compliant_rate,0.318182,0.086866,0.588235,37,2000,,,
+final_test,paired_regulator,RBI,tfidf_logreg,banned_phrase_rule,accuracy,0.243243,-0.025641,0.485734,37,2000,0.076000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,RBI,tfidf_logreg,banned_phrase_rule,macro_f1,0.449328,0.185876,0.617655,37,2000,0.002000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,RBI,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.681818,-0.913134,-0.411765,37,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_regulator,RBI,tfidf_logreg,majority_class,accuracy,0.243243,-0.025641,0.485734,37,2000,0.076000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,RBI,tfidf_logreg,majority_class,macro_f1,0.449328,0.185876,0.617655,37,2000,0.002000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,RBI,tfidf_logreg,majority_class,false_compliant_rate,-0.681818,-0.913134,-0.411765,37,2000,0.000000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,regulator,SEBI,majority_class,,accuracy,0.500000,0.250000,0.750000,32,2000,,,
+final_test,regulator,SEBI,majority_class,,macro_f1,0.222222,0.133333,0.408163,32,2000,,,
+final_test,regulator,SEBI,majority_class,,false_compliant_rate,1.000000,1.000000,1.000000,32,2000,,,
+final_test,regulator,SEBI,banned_phrase_rule,,accuracy,0.531250,0.290207,0.764706,32,2000,,,
+final_test,regulator,SEBI,banned_phrase_rule,,macro_f1,0.278232,0.166667,0.513522,32,2000,,,
+final_test,regulator,SEBI,banned_phrase_rule,,false_compliant_rate,0.937500,0.800000,1.000000,32,2000,,,
+final_test,regulator,SEBI,tfidf_logreg,,accuracy,0.593750,0.419355,0.764706,32,2000,,,
+final_test,regulator,SEBI,tfidf_logreg,,macro_f1,0.542172,0.322626,0.683766,32,2000,,,
+final_test,regulator,SEBI,tfidf_logreg,,false_compliant_rate,0.375000,0.076786,0.684211,32,2000,,,
+final_test,paired_regulator,SEBI,tfidf_logreg,banned_phrase_rule,accuracy,0.062500,-0.156250,0.303030,32,2000,0.747000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,SEBI,tfidf_logreg,banned_phrase_rule,macro_f1,0.263940,-0.126392,0.452752,32,2000,0.165000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,SEBI,tfidf_logreg,banned_phrase_rule,false_compliant_rate,-0.562500,-0.909091,-0.235181,32,2000,0.004000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_regulator,SEBI,tfidf_logreg,majority_class,accuracy,0.093750,-0.133448,0.343750,32,2000,0.528000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,SEBI,tfidf_logreg,majority_class,macro_f1,0.319950,-0.025797,0.477278,32,2000,0.081000,no significant difference,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate
+final_test,paired_regulator,SEBI,tfidf_logreg,majority_class,false_compliant_rate,-0.625000,-0.923214,-0.315789,32,2000,0.001000,improvement,difference A - B; paired cluster bootstrap on identical resamples; p is a bootstrap estimate; lower is better
+final_test,paired_mcnemar,all,tfidf_logreg,banned_phrase_rule,exact_p,0.005515,,,103,,0.005515,,"b=34 (tfidf_logreg right, banned_phrase_rule wrong) c=14; row-level, ignores group clustering: reference only"
+final_test,paired_mcnemar,all,tfidf_logreg,majority_class,exact_p,0.003088,,,103,,0.003088,,"b=34 (tfidf_logreg right, majority_class wrong) c=13; row-level, ignores group clustering: reference only"
+final_test,paired_en_hi,en,majority_class,,accuracy,0.437500,0.291667,0.583333,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,hi,majority_class,,accuracy,0.437500,0.291667,0.583333,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,en_minus_hi,majority_class,,accuracy,0.000000,0.000000,0.000000,48,2000,,no significant difference,48 en/hi original_id pairs in final_test; difference en - hi; CI excludes 0 -> language gap
+final_test,paired_en_hi,en,majority_class,,macro_f1,0.202899,0.150538,0.245614,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,hi,majority_class,,macro_f1,0.202899,0.150538,0.245614,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,en_minus_hi,majority_class,,macro_f1,0.000000,0.000000,0.000000,48,2000,,no significant difference,48 en/hi original_id pairs in final_test; difference en - hi; CI excludes 0 -> language gap
+final_test,paired_en_hi,mcnemar_exact,majority_class,,p_value,1.000000,,,48,,1.000000,,"discordant pairs: en right/hi wrong=0, en wrong/hi right=0; exact two-sided binomial"
+final_test,paired_en_hi,en,banned_phrase_rule,,accuracy,0.458333,0.312500,0.604167,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,hi,banned_phrase_rule,,accuracy,0.437500,0.291667,0.583333,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,en_minus_hi,banned_phrase_rule,,accuracy,0.020833,0.000000,0.062500,48,2000,,no significant difference,48 en/hi original_id pairs in final_test; difference en - hi; CI excludes 0 -> language gap
+final_test,paired_en_hi,en,banned_phrase_rule,,macro_f1,0.237628,0.166667,0.318925,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,hi,banned_phrase_rule,,macro_f1,0.202899,0.150538,0.245614,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,en_minus_hi,banned_phrase_rule,,macro_f1,0.034730,0.000000,0.104620,48,2000,,no significant difference,48 en/hi original_id pairs in final_test; difference en - hi; CI excludes 0 -> language gap
+final_test,paired_en_hi,mcnemar_exact,banned_phrase_rule,,p_value,1.000000,,,48,,1.000000,,"discordant pairs: en right/hi wrong=1, en wrong/hi right=0; exact two-sided binomial"
+final_test,paired_en_hi,en,tfidf_logreg,,accuracy,0.708333,0.583333,0.833333,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,hi,tfidf_logreg,,accuracy,0.562500,0.416667,0.708333,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,en_minus_hi,tfidf_logreg,,accuracy,0.145833,-0.041667,0.312500,48,2000,,no significant difference,48 en/hi original_id pairs in final_test; difference en - hi; CI excludes 0 -> language gap
+final_test,paired_en_hi,en,tfidf_logreg,,macro_f1,0.719767,0.555539,0.848197,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,hi,tfidf_logreg,,macro_f1,0.531676,0.336551,0.703409,48,2000,,,48 en/hi original_id pairs in final_test
+final_test,paired_en_hi,en_minus_hi,tfidf_logreg,,macro_f1,0.188091,-0.068849,0.433956,48,2000,,no significant difference,48 en/hi original_id pairs in final_test; difference en - hi; CI excludes 0 -> language gap
+final_test,paired_en_hi,mcnemar_exact,tfidf_logreg,,p_value,0.167068,,,48,,0.167068,,"discordant pairs: en right/hi wrong=13, en wrong/hi right=6; exact two-sided binomial"

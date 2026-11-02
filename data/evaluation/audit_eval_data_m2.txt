@@ -1,0 +1,47 @@
+== 1. FILES  (eval = risk_evidence_eval_m2.csv, 516 rows, 516 unique query_ids, 276 original_ids)
+  raw training CSV (labeled_examples_m1.csv): 516 rows; row-for-row identical (text+label, same order) to eval file: True
+  short_backup CSV identical to raw training CSV: True
+  M1 xlsx (RegLingua_M1_FINAL.xlsx): 516 rows in SEBI/RBI/DPDP sheets; 516 exact + 0 near-only matches into eval; eval rows not in xlsx: 0
+  -> no separate 'final labelled evaluation set' beyond the xlsx; the 516-row CSV is its flattened export.
+
+== 2. DUPLICATES (normalised text exact; char-trigram Jaccard >= 0.9 near)
+  within eval: exact groups=0 (rows=0); near pairs=3
+  of those links: different original_id=3; label conflict=3
+    e.g. EVALQ0373(DPDP029,LOW) ~ EVALQ0374(DPDP030,HIGH)
+    e.g. EVALQ0379(DPDP035,LOW) ~ EVALQ0380(DPDP036,HIGH)
+    e.g. EVALQ0449(DPDP035,LOW) ~ EVALQ0450(DPDP036,HIGH)
+  rewrite_eval_m2.csv[text]: 305 texts | within-file exact groups=0, near pairs=0 | vs eval: exact=295 near-only=0 none=10
+  rewrite_eval_set_m1.csv[original_text]: 10 texts | within-file exact groups=0, near pairs=0 | vs eval: exact=0 near-only=0 none=10
+  canonical_cases_m2.csv[text]: 12 texts | within-file exact groups=0, near pairs=0 | vs eval: exact=0 near-only=0 none=12
+  verifier_known_cases_m2.csv[original]: 63 texts | within-file exact groups=8, near pairs=0 | vs eval: exact=23 near-only=0 none=40
+  verifier_known_cases_m2.csv[rewrite]: 63 texts | within-file exact groups=0, near pairs=3 | vs eval: exact=20 near-only=0 none=43
+
+== 3. original_id GROUPING
+  groups=276; size histogram={2: 240, 1: 36}; language combos={'en+hi': 240, 'hi-en': 36}
+  groups with label conflict between versions=0; regulator conflict=0; id prefix != regulator=0
+  en+hi pairs sharing one original_id: 240  -> translations ARE grouped (never split by a group split)
+  hi-en rows=36 each in its own singleton group; max lexical trigram sim to any en/hi row of another group: max=0.38, rows>=0.5: 0  (lexical only; semantic siblings not ruled out)
+
+== 4. LABEL BALANCE (rows)
+  overall: {'MEDIUM': 82, 'LOW': 221, 'HIGH': 213}
+  risk x language: HIGH: en=100,hi=100,hi-en=13 | LOW: en=106,hi=106,hi-en=9 | MEDIUM: en=34,hi=34,hi-en=14
+  risk x regulator: HIGH: DPDP=73,RBI=70,SEBI=70 | LOW: DPDP=73,RBI=76,SEBI=72 | MEDIUM: DPDP=26,RBI=26,SEBI=30
+  language x regulator: en: DPDP=80,RBI=80,SEBI=80 | hi: DPDP=80,RBI=80,SEBI=80 | hi-en: DPDP=12,RBI=12,SEBI=12
+  risk x language x regulator cells with <10 rows: 9 of 27
+
+== 5. COMMITTED BASELINE: what it was trained on
+  script: scripts/train_baseline_classifier.py -> load_dataset(data/raw/labeled_examples_m1.csv) -> train_test_split_examples(test_size=0.2, random_state=42, stratified on risk_level; NOT grouped)
+  reproduced split: 412 train / 104 test of 516 rows
+  pickle check: vocabulary Jaccard vs pickle: refit on the 412 train rows=0.994, refit on all 516 rows=0.864 -> pickle matches the 80% train split, not the full file (exact equality not provable: CSV/pickle have no recorded data hash and the pickle (Sep 24) predates the only committed CSV (Sep 27))
+  reproduced test rows == Day 5-10 `held_out` flag (104 rows): True
+  eval rows (all 516 come from the training CSV) seen in baseline training: 412 (80%); never seen: 104
+  of the 104 unseen rows, 76 have an en/hi sibling (same original_id) in training -> translation leakage even for the 'held-out' rows
+  embedding model (models/*minilm.pkl): meta.json records no training rows; scripts/evaluate_day10_model_comparison_m2.py trains on rows with held_out==False (then drops rows sharing an original_id with held-out).
+  => scoring ANY committed model on the 516 rows is contaminated (80% seen); only freshly trained models on the train_pool can be scored on final_test.
+
+== 6. FROZEN SPLIT
+  final_split_m2.csv: {'rows': 516, 'unique_row_ids': 516, 'original_ids_straddling': 0, 'leak_groups_straddling': 0, 'final_test_rows': 103, 'train_pool_rows': 413}
+  final_test rows that were in the Day 5-10 `held_out` set (analysed/tuned on before): 25/103; final_test rows the committed baseline trained on: 78
+  test share by risk: HIGH=20%, LOW=19%, MEDIUM=21%
+  test share by language: en=20%, hi=20%, hi-en=19%
+  test share by regulator: DPDP=20%, RBI=22%, SEBI=19%
