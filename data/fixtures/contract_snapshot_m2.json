@@ -1,0 +1,666 @@
+{
+  "_meta": {
+    "purpose": "Day 11 contract freeze (M2). Regenerate only via scripts/update_contract_snapshot.py --update.",
+    "method": "static ast extraction; field names, annotations, default markers, enum members"
+  },
+  "classes": {
+    "services/classifier/contracts.py::RiskLevel": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "LOW": "'LOW'",
+        "MEDIUM": "'MEDIUM'",
+        "HIGH": "'HIGH'",
+        "NEEDS_REVIEW": "'NEEDS_REVIEW'"
+      },
+      "owner": "M2"
+    },
+    "services/classifier/contracts.py::RiskPrediction": {
+      "kind": "dataclass",
+      "bases": [],
+      "decorators": [
+        "dataclass"
+      ],
+      "fields": [
+        {
+          "name": "risk_level",
+          "type": "RiskLevel",
+          "default": "<required>"
+        },
+        {
+          "name": "confidence",
+          "type": "float",
+          "default": "<required>"
+        },
+        {
+          "name": "risk_factors",
+          "type": "List[str]",
+          "default": "<expr>"
+        },
+        {
+          "name": "regulator_candidates",
+          "type": "List[str]",
+          "default": "<expr>"
+        }
+      ],
+      "owner": "M2"
+    },
+    "services/classifier/contracts.py::AgentOutput": {
+      "kind": "dataclass",
+      "bases": [],
+      "decorators": [
+        "dataclass"
+      ],
+      "fields": [
+        {
+          "name": "agent",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "status",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "confidence",
+          "type": "float",
+          "default": "<required>"
+        },
+        {
+          "name": "result",
+          "type": "dict",
+          "default": "<required>"
+        },
+        {
+          "name": "evidence_refs",
+          "type": "List[str]",
+          "default": "<expr>"
+        },
+        {
+          "name": "next_action",
+          "type": "Optional[str]",
+          "default": "None"
+        }
+      ],
+      "owner": "M2"
+    },
+    "services/verification/independent_recheck.py::RecheckFlag": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "NOOP_REWRITE": "'NOOP_REWRITE'",
+        "WORSENED": "'WORSENED'",
+        "BLIND_ORIGINAL": "'BLIND_ORIGINAL'",
+        "LOW_CONFIDENCE": "'LOW_CONFIDENCE'"
+      },
+      "owner": "M2"
+    },
+    "services/verification/independent_recheck.py::RecheckResult": {
+      "kind": "dataclass",
+      "bases": [],
+      "decorators": [
+        "dataclass(frozen=True)"
+      ],
+      "fields": [
+        {
+          "name": "before_label",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "before_confidence",
+          "type": "float",
+          "default": "<required>"
+        },
+        {
+          "name": "after_label",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "after_confidence",
+          "type": "float",
+          "default": "<required>"
+        },
+        {
+          "name": "rewrite_unchanged",
+          "type": "bool",
+          "default": "<required>"
+        },
+        {
+          "name": "direction",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "original_classifier_blind",
+          "type": "bool",
+          "default": "<required>"
+        },
+        {
+          "name": "low_confidence_after",
+          "type": "bool",
+          "default": "<required>"
+        },
+        {
+          "name": "flags",
+          "type": "tuple[RecheckFlag, ...]",
+          "default": "<required>"
+        }
+      ],
+      "owner": "M2"
+    },
+    "services/classifier/abstention.py::Action": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "ACCEPT": "'ACCEPT'",
+        "REVIEW": "'REVIEW'",
+        "ABSTAIN": "'ABSTAIN'"
+      },
+      "owner": "M2"
+    },
+    "services/classifier/abstention.py::Reason": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "ACCEPTED": "'ACCEPTED'",
+        "BELOW_ABSTAIN_FLOOR": "'BELOW_ABSTAIN_FLOOR'",
+        "CONFLICT_BANNED_PHRASE_LOW": "'CONFLICT_BANNED_PHRASE_LOW'",
+        "LOW_BELOW_COMPLIANT_FLOOR": "'LOW_BELOW_COMPLIANT_FLOOR'",
+        "LOW_MARGIN": "'LOW_MARGIN'",
+        "HIGH_ENTROPY": "'HIGH_ENTROPY'",
+        "CLASSIFIER_NEEDS_REVIEW": "'CLASSIFIER_NEEDS_REVIEW'"
+      },
+      "owner": "M2"
+    },
+    "services/classifier/abstention.py::AbstentionDecision": {
+      "kind": "dataclass",
+      "bases": [],
+      "decorators": [
+        "dataclass(frozen=True)"
+      ],
+      "fields": [
+        {
+          "name": "action",
+          "type": "Action",
+          "default": "<required>"
+        },
+        {
+          "name": "reasons",
+          "type": "list",
+          "default": "<required>"
+        },
+        {
+          "name": "signals",
+          "type": "dict",
+          "default": "<required>"
+        }
+      ],
+      "owner": "M2"
+    },
+    "core/contracts.py::RiskLevel": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "LOW": "'LOW'",
+        "MEDIUM": "'MEDIUM'",
+        "HIGH": "'HIGH'",
+        "NEEDS_REVIEW": "'NEEDS_REVIEW'"
+      },
+      "owner": "read-only (M3/M4)"
+    },
+    "core/contracts.py::RiskPrediction": {
+      "kind": "dataclass",
+      "bases": [],
+      "decorators": [
+        "dataclass"
+      ],
+      "fields": [
+        {
+          "name": "risk_level",
+          "type": "RiskLevel",
+          "default": "<required>"
+        },
+        {
+          "name": "confidence",
+          "type": "float",
+          "default": "<required>"
+        },
+        {
+          "name": "risk_factors",
+          "type": "List[str]",
+          "default": "<expr>"
+        },
+        {
+          "name": "regulator_candidates",
+          "type": "List[str]",
+          "default": "<expr>"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    },
+    "core/contracts.py::AgentOutput": {
+      "kind": "dataclass",
+      "bases": [],
+      "decorators": [
+        "dataclass"
+      ],
+      "fields": [
+        {
+          "name": "agent",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "status",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "confidence",
+          "type": "float",
+          "default": "<required>"
+        },
+        {
+          "name": "result",
+          "type": "dict",
+          "default": "<required>"
+        },
+        {
+          "name": "evidence_refs",
+          "type": "List[str]",
+          "default": "<expr>"
+        },
+        {
+          "name": "next_action",
+          "type": "Optional[str]",
+          "default": "None"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::RiskLabel": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "COMPLIANT": "'Compliant'",
+        "RISKY": "'Risky'",
+        "AMBIGUOUS": "'Ambiguous'"
+      },
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::Regulator": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "SEBI": "'SEBI'",
+        "RBI": "'RBI'",
+        "DPDP": "'DPDP'",
+        "GENERAL": "'General'"
+      },
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::Language": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "EN": "'en'",
+        "HI": "'hi'",
+        "CODE_MIXED": "'hi-en'"
+      },
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::ResolutionStatus": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "PENDING": "'pending'",
+        "RESOLVED": "'resolved'",
+        "ESCALATED": "'escalated'",
+        "NEEDS_REVIEW": "'needs_review'"
+      },
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::EventType": {
+      "kind": "enum",
+      "bases": [
+        "str",
+        "Enum"
+      ],
+      "decorators": [],
+      "members": {
+        "CASE_STARTED": "'case_started'",
+        "LANGUAGE_DETECTED": "'language_detected'",
+        "RISK_CLASSIFIED": "'risk_classified'",
+        "EVIDENCE_RETRIEVED": "'evidence_retrieved'",
+        "EXPLANATION_GENERATED": "'explanation_generated'",
+        "REWRITE_PROPOSED": "'rewrite_proposed'",
+        "VERIFICATION_RUN": "'verification_run'",
+        "ITERATION_RETRY": "'iteration_retry'",
+        "ESCALATED": "'escalated'",
+        "ABSTAINED": "'abstained'",
+        "CASE_RESOLVED": "'case_resolved'",
+        "AGENT_ERROR": "'agent_error'"
+      },
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::EvidenceItem": {
+      "kind": "pydantic",
+      "bases": [
+        "BaseModel"
+      ],
+      "decorators": [],
+      "fields": [
+        {
+          "name": "clause_id",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "source_document",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "clause_text",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "similarity_score",
+          "type": "float",
+          "default": "<expr>"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::AgentEvent": {
+      "kind": "pydantic",
+      "bases": [
+        "BaseModel"
+      ],
+      "decorators": [],
+      "fields": [
+        {
+          "name": "event_id",
+          "type": "str",
+          "default": "<expr>"
+        },
+        {
+          "name": "case_id",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "event_type",
+          "type": "EventType",
+          "default": "<required>"
+        },
+        {
+          "name": "agent_name",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "timestamp",
+          "type": "datetime",
+          "default": "<expr>"
+        },
+        {
+          "name": "payload",
+          "type": "dict[str, Any]",
+          "default": "<expr>"
+        },
+        {
+          "name": "error",
+          "type": "Optional[str]",
+          "default": "None"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    },
+    "core/schemas.py::CaseState": {
+      "kind": "pydantic",
+      "bases": [
+        "BaseModel"
+      ],
+      "decorators": [],
+      "fields": [
+        {
+          "name": "case_id",
+          "type": "str",
+          "default": "<expr>"
+        },
+        {
+          "name": "input_text",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "language",
+          "type": "Optional[Language]",
+          "default": "None"
+        },
+        {
+          "name": "risk_label",
+          "type": "Optional[RiskLabel]",
+          "default": "None"
+        },
+        {
+          "name": "regulator",
+          "type": "Optional[Regulator]",
+          "default": "None"
+        },
+        {
+          "name": "classifier_confidence",
+          "type": "Optional[float]",
+          "default": "None"
+        },
+        {
+          "name": "evidence",
+          "type": "list[EvidenceItem]",
+          "default": "<expr>"
+        },
+        {
+          "name": "reason",
+          "type": "Optional[str]",
+          "default": "None"
+        },
+        {
+          "name": "clause_cited",
+          "type": "Optional[str]",
+          "default": "None"
+        },
+        {
+          "name": "risk_phrase",
+          "type": "Optional[str]",
+          "default": "None"
+        },
+        {
+          "name": "rewrite_candidate",
+          "type": "Optional[str]",
+          "default": "None"
+        },
+        {
+          "name": "rewrite_attempts",
+          "type": "int",
+          "default": "0"
+        },
+        {
+          "name": "max_rewrite_iterations",
+          "type": "int",
+          "default": "3"
+        },
+        {
+          "name": "verifier_feedback",
+          "type": "Optional[str]",
+          "default": "None"
+        },
+        {
+          "name": "verified_compliant",
+          "type": "Optional[bool]",
+          "default": "None"
+        },
+        {
+          "name": "resolution_status",
+          "type": "ResolutionStatus",
+          "default": "<expr>"
+        },
+        {
+          "name": "trace",
+          "type": "list[AgentEvent]",
+          "default": "<expr>"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    },
+    "agents/research_contracts.py::RiskPrediction": {
+      "kind": "dataclass",
+      "bases": [],
+      "decorators": [
+        "dataclass"
+      ],
+      "fields": [
+        {
+          "name": "label",
+          "type": "RiskLabel",
+          "default": "<required>"
+        },
+        {
+          "name": "confidence",
+          "type": "float",
+          "default": "<required>"
+        },
+        {
+          "name": "factors",
+          "type": "List[str]",
+          "default": "<expr>"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    },
+    "apps/api/main.py::ScanRequest": {
+      "kind": "pydantic",
+      "bases": [
+        "BaseModel"
+      ],
+      "decorators": [],
+      "fields": [
+        {
+          "name": "text",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "max_rewrite_iterations",
+          "type": "int",
+          "default": "3"
+        },
+        {
+          "name": "use_real_classifier",
+          "type": "bool",
+          "default": "True"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    },
+    "apps/api/main.py::ScanResponse": {
+      "kind": "pydantic",
+      "bases": [
+        "BaseModel"
+      ],
+      "decorators": [],
+      "fields": [
+        {
+          "name": "case_id",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "language",
+          "type": "Optional[str]",
+          "default": "<required>"
+        },
+        {
+          "name": "risk_label",
+          "type": "Optional[str]",
+          "default": "<required>"
+        },
+        {
+          "name": "regulator",
+          "type": "Optional[str]",
+          "default": "<required>"
+        },
+        {
+          "name": "reason",
+          "type": "Optional[str]",
+          "default": "<required>"
+        },
+        {
+          "name": "clause_cited",
+          "type": "Optional[str]",
+          "default": "<required>"
+        },
+        {
+          "name": "rewrite_candidate",
+          "type": "Optional[str]",
+          "default": "<required>"
+        },
+        {
+          "name": "verified_compliant",
+          "type": "Optional[bool]",
+          "default": "<required>"
+        },
+        {
+          "name": "resolution_status",
+          "type": "str",
+          "default": "<required>"
+        },
+        {
+          "name": "rewrite_attempts",
+          "type": "int",
+          "default": "<required>"
+        }
+      ],
+      "owner": "read-only (M3/M4)"
+    }
+  }
+}

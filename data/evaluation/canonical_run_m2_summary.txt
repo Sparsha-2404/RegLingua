@@ -1,0 +1,24 @@
+DEFINITIONS: completes = no crash/timeout and a terminal status reached (resolved|escalated|needs_review) or API rejected invalid input; full chain = completes + reached verify + all 6 fields present; documented terminal = resolved|escalated|needs_review|rejected.
+[normal] cases=12
+  completing full chain      : 6/12
+  completing (documented terminal): 12/12
+  mismatches vs expectation  : 6 (documented=2, inferred=4, language=0)
+  crashes/timeouts/unavailable: 0
+    MISMATCH CC01 safe_english: exp=resolved obs=resolved basis=documented
+    MISMATCH CC04 risky_dpdp: exp=resolved obs=needs_review basis=documented
+    MISMATCH CC05 risky_hindi: exp=resolved obs=needs_review basis=inferred
+    MISMATCH CC06 safe_hindi: exp=resolved obs=needs_review basis=inferred
+    MISMATCH CC07 hi_en_mixed: exp=resolved obs=needs_review basis=inferred
+    MISMATCH CC09 rewrite_cannot_fix: exp=escalated obs=resolved basis=inferred
+[offline] cases=12
+  completing full chain      : 6/12
+  completing (documented terminal): 12/12
+  mismatches vs expectation  : 6 (documented=2, inferred=4, language=0)
+  crashes/timeouts/unavailable: 0
+    MISMATCH CC01 safe_english: exp=resolved obs=resolved basis=documented
+    MISMATCH CC04 risky_dpdp: exp=resolved obs=needs_review basis=documented
+    MISMATCH CC05 risky_hindi: exp=resolved obs=needs_review basis=inferred
+    MISMATCH CC06 safe_hindi: exp=resolved obs=needs_review basis=inferred
+    MISMATCH CC07 hi_en_mixed: exp=resolved obs=needs_review basis=inferred
+    MISMATCH CC09 rewrite_cannot_fix: exp=escalated obs=resolved basis=inferred
+Saved C:\Users\tanis\Downloads\RegLingua\data\evaluation\canonical_run_m2.csv
